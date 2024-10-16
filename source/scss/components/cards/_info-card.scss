@@ -1,0 +1,79 @@
+.info-card{
+    width: 100%;
+    border-radius: 8px;
+    padding: 7px 10px 8px 10px;
+    background-color: var(--bg-d);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 5px;
+    height: 44px;
+
+    &__icon{
+        display: flex;
+        width: 20px;
+        aspect-ratio: 1;
+    
+        svg,img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__name{
+        display: inline-flex;
+        gap: 2px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-n);
+        opacity: 0.9;
+
+        i{
+            font-style: normal;
+            color: var(--cl-q);
+        }
+    }
+
+    &__box{
+        display: flex;
+        align-items: center;
+        grid-gap: 4px;
+    }
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        grid-gap: 2px;
+    }
+
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-b);
+        opacity: .9;
+    }
+
+    &__percent{
+        display: inline-flex;
+        align-items: center;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+        color: var(--cl-o);
+
+        svg,img{
+            width: 14px;
+            height: 14px;
+        }
+
+        &.down{
+            color: var(--cl-k);
+        }
+    }
+}

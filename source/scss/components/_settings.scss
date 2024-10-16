@@ -1,0 +1,136 @@
+.settings{
+    display: grid;
+    grid-gap: clamp(16px, 3.0556vw, 44px);
+   
+    height: 100%;
+
+    @include for-mobile{
+        background:  var(--bg-a);
+        grid-template-columns: clamp(190px, 18.3333vw, 264px) 1fr;
+        padding: clamp(20px, 1.9444vw, 28px) clamp(16px, 3.0556vw, 44px) clamp(20px, 1.9444vw, 28px) 0;
+    }
+
+    @include mobile{
+        grid-template-columns: 100%;
+        z-index: 2;
+    }
+
+    &__aside{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 1.9444vw, 28px);
+        position: relative;
+        height: 100%;
+
+        &::before{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 1px;
+            height: calc(100% + (clamp(20px, 1.9444vw, 28px) * 2));
+            border-right: solid 1px var(--br-c);
+            display: block;
+            pointer-events: none;
+
+            @include for-mobile{
+                content: '';
+            }
+        }
+    }
+
+    &__subtitle{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-n);
+        padding: 0 30px;
+
+        @include mobile{
+            display: none;
+        }
+    }
+
+    &__close{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-g);
+        transition: all .3s;
+        display: flex;
+        align-items: center;
+        grid-gap: 6px;
+
+        svg{
+            transform: scaleX(-1);
+        }
+
+        &:hover{
+            color: var(--cl-f);
+        }
+
+        @include for-mobile{
+            display: none;
+        }
+    }
+
+    &__inner{
+        @include for-mobile{
+            display: contents;
+        }
+
+        @include mobile{
+            background:  var(--bg-a);
+            display: flex;
+            flex-direction: column;
+            grid-gap: 24px;
+            padding: 24px;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                height: calc(100vh - var(--settings-distance) - 24px);
+                left: 0;
+                width: 100%;
+                background:  var(--bg-a);
+                z-index: -1;
+                pointer-events: none;
+            }
+        }
+
+        .pretitle + p{
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            color: var(--cl-e);
+        }
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 32px;
+
+        @include mobile{
+            transition: 0.3s ease;
+            position: fixed;
+            top: var(--header-height);
+            padding: 24px var(--container-offset);
+            left: 0;
+            z-index: 5;
+            transform: translateX(-125%);
+            background: var(--bg-g);
+            height: calc(100vh - var(--header-height));
+            overflow-y: auto;
+            width: 100%;
+        }
+
+        &.active{
+            transform: none;
+        }
+    }
+}

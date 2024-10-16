@@ -1,0 +1,51 @@
+.tabs-nav{
+    @include for-tablet{
+        display: none;
+    }
+
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--br-c);
+
+    &__btn{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-l);
+        padding: 8px 0 13px;
+        position: relative;
+        transition: all .4s;
+        z-index: 2;
+
+        &::before{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--cl-h);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .4s;
+            z-index: 1;
+        }
+
+        &.active{
+            color: var(--cl-h);
+
+            &::before{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &:hover {
+            &:not(.active) {
+                color: var(--cl-j);;
+            }
+          }
+    }
+}

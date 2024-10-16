@@ -1,0 +1,58 @@
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-h);
+  z-index: 60;
+  overflow: hidden;
+  transition: 0.3s ease;
+  max-width: 440px;
+  transform: translateX(-110%);
+  padding: 8px 16px 5px;
+  border-right: solid 1px var(--br-c);
+
+  @include for-tablet{
+    display: contents;
+  }
+
+  @include  tablet{
+    display: flex;
+  }
+
+  &.active {
+    display: flex;
+    transform: translateX(0);
+
+    @include  tablet {
+      overflow-y: auto;
+    }
+  }
+
+  .burger{
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 23px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 32px;
+    width: 100%;
+    align-items: center;
+  }
+
+  @include tablet {
+    .header__nav {
+      width: 100%;
+      flex-direction: column;
+     
+      &:only-child{
+        flex-grow: 1;
+      }
+    }
+  }
+}

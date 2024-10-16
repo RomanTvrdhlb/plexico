@@ -1,0 +1,99 @@
+.info-label{
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 5px 16px 0 rgba(1, 0, 73, 0.08);
+    background: var(--bg-a);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: clamp(8px, .9929vw, 13px) clamp(12px, 1.1348vw, 16px) clamp(10px, 1.1348vw, 15px) clamp(8px, .9929vw, 14px);
+    width: fit-content;
+    height: 85px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: fit-content;
+    grid-gap: clamp(2px, .4255vw, 6px) clamp(8px, .8511vw, 12px);
+
+    @include for-mobile{
+        right: 19px;
+        bottom: 54px;
+    }
+
+    @include mobile{
+        right: 36px;
+        bottom: 32px;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-gap: clamp(2px, .4255vw, 6px);
+    }
+
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(12px, .9929vw, 14px);
+        line-height: 120%;
+        color: var(--cl-d);
+
+        @include small-tablet{
+            letter-spacing: -0.01em;
+        }
+    }
+
+    p{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(9px, .8511vw, 12px);
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        color: var(--cl-l);
+        max-width: clamp(203px, 17.0213vw, 240px);
+    }
+
+    &__close{
+        grid-column: 3/4;
+        align-self: center;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: clamp(28px, 3.1206vw, 44px);
+        aspect-ratio: 1;
+        margin-left: clamp(5px, .922vw, 13px);
+        background-color: var(--bg-g);
+        transition: all .3s;
+
+        svg,img{
+            width: clamp(12px, 1.4184vw, 20px);
+            height: auto;
+        }
+
+        svg{
+            transition: all .3s;
+            fill: var(--cl-d);
+        }
+
+        &:hover{
+            background-color: var(--bg-f);
+            svg{
+                fill: var(--cl-h);
+            }
+        }
+    }
+
+    &__icon{
+        display: flex;
+        width: clamp(24px, 2.4113vw, 34px);
+        aspect-ratio: 1;
+        grid-column: 1;
+        align-self: center;
+
+        svg,img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

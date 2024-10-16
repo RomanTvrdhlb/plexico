@@ -1,0 +1,41 @@
+.main-top{
+    grid-gap: 24px;
+    display: grid;
+    justify-items: start;
+
+    @include for-tablet{
+        grid-template-columns: .344fr .7fr;
+    }
+
+    @include tablet{
+        grid-template-columns: 100%;
+    }
+
+    .title{
+        @include mobile{
+            br{
+                display: none;
+            }
+        }
+    }
+
+    .editor{
+        width: 100%;
+
+        p{
+            font-size: clamp(22px, 1.8229vw, 28px);
+        }
+    }
+
+
+    &.mode{
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+
+        .editor{
+            p{
+                font-size: clamp(20px, 1.5625vw, 24px);
+            }
+        }
+    }
+}

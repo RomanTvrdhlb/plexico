@@ -1,0 +1,88 @@
+:root {
+  // --------------- default global variables ---------------
+  // --error-bg: #d01f1f;
+  --body-bg: #fff;
+  --body-font-size: 16px;
+  --content-width: 1410px;
+  --content-width-mode: 1440px;
+
+
+  --content-width-mini: 1120px;
+  --content-width-medium: 1247px;
+  --container-offset: clamp(16px, 1.7021vw, 24px);
+  --container-offset-mode: clamp(16px, 2.1277vw, 30px);
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-dash: calc(var(--content-width-mode) + var(--container-offset-mode));
+
+  // --------------- default scroll variables ---------------
+  --scrollbar-thumb:  #055DF5;
+  --scrollbar-track: rgba(0, 0, 0, 0.18);
+  --scrollbar-track-hover: transparent;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+    // --------------- default JS variables ---------------
+    --header-height: 91px;
+ 
+    @include tablet{
+      --header-height: 60px;
+    }
+
+  // --------------- default font-family variables ---------------
+
+  --font-family: "Onest", sans-serif; // var(--font-family);
+  --second-family: "SFProText", sans-serif; // var(--second-family);
+  --third-family: "Inter", sans-serif; // var(--third-family);
+  --font3:  "Paprika", sans-serif; // var(--font3);
+  --font4:  "Cygre", sans-serif; // var(--font4);
+
+  // --------------- default text color variables ---------------
+  --cl-a: #ffffff; // var(--cl-a);
+  --cl-b: #000000; // var(--cl-b);
+  --cl-c: #CDDFFD; // var(--cl-c);
+  --cl-d: #0A0E20; // var(--cl-d);
+  --cl-e: #6C6E79; // var(--cl-e);
+  --cl-f: #535662; // var(--cl-f);
+  --cl-g: #B5B6BC; // var(--cl-g);
+  --cl-h: #055DF5; // var(--cl-h);
+  --cl-j: #3B3E4D; // var(--cl-j);
+  --cl-k: #E34545; // var(--cl-k);
+  --cl-l: #84868F; // var(--cl-l);
+  --cl-m: #3B3E4D; // var(--cl-m);
+  --cl-n: #9D9FA6; // var(--cl-n);
+  --cl-o: #00AC45; // var(--cl-o);
+  --cl-p: #E6EFFE; // var(--cl-p);
+  --cl-q: #222636; // var(--cl-q);
+  --cl-r: #FFB5B5; // var(--cl-r);
+
+  // --------------- default background color variables ---------------
+  --bg-a: #ffffff; // var(--bg-a);
+  --bg-b: #000000; // var(--bg-b);
+  --bg-c: #055DF5; // var(--bg-c);
+  --bg-d: #F8FAFC; // var(--bg-d);
+  --bg-e: #E6EFFE; // var(--bg-e);
+  --bg-f: #E6EAF0; // var(--bg-f);
+  --bg-g: #F1F4F9; // var(--bg-g);
+  --bg-h: #0A0E20; // var(--bg-h);
+  --bg-j: #00AC45; // var(--bg-j);
+  --bg-k: #222636; // var(--bg-k);
+  --bg-l: #3B3E4D; // var(--bg-l);
+  --bg-m: #1e6ef6; // var(--bg-m);
+  --bg-n: #CCD5E1; // var(--bg-n);
+
+  // --------------- default border color variable ---------------
+  --br-a: #ffffff; // var(--br-a);
+  --br-b: #055DF5; // var(--br-b);
+  --br-c: #E6EAF0; // var(--br-c);
+  --br-d: #FFB5B5; // var(--br-d);
+  --br-e: #699EF9; // var(--br-e);
+  --br-f: #82AEFA; // var(--br-f);
+  --br-g: #E6E6E8; // var(--br-g);
+
+ // --------------- default gradient color variable ---------------
+ --gr-a: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(245,240,226,1) 60%); // var(--gr-a);
+
+ // --------------- loader variable -------------------------------
+ --loader: linear-gradient(90deg, #FDD65F 0%, rgba(255, 255, 255, 1) 49%, rgba(255, 255, 255, 1) 51%, #0000fd 100%); // var(--loader);
+}       
+
+

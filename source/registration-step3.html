@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-section__box">
+          <div class="auth-section__inner">
+            <div class="auth-section__image">
+              <picture>
+                <source type='image/webp' srcset='img/auth/img1.webp'>
+                <img width='562' height='475' src='img/auth/img1.png' alt='image'>
+              </picture>
+            </div>
+
+            <div class="auth-section__wrapp">
+              <h2 class="auth-section__pretitle">Добро пожаловать! </h2>
+              <p>Открой безграничные возможности крипто инструментов с Plexico, </p>
+            </div>
+          </div>
+
+          <div class="auth-section__content">
+
+            <div class="auth-section__top">
+              <a href="#" class="auth-section__logo">
+                <svg width='151' height='48'>
+                  <use href='img/sprite/sprite.svg#logo'></use>
+                </svg>
+              </a>
+
+              <div class="progress-bar">
+                <div class="progress-bar__step active"></div>
+                <div class="progress-bar__step active"></div>
+                <div class="progress-bar__step active"></div>
+              </div>
+
+            </div>
+
+
+            <div class="auth-section__text">
+              <h1 class="auth-section__title">Регистрация</h1>
+              <p>Придумайте надежный пароль. Пароль должен содержать не менее 8 символов </p>
+            </div>
+
+            <form class="main-form">
+              <label for="pass_1" class="main-form__label">
+                <span class="main-form__name">Пароль</span>
+                <input type="password" name="pass_1" id="pass_1" class="main-form__input" placeholder="********">
+              </label>
+              <label for="pass_2" class="main-form__label">
+                <span class="main-form__name">Подтвердите пароль</span>
+                <input type="password" name="pass_2" id="pass_2" class="main-form__input" placeholder="********">
+              </label>
+
+              <div class="main-form__bottom">
+                <button class="blue-btn" data-btn-modal="success">Зарегистрироваться</button>
+
+                <div class="main-form__terms">
+                  <p class="main-form__text">Регистрируясь вы соглашаетесь с нашими <a href="#">Условиями предоставления услуг</a>,
+                    <a href="#">Политикой конфиденциальности</a>.</p>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Мне 18 лет или больше</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+
+  <main>
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-section__box">
+          <div class="auth-section__inner">
+            <div class="auth-section__image">
+              <picture>
+                <source type='image/webp' srcset='img/auth/img1.webp'>
+                <img width='562' height='475' src='img/auth/img1.png' alt='image'>
+              </picture>
+            </div>
+
+            <div class="auth-section__wrapp">
+              <h2 class="auth-section__pretitle">Добро пожаловать! </h2>
+              <p>Открой безграничные возможности крипто инструментов с Plexico, </p>
+            </div>
+          </div>
+
+          <div class="auth-section__content">
+
+            <div class="auth-section__top">
+              <a href="#" class="auth-section__logo">
+                <svg width='151' height='48'>
+                  <use href='img/sprite/sprite.svg#logo'></use>
+                </svg>
+              </a>
+            </div>
+            
+
+            <div class="auth-section__text">
+              <h1 class="auth-section__title">Email верификация</h1>
+              <p>Введите код отправленный на указанный Email</p>
+            </div>
+            
+
+            <form class="main-form invalid">
+              <div class="main-form__inputs">
+                <input class="main-form__input" type="text" maxlength="1" />
+                <input class="main-form__input" type="text" maxlength="1" />
+                <input class="main-form__input" type="text" maxlength="1" />
+                <input class="main-form__input" type="text" maxlength="1" />
+                <input class="main-form__input" type="text" maxlength="1" />
+                <input class="main-form__input" type="text" maxlength="1" />
+                <span class="main-form__error">Неверный код подтвержения</span>
+              </div>
+              
+              <div class="main-form__bottom">
+                <button class="blue-btn">Подтвердить</button> 
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="error-label">
+    <span class="error-label__icon">
+      <svg width='34' height='34'>
+        <use href='img/sprite/sprite.svg#error'></use>
+      </svg>
+    </span>
+
+    <span class="error-label__title">Ошибка</span>
+    <p>Неверный код подтверждения. Проверьте правильность введенных данных.</p>
+    <button class="error-label__close">
+      <svg width='20' height='20'>
+        <use href='img/sprite/sprite.svg#close'></use>
+      </svg>
+    </button>
+  </div>
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

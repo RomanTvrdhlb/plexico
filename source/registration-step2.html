@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-section__box">
+          <div class="auth-section__inner">
+            <div class="auth-section__image">
+              <picture>
+                <source type='image/webp' srcset='img/auth/img1.webp'>
+                <img width='562' height='475' src='img/auth/img1.png' alt='image'>
+              </picture>
+            </div>
+
+            <div class="auth-section__wrapp">
+              <h2 class="auth-section__pretitle">Добро пожаловать! </h2>
+              <p>Открой безграничные возможности крипто инструментов с Plexico, </p>
+            </div>
+          </div>
+
+          <div class="auth-section__content">
+
+            <div class="auth-section__top">
+              <a href="#" class="auth-section__logo">
+                <svg width='151' height='48'>
+                  <use href='img/sprite/sprite.svg#logo'></use>
+                </svg>
+              </a>
+
+              <div class="progress-bar">
+                <div class="progress-bar__step active"></div>
+                <div class="progress-bar__step active"></div>
+                <div class="progress-bar__step"></div>
+              </div>
+
+            </div>
+
+
+            <div class="auth-section__text">
+              <h1 class="auth-section__title">Регистрация</h1>
+              <p>Введите контактные данные</p>
+            </div>
+
+            <form class="main-form">
+              <label for="country" class="main-form__label">
+                <span class="main-form__name">Cтрана</span>
+                <input type="text" name="country" id="country" class="main-form__input" placeholder="Введите Вашу страну">
+              </label>
+              <label for="tel" class="main-form__label">
+                <span class="main-form__name">Номер телефона</span>
+                <input type="tel" name="tel" id="tel" class="main-form__input input-phone">
+              </label>
+
+              <div class="main-form__bottom">
+                <button class="blue-btn" data-btn-modal="send">Продолжить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

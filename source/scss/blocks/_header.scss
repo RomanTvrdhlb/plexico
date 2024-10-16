@@ -1,0 +1,156 @@
+.header {
+  right: 0;
+  position: fixed;
+  z-index: 19;
+  top: 0;
+
+  @include for-tablet{
+    padding: 12px 0;
+    background-color: var(--bg-a);
+    border-bottom: 1px solid var(--br-c);
+    left: 290px;
+  }
+
+  @include tablet{
+    padding: 8px 0;
+    left: 0;
+    background-color: var(--bg-h);
+  }
+
+ .main-partners{
+    @include tablet{
+      display: none;
+    }
+  }
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: 8px;
+
+    .select{
+      @include for-laptop{
+        margin-left: clamp(1px, .3546vw, 5px);
+      }
+
+      @include laptop{
+        margin-left: 5px;
+      }
+    }
+
+    @include tablet{
+      display: none;
+    }
+  }
+
+  &__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-g);
+    width: 44px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+
+
+    svg,img{
+      width: 20px;
+      height: 20px;
+      transition: all .3s;
+    }
+
+    &:hover{
+      svg,img{
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-a);
+    width: 28px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    svg,img{
+      width: 18px;
+      height: 18px;
+      transition: all .3s;
+    }
+
+    &:hover{
+      svg,img{
+        transform: scale(1.1);
+      }
+    }
+  }
+
+
+  &__box {
+    display: grid;
+    align-items: center;
+    grid-gap: clamp(10px, .8511vw, 12px);
+
+    @include for-laptop{
+      grid-template-columns: auto clamp(220px, 18.227vw, 257px) 1fr;
+    }
+
+    @include laptop{
+      @include for-tablet{
+        grid-template-columns: auto 1fr;
+      }
+    }
+
+    @include for-full-hd{
+      grid-template-columns: 1fr 257px 1fr;
+    }
+
+    @include tablet{
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  &__wrapp{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: 12px;
+
+    .blue-btn{
+      border-radius: 6px;
+      padding: 8px 12px;
+      height: 30px;
+      font-size: 12px;
+      line-height: 120%;
+      letter-spacing: -0.01em;
+    }
+
+    @include for-tablet{
+      display: none;
+    }
+  }
+
+  .burger {
+    justify-self: end;
+    @include for-tablet {
+      display: none;
+    }
+
+    @include tablet {
+      @include burger;
+    }
+  }
+
+  .logo{
+    @include for-tablet{
+      display: none;
+    }
+
+    width: 100px;
+    height: 34px;
+  }
+}

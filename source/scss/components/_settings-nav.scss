@@ -1,0 +1,94 @@
+.settings-nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__item{
+        display: flex;
+        width: 100%;
+        border-bottom: solid 1px var(--br-c);
+
+        &:last-of-type{
+            @include mobile{
+                border-bottom: none;
+            }
+        }
+
+        &:first-of-type{
+            @include for-mobile{
+                border-top: solid 1px var(--br-c);
+            }
+        }
+    }
+
+    &__btn{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        width: 100%;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-l);
+        transition: all .3s;
+        padding: 20px 28px;
+        
+        svg{
+            fill: var(--cl-l);
+            width: 20px;
+            height: 20px;
+
+            @include mobile{
+                fill: var(--cl-h);
+            }
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover{
+                color: var(--cl-m);
+    
+                svg{
+                    fill: var(--cl-m);
+                }
+            }
+        }
+
+        &.active{
+            @include for-mobile{
+                background: var(--bg-g);
+                color: var(--cl-h);
+                padding-left: 32px;
+                border-color: var(--cl-h);
+               
+                
+                svg{
+                    fill: var(--cl-h);
+                }
+            }
+        }
+
+        @include for-mobile{
+            border-left: 4px solid transparent;
+        }
+        
+        @include mobile{
+            position: relative;
+            background:  var(--bg-a);
+
+            &::before{
+                position: absolute;
+                content: '';
+                background-image: var(--arrow);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 16px;
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

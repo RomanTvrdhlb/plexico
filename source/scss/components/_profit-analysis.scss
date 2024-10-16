@@ -1,0 +1,104 @@
+.profit-analysis{
+    padding: clamp(16px, 1.7021vw, 24px);
+    background: var(--bg-a);
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    width: 100%;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 16px;
+    }
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        grid-gap: 20px 10px;
+
+        @include for-small-tablet{
+            justify-content: space-between;
+        }
+
+        @include small-tablet{
+            flex-direction: column;
+        }
+    }
+
+    &__period{
+        display: flex;
+        align-items: center;
+        grid-gap: clamp(10px, 1.2057vw, 17px);
+
+        @include small-tablet{
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: var(--cl-q);
+    }
+
+    &__nav{
+        display: flex;
+        align-items: center;
+        grid-gap: 4px;
+        border-radius: 8px;
+        padding: 3px;
+        background: var(--bg-g);
+
+        @include small-tablet{
+            width: 100%;
+        }
+
+        @include mobile{
+            overflow-x: auto;
+        }
+    }
+
+    &__btn{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+        color: var(--cl-e);
+        transition: all .3s;
+        padding: 8px clamp(8px, .8511vw, 12px);
+        border: 0.50px solid transparent;
+        border-radius: 6px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+     
+
+        &.active{
+            background-color: var(--bg-a);
+            color: var(--cl-d);
+            opacity: .9;
+            border-color: var(--br-g);
+        }
+
+        @include small-tablet{
+            width: 100%;
+        }
+
+        @include mobile{
+            white-space: nowrap;
+        }
+    }
+
+    &__item{
+        @include small-tablet{
+            width: 100%;
+        }
+    }
+}

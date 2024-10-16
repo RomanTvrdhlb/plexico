@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+    <main>
+      <div class="container container--dash">
+        <div class="dashboard">
+          @include('partials/header.html')
+   
+          <aside class="aside">
+            <div class="aside__top">
+              <a href="index.html" class="logo">
+                <svg width='125' height='40'>
+                  <use href='img/sprite/sprite.svg#logo2'></use>
+                </svg>
+              </a>
+
+              <div class="dashboard-info">
+                <div class="dashboard-info__top">
+                  <span class="dashboard-info__title">Ваш баланс</span>
+                  <span class="dashboard-info__date">13 Января, 2024</span>
+                </div>
+                <div class="dashboard-info__box">
+                  <span class="dashboard-info__value">$ <b>4,389.80</b></span>
+                  <span class="dashboard-info__precent">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#top'></use>
+                    </svg>
+                    7%
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="aside__mobile">
+              <div class="aside__mobile-top">
+                <button class="info-btn">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#notification'></use>
+                  </svg>
+                </button>
+                <span class="aside__mobile-user">Анастасия</span>
+            
+                <button class="burger">
+                  <span class="burger__line"></span>
+                </button>
+              </div>
+            
+              <div class="aside__mobile-box">
+                  <form class="search-form"> 
+                      <label for="search"> 
+                        <input type="text" name="search" id="search" placeholder="Поиск">
+                      </label> 
+                      <button type="submit"> 
+                       <svg width='24' height='24'>
+                         <use href='img/sprite/sprite.svg#search'></use>
+                       </svg>
+                      </button> 
+                  </form>
+            
+                  <ul class="aside-nav">
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button active">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside1'></use>
+                          </svg>
+                        </span>
+                        Дашборд
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside2'></use>
+                          </svg>
+                        </span>
+                        Продукты
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside3'></use>
+                          </svg>
+                        </span>
+                        Финансы
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside4'></use>
+                          </svg>
+                        </span>
+                        Партнеры
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside5'></use>
+                          </svg>
+                        </span>
+                        История операций
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside6'></use>
+                          </svg>
+                        </span>
+                        Настройки
+                      </a>
+                    </li>
+                  </ul>
+            
+                  <a href="#" class="exit-btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#exit'></use>
+                    </svg>
+                    Выход
+                  </a>
+              </div>
+            
+              <div class="aside__mobile-bottom">
+                <div class="lang-select select" data-select>
+                  <div class="select__header">
+                    <input type="hidden" class="select__input input-select" id="lang_1" name="lang_1" value="1">
+                    <span class="select__current" data-id="1">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </span>
+                    <svg class="select__current-icon" width='5' height='7'>
+                      <use href='img/sprite/sprite.svg#Union'></use>
+                    </svg>
+                  </div>
+                  <div class="select__body">
+                    <ul class="select__list">
+                      <li class="select__option" data-id="1" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                        Русский
+                      </li>
+                      <li class="select__option" data-id="2" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                        English
+                      </li>
+                      <li class="select__option" data-id="3" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                        Українська
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            
+                <p>Copyright © 2024 Plexico. All Rights Reserved.</p>
+              </div>
+            </div>
+          </aside>
+  
+          <div class="dashboard__content">
+            <section class="top-section">
+              <div class="top-section__box"></div>
+            </section>
+            <section class="main-section">
+              <div class="main-section__box">
+                <h1 class="title">Дашборд</h1>
+               
+                <div class="main-section__inner">
+                  <div class="main-balance">
+                    <div class="main-balance__box">
+                        <span class="main-balance__title">
+                          <span class="main-balance__title-icon">
+                            <svg width='24' height='24'>
+                              <use href='img/sprite/sprite.svg#icon1'></use>
+                            </svg>
+                          </span>
+                          Текущий баланс
+                        </span>
+
+                        <div class="main-balance__wrapp">
+                          <span class="main-balance__value mode">$<b>604.45</b></span>
+                          <span class="main-balance__percent">
+                              <svg width='16' height='16'>
+                                <use href='img/sprite/sprite.svg#top'></use>
+                              </svg>
+                              7%
+                          </span>
+                        </div>
+                        
+                        <span class="main-balance__value">$<b>7604.45</b></span>
+                    </div>
+                    
+
+                    <ul class="main-balance__list">
+                      <li class="main-balance__item">
+                        <span class="main-balance__text">Реферальные начисления</span>
+                        <span class="main-balance__value">$<b>1239.83</b></span>
+                      </li>
+                      <li class="main-balance__item">
+                        <span class="main-balance__text">Партнерский доход</span>
+                        <span class="main-balance__value">$<b>500.83</b></span>
+                      </li>
+                      <li class="main-balance__item">
+                        <span class="main-balance__text">Оборот структуры</span>
+                        <span class="main-balance__value">$<b>50000.83</b></span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dashboard__tabs" data-tabs-parrent>
+                    <ul class="tabs-nav">
+                      <li class="tabs-nav__item">
+                       <button class="tabs-nav__btn active" type="button" data-tab="1">Распределение</button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="tabs-nav__btn" type="button" data-tab="2">Статистика</button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="tabs-nav__btn" type="button" data-tab="3">Топ 5 рефералов</button>
+                      </li>
+                    </ul>
+                    <ul class="dashboard__tabs-content">
+                      <li class="dashboard__tabs-item active" data-tab-content="1">
+                        <div class="main-valute">
+                          <div class="main-valute__top">
+                            <span class="subtitle">Распределение валют</span>
+                            <button class="main-valute__btn">
+                              <svg width='16' height='16'>
+                                <use href='img/sprite/sprite.svg#info'></use>
+                              </svg>
+                            </button>
+                          </div>
+      
+                          <div class="main-valute__box">
+                            <div class="main-valute__wrapp">
+                              <div class="valute-circle">
+                                <div class="valute-circle__bg">
+                                  <svg width='205' height='205'>
+                                    <use href='img/sprite/sprite.svg#Growth'></use>
+                                  </svg>
+                                </div>
+                                <div class="valute-circle__box">
+                                  <span class="valute-circle__title">Общий баланс</span>
+                                  <span class="valute-circle__value">$<b>53189.45</b></span>
+                                </div>
+                              </div>
+      
+                              <div class="main-valute__info">
+                                <span class="main-valute__name">
+                                  <b style="background: linear-gradient(170deg, #57d3bf 0%, #0fa7ba 100%);"></b>
+                                  USDT
+                                </span>
+                                <span class="main-valute__name">
+                                  <b style="background: linear-gradient(167deg, #914fea 0%, #3b2ec6 100%);"></b>
+                                  ETH
+                                </span>
+                                <span class="main-valute__name">
+                                  <b style="background: linear-gradient(166deg, #5164d8 0%, #0824b6 100%);"></b>
+                                  BTC
+                                </span>
+                                <span class="main-valute__name">
+                                  <b style="background: linear-gradient(169deg, #f0ad78 0%, #dd8464 100%);"></b>
+                                  USDC
+                                </span>
+                              </div>
+                            </div>
+      
+                            <ul class="main-valute__list">
+                              <li class="main-valute__item">
+                                <div class="valute-card">
+                                  <span class="valute-card__icon">
+                                    <svg width='36' height='36'>
+                                      <use href='img/sprite/sprite.svg#USDT'></use>
+                                    </svg>
+                                  </span>
+      
+                                  <div class="valute-card__box">
+                                    <span class="valute-card__title">USDT</span>
+                                    <span class="valute-card__percent">84.4%</span>
+                                    <span class="valute-card__value">$<b>50060.94</b></span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="main-valute__item">
+                                <div class="valute-card">
+                                  <span class="valute-card__icon">
+                                    <svg width='36' height='36'>
+                                      <use href='img/sprite/sprite.svg#BTC'></use>
+                                    </svg>
+                                  </span>
+      
+                                  <div class="valute-card__box">
+                                    <span class="valute-card__title">BTC</span>
+                                    <span class="valute-card__percent">10.56%</span>
+                                    <span class="valute-card__value">$<b>2696.95</b></span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="main-valute__item">
+                                <div class="valute-card">
+                                  <span class="valute-card__icon">
+                                    <svg width='36' height='36'>
+                                      <use href='img/sprite/sprite.svg#ETH'></use>
+                                    </svg>
+                                  </span>
+      
+                                  <div class="valute-card__box">
+                                    <span class="valute-card__title">ETH</span>
+                                    <span class="valute-card__percent">5.6%</span>
+                                    <span class="valute-card__value">$<b>500.902</b></span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="main-valute__item">
+                                <div class="valute-card">
+                                  <span class="valute-card__icon">
+                                    <svg width='36' height='36'>
+                                      <use href='img/sprite/sprite.svg#USDC'></use>
+                                    </svg>
+                                  </span>
+      
+                                  <div class="valute-card__box">
+                                    <span class="valute-card__title">USDC</span>
+                                    <span class="valute-card__percent">2.6%</span>
+                                    <span class="valute-card__value">$<b>200.902</b></span>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="dashboard__tabs-item" data-tab-content="2">
+                        <div class="profit-analysis">
+                          <span class="subtitle">Статистика доходности</span>
+
+                          <div class="profit-analysis__box" data-inner-parrent>
+                            <div class="profit-analysis__inner">
+                              <ul class="profit-analysis__nav">
+                                <li class="profit-analysis__item">
+                                 <button class="profit-analysis__btn active" type="button" data-inner-tab="1">Доходность по продуктам</button>
+                                </li>
+                                <li class="profit-analysis__item">
+                                 <button class="profit-analysis__btn" type="button" data-inner-tab="2">Партнерская доходность</button>
+                                </li>
+                              </ul>
+
+                              <div class="profit-analysis__period">
+                                <span class="profit-analysis__text">Период</span>
+
+                                <div class="period-select select" data-select>
+                                  <div class="select__header">
+                                    <input type="hidden" class="select__input input-select" id="period_1" name="period_1" value="1">
+                                    <span class="select__current" data-id="1">
+                                      Последний год
+                                    </span>
+                                    <svg class="select__current-icon" width='5' height='7'>
+                                      <use href='img/sprite/sprite.svg#Union'></use>
+                                    </svg>
+                                  </div>
+                                  <div class="select__body">
+                                    <ul class="select__list">
+                                      <li class="select__option " data-id="1" data-type="option">
+                                        Последний год
+                                      </li>
+                                      <li class="select__option" data-id="2" data-type="option">
+                                        Текущий год
+                                      </li>
+                                      <li class="select__option" data-id="3" data-type="option">
+                                        Текущий год2
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <ul class="profit-analysis__content">
+                              <li class="profit-analysis__content-item active" data-inner-content="1">
+                                <canvas class="profit-chart" width="100%" data-profit="1"></canvas>
+                              </li>
+                              <li class="profit-analysis__content-item" data-inner-content="2">
+                                <canvas class="profit-chart" width="100%" data-profit="2"></canvas>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="dashboard__tabs-item" data-tab-content="3">
+                        <div class="referral-analysis">
+                          <div class="referral-analysis__top">
+                            <span class="subtitle">Топ 5 рефералов</span>
+                            <a href="#" class="more-link">Подробнее
+                              <svg width='16' height='16'>
+                                <use href='img/sprite/sprite.svg#top'></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <canvas class="referral-chart" width="100%"></canvas>
+
+                          <div class="referral-analysis__period">
+                            <span class="referral-analysis__text">Период</span>
+
+                            <div class="period-select select" data-select>
+                              <div class="select__header">
+                                <input type="hidden" class="select__input input-select" id="period_2" name="period_2" value="1">
+                                <span class="select__current" data-id="1">
+                                  Последний год
+                                </span>
+                                <svg class="select__current-icon" width='5' height='7'>
+                                  <use href='img/sprite/sprite.svg#Union'></use>
+                                </svg>
+                              </div>
+                              <div class="select__body">
+                                <ul class="select__list">
+                                  <li class="select__option " data-id="1" data-type="option">
+                                    Последний год
+                                  </li>
+                                  <li class="select__option" data-id="2" data-type="option">
+                                    Текущий год
+                                  </li>
+                                  <li class="select__option" data-id="3" data-type="option">
+                                    Текущий год2
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+              </div>
+            </section>
+  
+         
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="info-label">
+      <span class="info-label__icon">
+        <svg width='34' height='34'>
+          <use href='img/sprite/sprite.svg#check3'></use>
+        </svg>
+      </span>
+      <div class="info-label__box">
+        <span class="info-label__title">2FA аунтефикация успешно пройдена</span>
+      </div>
+      <button class="info-label__close">
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+    </div>
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

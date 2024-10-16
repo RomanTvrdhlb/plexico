@@ -1,0 +1,49 @@
+.main-section{
+    @include for-small-tablet{
+        margin-bottom: 32px;
+    }
+
+    @include small-tablet{
+        margin-bottom: 41px;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 1.7021vw, 24px);
+    }
+
+    &__inner{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr) repeat(8, 1.11fr);
+        grid-gap: clamp(16px, 1.4184vw, 20px);
+      
+        @media (max-width: (1375px)) {
+            grid-template-columns: 100%;
+        }
+
+        .main-balance{
+            @media (min-width: (1375px)) {
+                grid-column: 1/9;
+            }
+        }
+
+        .main-valute{
+            @media (min-width: (1375px)) {
+                grid-column: 9/17;
+            }
+        }
+
+        .profit-analysis{
+            @media (min-width: (1375px)) {
+                grid-column: 1/11;
+            }
+        }
+
+        .referral-analysis{
+            @media (min-width: (1375px)) {
+                grid-column: 11/17;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.preloader{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 16px;
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+    pointer-events: none;
+
+    &__logo{
+      width: 270px;
+      height: 65px;
+
+      img,svg{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__progress{
+      max-width: 270px;
+      width: 100%;
+      height: 1px;
+      display: flex;
+    }
+
+    &__line{
+      display: flex;
+      width: 0%;
+      background-color: var(--bg-a);
+      animation: grow-line 1.3s forwards linear 0.5s;
+    }
+  
+    &.loaded{
+      animation: to-top 1s forwards linear;
+    }
+  }
+
+@keyframes grow-line {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes to-top {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+  }
+  95% {
+    transform: translate(-50%, -150%);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transform: translate(-50%, -150%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}

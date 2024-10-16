@@ -1,0 +1,39 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-style: $style;
+    font-weight: #{$weight};
+    font-family: "#{$font-family}";
+
+    font-display: swap;
+    src: url("../fonts/#{$url}.woff2") format("woff2"),
+    url("../fonts/#{$url}.woff") format("woff");
+  }
+}
+
+@include font-face("Inter",  "Inter-Regular", 400, normal);
+@include font-face("Inter",  "Inter-ExtraBold", 800, normal);
+
+@include font-face("Onest",  "Onest-Light", 300, normal);
+@include font-face("Onest",  "Onest-Regular", 400, normal);
+@include font-face("Onest",  "Onest-Medium", 500, normal);
+@include font-face("Onest",  "Onest-SemiBold", 600, normal);
+
+@include font-face("Paprika",  "Paprika-Regular", 400, normal);
+
+@include font-face("Cygre",  "cygre-semibold", 600, normal);
+
+@include font-face("SFProText",  "SF-Pro-Display-Regular", 400, normal);
+@include font-face("SFProText",  "SF-Pro-Display-Semibold", 600, normal);
+
+
+// 100 – Thin || Hairline
+// 200 – Extra Light || Ultra Light || Thin
+// 300 – Light
+// 450 – Demi
+// 400 – Normal || Regular
+// 500 – Medium
+// 600 – Semi Bold || Demi Bold
+// 700 – Bold
+// 800 – Extra Bold || Ultra Bold || Heavy
+// 900 – Black || Heavy
+

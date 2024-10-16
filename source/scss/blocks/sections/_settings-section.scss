@@ -1,0 +1,29 @@
+.settings-section{
+    --height: calc(100vh - var(--header-height) - clamp(28px, 2.2695vw, 32px) - 32px);
+
+    @include for-small-tablet{
+        margin-bottom: 32px;
+    }
+
+    @include small-tablet{
+        --height: calc(100vh - var(--header-height) - clamp(28px, 2.2695vw, 32px) - 20px);
+        margin-bottom: 20px;
+    }
+
+    .settings{
+        @include for-small-tablet{
+            min-height:  calc(100vh - var(--settings-distance) - 32px);
+        }
+    
+        @include small-tablet{
+            min-height:  calc(100vh - var(--settings-distance) - 20px);
+        }
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 1.7021vw, 24px);
+        position: relative;
+    }
+}

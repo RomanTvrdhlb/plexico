@@ -1,0 +1,28 @@
+.error-section {
+  margin: clamp(40px, 8.4635vw, 130px) 0 clamp(80px, 8.4635vw, 130px);
+
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: clamp(100px, 12.6984vw, 160px);
+    color: var(--cl-c);
+  }
+
+  p {
+    margin: clamp(1px, 0.7937vw, 10px) 0 clamp(25px, 3.1746vw, 40px);
+    font-size: clamp(26px, 3.1746vw, 40px);
+    color: var(--cl-f);
+  }
+
+  .main-btn {
+    height: 52px;
+    max-width: 230px;
+    width: 100%;
+  }
+}

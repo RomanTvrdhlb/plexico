@@ -1,0 +1,258 @@
+.main-connect {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(24px, 2.2222vw, 32px);
+
+  @include mobile{
+    padding: clamp(20px, 2.2222vw, 32px) clamp(20px, 2.2222vw, 32px)
+    clamp(28px, 2.7778vw, 40px);
+  border: 1px solid var(--br-c);
+  border-radius: 12px;
+  }
+
+  &__inner {
+    
+    display: grid;
+
+    @include for-laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include laptop {
+      @include for-tablet {
+        grid-template-columns: 100%;
+      }
+    }
+
+    @include tablet {
+      @include for-small-tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @include small-tablet {
+      grid-template-columns: 100%;
+    }
+
+    @include for-mobile{
+        padding: clamp(20px, 2.2222vw, 32px) clamp(20px, 2.2222vw, 32px)
+        clamp(28px, 2.7778vw, 40px);
+      border: 1px solid var(--br-c);
+      border-radius: 12px;
+      grid-gap: clamp(52px, 5.5556vw, 80px);
+    }
+
+    @include mobile{
+        grid-gap: 80px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+
+    p {
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: -0.01em;
+      color: var(--cl-e);
+      opacity: 0.9;
+      flex-grow: 1;
+
+      
+      @include mobile{
+       text-align: center;     
+      }
+    }
+
+    &:first-of-type {
+      .connect-card {
+        &::after {
+          content: "";
+          width: 32px;
+          height: 32px;
+          display: block;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          grid-column: 2;
+          grid-row: 1;
+          align-self: center;
+          position: absolute;
+
+          @include for-laptop {
+            right: calc((clamp(52px, 5.5556vw, 80px) / 2) * -1);
+            top: 50%;
+            transform: translate(50%, -50%);
+            background-image: var(--arrow-bot);
+          }
+
+          @include laptop {
+            @include for-tablet {
+              left: 50%;
+              bottom: calc((clamp(52px, 5.5556vw, 80px) / 2) * -1);
+              transform: translate(-50%, 50%);
+              background-image: var(--arrow-bot-second);
+            }
+          }
+
+          @include tablet {
+            @include for-small-tablet {
+              right: calc((clamp(52px, 5.5556vw, 80px) / 2) * -1);
+              top: 50%;
+              transform: translate(50%, -50%);
+              background-image: var(--arrow-bot);
+            }
+          }
+
+          @include small-tablet {
+            left: 50%;
+            transform: translate(-50%, 50%);
+            background-image: var(--arrow-bot-second);
+
+            @include for-mobile{
+                bottom: calc((clamp(52px, 5.5556vw, 80px) / 2) * -1);
+            }
+          }
+
+          @include mobile{
+            bottom: calc(40px * -1);
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    grid-gap: 16px;
+
+    @include for-laptop {
+      justify-content: space-between;
+    }
+
+    @include laptop {
+      flex-direction: column;
+
+      .main-btn {
+        align-self: center;
+      }
+    }
+
+    p {
+      max-width: clamp(300px, 28.3333vw, 408px);
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: -0.01em;
+      opacity: 0.9;
+
+      @include laptop {
+        max-width: 100%;
+      }
+
+      @include small-tablet{
+        text-align: center;
+      }
+    }
+  }
+
+  &__wrapp{
+    @include for-laptop{
+        display: contents;
+    }
+
+    @include laptop{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: clamp(16px, 1.3889vw, 20px);
+        padding: 16px 16px 20px;
+        background: var(--bg-d);
+        border-radius: 8px;
+    }
+  }
+
+  &__box{
+    display: grid;
+
+    .blue-btn{
+        @include for-laptop{
+            font-size: 12px;
+            line-height: 120%;
+            letter-spacing: -0.01em;
+            padding: 8px 16px;
+            height: 30px;
+            align-self: center;
+            margin-left: 8px;
+        }
+
+        @include laptop{
+            @include for-mobile{
+                font-size: 12px;
+                line-height: 120%;
+                letter-spacing: -0.01em;
+                padding: 8px 16px;
+                height: 30px;
+                justify-self: center;
+                margin-left: 8px;
+            }
+        }
+
+        @include mobile{
+            height: 42px;
+            justify-self: center;
+            width: 100%;
+        }
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        color: var(--cl-e);
+
+        @media (max-width: (1400px)) {
+            br{
+                display: none;
+            }
+          }
+    }
+
+    @include for-laptop{
+        background: var(--bg-d);
+        border-radius: 8px;
+        padding: 16px clamp(16px, 1.6667vw, 24px);
+        grid-template-columns: auto 1fr auto;
+        grid-gap: 20px;
+    }
+
+    @include laptop{
+        grid-gap: 16px;
+        grid-template-columns: 100%;
+    }
+  }
+
+  &__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background: var(--bg-j);
+    margin-top: 4px;
+
+    svg,img{
+        width: 20px;
+        height: 20px;
+    }
+  }
+
+  &.add{
+    @include mobile{
+        padding: 0;
+      border: none;
+      border-radius: initial;
+      }
+  }
+}

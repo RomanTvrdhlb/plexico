@@ -1,0 +1,19 @@
+.aos-animate[data-aos="custom-scale"] {
+    transform: scale(1);
+    transition: transform 1.5s linear;
+  }
+  
+  [data-aos="custom-scale"] {
+    transform: scale(2.5);
+  }
+
+
+  .aos-animate[data-aos="custom-top"] {
+    transform: translateY(0%);
+    transition: transform 1s linear;
+  }
+  
+  [data-aos="custom-top"] {
+    transform: translateY(100%);
+    position: relative;
+  }

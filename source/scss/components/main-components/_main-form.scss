@@ -1,0 +1,315 @@
+.main-form {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  width: 100%;
+  grid-gap: 12px clamp(12px, 1.1348vw, 16px);
+
+  &__label {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 4px;
+    
+    .main-form{
+      &__link{
+        justify-self: end;
+      }
+
+      &__input{
+        grid-column: 1/-1;
+      }
+    }
+  }
+
+  &__name{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--cl-j);
+  }
+
+  &__link{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--cl-d);
+    transition: all .3s;
+    text-underline-offset: 3px;
+
+    &:hover{
+      text-decoration-color: transparent;
+      color: var(--cl-h);
+    }
+
+    &.blue{
+      font-weight: 600;
+      line-height: 120%;
+      color: var(--cl-h);
+    }
+  }
+
+  &__bottom{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(24px, 2.2695vw, 32px);
+    width: 100%;
+    padding-top: calc(clamp(24px, 2.2695vw, 32px) - 12px);
+
+    .blue-btn{
+      width: 100%;
+    }
+  }
+
+  &__text{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    color: var(--cl-e);
+
+    a{
+      font-size: inherit;
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      transition: all .3s;
+
+      &:hover{
+        color: var(--cl-h);
+        text-decoration-color: transparent;
+      }
+    }
+  }
+
+  &__terms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include for-mobile{
+      grid-gap: 16px;
+    }
+
+    @include mobile{
+      grid-gap: 28px;
+    }
+
+
+    p{
+      font-size: 12px;
+      text-align: center;
+      color: var(--cl-l);
+    }
+  }
+
+  &__links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 16px;
+  }
+
+  &__inputs{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap:clamp(6px, .7801vw, 11px);
+    max-width: 337px;
+    position: relative;
+
+    .main-form__input{
+      border-radius: 6px;
+      height: 50px;
+      font-weight: 600;
+      font-size: 18px;
+      text-align: center;
+
+    }
+
+    & + .main-form__bottom{
+      max-width: 337px;
+    }
+  }
+
+  &__error{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--cl-k);
+    grid-column: 1/-1;
+    margin-top: calc(clamp(8px, .9929vw, 14px) - clamp(6px, 0.7801vw, 11px));
+    display: none;
+  }
+
+  &__input {
+    display: flex;
+    width: 100%;
+    min-height: 44px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 4px 16px;
+    border: solid 1px var(--br-c);
+    transition: all 0.3s;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color:  var(--cl-f);
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-g);
+    }
+
+    &:focus {
+      border-color: var(--br-b);
+    }
+  }
+
+  input[type='password']{
+    letter-spacing: 3px;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 10px;
+    letter-spacing: 0.11em;
+    padding-top: 13px;
+    height: 44px;
+    transition: none;
+
+    &::placeholder {
+      letter-spacing: 3px;
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: 0.11em;
+    }
+    
+    &:not(:placeholder-shown) {
+      padding-top: 4px;
+    }
+   
+  }
+
+  &.invalid{
+    .main-form__error{
+      display: block;
+    }
+
+    .main-form__input{
+      border-color: var(--br-d);
+    }
+  }
+ 
+  &.mode{
+    @include for-mobile{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .main-form{
+      &__bottom{
+        @include for-mobile{
+          grid-column: 1/-1;
+        }
+      }
+    }
+  }
+
+  .iti{
+    grid-column: 1/-1;
+    align-items: center;
+    display: flex;
+    grid-gap: 8px;
+   
+
+    &__arrow{
+      position: absolute;
+      left: clamp(84px, 7.0922vw, 100px);
+      top: 50%;
+      transform: translate(0%, -50%);
+      margin: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%236C6E79' fill-rule='evenodd' d='M5.8332 6.667H4.1665v1.6667h1.6667V6.667Zm8.3334 0h1.6667v1.6667H14.167v1.6662h-1.6666V8.3332h1.6662V6.667Zm-8.333 1.6662h1.6667V10H5.8336V8.3332ZM7.5 10.0004h1.6666v1.6666H7.5v-1.6666Zm5 1.6666h-1.6662v1.6663H9.167v-1.6667h1.6663v-1.6662h1.6666v1.6666Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      border: none;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 20px;
+      height: 20px;
+      transition: all .3s;
+
+      &--up{
+        transform: translate(0, -50%) scaleY(-1);
+      }
+    }
+
+    &.just-validate-error-field{
+      .iti__flag-container, input[type="tel"]{
+        border-color: red;
+      }
+    }
+
+    &__flag{
+      border-radius: 2px;
+    }
+
+    &__flag-container{
+      position: static;
+      width: clamp(116px, 9.3617vw, 132px);
+      border-radius: 6px;
+      padding: 12px;
+      height: 44px;
+      border: solid 1px var(--br-c);
+      flex-shrink: 0;
+    }
+
+    &__dropdown-content{
+      margin-top: 8px;
+      min-width: 200px;
+      max-width: 230px;
+      z-index: 10;
+    }
+
+    &__selected-flag{
+      transition: all .3s;
+      background-color: transparent !important;
+      border: none !important;
+      position: static;
+      padding: 0;
+    }
+
+    [code]{
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-m);
+      left: 43px;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      pointer-events: none;
+    }
+
+    input[type="tel"] {
+      order: 3;
+      border-radius: 10px;
+      padding: 4px 16px;
+    }
+
+   
+  }
+}
+
+

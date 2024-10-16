@@ -1,0 +1,36 @@
+.main-lang{
+    border: 1px solid var(--br-c);
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    grid-gap: 10px;
+
+    @include for-mobile{
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px clamp(16px, 1.6667vw, 24px);
+    }
+
+    @include small-tablet{
+        flex-wrap: wrap;
+    }
+
+    @include mobile{
+        flex-direction: column;
+        padding: 12px 16px 16px;
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 137%;
+        color: var(--cl-q);
+    }
+
+    .choice-lang{
+        @include mobile{
+            width: 100%;
+        }
+    }
+}

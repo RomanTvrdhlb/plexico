@@ -1,0 +1,166 @@
+.info-slider{
+    position: relative;
+    z-index: 1;
+
+    .info-card{
+        @include laptop{
+            padding: 0;
+            height: fit-content;
+        }
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-n);
+        opacity: 0.9;
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px; 
+    }
+
+    &__close{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        color: var(--br-g);
+
+        svg{
+            transition: all .3s;
+        }
+
+        svg:not(:first-of-type){
+            width: 20px;
+            height: 20px;
+        }
+
+        svg:first-of-type{
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover{
+            color: var(--cl-m);
+        }
+    }
+
+    .swiper{
+
+        &-container{
+            border-radius: 8px;
+
+            @include laptop{
+                margin: 0;
+            }
+        }
+
+        &-wrapper{
+
+            @include laptop{
+                transform: none !important;
+                flex-direction: column;
+
+            }
+        }
+
+        &-slide{
+            @include laptop{
+                padding: 10px 0;
+                margin: 0 !important;
+                width: 100% !important;
+
+                &:not(:last-of-type){
+                    border-bottom: 1px solid #E6EAF0;
+                }
+            }
+        }
+
+        &-pagination{
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 8px;
+
+            @include laptop{
+                display: none;
+            }
+        }
+    }
+
+    @include for-laptop{
+        width: clamp(220px, 18.227vw, 257px);
+    }
+
+    @include laptop{
+        position: fixed;
+        z-index: 15;
+        top: 75px;
+        right: clamp(12px, 1.4184vw, 20px);
+        width: 257px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+        padding: 14px 10px;
+        border-radius: 8px;
+        box-shadow: 0 5px 16px 0 rgba(1, 0, 73, 0.08);
+        background: var(--bg-d);
+        transform: translateX(110%);
+        transition: all 0.4s;
+
+        &.active {
+            transform: none;
+        }
+    }
+
+    &__top{
+        @include for-laptop{
+            display: none;
+        }
+    }
+}
+
+.valute-btn{
+    @include for-laptop{
+        display: none;
+    }
+
+    @include laptop{
+        z-index: 13;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        grid-gap: 4px;
+        top: 75px;
+        right: 0;
+        border-radius: 8px 0 0 8px;
+        padding: 10px 10px 8px 6px;
+        box-shadow: 0 5px 16px 0 rgba(1, 0, 73, 0.08);
+        background: var(--bg-d);
+        color: var(--br-g);
+
+        svg{
+            transition: all .3s;
+        }
+
+        svg:not(:first-of-type){
+            width: 20px;
+            height: 20px;
+        }
+
+        svg:first-of-type{
+            width: 16px;
+            height: 16px;
+            transform: scaleX(-1);
+        }
+
+        &:hover{
+            color: var(--cl-m);
+        }
+    }   
+}
