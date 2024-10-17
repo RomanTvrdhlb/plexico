@@ -92,15 +92,53 @@ function initNavBtns() {
     }
 }
 
-initNavBtns();
+if(navContent && navBtns){
+    initNavBtns();
 
-window.addEventListener('resize', () => {
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 576) {
+            initNavBtns();
+        } else {
+            removeCustomClass(navContent, 'active');
+        }
+    });
+}
+
+const financeCards = document.querySelectorAll('.finance-card');
+
+function initFinaceCard() {
     if (window.innerWidth < 576) {
-        initNavBtns();
-    } else {
-        removeCustomClass(navContent, 'active');
+        financeCards && financeCards.forEach(function(card) {
+            const content = card.querySelector('.finance-card__content');
+            const closeBtn = card.querySelector('.finance-card__close');
+
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                addCustomClass(content, 'active');
+            });
+
+            closeBtn && closeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                removeCustomClass(content, 'active');
+            });
+        });
     }
-});
+}
+
+if(financeCards){
+    initFinaceCard();
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 576) {
+            initFinaceCard();
+        } else {
+            removeClassInArray(document.querySelectorAll('.finance-card__content'), 'active');
+        }
+    });
+}
+
+
 
 
 document.querySelectorAll('[data-modal]').forEach(function (item) {

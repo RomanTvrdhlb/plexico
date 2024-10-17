@@ -69,6 +69,42 @@
   }
 }
 
+.transparent-btn {
+  transition: all .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 2px;
+  height: 28px;
+  border: 1px solid var(--cl-a);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  color: var(--cl-a);
+  width: 100%;
+
+  svg{
+    display: flex;
+    width: 16px;
+    aspect-ratio: 1;
+    position: relative;
+  }
+
+  &:hover{
+    border-color: var(--bg-c);
+    background-color: var(--bg-c);
+  }
+
+  &:disabled{
+    opacity: .7;
+    pointer-events: none;
+  }
+}
+
 .swiper-pagination{
   display: flex;
   align-items: center;

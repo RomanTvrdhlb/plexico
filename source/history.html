@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+    <main>
+      <div class="container container--dash">
+        <div class="dashboard">
+          @include('partials/header.html')
+   
+          <aside class="aside">
+            <div class="aside__top">
+              <a href="index.html" class="logo">
+                <svg width='125' height='40'>
+                  <use href='img/sprite/sprite.svg#logo2'></use>
+                </svg>
+              </a>
+
+              <div class="dashboard-info">
+                <div class="dashboard-info__top">
+                  <span class="dashboard-info__title">Ваш баланс</span>
+                  <span class="dashboard-info__date">13 Января, 2024</span>
+                </div>
+                <div class="dashboard-info__box">
+                  <span class="dashboard-info__value">$ <b>4,389.80</b></span>
+                  <span class="dashboard-info__precent">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#top'></use>
+                    </svg>
+                    7%
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="aside__mobile">
+              <div class="aside__mobile-top">
+                <button class="info-btn">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#notification'></use>
+                  </svg>
+                </button>
+                <span class="aside__mobile-user">Анастасия</span>
+            
+                <button class="burger">
+                  <span class="burger__line"></span>
+                </button>
+              </div>
+            
+              <div class="aside__mobile-box">
+                  <form class="search-form"> 
+                      <label for="search"> 
+                        <input type="text" name="search" id="search" placeholder="Поиск">
+                      </label> 
+                      <button type="submit"> 
+                       <svg width='24' height='24'>
+                         <use href='img/sprite/sprite.svg#search'></use>
+                       </svg>
+                      </button> 
+                  </form>
+            
+                  <ul class="aside-nav">
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside1'></use>
+                          </svg>
+                        </span>
+                        Дашборд
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside2'></use>
+                          </svg>
+                        </span>
+                        Продукты
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside3'></use>
+                          </svg>
+                        </span>
+                        Финансы
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside4'></use>
+                          </svg>
+                        </span>
+                        Партнеры
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button active">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside5'></use>
+                          </svg>
+                        </span>
+                        История операций
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside6'></use>
+                          </svg>
+                        </span>
+                        Настройки
+                      </a>
+                    </li>
+                  </ul>
+            
+                  <a href="#" class="exit-btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#exit'></use>
+                    </svg>
+                    Выход
+                  </a>
+              </div>
+            
+              <div class="aside__mobile-bottom">
+                <div class="lang-select select" data-select>
+                  <div class="select__header">
+                    <input type="hidden" class="select__input input-select" id="lang_1" name="lang_1" value="1">
+                    <span class="select__current" data-id="1">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </span>
+                    <svg class="select__current-icon" width='5' height='7'>
+                      <use href='img/sprite/sprite.svg#Union'></use>
+                    </svg>
+                  </div>
+                  <div class="select__body">
+                    <ul class="select__list">
+                      <li class="select__option" data-id="1" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                        Русский
+                      </li>
+                      <li class="select__option" data-id="2" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                        English
+                      </li>
+                      <li class="select__option" data-id="3" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                        Українська
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            
+                <p>Copyright © 2024 Plexico. All Rights Reserved.</p>
+              </div>
+            </div>
+          </aside>
+  
+          <div class="dashboard__content">
+            <section class="finance-section">
+              <div class="finance-section__box">
+                <h1 class="title">История операций</h1>
+
+                <div class="history">
+                  <div class="history__top history__top--mode">
+                    <div class="history__wrapp">
+                      <span class="history__text">Период</span>
+                      <div class="period-select select" data-select>
+                        <div class="select__header">
+                          <input type="hidden" class="select__input input-select" id="year_1" name="year_1" value="1">
+                          <span class="select__current" data-id="1">
+                            Последний год
+                          </span>
+                          <svg class="select__current-icon" width='5' height='7'>
+                            <use href='img/sprite/sprite.svg#Union'></use>
+                          </svg>
+                        </div>
+                        <div class="select__body">
+                          <ul class="select__list">
+                            <li class="select__option" data-id="1" data-type="option">
+                              Последний год
+                            </li>
+                            <li class="select__option" data-id="2" data-type="option">
+                              Текущий год
+                            </li>
+                            <li class="select__option" data-id="3" data-type="option">
+                              Все года
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="period-select select" data-select>
+                      <div class="select__header">
+                        <input type="hidden" class="select__input input-select" id="score_1" name="score_1" value="1">
+                        <span class="select__current" data-id="1">
+                          Все счета
+                        </span>
+                        <svg class="select__current-icon" width='5' height='7'>
+                          <use href='img/sprite/sprite.svg#Union'></use>
+                        </svg>
+                      </div>
+                      <div class="select__body">
+                        <ul class="select__list">
+                          <li class="select__option" data-id="1" data-type="option">
+                            Все счета
+                          </li>
+                          <li class="select__option" data-id="2" data-type="option">
+                            Текущие счета
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="history__box" data-tabs-parrent>
+                    <ul class="history__nav">
+                      <li class="history__nav-item">
+                       <button class="history__btn active" type="button" data-tab="1">Пополнения</button>
+                      </li>
+                      <li class="history__nav-item">
+                        <button class="history__btn" type="button" data-tab="2">Выводы</button>
+                       </li>
+                       <li class="history__nav-item">
+                        <button class="history__btn" type="button" data-tab="3">Переводы</button>
+                       </li>
+                       <li class="history__nav-item">
+                        <button class="history__btn" type="button" data-tab="4">Обмен</button>
+                       </li>
+                       <li class="history__nav-item">
+                        <button class="history__btn" type="button" data-tab="5">Инвестиции</button>
+                       </li>
+                       <li class="history__nav-item">
+                        <button class="history__btn" type="button" data-tab="6">Карьера</button>
+                       </li>
+                    </ul>
+                    <ul class="history__content">
+                      <li class="history__item active" data-tab-content="1">
+
+                        <div class="history__inner">
+                          <div class="history-list">
+                            <ul class="history-list__box" data-simplebar>
+                              <li class="history-list__row history-list__row--head">
+                                <span class="history-list__name">Дата и время</span>
+                                <span class="history-list__name">Валюта</span>
+                                <span class="history-list__name">Сумма</span>
+                                <span class="history-list__name">Сумма в USDT</span>
+                                <span class="history-list__name">Статус</span>
+                              </li>
+                              <li class="history-list__row">
+                                <span class="history-list__value">04.07.2024 13:12</span>
+                                <span class="history-list__value">BTC</span>
+                                <span class="history-list__value">0,005</span>
+                                <span class="history-list__value">599.00</span>
+                                <span class="history-list__status green">Выполнено</span>
+                              </li>
+                              <li class="history-list__row">
+                                <span class="history-list__value">04.07.2024 13:12</span>
+                                <span class="history-list__value">ETH</span>
+                                <span class="history-list__value">0,0002</span>
+                                <span class="history-list__value">299.00</span>
+                                <span class="history-list__status orange">Ожидание перевода</span>
+                              </li>
+                              <li class="history-list__row">
+                                <span class="history-list__value">04.07.2024 13:12</span>
+                                <span class="history-list__value">ETH</span>
+                                <span class="history-list__value">0,0002</span>
+                                <span class="history-list__value">299.00</span>
+                                <span class="history-list__status blue">В обработке</span>
+                              </li>
+                              <li class="history-list__row">
+                                <span class="history-list__value">04.07.2024 13:12</span>
+                                <span class="history-list__value">ETH</span>
+                                <span class="history-list__value">0,0002</span>
+                                <span class="history-list__value">299.00</span>
+                                <span class="history-list__status green">Выполнено</span>
+                              </li>
+                              <li class="history-list__row">
+                                <span class="history-list__value">04.07.2024 13:12</span>
+                                <span class="history-list__value">BTC</span>
+                                <span class="history-list__value">0,005</span>
+                                <span class="history-list__value">599.00</span>
+                                <span class="history-list__status red">Отменено</span>
+                              </li>
+                              <li class="history-list__row">
+                                <span class="history-list__value">04.07.2024 13:12</span>
+                                <span class="history-list__value">BTC</span>
+                                <span class="history-list__value">0,005</span>
+                                <span class="history-list__value">599.00</span>
+                                <span class="history-list__status red">Отменено</span>
+                              </li>
+                              <li class="history-list__row">
+                                <span class="history-list__value">04.07.2024 13:12</span>
+                                <span class="history-list__value">ETH</span>
+                                <span class="history-list__value">0,0002</span>
+                                <span class="history-list__value">299.00</span>
+                                <span class="history-list__status green">Выполнено</span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <ul class="page-nav">
+                            <li class="page-nav__item">
+                              <button class="page-nav__btn">
+                                <svg width='20' height='20'>
+                                  <use href='img/sprite/sprite.svg#arrow-right'></use>
+                                </svg>
+                              </button>
+                            </li>
+                            <li class="page-nav__item">
+                              <a href="#" class="page-nav__link active">1</a>
+                            </li>
+                            <li class="page-nav__item">
+                              <a href="#" class="page-nav__link">2</a>
+                            </li>
+                            <li class="page-nav__item">
+                              <a href="#" class="page-nav__link">3</a>
+                            </li>
+                            <li class="page-nav__item">
+                              ..
+                            </li>
+                            <li class="page-nav__item">
+                              <a href="#" class="page-nav__link">5</a>
+                            </li>
+                            <li class="page-nav__item">
+                              <button class="page-nav__btn next">
+                                <svg width='20' height='20'>
+                                  <use href='img/sprite/sprite.svg#arrow-right'></use>
+                                </svg>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="history__item" data-tab-content="2">
+                        <div class="history-list history-list--withdrawals">
+                          <ul class="history-list__box" data-simplebar>
+                            <li class="history-list__row history-list__row--head">
+                              <span class="history-list__name">Дата и время</span>
+                              <span class="history-list__name">Валюта</span>
+                              <span class="history-list__name">Сумма</span>
+                              <span class="history-list__name">Комиссия</span>
+                              <span class="history-list__name">Итог</span>
+                              <span class="history-list__name">Сумма USDT</span>
+                              <span class="history-list__name">Hash транзакции</span>
+                              <span class="history-list__name">Статус/Действие</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <div class="history-list__currency">
+                                <span class="history-list__value">BTC</span>
+                                <span class="history-list__subtitle">BTC</span>
+                              </div>
+                              <span class="history-list__value">0,0002</span>
+                              <span class="history-list__value">0,00001</span>
+                              <span class="history-list__value">0,000201</span>
+                              <span class="history-list__value">120.00</span>
+                              <span class="history-list__value"></span>
+                              <div class="history-list__inner">
+                                <button class="history-list__status mode">Отменить вывод
+                                  <svg width='16' height='16'>
+                                    <use href='img/sprite/sprite.svg#info2'></use>
+                                  </svg>
+
+                                  <span class="history-list__info">Вы можете отменить созданную заявку на вывод в течение 15-ти минут</span>
+                                </button>
+                                <span class="history-list__status pink">Ожидание перевода <b>12:34</b></span>
+                              </div>
+                              
+                            </li>
+
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <div class="history-list__currency">
+                                <span class="history-list__value">BTC</span>
+                                <span class="history-list__subtitle">BTC</span>
+                              </div>
+                              <span class="history-list__value">0,0002</span>
+                              <span class="history-list__value">0,00001</span>
+                              <span class="history-list__value">0,000201</span>
+                              <span class="history-list__value">120.00</span>
+                              <span class="history-list__value"></span>
+                              <span class="history-list__status blue">В обработке</span>
+                            </li>
+
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <div class="history-list__currency">
+                                <span class="history-list__value">ETH</span>
+                                <span class="history-list__subtitle">BTC</span>
+                              </div>
+                              <span class="history-list__value">99.00</span>
+                              <span class="history-list__value">0,01</span>
+                              <span class="history-list__value">99.01</span>
+                              <span class="history-list__value">99.0</span>
+                              <a href="#" class="history-list__link"><b>https://tronscantronscan</b>
+                                <svg width='16' height='16'>
+                                  <use href='img/sprite/sprite.svg#arrowup'></use>
+                                </svg>
+                              </a>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <div class="history-list__currency">
+                                <span class="history-list__value">ETH</span>
+                                <span class="history-list__subtitle">ETH</span>
+                              </div>
+                              <span class="history-list__value">0,0002</span>
+                              <span class="history-list__value">0,00001</span>
+                              <span class="history-list__value">0,000201</span>
+                              <span class="history-list__value">120.00</span>
+                              <span class="history-list__value"></span>
+                              <span class="history-list__status red">Отменено</span>
+                            </li>
+                          
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="history__item" data-tab-content="3">
+                        <div class="history-list history-list--transfer">
+                          <ul class="history-list__box" data-simplebar>
+                            <li class="history-list__row history-list__row--head">
+                              <span class="history-list__name">От партнера</span>
+                              <span class="history-list__name">Дата и время</span>
+                              <span class="history-list__name">Валюта</span>
+                              <span class="history-list__name">Сумма</span>
+                              <span class="history-list__name">Комиссия</span>
+                              <span class="history-list__name">Итог</span>
+                              <span class="history-list__name">Сумма USDT</span>
+                              <span class="history-list__name">Статус</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">User Name</span>
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">BTC</span>
+                              <span class="history-list__value">0,0002</span>
+                              <span class="history-list__value">0,00001</span>
+                              <span class="history-list__value">0,000201</span>
+                              <span class="history-list__value">120.00</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">User Name</span>
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">ETH</span>
+                              <span class="history-list__value">0,23</span>
+                              <span class="history-list__value">0,001</span>
+                              <span class="history-list__value">0,231</span>
+                              <span class="history-list__value">250.45</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">User Name</span>
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">BTC</span>
+                              <span class="history-list__value">0,0002</span>
+                              <span class="history-list__value">0,00001</span>
+                              <span class="history-list__value">0,000201</span>
+                              <span class="history-list__value">120.00</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">User Name</span>
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">BTC</span>
+                              <span class="history-list__value">0,23</span>
+                              <span class="history-list__value">0,001</span>
+                              <span class="history-list__value">0,231</span>
+                              <span class="history-list__value">250.45</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="history__item" data-tab-content="4">
+                        <div class="history-list history-list--swap">
+                          <ul class="history-list__box" data-simplebar>
+                            <li class="history-list__row history-list__row--head">
+                              <span class="history-list__name">Дата и время</span>
+                              <span class="history-list__name">Cумма обмена</span>
+                              <span class="history-list__name">Курс обмена</span>
+                              <span class="history-list__name">Комиссия</span>
+                              <span class="history-list__name">Полученная сумма</span>
+                              <span class="history-list__name">Статус</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">0,002BTC</span>
+                              <span class="history-list__value">21,45ETH</span>
+                              <span class="history-list__value">0,00001BTC</span>
+                              <span class="history-list__value">21,44002ETH</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">0,002BTC</span>
+                              <span class="history-list__value">61052,45USD</span>
+                              <span class="history-list__value">0,00001BTC</span>
+                              <span class="history-list__value">80245,12USDT</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="history__item" data-tab-content="5">
+                        <div class="history-list history-list--swap">
+                          <ul class="history-list__box" data-simplebar>
+                            <li class="history-list__row history-list__row--head">
+                              <span class="history-list__name">Дата и время</span>
+                              <span class="history-list__name">Cумма обмена</span>
+                              <span class="history-list__name">Курс обмена</span>
+                              <span class="history-list__name">Комиссия</span>
+                              <span class="history-list__name">Полученная сумма</span>
+                              <span class="history-list__name">Статус</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">0,002BTC</span>
+                              <span class="history-list__value">21,45ETH</span>
+                              <span class="history-list__value">0,00001BTC</span>
+                              <span class="history-list__value">21,44002ETH</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">0,002BTC</span>
+                              <span class="history-list__value">61052,45USD</span>
+                              <span class="history-list__value">0,00001BTC</span>
+                              <span class="history-list__value">80245,12USDT</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="history__item" data-tab-content="6">
+                        <div class="history-list history-list--swap">
+                          <ul class="history-list__box" data-simplebar>
+                            <li class="history-list__row history-list__row--head">
+                              <span class="history-list__name">Дата и время</span>
+                              <span class="history-list__name">Cумма обмена</span>
+                              <span class="history-list__name">Курс обмена</span>
+                              <span class="history-list__name">Комиссия</span>
+                              <span class="history-list__name">Полученная сумма</span>
+                              <span class="history-list__name">Статус</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">0,002BTC</span>
+                              <span class="history-list__value">21,45ETH</span>
+                              <span class="history-list__value">0,00001BTC</span>
+                              <span class="history-list__value">21,44002ETH</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                            <li class="history-list__row">
+                              <span class="history-list__value">04.07.2024 13:12</span>
+                              <span class="history-list__value">0,002BTC</span>
+                              <span class="history-list__value">61052,45USD</span>
+                              <span class="history-list__value">0,00001BTC</span>
+                              <span class="history-list__value">80245,12USDT</span>
+                              <span class="history-list__status green">Выполнено</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+  
+         
+          </div>
+        </div>
+      </div>
+    </main>
+
+   
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

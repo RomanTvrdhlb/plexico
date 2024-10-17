@@ -1,0 +1,292 @@
+.finance-card{
+    padding: clamp(12px, 1.1111vw, 16px) clamp(12px, 1.3889vw, 20px);
+    background: var(--gr-b);
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+    width: 100%;
+
+    @include mobile{
+        grid-gap: 4px;
+        align-items: center;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    &.violet{
+        background: var(--gr-c);
+    }
+
+    &.green{
+        background:  var(--gr-d);
+    }
+
+    &.orange{
+        background: var(--gr-e);
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 137%;
+        color: var(--cl-a);
+
+        @include mobile{
+            display: none;
+        }
+    }
+
+    &__subtitle{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+        color: var(--cl-a);
+    }
+
+    &__currency{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+        color: var(--cl-a);
+
+        grid-column: 3;
+        grid-row: 1;
+
+        @include mobile{
+            display: none;
+        }
+    }
+
+    &__icon{
+        grid-column: 1;
+        grid-row: 1/3;
+        display: flex;
+        width: 36px;
+        height: 36px;
+
+        svg,img{
+            width: 100%;
+            height: 100%;
+        }
+
+        @include mobile{
+            margin-bottom: 10px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__top{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 8px;
+
+        @include mobile{
+            display: contents;
+        }
+    }
+
+    &__btns{
+        margin-top: 8px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
+
+        @include mobile{
+            display: none;
+        }
+    }
+
+    &__value{
+        color: var(--cl-a);
+        display: inline-flex;
+        align-items: center;
+        grid-gap: 2px;
+      
+        svg,img{
+            position: relative;
+            top: -1px;
+
+            @include mobile{
+                display: none;
+            }
+        }
+
+        @include for-mobile{
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 105%;
+            align-self: center;
+        }
+
+        @include mobile{
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 120%;
+            letter-spacing: -0.01em;
+            text-align: center;
+        }
+    }
+
+    &__close{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-g);
+        transition: all .3s;
+        display: flex;
+        align-items: center;
+        grid-gap: 6px;
+
+        svg{
+            transform: scaleX(-1);
+        }
+
+        &:hover{
+            color: var(--cl-f);
+        }
+
+        @include for-mobile{
+            display: none;
+        }
+    }
+
+    &__wrapp{
+        @include for-mobile{
+            display: none;
+        }
+
+        @include mobile{
+            background:  var(--bg-a);
+            display: flex;
+            flex-direction: column;
+            grid-gap: 8px;
+            padding: 24px 0 0;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                height: 100%;
+                left: 0;
+                width: 100%;
+                background:  var(--bg-a);
+                z-index: -1;
+                pointer-events: none;
+            }
+        }
+
+        .history{
+            grid-gap: 24px;
+
+            &__box{
+                grid-gap: 24px;
+            }
+        }
+
+        .main-link{
+            margin-top: 11px;
+        }
+    }
+
+    &__content{
+        cursor: initial;
+        @include for-mobile{
+            display: none;
+        }
+    
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+                grid-gap: 16px;
+                transition: 0.3s ease;
+                position: fixed;
+                top: var(--header-height);
+                padding: 24px var(--container-offset) 47px;
+                left: 0;
+                z-index: 10;
+                transform: translateX(-125%);
+                background: var(--bg-g);
+                height: calc(100vh - var(--header-height));
+                overflow-y: auto;
+                width: 100%;
+            }
+    
+            &.active{
+                transform: none;
+            }
+    }
+
+    &--mobile{
+        margin: 0 24px;
+        width: calc(100% - 48px);
+        cursor: initial;
+
+        @include mobile{
+            border-radius: 0;
+            align-items: flex-start;
+            grid-gap: 16px;
+        }
+
+        .finance-card{
+
+            &__title{
+                @include mobile{
+                    display: inline-flex;
+                }
+            }
+        
+            &__currency{
+                @include mobile{
+                    display: inline-flex;
+                }
+            }
+        
+            &__icon{
+                @include mobile{
+                    margin-bottom: 0;
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        
+            &__top{
+                @include mobile{
+                    display: grid;
+                    width: 100%;
+                }
+            }
+        
+            &__btns{
+                @include mobile{
+                    display: grid;
+                    width: 100%;
+                }
+            }
+        
+            &__value{
+                font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 105%;
+                    align-self: center;
+                    letter-spacing: initial;
+              
+                svg,img{
+                    @include mobile{
+                        display: flex;
+                    }
+                }
+            }
+
+        }
+    }
+}

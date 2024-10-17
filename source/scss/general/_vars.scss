@@ -53,6 +53,7 @@
   --cl-p: #E6EFFE; // var(--cl-p);
   --cl-q: #222636; // var(--cl-q);
   --cl-r: #FFB5B5; // var(--cl-r);
+  --cl-s: #CECFD2; // var(--cl-s);
 
   // --------------- default background color variables ---------------
   --bg-a: #ffffff; // var(--bg-a);
@@ -68,6 +69,10 @@
   --bg-l: #3B3E4D; // var(--bg-l);
   --bg-m: #1e6ef6; // var(--bg-m);
   --bg-n: #CCD5E1; // var(--bg-n);
+  --bg-o: #32ADE6; // var(--bg-o);
+  --bg-p: #FF833E; // var(--bg-p);
+  --bg-q: #E34545; // var(--bg-q);
+  --bg-r: #FB7185; // var(--bg-r);
 
   // --------------- default border color variable ---------------
   --br-a: #ffffff; // var(--br-a);
@@ -80,6 +85,10 @@
 
  // --------------- default gradient color variable ---------------
  --gr-a: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(245,240,226,1) 60%); // var(--gr-a);
+ --gr-b: linear-gradient(166deg, #5164d8 0%, #0824b6 100%); // var(--gr-b);
+ --gr-c: linear-gradient(167deg, #914fea 0%, #3b2ec6 100%); // var(--gr-c);
+ --gr-d: linear-gradient(170deg, #57d3bf 0%, #0fa7ba 100%); // var(--gr-d);
+ --gr-e: linear-gradient(169deg, #f0ad78 0%, #dd8464 100%); // var(--gr-e);
 
  // --------------- loader variable -------------------------------
  --loader: linear-gradient(90deg, #FDD65F 0%, rgba(255, 255, 255, 1) 49%, rgba(255, 255, 255, 1) 51%, #0000fd 100%); // var(--loader);

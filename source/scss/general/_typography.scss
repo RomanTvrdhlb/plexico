@@ -55,6 +55,11 @@
   line-height: 110%;
   letter-spacing: -0.01em;
   color: var(--cl-d);
+
+  &--mode{
+    font-size: 18px;
+    line-height: 120%;
+  }
 }
 
 .search-form {
@@ -113,3 +118,29 @@
   }
 }
 
+.main-link{
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: var(--cl-h);
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  grid-gap: 3px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: transparent;
+  transition: all .3s;
+
+  svg,img{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: .5px;
+  }
+
+  &:hover{
+    text-decoration-color: inherit;
+  }
+}

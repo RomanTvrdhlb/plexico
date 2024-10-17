@@ -27,17 +27,21 @@ function stickyHeaderFunction(breakpoint){
 
 const settingsElement = document.querySelector('.settings');
 
-function updateSettingsDistance() {
+function updateSettingsDistance(el) {
 
-    if (settingsElement) {
-        const distanceFromTop = settingsElement.getBoundingClientRect().top + window.pageYOffset;
+    if (el) {
+        const distanceFromTop = el.getBoundingClientRect().top + window.pageYOffset;
         document.documentElement.style.setProperty('--settings-distance', `${distanceFromTop}px`);
     }
 }
 
-if(settingsElement) updateSettingsDistance();
+if(settingsElement) updateSettingsDistance(settingsElement);
 
-if(settingsElement) window.addEventListener('resize', updateSettingsDistance);
+if(settingsElement) window.addEventListener('resize', updateSettingsDistance(settingsElement));
+
+if(settingsElement) updateSettingsDistance(settingsElement);
+
+if(settingsElement) window.addEventListener('resize', updateSettingsDistance(settingsElement));
 
 stickyHeaderFunction(320);
 
