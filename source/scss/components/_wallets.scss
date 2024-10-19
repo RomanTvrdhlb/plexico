@@ -1,0 +1,113 @@
+.wallets{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 24px;
+
+    &__btn{
+        width: 100%;
+        padding: 23px 24px;
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        justify-content: center;
+        transition: all .3s;
+        border: 1px dashed var(--br-c);
+        border-radius: 16px;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 137%;
+        color: var(--cl-n);
+
+        @include mobile{
+            border-color: var(--cl-h);
+            color: var(--cl-h);
+        }
+
+        &:hover{
+            @include for-mobile{
+                color: var(--cl-h);
+                border-color: var(--cl-h);
+            }
+
+            @include mobile{
+                border-color: var(--br-c);
+                color: var(--cl-n);
+            }
+        }
+
+        svg,img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__list{
+        display: grid;
+        grid-gap: clamp(16px, 1.6667vw, 24px) 18px;
+
+        @include for-laptop{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include laptop{
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+
+        @include mobile{
+            padding-bottom: 4px;
+        }
+    }
+
+   &__image{
+    display: flex;
+    width: clamp(100px, 9.2361vw, 133px);
+    height: clamp(100px, 9.2361vw, 133px);
+
+        svg,img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(20px, 1.6667vw, 24px);
+        line-height: 105%;
+        text-align: center;
+        color: var(--cl-d);
+
+        @include mobile{
+            font-weight: 600;
+            line-height: 110%;
+            letter-spacing: -0.01em;
+        }
+    }
+
+    &--details{
+        align-items: center;
+        border: 1px solid var(--br-c);
+        border-radius: 12px;
+        grid-gap: 15px;
+        padding: clamp(32px, 5.2778vw, 76px) 32px clamp(32px, 7.9861vw, 115px);
+
+        .blue-btn{
+            padding: 10px 21px;
+        }
+
+        .wallets__image{
+            @include for-mobile{
+                margin-bottom: 13px;
+            }
+
+            @include mobile{
+                margin-bottom: 17px;
+            }
+        }
+
+        @include mobile{
+            grid-gap: 24px;
+        }
+    }
+}

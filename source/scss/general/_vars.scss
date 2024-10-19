@@ -21,7 +21,7 @@
   --overlay-bg: rgba(0, 0, 0, 0.5);
 
     // --------------- default JS variables ---------------
-    --header-height: 91px;
+    --header-height: 69px;
  
     @include tablet{
       --header-height: 60px;
@@ -89,6 +89,8 @@
  --gr-c: linear-gradient(167deg, #914fea 0%, #3b2ec6 100%); // var(--gr-c);
  --gr-d: linear-gradient(170deg, #57d3bf 0%, #0fa7ba 100%); // var(--gr-d);
  --gr-e: linear-gradient(169deg, #f0ad78 0%, #dd8464 100%); // var(--gr-e);
+ --gr-f: linear-gradient(170deg, #57d3bf 0%, #0fa7ba 100%); // var(--gr-f);
+ --gr-g: linear-gradient(167deg, rgba(145, 79, 234, 0.05) 0%, rgba(59, 46, 198, 0.05) 100%); // var(--gr-g);
 
  // --------------- loader variable -------------------------------
  --loader: linear-gradient(90deg, #FDD65F 0%, rgba(255, 255, 255, 1) 49%, rgba(255, 255, 255, 1) 51%, #0000fd 100%); // var(--loader);

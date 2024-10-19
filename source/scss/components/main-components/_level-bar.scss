@@ -1,0 +1,98 @@
+.level-bar{
+    padding: 16px 25px 20px;
+    border-radius: 12px;
+    background: var(--bg-a);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+
+    @include mobile{
+        box-shadow: 0 5px 16px 0 rgba(1, 0, 73, 0.08);
+    }
+ 
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-n);
+    
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 6px;
+
+        &.active{
+            .level-bar__value{
+                color:  var(--cl-j);
+            }
+        }
+
+        &:nth-of-type(1){
+            .level-bar__row::before{
+                width: 100%;
+            }
+
+            & + .level-bar__item{
+                .level-bar__row::before{
+                    width: 5px;
+                }
+            }
+        }
+
+        &:nth-of-type(2){
+            .level-bar__row::before{
+                background: var(--gr-c);
+            }
+
+            &.active{
+                .level-bar__row::before{
+                    width: 100%;
+                }
+
+                & + .level-bar__item{
+                    .level-bar__row::before{
+                        width: 5px;
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(3){
+            .level-bar__row::before{
+                background: var(--gr-e);
+            }
+
+             &.active{
+                .level-bar__row::before{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    &__row{
+        border: 0.50px solid var(--br-c);
+        border-radius: 24px;
+        height: 8px;
+        width: 100%;
+        position: relative;
+        padding: 1px;
+
+        &::before{
+            position: absolute;
+            content: '';
+            background: var(--gr-d);
+            max-width: calc(100% - 2px);
+            height: 5px;
+            left: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: inherit;
+            width: 0%;
+        }
+    }
+    
+}

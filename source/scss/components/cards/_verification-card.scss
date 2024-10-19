@@ -1,0 +1,209 @@
+.verification-card{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+    padding: clamp(16px, 2.2222vw, 32px);
+    border-radius: clamp(6px, .8333vw, 12px);
+    background: var(--gr-g);
+
+    @include gradient-border(linear-gradient(167deg, rgba(145, 79, 234, 0.3) 0%, rgba(59, 46, 198, 0.3) 100%), 1px);
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        font-size: clamp(12px, .9722vw, 14px);
+        color: var(--cl-f);
+
+        @include small-tablet{
+            padding-bottom: 4px;
+        }
+    }
+
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(12px, .9722vw, 14px);
+        line-height: 120%;
+        color: var(--cl-j);
+        text-align: right;
+
+        @include small-tablet{
+            padding-bottom: 4px;
+        }
+
+        @include mobile{
+            letter-spacing: -0.01em;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+
+        @include laptop{
+            order: -1;
+        }
+
+        @include for-mobile{
+            grid-gap: 16px;
+        }
+
+        @include mobile{
+            margin-bottom: 13px;
+            grid-gap: 12px;
+        }
+    }
+
+    &__label{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(12px, .9722vw, 14px);
+        line-height: 120%;
+        color: var(--cl-a);
+        background: var(--gr-c);
+        border-radius: 6px;
+        padding: 6px 10px;
+        width: fit-content;
+        height: fit-content;
+
+        @include mobile{
+            letter-spacing: -0.01em;
+        }
+    }
+
+    &__level{
+        display: flex;
+        align-items: center;
+        grid-gap: 8px 12px;
+
+        
+        @include laptop{
+            order: -3;
+        }
+
+        @include mobile{
+            margin-bottom: 13px;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+    
+    &__pretitle{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+        color: var(--cl-d);
+        display: inline-flex;
+        align-items: center;
+        grid-gap: 12px;
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(14px, 1.1111vw, 16px);
+        color: var(--cl-m);
+
+        
+        @include laptop{
+            order: -2;
+        }
+
+
+        @include for-mobile{
+            line-height: 137%;
+        }
+
+        @include mobile{
+            line-height: 120%;
+        }
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 15px;
+        margin-bottom: 12px;
+
+        .blue-btn{
+            height: 32px;
+            padding: 5px 17px;
+            font-size: 12px;
+            line-height: 120%;
+            letter-spacing: -0.01em;
+            grid-gap: 6px;
+
+            svg,img{
+                position: relative;
+                top: -1px;
+                width: 16px;
+                height: 16px;
+            }
+
+            @include laptop{
+                align-self: center;
+                min-width: 240px;
+
+                @include for-small-tablet{
+                    width: 60%;
+                }
+            }
+
+            @include small-tablet{
+                width: 100%;
+            }
+        }
+
+
+        @include laptop{
+             display: contents;   
+        }
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        column-gap: 5px;
+        flex-wrap: wrap;
+
+        p{
+            grid-column: 1/-1;
+            width: 100%;
+            font-family: var(--font-family);
+            font-size: clamp(12px, .9722vw, 14px);
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            color: var(--cl-l);
+        }
+
+        @include small-tablet{
+            grid-gap: 6px;
+        }
+
+        @include mobile{
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+    } 
+
+
+    &.yellow{
+        background: linear-gradient(169deg, rgba(240, 173, 120, 0.05) 0%, rgba(221, 132, 100, 0.05) 100%);
+
+        &::before{
+            background: linear-gradient(169deg, rgba(240, 173, 120, 0.3) 0%, rgba(221, 132, 100, 0.3) 100%);
+        }
+
+        .verification-card{
+            &__label{
+                background:  var(--gr-e);
+            }
+        }
+    }
+}

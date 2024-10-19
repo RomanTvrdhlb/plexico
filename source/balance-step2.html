@@ -205,8 +205,63 @@
                       <p>Совершите перевод на сумму, которая была указана при создании заявки на пополнение баланса. Обратите внимание на сеть перевода!</p>
                     </div>
 
-
                     <div class="balance__content">
+                      <div class="balance-wallet">
+                        <div class="balance-wallet__inner">
+                          <span class="balance-wallet__title">Адрес кошелька</span>
+
+                          <form class="connect-card connect-card--mode">
+                            <label for="code" class="connect-card__label">
+                              <input class="connect-card__input" type="text" name="code" id="code" value="0fjs9mpds3kdjs03k29n5n2dlk003k9fd" readonly>
+                            </label>
+                            
+                            <button class="blue-btn">
+                              Копировать
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#copy'></use>
+                              </svg>
+                            </button>
+                          </form>
+                        </div>
+                        <span class="balance-wallet__text">или</span>
+                        <div class="balance-wallet__box">
+                          <div class="balance-wallet__inner">
+                            <span class="balance-wallet__title">QR-код кошелька</span>
+
+                            <div class="balance-wallet__qr">
+                              <div class="balance-wallet__image">
+                                <picture>
+                                  <source type='image/webp' srcset='img/index/qr.webp'>
+                                  <img width='172' height='172' src='img/index/qr.png' alt='image'>
+                                </picture>
+                              </div>
+                              <span class="balance-wallet__subtitle"> QR-код для сканирования</span>
+                            </div>
+                          </div>
+
+                          <div class="balance-wallet__info">
+                            <span class="balance-wallet__icon">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#lock'></use>
+                              </svg>
+                            </span>
+                            <span class="balance-wallet__title">Правила для перевода</span>
+                            <ol>
+                              <li>
+                                <p>Отправляйте только Bitcoin на этот адрес. Отправка монеты или токена, кроме BTC по этому адресу может привести к потере средств</p>
+                              </li>
+                              <li>
+                                <p>Токены будут зачислены в течении 30 минут после всех подтверждения в сети.</p>
+                              </li>
+                            </ol>
+                          </div>
+
+                          <div class="balance-wallet__btns">
+                            <button class="blue-btn">Средства переведены</button>
+                            <button class="main-btn">Отменить</button>
+                          </div>
+                        </div>
+                      </div>
 
                       <div class="balance__info">
                         <div class="balance__label">
@@ -218,63 +273,44 @@
     
                           <p>Перед выполнением операции проверьте правильность введенных данных</p>
                         </div>
+
+                        <ul class="exchange-list">
+                          <li class="exchange-list__item">
+                            <span class="exchange-list__name">Сеть для пополнения криптовалюты</span>
+                            <div class="exchange-list__row">
+                              <span class="exchange-list__icon">
+                                <svg width='24' height='24'>
+                                  <use href='img/sprite/sprite.svg#BTC3'></use>
+                                </svg>
+                              </span>
+                              <span class="exchange-list__value">Bitcoin (BTC)</span>
+                            </div>
+                          </li>
+
+                          <li class="exchange-list__item">
+                            <span class="exchange-list__name">Сумма пополнения</span>
+                            <div class="exchange-list__row">
+                              <span class="exchange-list__value">0.000000 <b>BTC</b></span>
+                            </div>
+                          </li>
+
+                          <li class="exchange-list__item">
+                            <span class="exchange-list__name">Текущий баланс</span>
+                            <div class="exchange-list__row">
+                              <span class="exchange-list__value">0.000541 <b>BTC</b></span>
+                            </div>
+                          </li>
+
+                          <li class="exchange-list__item">
+                            <span class="exchange-list__name">Баланс после пополнения</span>
+                            <div class="exchange-list__row">
+                              <span class="exchange-list__value">0.002540 <b>BTC</b></span>
+                            </div>
+                            <p>При пополнении счета обратите внимание на сумму пополнения и комиссию сети. В случае отправки другой суммы, средства будут пересчитаны и зачислены на ваш счет.</p>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-
-                    <form class="balance-form main-form">
-                      <label for="valute_1" class="main-form__label">
-                        <span class="main-form__title">Сеть для пополнения криптовалюты</span>
-                        <div class="select" data-select>
-                          <div class="select__header">
-                            <input type="hidden" class="select__input input-select" id="valute_1" name="valute_1"
-                              value="1">
-                            <span class="select__current" data-id="1">
-                              <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
-                              Bitcoin (BTC)
-                            </span>
-                            <svg class="select__current-icon" width='5' height='7'>
-                              <use href='img/sprite/sprite.svg#Union'></use>
-                            </svg>
-                          </div>
-                          <div class="select__body">
-                            <ul class="select__list">
-                              <li class="select__option" data-id="1" data-type="option">
-                                <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
-                                Bitcoin (BTC)
-                              </li>
-                              <li class="select__option" data-id="2" data-type="option">
-                                <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
-                                Ethereum (ETH)
-                              </li>
-                              <li class="select__option" data-id="2" data-type="option">
-                                <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
-                                USDT (USDT)
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </label>
-
-                      <label for="sum_1" class="main-form__label">
-                        <span class="main-form__title">Сумма пополнения</span>
-                        <div class="main-form__field">
-                          <input type="number" name="sum_1" id="sum_1" class="main-form__input" placeholder="0.0001">
-                          <span class="main-form__icon">
-                            <svg width='24' height='24'>
-                              <use href='img/sprite/sprite.svg#BTC4'></use>
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="main-form__wrapp">
-                          <span class="main-form__text">Мин: <b>0.00001 BTC</b> , Макс: <b>150 BTC</b></span>
-                        </div>
-                      </label>
-
-                      <div class="main-form__inner">
-                        <button class="main-btn">Отменить</button>
-                        <button class="blue-btn">Перевести средства</button>
-                      </div>
-                    </form>
                   </div>
                 </div>
               </div>

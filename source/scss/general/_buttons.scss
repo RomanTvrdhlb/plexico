@@ -28,7 +28,7 @@
   }
 
   &:disabled{
-    opacity: .7;
+    background: var(--cl-n);
     pointer-events: none;
   }
 

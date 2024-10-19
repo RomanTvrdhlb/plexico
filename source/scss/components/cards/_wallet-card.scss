@@ -1,0 +1,224 @@
+.wallet-card{
+    box-shadow: 0 5px 40px -27px rgba(1, 51, 138, 0.1);
+    background: var(--bg-a);
+    border: 1px solid var(--br-c);
+    border-radius: 16px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    padding: clamp(16px, 1.3889vw, 20px);
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(8px, 1.1111vw, 16px);
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 15px;
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(16px, 1.25vw, 18px);
+        color: var(--cl-m);
+
+        @include for-mobile{
+            line-height: 120%;
+            letter-spacing: -0.01em;
+        }
+
+        @include mobile{
+            font-size: 16px;
+            line-height: 137%;
+        }
+    }
+
+    &__edit{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: clamp(40px, 3.0556vw, 44px);
+        height: clamp(40px, 3.0556vw, 44px);
+        border-radius: 8px;
+        background: var(--bg-g);
+        transition: all .3s;
+        color: var(--cl-d);
+
+        &:hover{
+            color: var(--cl-h);
+            background: var(--bg-f);
+        }
+
+        svg,img{
+            width: clamp(18px, 1.3889vw, 20px);
+            height: clamp(18px, 1.3889vw, 20px);
+        }
+    }
+   
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 12px; 
+        padding: clamp(16px, 1.3889vw, 20px);
+        background-color: var(--bg-d);
+        border-radius: 12px;
+        position: relative;
+        z-index: 1;
+       
+        &::before{
+            position: absolute;
+            content: '';
+            inset: 0;
+            border-radius: inherit;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+
+    &__subtitle{
+        display: inline-flex;
+        align-items: center;
+        grid-gap: 8px;
+        font-family: var(--font-family);
+        font-size: clamp(16px, 1.6667vw, 24px);
+        color: var(--cl-d);
+        margin-bottom: clamp(4px, .7639vw, 11px);
+
+        @include for-mobile{
+            line-height: 105%;
+            font-weight: 500;
+        }
+
+        @include mobile{
+            font-weight: 600;
+            line-height: 137%;
+        }
+    
+        svg,img{
+            display: flex;
+            width: clamp(32px, 2.5vw, 36px);
+            height: clamp(32px, 2.5vw, 36px);
+        }
+    }
+
+    &__bottom, &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 15px;
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        color: var(--cl-e);
+    }
+
+    &__subname{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(14px, 1.1111vw, 16px);
+        color: var(--cl-j);
+
+        @include for-mobile{
+            font-size: 16px;
+            line-height: 126%;
+        }
+
+        @include mobile{
+            line-height: 130%;
+            letter-spacing: -0.01em;
+        }
+    }
+
+    &__pretitle{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(20px, 1.6667vw, 24px);
+        line-height: 105%;
+        color: var(--cl-d);
+        
+        @include mobile{
+            font-weight: 600;
+        }
+    }
+
+    &.green{
+        .wallet-card{
+
+            &__box{
+                &::before{
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='172' fill='none'%3E%3Cg clip-path='url(%23a)' filter='url(%23b)' opacity='0.3'%3E%3Ccircle cx='227' cy='132' r='119' fill='url(%23c)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='c' x1='266.068' x2='400.58' y1='-85.0849' y2='196.861' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2357D3BF'/%3E%3Cstop offset='1' stop-color='%230FA7BA'/%3E%3C/linearGradient%3E%3CclipPath id='a'%3E%3Crect width='320' height='172' fill='%23fff' rx='12'/%3E%3C/clipPath%3E%3Cfilter id='b' width='644.838' height='644.838' x='-95.4188' y='-190.419' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_6037_63958' stdDeviation='101.709'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+                }
+            }
+
+            &__pretitle{
+                background: linear-gradient(170deg, #57d3bf 0%, #0fa7ba 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }   
+    }
+
+    &.violet{
+        .wallet-card{
+
+            &__box{
+                &::before{
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='172' fill='none'%3E%3Cg clip-path='url(%23a)' filter='url(%23b)' opacity='0.3'%3E%3Ccircle cx='227' cy='132' r='119' fill='url(%23c)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='c' x1='254.842' x2='411.076' y1='-30.2727' y2='241.984' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23914FEA'/%3E%3Cstop offset='1' stop-color='%233B2EC6'/%3E%3C/linearGradient%3E%3CclipPath id='a'%3E%3Crect width='320' height='172' fill='%23fff' rx='12'/%3E%3C/clipPath%3E%3Cfilter id='b' width='644.838' height='644.838' x='-95.4188' y='-190.419' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_6037_48364' stdDeviation='101.709'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+                }
+            }
+
+            &__pretitle{
+                background: linear-gradient(167deg, #914fea 0%, #3b2ec6 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }  
+    }
+
+    &.blue{
+        .wallet-card{
+            &__box{
+                &::before{
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='172' fill='none'%3E%3Cg clip-path='url(%23a)' filter='url(%23b)' opacity='0.3'%3E%3Ccircle cx='227' cy='132' r='119' fill='url(%23c)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='c' x1='227.449' x2='411.993' y1='-49.7455' y2='247.691' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%235164D8'/%3E%3Cstop offset='1' stop-color='%230824B6'/%3E%3C/linearGradient%3E%3CclipPath id='a'%3E%3Crect width='320' height='172' fill='%23fff' rx='12'/%3E%3C/clipPath%3E%3Cfilter id='b' width='644.838' height='644.838' x='-95.4188' y='-190.419' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_6037_40886' stdDeviation='101.709'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+                }
+            }
+
+            &__pretitle{
+                background: linear-gradient(167deg, #914fea 0%, #3b2ec6 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }  
+    }
+
+    &.orange{
+        .wallet-card{
+
+            &__box{
+                &::before{
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='172' fill='none'%3E%3Cg clip-path='url(%23a)' filter='url(%23b)' opacity='0.3'%3E%3Ccircle cx='227' cy='132' r='119' fill='url(%23c)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='c' x1='263.374' x2='407.591' y1='-20.897' y2='275.874' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F0AD78'/%3E%3Cstop offset='1' stop-color='%23DD8464'/%3E%3C/linearGradient%3E%3CclipPath id='a'%3E%3Crect width='320' height='172' fill='%23fff' rx='12'/%3E%3C/clipPath%3E%3Cfilter id='b' width='644.838' height='644.838' x='-95.4188' y='-190.419' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_6037_32267' stdDeviation='101.709'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+                }
+            }
+
+            &__pretitle{
+                background: linear-gradient(169deg, #f0ad78 0%, #dd8464 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }  
+    }
+}

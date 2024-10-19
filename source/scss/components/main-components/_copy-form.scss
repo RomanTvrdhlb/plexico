@@ -1,0 +1,48 @@
+.copy-form{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 14px;
+
+    &__label{
+        width: 100%;
+        position: relative;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 8px;
+        padding: 12px;
+        height: 41px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__input{
+        width: 168px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-j);
+    }
+
+    &__btn{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        left: calc( 50% + (168px / 2) - 5px);
+        color: var(--cl-j);
+        
+        svg,img{
+            width: 16px;
+            height: 16px;
+            transition: all .3;
+        }
+
+        &:hover{
+            color: var(--cl-h);
+        }
+    }
+}

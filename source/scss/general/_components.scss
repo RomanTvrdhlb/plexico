@@ -9,8 +9,9 @@
 @import "../components/main-components/main-lang.scss";
 @import "../components/main-components/main-connect.scss";
 @import "../components/main-components/page-nav.scss";
-
-// @import "../components/main-components/main-top.scss";
+@import "../components/main-components/exchange-list.scss";
+@import "../components/main-components/copy-form.scss";
+@import "../components/main-components/level-bar.scss";
 
 
 // ----------------- BLOCK COMPONENTS -----------------
@@ -30,8 +31,9 @@
 @import "../components/funds.scss";
 @import "../components/finance-list.scss";
 @import "../components/balance.scss";
-
-
+@import "../components/balance-wallet.scss";
+@import "../components/wallets.scss";
+@import "../components/verification.scss";
 
 
 // ----------------- CARD COMPONENTS -----------------
@@ -39,7 +41,9 @@
 @import "../components/cards/info-card.scss";
 @import "../components/cards/connect-card.scss";
 @import "../components/cards/finance-card.scss";
+@import "../components/cards/wallet-card.scss";
 @import "../components/cards/operation-card.scss";
+@import "../components/cards/verification-card.scss";
 
 
 

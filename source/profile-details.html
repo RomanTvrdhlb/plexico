@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+    <main>
+      <div class="container container--dash">
+        <div class="dashboard">
+          @include('partials/header.html')
+   
+          <aside class="aside">
+            <div class="aside__top">
+              <a href="index.html" class="logo">
+                <svg width='125' height='40'>
+                  <use href='img/sprite/sprite.svg#logo2'></use>
+                </svg>
+              </a>
+
+              <div class="dashboard-info">
+                <div class="dashboard-info__top">
+                  <span class="dashboard-info__title">Ваш баланс</span>
+                  <span class="dashboard-info__date">13 Января, 2024</span>
+                </div>
+                <div class="dashboard-info__box">
+                  <span class="dashboard-info__value">$ <b>4,389.80</b></span>
+                  <span class="dashboard-info__precent">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#top'></use>
+                    </svg>
+                    7%
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="aside__mobile">
+              <div class="aside__mobile-top">
+                <button class="info-btn">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#notification'></use>
+                  </svg>
+                </button>
+                <span class="aside__mobile-user">Анастасия</span>
+            
+                <button class="burger">
+                  <span class="burger__line"></span>
+                </button>
+              </div>
+            
+              <div class="aside__mobile-box">
+                  <form class="search-form"> 
+                      <label for="search"> 
+                        <input type="text" name="search" id="search" placeholder="Поиск">
+                      </label> 
+                      <button type="submit"> 
+                       <svg width='24' height='24'>
+                         <use href='img/sprite/sprite.svg#search'></use>
+                       </svg>
+                      </button> 
+                  </form>
+            
+                  <ul class="aside-nav">
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button active">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside1'></use>
+                          </svg>
+                        </span>
+                        Дашборд
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside2'></use>
+                          </svg>
+                        </span>
+                        Продукты
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside3'></use>
+                          </svg>
+                        </span>
+                        Финансы
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside4'></use>
+                          </svg>
+                        </span>
+                        Партнеры
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside5'></use>
+                          </svg>
+                        </span>
+                        История операций
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside6'></use>
+                          </svg>
+                        </span>
+                        Настройки
+                      </a>
+                    </li>
+                  </ul>
+            
+                  <a href="#" class="exit-btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#exit'></use>
+                    </svg>
+                    Выход
+                  </a>
+              </div>
+            
+              <div class="aside__mobile-bottom">
+                <div class="lang-select select" data-select>
+                  <div class="select__header">
+                    <input type="hidden" class="select__input input-select" id="lang_1" name="lang_1" value="1">
+                    <span class="select__current" data-id="1">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </span>
+                    <svg class="select__current-icon" width='5' height='7'>
+                      <use href='img/sprite/sprite.svg#Union'></use>
+                    </svg>
+                  </div>
+                  <div class="select__body">
+                    <ul class="select__list">
+                      <li class="select__option" data-id="1" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                        Русский
+                      </li>
+                      <li class="select__option" data-id="2" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                        English
+                      </li>
+                      <li class="select__option" data-id="3" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                        Українська
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            
+                <p>Copyright © 2024 Plexico. All Rights Reserved.</p>
+              </div>
+            </div>
+          </aside>
+  
+          <div class="dashboard__content">
+            <section class="settings-section">
+              <div class="settings-section__box">
+                <h1 class="title">Настройки</h1>
+
+                <div class="settings">
+                  <div class="settings__aside">
+                    <span class="settings__subtitle">MЕНЮ</span>
+                      <ul class="settings-nav">
+                        <li class="settings-nav__item">
+                        <a href="settings.html" class="settings-nav__btn">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#Notifications'></use>
+                            </svg>
+                            Личные данные
+                        </a>
+                        </li>
+                        <li class="settings-nav__item">
+                          <a href="settings-lang.html" class="settings-nav__btn">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#Language'></use>
+                            </svg>
+                            Контактные данные
+                          </a>
+                        </li>
+                        <li class="settings-nav__item">
+                          <a href="settings-bot.html" class="settings-nav__btn">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#Bot'></use>
+                            </svg>
+                            Верификация
+                          </a>
+                        </li>
+                        <li class="settings-nav__item">
+                          <a href="settings-bot.html" class="settings-nav__btn">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#Bot'></use>
+                            </svg>
+                            Безопасность
+                          </a>
+                        </li>
+                        <li class="settings-nav__item">
+                          <a href="settings-bot.html" class="settings-nav__btn  active">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#Bot'></use>
+                            </svg>
+                            Mои реквизиты
+                          </a>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="settings__content">
+                    <button class="settings__close">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#arrow'></use>
+                      </svg>
+                      Настройки профиля
+                    </button>
+                    <div class="settings__inner">
+                      <span class="pretitle">Мои реквизиты</span>
+                      <p>Данный раздел предназначен для сохранения ваших реквизитов, которые в дальнейшем будут использованы платформой для совершения выплат.</p>
+
+                      <div class="wallets">
+                        <button class="wallets__btn">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#add-box'></use>
+                          </svg>
+                          Добавить реквизиты
+                        </button>
+
+                        <ul class="wallets__list">
+                          <li class="wallets__item">
+                            <div class="wallet-card green">
+                              <div class="wallet-card__top">
+                                <span class="wallet-card__title">Crypto 1</span>
+                                <button class="wallet-card__edit">
+                                  <svg width='20' height='20'>
+                                    <use href='img/sprite/sprite.svg#edit-box'></use>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="wallet-card__box">
+                                <div class="wallet-card__inner">
+                                  <span class="wallet-card__subtitle">
+                                    <svg width='36' height='36'>
+                                      <use href='img/sprite/sprite.svg#USDT2'></use>
+                                    </svg>
+                                    Tether
+                                  </span>
+                                  <span class="wallet-card__pretitle">USDT</span>
+                                </div>
+
+                                <form class="copy-form">
+                                  <label for="code" class="copy-form__label">
+                                    <input class="copy-form__input" type="text" name="code" id="code" value="0fjs9mpds3kdjs03k292dlk003k9fd" readonly>
+                                    <button class="copy-form__btn">
+                                      <svg width='24' height='24'>
+                                        <use href='img/sprite/sprite.svg#copy'></use>
+                                      </svg>
+                                    </button>
+                                  </label>
+                                  
+                                
+                                </form>
+
+                                <div class="wallet-card__bottom">
+                                  <span class="wallet-card__text">Сеть:</span>
+                                  <span class="wallet-card__subname">TRC-20</span>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="wallets__item">
+                            <div class="wallet-card violet">
+                              <div class="wallet-card__top">
+                                <span class="wallet-card__title">Crypto 2</span>
+                                <button class="wallet-card__edit">
+                                  <svg width='20' height='20'>
+                                    <use href='img/sprite/sprite.svg#edit-box'></use>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="wallet-card__box">
+                                <div class="wallet-card__inner">
+                                  <span class="wallet-card__subtitle">
+                                    <svg width='36' height='36'>
+                                      <use href='img/sprite/sprite.svg#ETH2'></use>
+                                    </svg>
+                                    Ethereum
+                                  </span>
+                                  <span class="wallet-card__pretitle">ETH</span>
+                                </div>
+
+                                <form class="copy-form">
+                                  <label for="code_2" class="copy-form__label">
+                                    <input class="copy-form__input" type="text" name="code_2" id="code_2" value="0fjs9mpds3kdjs03k292dlk003k9fd" readonly>
+                                 
+                                    <button class="copy-form__btn">
+                                      <svg width='24' height='24'>
+                                        <use href='img/sprite/sprite.svg#copy'></use>
+                                      </svg>
+                                    </button>
+                                  </label>
+                                </form>
+
+                                <div class="wallet-card__bottom">
+                                  <span class="wallet-card__text">Сеть:</span>
+                                  <span class="wallet-card__subname">ERC-20</span>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="wallets__item">
+                            <div class="wallet-card blue">
+                              <div class="wallet-card__top">
+                                <span class="wallet-card__title">Crypto 3</span>
+                                <button class="wallet-card__edit">
+                                  <svg width='20' height='20'>
+                                    <use href='img/sprite/sprite.svg#edit-box'></use>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="wallet-card__box">
+                                <div class="wallet-card__inner">
+                                  <span class="wallet-card__subtitle">
+                                    <svg width='36' height='36'>
+                                      <use href='img/sprite/sprite.svg#BTC3'></use>
+                                    </svg>
+                                    Bitcoin
+                                  </span>
+                                  <span class="wallet-card__pretitle">BTC</span>
+                                </div>
+
+                                <form class="copy-form">
+                                  <label for="code_3" class="copy-form__label">
+                                    <input class="copy-form__input" type="text" name="code_3" id="code_3" value="0fjs9mpds3kdjs03k292dlk003k9fd" readonly>
+                                  
+                                    <button class="copy-form__btn">
+                                      <svg width='24' height='24'>
+                                        <use href='img/sprite/sprite.svg#copy'></use>
+                                      </svg>
+                                    </button>
+                                  </label>
+                                </form>
+
+                                <div class="wallet-card__bottom">
+                                  <span class="wallet-card__text">Сеть:</span>
+                                  <span class="wallet-card__subname">Bitcoin</span>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="wallets__item">
+                            <div class="wallet-card orange">
+                              <div class="wallet-card__top">
+                                <span class="wallet-card__title">Crypto 4</span>
+                                <button class="wallet-card__edit">
+                                  <svg width='20' height='20'>
+                                    <use href='img/sprite/sprite.svg#edit-box'></use>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="wallet-card__box">
+                                <div class="wallet-card__inner">
+                                  <span class="wallet-card__subtitle">
+                                    <svg width='36' height='36'>
+                                      <use href='img/sprite/sprite.svg#USDC2'></use>
+                                    </svg>
+                                    USD Coin
+                                  </span>
+                                  <span class="wallet-card__pretitle">USDC</span>
+                                </div>
+
+                                <form class="copy-form">
+                                  <label for="code_4" class="copy-form__label">
+                                    <input class="copy-form__input" type="text" name="code_4" id="code_4" value="0fjs9mpds3kdjs03k292dlk003k9fd" readonly>
+                                 
+                                    <button class="copy-form__btn">
+                                      <svg width='24' height='24'>
+                                        <use href='img/sprite/sprite.svg#copy'></use>
+                                      </svg>
+                                    </button>
+                                  </label>
+                                </form>
+
+                                <div class="wallet-card__bottom">
+                                  <span class="wallet-card__text">Сеть:</span>
+                                  <span class="wallet-card__subname">BEP-20</span>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </section>
+  
+         
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="info-label">
+      <span class="info-label__icon">
+        <svg width='34' height='34'>
+          <use href='img/sprite/sprite.svg#check3'></use>
+        </svg>
+      </span>
+      <div class="info-label__box">
+        <span class="info-label__title">Реквизиты успешно добавлены</span>
+      </div>
+      <button class="info-label__close">
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+    </div>
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>
