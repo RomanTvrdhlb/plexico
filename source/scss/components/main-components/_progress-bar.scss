@@ -1,76 +1,131 @@
 .progress-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 244px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 244px;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--bg-f);
+    z-index: 0;
+    transform: translateY(-50%);
     z-index: 1;
+  }
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background-color: var(--bg-f);
-        z-index: 0;
-        transform: translateY(-50%);
-        z-index: 1;
-    }
+  &__step {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    z-index: 3;
+    border: solid 2px var(--br-c);
+    background-color: var(--bg-a);
 
-    &__step {
-        width: 13px;
-        height: 13px;
-        border-radius: 50%;
-        z-index: 3;
-        border: solid 2px var(--br-c);
+    &.active {
+      background-color: var(--bg-c);
+      border-color: var(--br-b);
+
+      & + .progress-bar__step.active {
         background-color: var(--bg-a);
-
-        &.active {
-            background-color: var(--bg-c);
-            border-color: var(--br-b);
-
-            & + .progress-bar__step.active{
-                background-color: var(--bg-a);
-                &::before{
-                    width: calc(50% - 6.5px);
-                }
-
-                &:after{
-                    position: absolute;
-                    content: '';
-                    width: 13px;
-                    height: 13px;
-                    top: 50%;
-                    left: 50%;
-                    z-index: 3;
-                    transform: translate(-50%, -50%);
-                    border: solid 2px var(--br-b);
-                    background-color: var(--bg-a);
-                    border-radius: 50%;
-                }
-                
-                & + .progress-bar__step.active{
-                    background-color: var(--bg-a);
-                    &::before{
-                        width: calc(100% - 13px);
-                    }
-                }
-            }
+        &::before {
+          width: calc(50% - 6.5px);
         }
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 50%;
+        &:after {
+          position: absolute;
+          content: "";
+          width: 13px;
+          height: 13px;
+          top: 50%;
+          left: 50%;
+          z-index: 3;
+          transform: translate(-50%, -50%);
+          border: solid 2px var(--br-b);
+          background-color: var(--bg-a);
+          border-radius: 50%;
+        }
+
+        & + .progress-bar__step.active {
+          background-color: var(--bg-a);
+          &::before {
+            width: calc(100% - 13px);
+          }
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--bg-c);
+      z-index: 0;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    &:first-of-type{
+        .progress-bar__text{
             left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--bg-c);
-            z-index: 0;
-            transform: translateY(-50%);
-            z-index: 2;
         }
     }
+
+    &:last-of-type{
+        .progress-bar__text{
+            left: 100%;
+        }
+    }
+
+    &.hide{
+        &::after{
+            background-color: var(--bg-c) !important;
+        }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    content: attr(data-title);
+    display: inline-block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--cl-g);
+    left: 50%;
+    transform: translate(-50%, -100%);
+    min-width: 135px;
+    top: -10px;
+
+    &.active{
+        color: var(--cl-h);
+    }
+
+    @include small-tablet{
+        display: none;
+    }
+  }
+
+  &--balance {
+    
+
+    @include for-mobile{
+        width: clamp(500px, 38.8194vw, 559px);
+    }
+
+    @include mobile{
+        width: calc(100% - 104px);
+        margin: 0 52px;
+    }
+  }
 }

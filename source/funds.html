@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+    <main>
+      <div class="container container--dash">
+        <div class="dashboard">
+          @include('partials/header.html')
+   
+          <aside class="aside">
+            <div class="aside__top">
+              <a href="index.html" class="logo">
+                <svg width='125' height='40'>
+                  <use href='img/sprite/sprite.svg#logo2'></use>
+                </svg>
+              </a>
+
+              <div class="dashboard-info">
+                <div class="dashboard-info__top">
+                  <span class="dashboard-info__title">Ваш баланс</span>
+                  <span class="dashboard-info__date">13 Января, 2024</span>
+                </div>
+                <div class="dashboard-info__box">
+                  <span class="dashboard-info__value">$ <b>4,389.80</b></span>
+                  <span class="dashboard-info__precent">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#top'></use>
+                    </svg>
+                    7%
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="aside__mobile">
+              <div class="aside__mobile-top">
+                <button class="info-btn">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#notification'></use>
+                  </svg>
+                </button>
+                <span class="aside__mobile-user">Анастасия</span>
+            
+                <button class="burger">
+                  <span class="burger__line"></span>
+                </button>
+              </div>
+            
+              <div class="aside__mobile-box">
+                  <form class="search-form"> 
+                      <label for="search"> 
+                        <input type="text" name="search" id="search" placeholder="Поиск">
+                      </label> 
+                      <button type="submit"> 
+                       <svg width='24' height='24'>
+                         <use href='img/sprite/sprite.svg#search'></use>
+                       </svg>
+                      </button> 
+                  </form>
+            
+                  <ul class="aside-nav">
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside1'></use>
+                          </svg>
+                        </span>
+                        Дашборд
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside2'></use>
+                          </svg>
+                        </span>
+                        Продукты
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside3'></use>
+                          </svg>
+                        </span>
+                        Финансы
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside4'></use>
+                          </svg>
+                        </span>
+                        Партнеры
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button active">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside5'></use>
+                          </svg>
+                        </span>
+                        История операций
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside6'></use>
+                          </svg>
+                        </span>
+                        Настройки
+                      </a>
+                    </li>
+                  </ul>
+            
+                  <a href="#" class="exit-btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#exit'></use>
+                    </svg>
+                    Выход
+                  </a>
+              </div>
+            
+              <div class="aside__mobile-bottom">
+                <div class="lang-select select" data-select>
+                  <div class="select__header">
+                    <input type="hidden" class="select__input input-select" id="lang_1" name="lang_1" value="1">
+                    <span class="select__current" data-id="1">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </span>
+                    <svg class="select__current-icon" width='5' height='7'>
+                      <use href='img/sprite/sprite.svg#Union'></use>
+                    </svg>
+                  </div>
+                  <div class="select__body">
+                    <ul class="select__list">
+                      <li class="select__option" data-id="1" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                        Русский
+                      </li>
+                      <li class="select__option" data-id="2" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                        English
+                      </li>
+                      <li class="select__option" data-id="3" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                        Українська
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            
+                <p>Copyright © 2024 Plexico. All Rights Reserved.</p>
+              </div>
+            </div>
+          </aside>
+  
+          <div class="dashboard__content">
+            <section class="finance-section finance-section--funds">
+              <div class="finance-section__box">
+                <h1 class="title">Перевод средств</h1>
+
+                <div class="funds">
+                  <a href="finances.html" class="funds__link">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow'></use>
+                    </svg>
+                    Финансы
+                  </a>
+
+
+                  <div class="funds__box">
+                    <h2 class="pretitle">Перевод средств</h2>
+
+                    <a href="finances.html" class="funds__link">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#arrow'></use>
+                      </svg>
+                      Назад
+                    </a>
+
+                    <button class="funds__btn">
+                      Инструкция по переводу средств
+                    
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#arrowup'></use>
+                      </svg>
+                    </button>
+
+                    <div class="funds__label">
+                      <span class="funds__icon">
+                        <svg width='32' height='32'>
+                          <use href='img/sprite/sprite.svg#info2'></use>
+                        </svg>
+                      </span>
+
+                      <p>Функция перевода средств позволяет пользователям платформы легко и быстро отправлять деньги другим пользователям. </p>
+                    </div>
+
+                    <form class="funds-form main-form">
+                      <label for="valute_1" class="main-form__label">
+                        <span class="main-form__title">Валюта</span>
+                        
+                        <div class="select" data-select>
+                          <div class="select__header">
+                            <input type="hidden" class="select__input input-select" id="valute_1" name="valute_1" value="1">
+                            <span class="select__current" data-id="1">
+                              <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
+                              Bitcoin (BTC)
+                            </span>
+                            <svg class="select__current-icon" width='5' height='7'>
+                              <use href='img/sprite/sprite.svg#Union'></use>
+                            </svg>
+                          </div>
+                          <div class="select__body">
+                            <ul class="select__list">
+                              <li class="select__option" data-id="1" data-type="option">
+                                <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
+                                Bitcoin (BTC)
+                              </li>
+                              <li class="select__option" data-id="2" data-type="option">
+                                <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                                Ethereum (ETH)
+                              </li>
+                              <li class="select__option" data-id="2" data-type="option">
+                                <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
+                                USDT (USDT)
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </label>
+                      <label for="sum_1" class="main-form__label">
+                        <span class="main-form__name">Сумма пополнения</span>
+
+                        <div class="main-form__field">
+                          <input type="number" name="sum_1" id="sum_1" class="main-form__input" placeholder="0.0001">
+                          <span class="main-form__icon">
+                            <svg width='24' height='24'>
+                              <use href='img/sprite/sprite.svg#BTC4'></use>
+                            </svg>
+                          </span>
+                        </div>
+                        
+                      
+                        <div class="main-form__wrapp">
+                          <span class="main-form__text">Комиссия на вывод: <b>0.00001 BTC</b></span>
+                          <span class="main-form__text">Мин: <b>0.00001 BTC</b> , Макс: <b>150 BTC</b></span>
+                        </div>
+                      </label>
+
+                      <label for="login_1" class="main-form__label">
+                        <span class="main-form__name">Login или Email получателя</span>
+
+                        <input type="text" name="login_1" id="login_1" class="main-form__input" placeholder="Введите Login или Email">
+                      </label>
+        
+                      <div class="main-form__inner">
+                        <div class="main-form__total">
+                          <span class="main-form__pretitle">К списанию</span>
+                          <span class="main-form__value"><b>0.00</b> BTC</span>
+                        </div>
+
+                        <button class="main-btn">Отменить</button>
+                        <button class="blue-btn">Перевести средства</button>
+                      </div>
+                    </form>
+
+                  </div>
+                  <aside class="funds__aside">
+                    <a href="funds.html" class="funds__link">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#arrow'></use>
+                      </svg>
+                      Перевод средств
+                    </a>
+                    <div class="funds__aside-box">
+                    <button class="funds__close main-link"> 
+                      Скрыть
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#arrow-bar-right'></use>
+                      </svg>
+                    </button>
+                    <div class="funds__info">
+                      <p>Инструкция по переводу средств</p>
+                      <svg width='26' height='26'>
+                        <use href='img/sprite/sprite.svg#help'></use>
+                      </svg>
+                    </div>
+                    <ol>
+                      <li>
+                        <span>Выбор валюты</span>
+                        <p>В интерфейсе выберите выпадающий список "Валюта" и укажите валюту, которую хотите перевести (например, BTC, ETH, USD и т.д.)</p>
+                      </li>
+                      <li>
+                        <span>Ввод количества средств для перевода</span>
+                        <p>В поле "Сумма перевода" введите количество средств, которое хотите перевести, убедившись, что сумма не превышает доступный баланс на вашем счету.</p>
+                      </li>
+                      <li>
+                        <span>Ввод логина или email получателя</span>
+                        <p>Введите данные получателя и проверьте их правильность. Нажмите кнопку "Подтвердить перевод" для завершения операции. Вы увидите уведомление о успешном переводе или сообщение об ошибке, если что-то пошло не так.</p>
+                        <p>Если у вас возникли вопросы или необходима дополнительная информация, обратитесь в службу поддержки</p>
+                      </li>
+                    </ol>
+                    <button class="funds__close blue-btn">Закрыть</button>
+                  </div>
+                  </aside>
+
+
+                </div>
+              </div>
+            </section>
+  
+         
+          </div>
+        </div>
+      </div>
+    </main>
+
+   
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

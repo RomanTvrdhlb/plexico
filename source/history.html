@@ -166,7 +166,7 @@
           </aside>
   
           <div class="dashboard__content">
-            <section class="finance-section">
+            <section class="finance-section finance-section--history">
               <div class="finance-section__box">
                 <h1 class="title">История операций</h1>
 
@@ -226,13 +226,13 @@
                   <div class="history__box" data-tabs-parrent>
                     <ul class="history__nav">
                       <li class="history__nav-item">
-                       <button class="history__btn active" type="button" data-tab="1">Пополнения</button>
+                       <button class="history__btn" type="button" data-tab="1">Пополнения</button>
                       </li>
                       <li class="history__nav-item">
                         <button class="history__btn" type="button" data-tab="2">Выводы</button>
                        </li>
                        <li class="history__nav-item">
-                        <button class="history__btn" type="button" data-tab="3">Переводы</button>
+                        <button class="history__btn active" type="button" data-tab="3">Переводы</button>
                        </li>
                        <li class="history__nav-item">
                         <button class="history__btn" type="button" data-tab="4">Обмен</button>
@@ -245,7 +245,7 @@
                        </li>
                     </ul>
                     <ul class="history__content">
-                      <li class="history__item active" data-tab-content="1">
+                      <li class="history__item" data-tab-content="1">
 
                         <div class="history__inner">
                           <div class="history-list">
@@ -428,58 +428,128 @@
                           </ul>
                         </div>
                       </li>
-                      <li class="history__item" data-tab-content="3">
-                        <div class="history-list history-list--transfer">
-                          <ul class="history-list__box" data-simplebar>
-                            <li class="history-list__row history-list__row--head">
-                              <span class="history-list__name">От партнера</span>
-                              <span class="history-list__name">Дата и время</span>
-                              <span class="history-list__name">Валюта</span>
-                              <span class="history-list__name">Сумма</span>
-                              <span class="history-list__name">Комиссия</span>
-                              <span class="history-list__name">Итог</span>
-                              <span class="history-list__name">Сумма USDT</span>
-                              <span class="history-list__name">Статус</span>
+                      <li class="history__item active" data-tab-content="3">
+                        <div class="history__tabs" data-inner-parrent>
+                          <ul class="history__tabs-nav">
+                            <li class="history__tabs-item">
+                             <button class="history__tabs-btn active" type="button" data-inner-tab="1">Начисленный перевод</button>
                             </li>
-                            <li class="history-list__row">
-                              <span class="history-list__value">User Name</span>
-                              <span class="history-list__value">04.07.2024 13:12</span>
-                              <span class="history-list__value">BTC</span>
-                              <span class="history-list__value">0,0002</span>
-                              <span class="history-list__value">0,00001</span>
-                              <span class="history-list__value">0,000201</span>
-                              <span class="history-list__value">120.00</span>
-                              <span class="history-list__status green">Выполнено</span>
+                            <li class="history__tabs-item">
+                              <button class="history__tabs-btn" type="button" data-inner-tab="2">Отправленный перевод</button>
+                             </li>
+                          </ul>
+                          <ul class="history__tabs-content">
+                            <li class="history__tabs-inner active" data-inner-content="1">
+                              <div class="history-list history-list--transfer">
+                                <ul class="history-list__box" data-simplebar>
+                                  <li class="history-list__row history-list__row--head">
+                                    <span class="history-list__name">От партнера</span>
+                                    <span class="history-list__name">Дата и время</span>
+                                    <span class="history-list__name">Валюта</span>
+                                    <span class="history-list__name">Сумма</span>
+                                    <span class="history-list__name">Комиссия</span>
+                                    <span class="history-list__name">Итог</span>
+                                    <span class="history-list__name">Сумма USDT</span>
+                                    <span class="history-list__name">Статус</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">User Name</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">0,00001</span>
+                                    <span class="history-list__value">0,000201</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">User Name</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">ETH</span>
+                                    <span class="history-list__value">0,23</span>
+                                    <span class="history-list__value">0,001</span>
+                                    <span class="history-list__value">0,231</span>
+                                    <span class="history-list__value">250.45</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">User Name</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">0,00001</span>
+                                    <span class="history-list__value">0,000201</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">User Name</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,23</span>
+                                    <span class="history-list__value">0,001</span>
+                                    <span class="history-list__value">0,231</span>
+                                    <span class="history-list__value">250.45</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
-                            <li class="history-list__row">
-                              <span class="history-list__value">User Name</span>
-                              <span class="history-list__value">04.07.2024 13:12</span>
-                              <span class="history-list__value">ETH</span>
-                              <span class="history-list__value">0,23</span>
-                              <span class="history-list__value">0,001</span>
-                              <span class="history-list__value">0,231</span>
-                              <span class="history-list__value">250.45</span>
-                              <span class="history-list__status green">Выполнено</span>
-                            </li>
-                            <li class="history-list__row">
-                              <span class="history-list__value">User Name</span>
-                              <span class="history-list__value">04.07.2024 13:12</span>
-                              <span class="history-list__value">BTC</span>
-                              <span class="history-list__value">0,0002</span>
-                              <span class="history-list__value">0,00001</span>
-                              <span class="history-list__value">0,000201</span>
-                              <span class="history-list__value">120.00</span>
-                              <span class="history-list__status green">Выполнено</span>
-                            </li>
-                            <li class="history-list__row">
-                              <span class="history-list__value">User Name</span>
-                              <span class="history-list__value">04.07.2024 13:12</span>
-                              <span class="history-list__value">BTC</span>
-                              <span class="history-list__value">0,23</span>
-                              <span class="history-list__value">0,001</span>
-                              <span class="history-list__value">0,231</span>
-                              <span class="history-list__value">250.45</span>
-                              <span class="history-list__status green">Выполнено</span>
+                            <li class="history__tabs-inner" data-inner-content="2">
+                              <div class="history-list history-list--transfer">
+                                <ul class="history-list__box" data-simplebar>
+                                  <li class="history-list__row history-list__row--head">
+                                    <span class="history-list__name">От партнера</span>
+                                    <span class="history-list__name">Дата и время</span>
+                                    <span class="history-list__name">Валюта</span>
+                                    <span class="history-list__name">Сумма</span>
+                                    <span class="history-list__name">Комиссия</span>
+                                    <span class="history-list__name">Итог</span>
+                                    <span class="history-list__name">Сумма USDT</span>
+                                    <span class="history-list__name">Статус</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">User Name</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">ETH</span>
+                                    <span class="history-list__value">0,23</span>
+                                    <span class="history-list__value">0,001</span>
+                                    <span class="history-list__value">0,231</span>
+                                    <span class="history-list__value">250.45</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">User Name</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">0,00001</span>
+                                    <span class="history-list__value">0,000201</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">User Name</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">0,00001</span>
+                                    <span class="history-list__value">0,000201</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">User Name</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,23</span>
+                                    <span class="history-list__value">0,001</span>
+                                    <span class="history-list__value">0,231</span>
+                                    <span class="history-list__value">250.45</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
                           </ul>
                         </div>
@@ -515,61 +585,311 @@
                         </div>
                       </li>
                       <li class="history__item" data-tab-content="5">
-                        <div class="history-list history-list--swap">
-                          <ul class="history-list__box" data-simplebar>
-                            <li class="history-list__row history-list__row--head">
-                              <span class="history-list__name">Дата и время</span>
-                              <span class="history-list__name">Cумма обмена</span>
-                              <span class="history-list__name">Курс обмена</span>
-                              <span class="history-list__name">Комиссия</span>
-                              <span class="history-list__name">Полученная сумма</span>
-                              <span class="history-list__name">Статус</span>
+                        <div class="history__tabs" data-inner-parrent>
+                          <ul class="history__tabs-nav">
+                            <li class="history__tabs-item">
+                             <button class="history__tabs-btn active" type="button" data-inner-tab="1">Открытие продукта</button>
                             </li>
-                            <li class="history-list__row">
-                              <span class="history-list__value">04.07.2024 13:12</span>
-                              <span class="history-list__value">0,002BTC</span>
-                              <span class="history-list__value">21,45ETH</span>
-                              <span class="history-list__value">0,00001BTC</span>
-                              <span class="history-list__value">21,44002ETH</span>
-                              <span class="history-list__status green">Выполнено</span>
+                            <li class="history__tabs-item">
+                              <button class="history__tabs-btn" type="button" data-inner-tab="2">Дивиденты</button>
+                             </li>
+                             <li class="history__tabs-item">
+                              <button class="history__tabs-btn" type="button" data-inner-tab="3">Закрытие продукта</button>
+                             </li>
+                             <li class="history__tabs-item">
+                              <button class="history__tabs-btn" type="button" data-inner-tab="4">Реинвестирование</button>
+                             </li>
+                          </ul>
+                          <ul class="history__tabs-content">
+                            <li class="history__tabs-inner active" data-inner-content="1">
+                              <div class="history-list history-list--career">
+                                <ul class="history-list__box" data-simplebar>
+                                  <li class="history-list__row history-list__row--head">
+                                    <span class="history-list__name">Продукт</span>
+                                    <span class="history-list__name">Дата и время</span>
+                                    <span class="history-list__name">Валюта</span>
+                                    <span class="history-list__name">Сумма</span>
+                                    <span class="history-list__name">Сумма USDT</span>
+                                    <span class="history-list__name">Статус</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№1</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№2</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№3</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№4</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
-                            <li class="history-list__row">
-                              <span class="history-list__value">04.07.2024 13:12</span>
-                              <span class="history-list__value">0,002BTC</span>
-                              <span class="history-list__value">61052,45USD</span>
-                              <span class="history-list__value">0,00001BTC</span>
-                              <span class="history-list__value">80245,12USDT</span>
-                              <span class="history-list__status green">Выполнено</span>
+                            <li class="history__tabs-inner" data-inner-content="2">
+                              <div class="history-list history-list--career">
+                                <ul class="history-list__box" data-simplebar>
+                                  <li class="history-list__row history-list__row--head">
+                                    <span class="history-list__name">Дивиденты</span>
+                                    <span class="history-list__name">Дата и время</span>
+                                    <span class="history-list__name">Валюта</span>
+                                    <span class="history-list__name">Сумма</span>
+                                    <span class="history-list__name">Сумма USDT</span>
+                                    <span class="history-list__name">Статус</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№1</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№2</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№3</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№4</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="history__tabs-inner" data-inner-content="3">
+                              <div class="history-list history-list--career">
+                                <ul class="history-list__box" data-simplebar>
+                                  <li class="history-list__row history-list__row--head">
+                                    <span class="history-list__name">Продукт</span>
+                                    <span class="history-list__name">Дата и время</span>
+                                    <span class="history-list__name">Валюта</span>
+                                    <span class="history-list__name">Сумма</span>
+                                    <span class="history-list__name">Сумма USDT</span>
+                                    <span class="history-list__name">Статус</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№1</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№2</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№3</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№4</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="history__tabs-inner" data-inner-content="4">
+                              <div class="history-list history-list--career">
+                                <ul class="history-list__box" data-simplebar>
+                                  <li class="history-list__row history-list__row--head">
+                                    <span class="history-list__name">Реинвестирование</span>
+                                    <span class="history-list__name">Дата и время</span>
+                                    <span class="history-list__name">Валюта</span>
+                                    <span class="history-list__name">Сумма</span>
+                                    <span class="history-list__name">Сумма USDT</span>
+                                    <span class="history-list__name">Статус</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№1</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№2</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№3</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№4</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
                           </ul>
                         </div>
                       </li>
                       <li class="history__item" data-tab-content="6">
-                        <div class="history-list history-list--swap">
-                          <ul class="history-list__box" data-simplebar>
-                            <li class="history-list__row history-list__row--head">
-                              <span class="history-list__name">Дата и время</span>
-                              <span class="history-list__name">Cумма обмена</span>
-                              <span class="history-list__name">Курс обмена</span>
-                              <span class="history-list__name">Комиссия</span>
-                              <span class="history-list__name">Полученная сумма</span>
-                              <span class="history-list__name">Статус</span>
+                        <div class="history__tabs" data-inner-parrent>
+                          <ul class="history__tabs-nav">
+                            <li class="history__tabs-item">
+                             <button class="history__tabs-btn active" type="button" data-inner-tab="1">Реферальные начисления</button>
                             </li>
-                            <li class="history-list__row">
-                              <span class="history-list__value">04.07.2024 13:12</span>
-                              <span class="history-list__value">0,002BTC</span>
-                              <span class="history-list__value">21,45ETH</span>
-                              <span class="history-list__value">0,00001BTC</span>
-                              <span class="history-list__value">21,44002ETH</span>
-                              <span class="history-list__status green">Выполнено</span>
+                            <li class="history__tabs-item">
+                              <button class="history__tabs-btn" type="button" data-inner-tab="2">Партнерский ранг</button>
+                             </li>
+                          </ul>
+                          <ul class="history__tabs-content">
+                            <li class="history__tabs-inner active" data-inner-content="1">
+                              <div class="history-list history-list--career">
+                                <ul class="history-list__box" data-simplebar>
+                                  <li class="history-list__row history-list__row--head">
+                                    <span class="history-list__name">Логин партнера</span>
+                                    <span class="history-list__name">Дата и время</span>
+                                    <span class="history-list__name">Валюта</span>
+                                    <span class="history-list__name">Сумма</span>
+                                    <span class="history-list__name">Сумма USDT</span>
+                                    <span class="history-list__name">Статус</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№1</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№2</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№3</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№4</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
-                            <li class="history-list__row">
-                              <span class="history-list__value">04.07.2024 13:12</span>
-                              <span class="history-list__value">0,002BTC</span>
-                              <span class="history-list__value">61052,45USD</span>
-                              <span class="history-list__value">0,00001BTC</span>
-                              <span class="history-list__value">80245,12USDT</span>
-                              <span class="history-list__status green">Выполнено</span>
+                            <li class="history__tabs-inner" data-inner-content="2">
+                              <div class="history-list history-list--career">
+                                <ul class="history-list__box" data-simplebar>
+                                  <li class="history-list__row history-list__row--head">
+                                    <span class="history-list__name">Ранг</span>
+                                    <span class="history-list__name">Дата и время</span>
+                                    <span class="history-list__name">Валюта</span>
+                                    <span class="history-list__name">Сумма</span>
+                                    <span class="history-list__name">Сумма USDT</span>
+                                    <span class="history-list__name">Статус</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№1</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№2</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№3</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                  <li class="history-list__row">
+                                    <span class="history-list__value">Продукт№4</span>
+                                    <span class="history-list__value">04.07.2024 13:12</span>
+                                    <span class="history-list__value">BTC</span>
+                                    <span class="history-list__value">0,0002</span>
+                                    <span class="history-list__value">120.00</span>
+                                    <span class="history-list__status green">Выполнено</span>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
                           </ul>
                         </div>

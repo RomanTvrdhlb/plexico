@@ -11,3 +11,4 @@ import './components/tabs.js';
 import './components/chart.js';
 import './components/checkbox.js';
 import './components/simplebar.js';
+import './components/global.js';

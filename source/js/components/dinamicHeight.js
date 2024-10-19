@@ -26,22 +26,36 @@ function stickyHeaderFunction(breakpoint){
 }
 
 const settingsElement = document.querySelector('.settings');
+const historyElement = document.querySelector('.finance-section--history .history');
+const fundsElement = document.querySelector('.finance-section--funds .funds');
+const balanceElement = document.querySelector('.finance-section--balance .balance');
 
-function updateSettingsDistance(el) {
-
+function updateSettingsDistance(el, name) {
     if (el) {
         const distanceFromTop = el.getBoundingClientRect().top + window.pageYOffset;
-        document.documentElement.style.setProperty('--settings-distance', `${distanceFromTop}px`);
+        document.documentElement.style.setProperty(`--${name}-distance`, `${distanceFromTop}px`);
     }
 }
 
-if(settingsElement) updateSettingsDistance(settingsElement);
+if (settingsElement) {
+    updateSettingsDistance(settingsElement, 'settings');
+    window.addEventListener('resize', () => updateSettingsDistance(settingsElement, 'settings'));
+}
 
-if(settingsElement) window.addEventListener('resize', updateSettingsDistance(settingsElement));
+if (historyElement) {
+    updateSettingsDistance(historyElement, 'history');
+    window.addEventListener('resize', () => updateSettingsDistance(historyElement, 'history'));
+}
 
-if(settingsElement) updateSettingsDistance(settingsElement);
+if (fundsElement) {
+    updateSettingsDistance(fundsElement, 'history');
+    window.addEventListener('resize', () => updateSettingsDistance(fundsElement, 'history'));
+}
 
-if(settingsElement) window.addEventListener('resize', updateSettingsDistance(settingsElement));
+if (balanceElement) {
+    updateSettingsDistance(balanceElement, 'balance');
+    window.addEventListener('resize', () => updateSettingsDistance(balanceElement, 'balance'));
+}
 
 stickyHeaderFunction(320);
 

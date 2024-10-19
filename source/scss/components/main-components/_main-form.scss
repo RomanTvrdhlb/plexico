@@ -310,6 +310,460 @@
 
    
   }
+
+  &__pretitle{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: clamp(14px, 1.1111vw, 16px);
+    line-height: 137%;
+    color: var(--cl-j);
+
+    @include mobile{
+      line-height: 120%;
+    }
+  }
+
+  &__value{
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: clamp(16px, 1.3889vw, 20px);
+      letter-spacing: -0.01em;
+      text-align: right;
+      color: var(--cl-n);
+
+      b{
+        color: var(--cl-d);
+      }
+
+      @include for-mobile{
+        line-height: 110%;
+      }
+
+      @include mobile{
+        line-height: 137%;
+      }
+  }
+    
+  &__inner{
+    display: grid;
+    width: 100%;
+
+    @include for-laptop{
+      grid-gap: 32px 16px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include laptop{
+      grid-template-columns: 100%;
+      grid-gap: 16px;
+    }
+
+    .main-form__total{
+      grid-column: 1/-1;
+
+      @include laptop{
+        margin-bottom: 16px;
+      }
+    }
+
+    .main-btn{
+      padding: 10px 10px;
+
+      @include for-laptop{
+        min-width: 231px;
+      }
+
+      
+      @include laptop{
+        width: 100%;
+      }
+    }
+
+    .blue-btn{
+      padding: 10px 10px;
+
+      @include for-laptop{
+        min-width: 231px;
+        justify-self: end;
+      }
+
+      @include laptop{
+        width: 100%;
+      }
+    }
+  }
+
+  &__wrapp{
+    display: flex;
+    grid-gap: 4px;
+
+    .main-form__text{
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 130%;
+      letter-spacing: -0.01em;
+      color: var(--cl-l);
+
+      b{
+        font-weight: 500;
+        line-height: 110%;
+        color:  var(--cl-m);
+      }
+    }
+
+    @include for-laptop{
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include laptop{
+      flex-direction: column;
+    }
+  }
+
+  &__total{
+    border-radius: 6px;
+    padding: 16px clamp(20px, 1.6667vw, 24px);
+    background:  var(--bg-d);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 10px;
+  }
+
+  &__title{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--cl-m);
+  }
+
+  &__field{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 6px;
+    position: relative;
+ 
+    .main-form__icon{
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      width: 24px;
+      height: 24px;
+      display: flex;
+
+      svg,img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__row{
+    display: grid;
+    width: 100%;
+    grid-gap: 12px;
+
+    @include for-laptop{
+      .main-form__title{
+        grid-column: 1/-1;
+      }
+
+      grid-template-columns: 206px 1fr;
+    }
+
+    @include laptop{
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__image{
+    width: clamp(52px, 4.2361vw, 61px);
+    height: clamp(52px, 4.2361vw, 61px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: var(--bg-d);
+
+    svg,img{
+      width: clamp(22px, 1.875vw, 27px);
+      height: clamp(18px, 1.4583vw, 21px);
+    }
+  }
+
+  &__swap{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: clamp(12px, 1.1111vw, 16px);
+    align-items: center;
+
+    &-box{
+      display: flex;
+      padding: 12px clamp(16px, 1.3889vw, 20px);
+      border-radius: 6px;
+      background: var(--bg-d);
+      grid-gap: 12px 4px;
+      flex-wrap: wrap;
+
+      @include for-mobile{
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      @include mobile{
+        flex-direction: column;
+      }
+    }
+
+    &-inner{
+      display: inline-flex;
+      grid-gap: 4px clamp(4px, .5556vw, 8px);
+      flex-wrap: wrap;
+
+      @include mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .main-form__text{
+      font-size: clamp(12px, .9722vw, 14px);
+    }
+
+    .main-form__value{
+      font-size: clamp(12px, .9722vw, 14px);
+      line-height: 130%;
+    }
+  }
 }
 
+.funds-form{
+  grid-gap: 20px;
+  .main-form{
+
+    &__label{
+      grid-template-columns: 100%;
+    }
+
+    &__total{
+      @include small-tablet{
+        margin-top: 8px;
+      }
+    }
+    
+    &__input{
+      font-weight: 400;
+      line-height: 126%;
+      padding: 4px 36px 4px 16px;
+    }
+  }
+
+  .select{
+    width: 100%;
+    padding: 9px 12px 9px 16px;
+
+    &__current:not(.select__current-icon){
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-m);
+
+      svg, img{
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &__option{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-m);
+      padding: 0 16px;
+
+      svg, img{
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+
+.swap-form{
+  grid-gap: 25px;
+  padding: clamp(24px, 1.9444vw, 28px) clamp(20px, 2.222vw, 32px) clamp(28px, 2.2222vw, 32px);
+  border: 1px solid var(--br-c);
+  border-radius: 12px;
+
+  .main-form{
+    &__label{
+      grid-template-columns: 100%;
+    }
+
+    &__inner{
+      margin-top: 7px;
+
+      .main-btn{
+        @include for-laptop{
+          min-width: clamp(190px, 16.0417vw, 231px);
+        }
+      }
+  
+      .blue-btn{
+        @include for-laptop{
+          min-width: clamp(190px, 16.0417vw, 231px);
+        }
+      }
+    }
+    
+    &__input{
+      font-weight: 400;
+      line-height: 126%;
+      padding: 4px 36px 4px 16px;
+    }
+  }
+
+  .select{
+    width: 100%;
+    padding: 9px 12px 9px 16px;
+
+    &__current:not(.select__current-icon){
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-m);
+
+      svg, img{
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &__option{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-m);
+      padding: 0 16px;
+
+      svg, img{
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+
+.balance-form{
+  grid-gap: 20px;
+  padding: clamp(24px, 1.9444vw, 28px) clamp(20px, 2.222vw, 32px) clamp(28px, 2.2222vw, 32px);
+  border: 1px solid var(--br-c);
+  border-radius: 12px;
+
+  @include for-small-tablet{
+    max-width: 560px;
+  }
+
+  @include small-tablet{
+    width: 100%;
+  }
+
+  .main-form{
+    &__label{
+      grid-template-columns: 100%;
+      grid-gap: 6px;
+    }
+
+    &__wrapp{
+        @include for-small-tablet{
+          justify-content: flex-end;
+
+          .main-form__text{
+            text-align: right;
+        }
+      }
+    }
+
+    &__input{
+      font-weight: 400;
+      line-height: 126%;
+      padding: 4px 36px 4px 16px;
+
+      &--mode{
+        padding-right: 0;
+      }
+    }
+
+    &__inner{
+      margin-top: 12px;
+
+      .main-btn{
+        @include for-laptop{
+          min-width: clamp(190px, 16.0417vw, 231px);
+        }
+      }
+  
+      .blue-btn{
+        @include for-laptop{
+          min-width: clamp(190px, 16.0417vw, 231px);
+        }
+      }
+    }
+    
+    &__pretitle{
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+
+      &--mob{
+        @include for-mobile{
+          display: none;
+        }
+      }
+
+      &:not(.main-form__pretitle--mob){
+        @include mobile{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .select{
+    width: 100%;
+    padding: 9px 12px 9px 16px;
+
+    &__current:not(.select__current-icon){
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-m);
+
+      svg, img{
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &__option{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-m);
+      padding: 0 16px;
+
+      svg, img{
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
 

@@ -540,6 +540,57 @@
       }
     }
   }
+
+  &--career{
+    
+    @include small-tablet{
+      .simplebar-track {
+        display: flex ;
+      }
+
+      margin-bottom: 16px;
+
+      &::before{
+        content: "";
+      }
+    }
+
+    .history-list{
+ 
+      &__row {
+        @include for-laptop {
+          grid-template-columns: 1fr minmax(120px, 1fr) repeat(3, 1fr) minmax(77px, .5fr);
+        }
+    
+        @include laptop {
+          @include for-small-tablet {
+            grid-gap: 5px;
+            grid-template-columns: 1fr minmax(120px, 1fr) minmax(100px, 1fr) 1fr 1fr minmax(77px, .5fr);
+          }
+        }
+    
+        @include for-small-tablet {
+          padding: 0 clamp(10px, 1.3889vw, 20px);
+        }
+    
+        @include small-tablet {
+          padding: 0 20px;
+          grid-template-columns: minmax(120px, .85fr) minmax(100px, .7fr) minmax(60px, .4fr) repeat(2, minmax(100px, .7fr)) minmax(66px, .5fr);
+          min-width: 700px;
+        }
+
+        @include mobile{
+          min-width: clamp(646px, 133.2vw, 666px);
+        }
+    
+        .history-list {
+          &__name:last-child {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }
 
 @keyframes bounce {

@@ -32,6 +32,72 @@
         }
     }
 
+    &__tabs{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+
+        @include mobile{
+            max-width: calc(100vw - (var(--container-offset) * 2) - ( clamp(24px, 2.2222vw, 32px) * 2));
+        }
+
+        &-nav{
+            display: flex;
+            align-items: center;
+            grid-gap: 4px;
+            padding: 3px;
+            border-radius: 8px;
+            background: var(--bg-g);
+            width: fit-content;
+
+            @include mobile{
+                width: 100%;
+                overflow: auto;
+            }
+        }
+
+        &-btn{
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 110%;
+            letter-spacing: -0.01em;
+            color: var(--cl-e);
+            transition: all .3s;
+            border: 0.50px solid transparent;
+            border-radius: 6px;
+            padding: 8px 12px;
+            width: fit-content;
+            height: 29px;
+
+            &:hover{
+                &:not(.active){
+                    color: rgba(10, 14, 32, .9);
+                    background: var(--bg-a);
+                    border-color: var(--br-g);
+                    opacity: .8;
+                }
+            }
+
+            &.active{
+                border-color: var(--br-g);
+                background: var(--bg-a);
+                color: rgba(10, 14, 32, .9);
+            }
+
+            @include small-tablet{
+                white-space: nowrap;
+                @include for-mobile{
+                    padding: 8px 6px;
+                }
+            }
+
+            @include mobile{
+                padding: 8px 12px;
+            }
+        }
+    }
+
     &__nav{
         display: flex;
         align-items: center;

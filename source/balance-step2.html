@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  <main>
+    <div class="container container--dash">
+      <div class="dashboard">
+        @include('partials/header.html')
+
+        <aside class="aside">
+          <div class="aside__top">
+            <a href="index.html" class="logo">
+              <svg width='125' height='40'>
+                <use href='img/sprite/sprite.svg#logo2'></use>
+              </svg>
+            </a>
+
+            <div class="dashboard-info">
+              <div class="dashboard-info__top">
+                <span class="dashboard-info__title">Ваш баланс</span>
+                <span class="dashboard-info__date">13 Января, 2024</span>
+              </div>
+              <div class="dashboard-info__box">
+                <span class="dashboard-info__value">$ <b>4,389.80</b></span>
+                <span class="dashboard-info__precent">
+                  <svg width='16' height='16'>
+                    <use href='img/sprite/sprite.svg#top'></use>
+                  </svg>
+                  7%
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="aside__mobile">
+            <div class="aside__mobile-top">
+              <button class="info-btn">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#notification'></use>
+                </svg>
+              </button>
+              <span class="aside__mobile-user">Анастасия</span>
+
+              <button class="burger">
+                <span class="burger__line"></span>
+              </button>
+            </div>
+
+            <div class="aside__mobile-box">
+              <form class="search-form">
+                <label for="search">
+                  <input type="text" name="search" id="search" placeholder="Поиск">
+                </label>
+                <button type="submit">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#search'></use>
+                  </svg>
+                </button>
+              </form>
+
+              <ul class="aside-nav">
+                <li class="aside-nav__item">
+                  <a href="index.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside1'></use>
+                      </svg>
+                    </span>
+                    Дашборд
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside2'></use>
+                      </svg>
+                    </span>
+                    Продукты
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="finances.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside3'></use>
+                      </svg>
+                    </span>
+                    Финансы
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside4'></use>
+                      </svg>
+                    </span>
+                    Партнеры
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="history.html" class="aside-nav__button active">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside5'></use>
+                      </svg>
+                    </span>
+                    История операций
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="settings.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside6'></use>
+                      </svg>
+                    </span>
+                    Настройки
+                  </a>
+                </li>
+              </ul>
+
+              <a href="#" class="exit-btn">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#exit'></use>
+                </svg>
+                Выход
+              </a>
+            </div>
+
+            <div class="aside__mobile-bottom">
+              <div class="lang-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="lang_1" name="lang_1" value="1">
+                  <span class="select__current" data-id="1">
+                    <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                    Русский
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+                    <li class="select__option" data-id="1" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                      English
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                      Українська
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <p>Copyright © 2024 Plexico. All Rights Reserved.</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="dashboard__content">
+          <section class="finance-section finance-section--balance">
+            <div class="finance-section__box">
+              <h1 class="title">Пополнить баланс</h1>
+
+              <div class="balance">
+                <a href="finances.html" class="balance__link">
+                  <svg width='16' height='16'>
+                    <use href='img/sprite/sprite.svg#arrow'></use>
+                  </svg>
+                  Финансы
+                </a>
+
+                <div class="balance__box">
+                  <h2 class="pretitle">Пополнить баланс</h2>
+                  <a href="finances.html" class="balance__link">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow'></use>
+                    </svg>
+                    Назад
+                  </a>
+
+                  <div class="progress-bar progress-bar--balance">
+                    <div class="progress-bar__step active">
+                      <span class="progress-bar__text">Cумма пополнения</span>
+                    </div>
+                    <div class="progress-bar__step active">
+                      <span class="progress-bar__text">Реквизиты</span>
+                    </div>
+                    <div class="progress-bar__step">
+                      <span class="progress-bar__text">Подтверждение</span>
+                    </div>
+                  </div>
+
+                  <div class="balance__inner">
+                    <div class="balance__top">
+                      <span class="balance__title">Реквизиты для пополнения балансa</span>
+                      <p>Совершите перевод на сумму, которая была указана при создании заявки на пополнение баланса. Обратите внимание на сеть перевода!</p>
+                    </div>
+
+
+                    <div class="balance__content">
+
+                      <div class="balance__info">
+                        <div class="balance__label">
+                          <span class="balance__icon">
+                            <svg width='32' height='32'>
+                              <use href='img/sprite/sprite.svg#warn'></use>
+                            </svg>
+                          </span>
+    
+                          <p>Перед выполнением операции проверьте правильность введенных данных</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form class="balance-form main-form">
+                      <label for="valute_1" class="main-form__label">
+                        <span class="main-form__title">Сеть для пополнения криптовалюты</span>
+                        <div class="select" data-select>
+                          <div class="select__header">
+                            <input type="hidden" class="select__input input-select" id="valute_1" name="valute_1"
+                              value="1">
+                            <span class="select__current" data-id="1">
+                              <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
+                              Bitcoin (BTC)
+                            </span>
+                            <svg class="select__current-icon" width='5' height='7'>
+                              <use href='img/sprite/sprite.svg#Union'></use>
+                            </svg>
+                          </div>
+                          <div class="select__body">
+                            <ul class="select__list">
+                              <li class="select__option" data-id="1" data-type="option">
+                                <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
+                                Bitcoin (BTC)
+                              </li>
+                              <li class="select__option" data-id="2" data-type="option">
+                                <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                                Ethereum (ETH)
+                              </li>
+                              <li class="select__option" data-id="2" data-type="option">
+                                <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
+                                USDT (USDT)
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </label>
+
+                      <label for="sum_1" class="main-form__label">
+                        <span class="main-form__title">Сумма пополнения</span>
+                        <div class="main-form__field">
+                          <input type="number" name="sum_1" id="sum_1" class="main-form__input" placeholder="0.0001">
+                          <span class="main-form__icon">
+                            <svg width='24' height='24'>
+                              <use href='img/sprite/sprite.svg#BTC4'></use>
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="main-form__wrapp">
+                          <span class="main-form__text">Мин: <b>0.00001 BTC</b> , Макс: <b>150 BTC</b></span>
+                        </div>
+                      </label>
+
+                      <div class="main-form__inner">
+                        <button class="main-btn">Отменить</button>
+                        <button class="blue-btn">Перевести средства</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </section>
+
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

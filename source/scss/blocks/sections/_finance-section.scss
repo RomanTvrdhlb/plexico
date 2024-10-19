@@ -1,11 +1,17 @@
 .finance-section{
+
+    --height: calc(100vh - var(--header-height) - clamp(28px, 2.2695vw, 32px) - 32px);
+
     @include for-small-tablet{
         margin-bottom: 32px;
     }
 
     @include small-tablet{
+        --height: calc(100vh - var(--header-height) - clamp(28px, 2.2695vw, 32px) - 41px);
         margin-bottom: 41px;
     }
+
+   
 
     &__wrapp{
         display: flex;
@@ -50,6 +56,69 @@
 
         @include mobile{
             grid-gap: 24px;
+        }
+    }
+
+    &--history{
+        .history{
+            @include for-small-tablet{
+                min-height:  calc(100vh - var(--history-distance) - 32px);
+            }
+        
+            @include small-tablet{
+                min-height:  calc(100vh - var(--history-distance) - 41px);
+            }
+        }
+    }
+
+    &--funds{
+        .funds{
+            @include for-small-tablet{
+                min-height:  calc(100vh - var(--history-distance) - 32px);
+            }
+
+            @include small-tablet{
+                min-height:  calc(100vh - var(--history-distance) - 41px);
+
+               
+            }
+        
+            &__box{
+                @include small-tablet{
+                    flex-grow: 1;
+                    grid-gap: 24px;
+                }
+            }
+        }
+
+        @include small-tablet{
+            .title{
+                display: none;
+            }
+        }
+    }
+
+    &--balance{
+        .balance{
+            @include for-small-tablet{
+                min-height:  calc(100vh - var(--balance-distance) - 32px);
+            }
+
+            @include small-tablet{
+                min-height:  calc(100vh - var(--balance-distance) - 41px);
+            }
+        
+            &__box{
+                @include small-tablet{
+                    flex-grow: 1;
+                }
+            }
+        }
+
+        @include small-tablet{
+            .title{
+                display: none;
+            }
         }
     }
 }
