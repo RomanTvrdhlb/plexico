@@ -1,0 +1,64 @@
+.contacts{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(24px, 2.2222vw, 32px);
+
+    &__add{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        width: 100%;
+        justify-content: space-between;
+        border: 1px solid var(--br-c);
+        border-radius: 12px;
+        padding: clamp(12px, 1.3194vw, 18px) clamp(12px, 1.6667vw, 24px) clamp(12px, 1.3194vw, 18px) clamp(16px, 1.6667vw, 24px);
+    
+        .blue-btn{
+            font-size: 12px;
+            line-height: 120%;
+            letter-spacing: -0.01em;
+            padding: 8px 16px;
+            height: 30px;
+            grid-gap: 4px;
+
+            i{
+                font-style: normal;
+                font-weight: inherit;
+
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        &-box{
+            display: flex;
+            align-items: center;
+            grid-gap: clamp(16px, 1.5278vw, 22px);
+        }
+    }
+
+    &__name{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(14px, 1.25vw, 18px);
+        line-height: 120%;
+        color: var(--cl-h);
+
+        @include for-mobile{
+            letter-spacing: -0.01em;
+        }
+    }
+
+    &__subtitle{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(14px, 1.1111vw, 16px);
+        line-height: 137%;
+        color: var(--cl-q);
+
+        @include mobile{
+        line-height: 120%;
+        }
+    }
+}

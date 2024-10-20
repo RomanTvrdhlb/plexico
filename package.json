@@ -61,7 +61,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-to-ico": "^1.0.0",
     "inputmask": "^5.0.7",
-    "intl-tel-input": "^20.1.0",
+    "intl-tel-input": "^20.3.0",
     "just-validate": "^3.3.3",
     "lottie-web": "^5.12.2",
     "nouislider": "^15.7.1",

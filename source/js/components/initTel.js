@@ -27,11 +27,11 @@ export const initTelInput = (code, form) => {
         if (iti.isValidNumberPrecise()) {
           removeCustomClass(item, "just-validate-error-field");
           removeCustomClass(item.parentNode, "just-validate-error-field");
-          form.querySelector('.main-btn.submit').style.pointerEvents = 'initial';
+          form.querySelector('.blue-btn').style.pointerEvents = 'initial';
          
         } else {
           addCustomClass(item.parentNode, "just-validate-error-field");
-          form.querySelector('.main-btn.submit').style.pointerEvents = 'none';
+          form.querySelector('.blue-btn').style.pointerEvents = 'none';
         
         }
       }
@@ -84,9 +84,9 @@ export const initTelInput = (code, form) => {
 };
 
 
-
 const forms = document.querySelectorAll('.main-form');
 
 forms && forms.forEach(function(form){
+  console.log(form);
   initTelInput('RU', form);
 })

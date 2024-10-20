@@ -402,3 +402,52 @@
       }
   }
 }
+
+.contact-select{
+  width: 100%;
+    padding: 11px 12px 7px 16px;
+    height: 44px;
+    align-self: end;
+
+  .select{
+    &__current:not(.select__current-icon){
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-m);
+
+      svg, img{
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &__option{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-m);
+      padding: 0 16px;
+
+      svg, img{
+        height: 24px;
+        width: 24px;
+      }
+
+      &[data-id='1']{
+        display: none !important;
+      }
+    }
+
+    &__current{
+      &[data-id='1']{
+        color: var(--cl-g);
+      }
+    }
+    
+  }
+
+  &.active{
+    border-color: var(--br-b);
+  }
+}

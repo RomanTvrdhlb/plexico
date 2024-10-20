@@ -173,48 +173,48 @@
                 <div class="settings">
                   <div class="settings__aside">
                     <span class="settings__subtitle">MЕНЮ</span>
-                    <ul class="settings-nav">
-                      <li class="settings-nav__item">
-                      <a href="settings.html" class="settings-nav__btn">
-                          <svg width='20' height='20'>
-                            <use href='img/sprite/sprite.svg#Personal'></use>
-                          </svg>
-                          Личные данные
-                      </a>
-                      </li>
-                      <li class="settings-nav__item">
-                        <a href="settings-lang.html" class="settings-nav__btn">
-                          <svg width='20' height='20'>
-                            <use href='img/sprite/sprite.svg#Contact'></use>
-                          </svg>
-                          Контактные данные
+                      <ul class="settings-nav">
+                        <li class="settings-nav__item">
+                        <a href="settings.html" class="settings-nav__btn">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#Personal'></use>
+                            </svg>
+                            Личные данные
                         </a>
-                      </li>
-                      <li class="settings-nav__item">
-                        <a href="settings-bot.html" class="settings-nav__btn active">
-                          <svg width='20' height='20'>
-                            <use href='img/sprite/sprite.svg#Verification'></use>
-                          </svg>
-                          Верификация
-                        </a>
-                      </li>
-                      <li class="settings-nav__item">
-                        <a href="settings-bot.html" class="settings-nav__btn">
-                          <svg width='20' height='20'>
-                            <use href='img/sprite/sprite.svg#Safety'></use>
-                          </svg>
-                          Безопасность
-                        </a>
-                      </li>
-                      <li class="settings-nav__item">
-                        <a href="settings-bot.html" class="settings-nav__btn">
-                          <svg width='20' height='20'>
-                            <use href='img/sprite/sprite.svg#MyWallet'></use>
-                          </svg>
-                          Mои реквизиты
-                        </a>
-                      </li>
-                    </ul>
+                        </li>
+                        <li class="settings-nav__item">
+                          <a href="settings-lang.html" class="settings-nav__btn active">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#Contact'></use>
+                            </svg>
+                            Контактные данные
+                          </a>
+                        </li>
+                        <li class="settings-nav__item">
+                          <a href="settings-bot.html" class="settings-nav__btn">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#Verification'></use>
+                            </svg>
+                            Верификация
+                          </a>
+                        </li>
+                        <li class="settings-nav__item">
+                          <a href="settings-bot.html" class="settings-nav__btn">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#Safety'></use>
+                            </svg>
+                            Безопасность
+                          </a>
+                        </li>
+                        <li class="settings-nav__item">
+                          <a href="settings-bot.html" class="settings-nav__btn">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#MyWallet'></use>
+                            </svg>
+                            Mои реквизиты
+                          </a>
+                        </li>
+                      </ul>
                   </div>
                   <div class="settings__content">
                     <button class="settings__close">
@@ -224,71 +224,86 @@
                       Настройки профиля
                     </button>
                     <div class="settings__inner">
-                      <span class="pretitle">Центр верификация</span>
-                    
-                      <div class="verification">
-                        <div class="verification__box">
-                          <div class="verification__top">
-                            <span class="verification__pretitle">Уровень верификации профиля</span>
-                            <div class="verification__level">
-                              <span class="verification__text">Базовый уровень</span>
-                              <span class="verification__label orange">2 LVL</span>
-                            </div>
+                      <span class="pretitle">Контактные данные</span>
+
+                      <div class="contacts">
+                        <div class="contacts__add">
+                          <span class="contacts__subtitle">Telegram</span>
+
+                          <div class="contacts__add-box">
+                            <span class="contacts__name">@ana123</span>
+                            <button class="edit-btn"><i>Изменить</i>
+                              <svg width='16' height='16'>
+                                <use href='img/sprite/sprite.svg#pen'></use>
+                              </svg>
+                            </button>
                           </div>
-
-                          <ul class="level-bar">
-                            <li class="level-bar__item active">
-                              <span class="level-bar__value">0 LVL</span>
-                              <span class="level-bar__row"></span>
-                            </li>
-                            <li class="level-bar__item active">
-                              <span class="level-bar__value">1 LVL</span>
-                              <span class="level-bar__row  violet"></span>
-                            </li>
-                            <li class="level-bar__item active">
-                              <span class="level-bar__value">2 LVL</span>
-                              <span class="level-bar__row orange"></span>
-                            </li>
-                          </ul>
-
-                          <div class="verification__content">
-                            <div class="verification__info">
-                              <span class="verification__title">
-                                <span class="verification__icon orange">
-                                  <svg width='20' height='20'>
-                                    <use href='img/sprite/sprite.svg#Limits'></use>
-                                  </svg>
-                                </span>
-                                Лимиты верификации профиля
-                              </span>
-                            </div>
-
-                            <ul class="verification__list">
-                              <li class="verification__item">
-                                <span class="verification__text">Сумма инвестиции (по всем продуктам):</span>
-                                <span class="verification__value">до $3,000,000</span>
-                              </li>
-                              <li class="verification__item">
-                                <span class="verification__text">Вывод:</span>
-                                <span class="verification__value">до $3,000,000 в месяц</span>
-                                <p>-Вывод не доступен без активации кабинета</p>
-                                <p>-Активация кабинета = $100 открытый мин продукт</p>
-                              </li>
-                              <li class="verification__item">
-                                <span class="verification__text">Уровни партнерской программы:</span>
-                                <span class="verification__value">Доступно до максимального уровня</span>
-                              </li>
-                              <li class="verification__item">
-                                <span class="verification__text">Обмен валют:</span>
-                                <span class="verification__value">Доступно</span>
-                              </li>
-                              <li class="verification__item">
-                                <span class="verification__text">Внутренние переводы:</span>
-                                <span class="verification__value">Недоступно</span>
-                              </li>
-                            </ul>
-                          </div>
+                         
                         </div>
+
+                        <form class="contact-form main-form">
+
+                          <label for="country_1" class="main-form__label">
+                            <span class="main-form__name">Cтрана</span>
+
+                            <div class="contact-select select" data-select>
+                              <div class="select__header">
+                                <input type="hidden" class="select__input input-select" id="country_1" name="country_1" value="1">
+                                <span class="select__current" data-id="1">
+                                  Выберите страну
+                                </span>
+                                <svg class="select__current-icon" width='5' height='7'>
+                                  <use href='img/sprite/sprite.svg#Union'></use>
+                                </svg>
+                              </div>
+                              <div class="select__body">
+                                <ul class="select__list">
+                                  <li class="select__option" data-id="1" data-type="option">
+                                    Выберите страну
+                                  </li>
+                                  <li class="select__option" data-id="2" data-type="option">
+                                    English
+                                  </li>
+                                  <li class="select__option" data-id="3" data-type="option">
+                                    Ukraine
+                                  </li>
+                                  <li class="select__option" data-id="3" data-type="option">
+                                    Russia
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </label>
+                        
+                          <label for="tel" class="main-form__label">
+                            <span class="main-form__name">Номер телефона</span>
+                            <input type="tel" name="tel" id="tel" class="main-form__input input-phone">
+                          </label>
+
+                          <label for="city" class="main-form__label">
+                            <span class="main-form__name">Город</span>
+                            <input type="text" name="city" id="city" class="main-form__input" placeholder="Введите Ваш город">
+                          </label>
+
+                          <label for="code" class="main-form__label">
+                            <span class="main-form__name">Почтовый индекс</span>
+                            <input type="number" name="code" id="code" class="main-form__input" placeholder="_ _ _ _ _ _">
+                          </label>
+
+                          <label for="adress" class="main-form__label">
+                            <span class="main-form__name">Адрес</span>
+                            <input type="text" name="adress" id="adress" class="main-form__input" placeholder="Введите адрес">
+                          </label>
+
+                          <label for="mail" class="main-form__label">
+                            <span class="main-form__name">Email*</span>
+                            <input type="email" name="mail" id="mail" class="main-form__input" placeholder="ana126@mail.com">
+                          </label>
+
+                          <button class="blue-btn">Cохранить изменения</button>
+                       
+                        </form>
+                      
                       </div>
                     </div>
                   </div>
@@ -303,9 +318,9 @@
       </div>
     </main>
 
-
   @include('partials/modals.html')
-  <script defer src="js/main.js"></script>
+  
+  <script src="js/main.js"></script>
 </body>
 
 

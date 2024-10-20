@@ -175,7 +175,7 @@
                     <span class="settings__subtitle">MЕНЮ</span>
                     <ul class="settings-nav">
                       <li class="settings-nav__item">
-                      <a href="settings.html" class="settings-nav__btn">
+                      <a href="settings.html" class="settings-nav__btn active">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#Personal'></use>
                           </svg>
@@ -191,7 +191,7 @@
                         </a>
                       </li>
                       <li class="settings-nav__item">
-                        <a href="settings-bot.html" class="settings-nav__btn active">
+                        <a href="settings-bot.html" class="settings-nav__btn">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#Verification'></use>
                           </svg>
@@ -224,120 +224,126 @@
                       Настройки профиля
                     </button>
                     <div class="settings__inner">
-                      <span class="pretitle">Центр верификация</span>
-                    
-                      <div class="verification">
-                        <div class="verification__box">
-                          <div class="verification__top">
-                            <span class="verification__pretitle">Уровень верификации профиля</span>
-                            <div class="verification__level">
-                              <span class="verification__text">Базовый уровень</span>
-                              <span class="verification__label violet">1 LVL</span>
+                      <span class="pretitle">Личные данные</span>
+
+                      <div class="personal">
+                        <div class="personal-info personal-info--verify">
+
+                          <form class="photo-form">
+                            <div class="photo-form__label">
+                              <div class="photo-form__image">
+                                <img width='72' height='98' src='img/sprite/ava2.svg' alt='image'>
+                              </div>
                             </div>
-                          </div>
 
-                          <ul class="level-bar">
-                            <li class="level-bar__item active">
-                              <span class="level-bar__value">0 LVL</span>
-                              <span class="level-bar__row"></span>
-                            </li>
-                            <li class="level-bar__item active">
-                              <span class="level-bar__value">1 LVL</span>
-                              <span class="level-bar__row  violet"></span>
-                            </li>
-                            <li class="level-bar__item">
-                              <span class="level-bar__value">2 LVL</span>
-                              <span class="level-bar__row orange"></span>
-                            </li>
-                          </ul>
+                            <label class="photo-form__btn blue-btn">
+                              <input type="file" name="avatar" accept="image/*" hidden>
+                              Загрузить фото
+                              <svg width='16' height='16'>
+                                <use href='img/sprite/sprite.svg#camera-add'></use>
+                              </svg>
+                            </label>
+                          </form>
 
-                          <div class="verification__content">
-                            <div class="verification__info">
-                              <span class="verification__title">
-                                <span class="verification__icon violet">
-                                  <svg width='20' height='20'>
-                                    <use href='img/sprite/sprite.svg#Limits'></use>
-                                  </svg>
+                          <div class="personal-info__bottom">
+
+                            <div class="personal-info__inner">
+                              <span class="personal-info__text">Верификация аккаунта:</span>
+                              <div class="personal-info__wrapp">
+                                <span class="personal-info__level violet">1 LVL 
+                                  <button class="personal-info__level-btn">
+                                    <svg width='12' height='12'>
+                                      <use href='img/sprite/sprite.svg#info2'></use>
+                                    </svg>
+                                  </button>
+                                  <div class="personal-info__content">
+                                    <span class="personal-info__pretitle">Ограничения 1 LVL</span>
+                                    <ul class="personal-info__list">
+                                      <li class="personal-info__item">
+                                        <span class="personal-info__text">Ограничение по сумме инвестиций:</span>
+                                        <span class="personal-info__value">до $1,000 в месяц</span>
+                                      </li>
+                                      <li class="personal-info__item">
+                                        <span class="personal-info__text">Органичение по партнерской программе:</span>
+                                        <span class="personal-info__value">Доступен первый и второй уровень</span>
+                                      </li>
+                                      <li class="personal-info__item">
+                                        <span class="personal-info__text">Ограничение по сумме вывода:</span>
+                                        <span class="personal-info__value">до $1,000 в месяц</span>
+                                      </li>
+                                      <li class="personal-info__item">
+                                        <span class="personal-info__text">Внутренние переводы:</span>
+                                        <span class="personal-info__value">Недоступны</span>
+                                      </li>
+                                      <li class="personal-info__item">
+                                        <span class="personal-info__text">Обмен:</span>
+                                        <span class="personal-info__value">Доступно</span>
+                                      </li>
+                                    </ul>
+                                  </div>
                                 </span>
-                                Лимиты верификации профиля
-                              </span>
-                              <button class="blue-btn">Увеличить лимиты</button>
+                                <span class="personal-info__text"><b>Базовый уровень</b></span>
+                              </div>
+                              <button class="blue-btn">Пройти продвинутую верификацию</button>
                             </div>
-
-                            <ul class="verification__list">
-                              <li class="verification__item">
-                                <span class="verification__text">Сумма инвестиции (по всем продуктам):</span>
-                                <span class="verification__value">до $250,000</span>
-                              </li>
-                              <li class="verification__item">
-                                <span class="verification__text">Вывод:</span>
-                                <span class="verification__value">до $250,000 в месяц</span>
-                                <p>-Вывод не доступен без активации кабинета</p>
-                                <p>-Активация кабинета = $100 открытый мин продукт</p>
-                              </li>
-                              <li class="verification__item">
-                                <span class="verification__text">Уровни партнерской программы:</span>
-                                <span class="verification__value">До 10-го уровня</span>
-                              </li>
-                              <li class="verification__item">
-                                <span class="verification__text">Обмен валют:</span>
-                                <span class="verification__value">Доступно</span>
-                              </li>
-                              <li class="verification__item">
-                                <span class="verification__text">Внутренние переводы:</span>
-                                <span class="verification__value">Недоступно</span>
-                              </li>
-                            </ul>
                           </div>
                         </div>
 
-                        <ul class="verification__list verification__list--mode">
-                          <li class="verification__item">
-                            <div class="verification-card yellow">
-                              <div class="verification-card__top">
-                                <div class="verification-card__level">
-                                  <span class="verification-card__label">2 LVL</span>
-                                  <span class="verification-card__pretitle">Продвинутый уровень</span>
-                                </div>
+                        <form class="personal-form main-form">
+                          <label for="login" class="main-form__label">
+                            <span class="main-form__name">Логин</span>
+                            <input type="text" name="login" id="login" class="main-form__input" placeholder="Ana1997">
+                          </label>
+                        
+                          <label for="date" class="main-form__label">
+                            <span class="main-form__name">Дата рождения</span>
+                            <input type="text" name="date" id="date" class="main-form__input" value="05.06.1997">
+                            <button class="main-form__btn">
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#calendar-month'></use>
+                              </svg>
+                            </button>
+                          </label>
+                       
+                          <label for="name" class="main-form__label">
+                            <span class="main-form__name">Имя</span>
+                            <input type="text" name="name" id="name" class="main-form__input" value="Aнастасия">
+                          </label>
 
-                                <button class="blue-btn">Пройти верификацию 2 LVL
-                                  <svg width='16' height='16'>
-                                    <use href='img/sprite/sprite.svg#arrow-right'></use>
-                                  </svg>
-                                </button>
-                              </div>
-                              <span class="verification-card__title">Лимиты верификации 2 LVL </span>
+                          <div class="main-form__label">
+                            <span class="main-form__name">Пол</span>
+                            <div class="main-form__btns">
+                            <label class="radio-checkbox">
+                              <input name="gender" checked type="radio" class="radio-checkbox__field">
+                              <span class="radio-checkbox__content">Не выбран</span>
+                            </label>
 
-                              <ul class="verification-card__list">
-                                <li class="verification-card__item">
-                                  <span class="verification-card__text">Сумма инвестиции (по всем продуктам):</span>
-                                  <span class="verification-card__value">до $3,000,000</span>
-                                </li>
-                                <li class="verification-card__item">
-                                  <span class="verification-card__text">Вывод:</span>
-                                  <span class="verification-card__value">до $3,000,000 в месяц</span>
-                                  <p>-Вывод не доступен без активации кабинета</p>
-                                  <p>-Активация кабинета = $100 открытый мин продукт</p>
-                                </li>
-                                <li class="verification-card__item">
-                                  <span class="verification-card__text">Уровни партнерской программы:</span>
-                                  <span class="verification-card__value">Доступно до максимального уровня</span>
-                                </li>
-                                <li class="verification-card__item">
-                                  <span class="verification-card__text">Внутренние переводы:</span>
-                                  <span class="verification-card__value">Доступно</span>
-                                </li>
-                                <li class="verification-card__item">
-                                  <span class="verification-card__text">Обмен валют:</span>
-                                  <span class="verification-card__value">Доступно</span>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
+                            <label class="radio-checkbox">
+                              <input name="gender" type="radio" class="radio-checkbox__field">
+                              <span class="radio-checkbox__content">Mужской</span>
+                            </label>
+
+                            <label class="radio-checkbox">
+                              <input name="gender" type="radio" class="radio-checkbox__field">
+                              <span class="radio-checkbox__content">Женский</span>
+                            </label>
+                          </div>
+                          </div>
+
+                          <label for="subname" class="main-form__label">
+                            <span class="main-form__name">Фамилия</span>
+                            <input type="text" name="subname" id="subname" class="main-form__input" value="Звонкович">
+                          </label>
+
+                          <label for="sponsor" class="main-form__label">
+                            <span class="main-form__name">Спонсор</span>
+                            <input type="text" name="sponsor" id="sponsor" class="main-form__input" placeholder="Egor1934">
+                          </label>
+
+                          <button class="blue-btn">Cохранить изменения</button>
+                       
+                        </form>
                       </div>
-                      
-                     
                     </div>
                   </div>
                 </div>
@@ -351,9 +357,9 @@
       </div>
     </main>
 
-
   @include('partials/modals.html')
-  <script defer src="js/main.js"></script>
+  
+  <script src="js/main.js"></script>
 </body>
 
 

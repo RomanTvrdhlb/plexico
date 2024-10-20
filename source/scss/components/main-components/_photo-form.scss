@@ -1,0 +1,48 @@
+.photo-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 14px;
+
+
+    &__image{
+        width: clamp(88px, 6.8056vw, 98px);
+        height: clamp(88px, 6.8056vw, 98px);
+        border-radius: 100%;
+        background-color: #FABB1D;
+        outline: solid 3px var(--br-a);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        overflow: hidden;
+
+        svg,img{
+            max-width: clamp(64px, 5vw, 72px);
+            max-height: clamp(90px, 6.8056vw, 98px);
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .blue-btn{
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+        justify-self: end;
+        height: 30px;
+        padding: 8px 16px;
+        grid-gap: 6px;
+
+        img,svg{
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover{
+            background: var(--bg-c);
+            color: var(--cl-a);
+            opacity: .7;
+        }
+    }
+}

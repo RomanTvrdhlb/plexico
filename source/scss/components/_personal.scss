@@ -1,0 +1,5 @@
+.personal{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(24px, 2.2222vw, 32px);
+}
