@@ -15,6 +15,11 @@
         z-index: 2;
     }
 
+    &.mode{
+        grid-template-columns: 100%;
+        padding: clamp(24px, 2.2222vw, 32px) clamp(16px, 3.0556vw, 44px) clamp(28px, 2.2222vw, 32px);
+    }
+
     &__aside{
         display: flex;
         flex-direction: column;
@@ -107,6 +112,12 @@
             line-height: 130%;
             letter-spacing: -0.01em;
             color: var(--cl-e);
+        }
+
+        &--mode{
+            @include mobile{
+                height: 100%;
+            }
         }
     }
 

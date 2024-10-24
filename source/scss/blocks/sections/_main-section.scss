@@ -18,30 +18,30 @@
         grid-template-columns: repeat(8, 1fr) repeat(8, 1.11fr);
         grid-gap: clamp(16px, 1.4184vw, 20px);
       
-        @media (max-width: (1375px)) {
+        @media (max-width: (1415px)) {
             grid-template-columns: 100%;
         }
 
         .main-balance{
-            @media (min-width: (1375px)) {
+            @media (min-width: (1415px)) {
                 grid-column: 1/9;
             }
         }
 
         .main-valute{
-            @media (min-width: (1375px)) {
+            @media (min-width: (1415px)) {
                 grid-column: 9/17;
             }
         }
 
         .profit-analysis{
-            @media (min-width: (1375px)) {
+            @media (min-width: (1415px)) {
                 grid-column: 1/11;
             }
         }
 
         .referral-analysis{
-            @media (min-width: (1375px)) {
+            @media (min-width: (1415px)) {
                 grid-column: 11/17;
             }
         }

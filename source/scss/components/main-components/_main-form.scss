@@ -11,19 +11,19 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-gap: 4px;
-    
-    .main-form{
-      &__link{
+
+    .main-form {
+      &__link {
         justify-self: end;
       }
 
-      &__input{
+      &__input {
         grid-column: 1/-1;
       }
     }
   }
 
-  &__name{
+  &__name {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
@@ -31,7 +31,7 @@
     color: var(--cl-j);
   }
 
-  &__link{
+  &__link {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
@@ -39,34 +39,34 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--cl-d);
-    transition: all .3s;
+    transition: all 0.3s;
     text-underline-offset: 3px;
 
-    &:hover{
+    &:hover {
       text-decoration-color: transparent;
       color: var(--cl-h);
     }
 
-    &.blue{
+    &.blue {
       font-weight: 600;
       line-height: 120%;
       color: var(--cl-h);
     }
   }
 
-  &__bottom{
+  &__bottom {
     display: flex;
     flex-direction: column;
     grid-gap: clamp(24px, 2.2695vw, 32px);
     width: 100%;
     padding-top: calc(clamp(24px, 2.2695vw, 32px) - 12px);
 
-    .blue-btn{
+    .blue-btn {
       width: 100%;
     }
   }
 
-  &__text{
+  &__text {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
@@ -74,79 +74,129 @@
     letter-spacing: -0.01em;
     color: var(--cl-e);
 
-    a{
+    a {
       font-size: inherit;
       color: inherit;
       text-decoration: underline;
       text-decoration-skip-ink: none;
-      transition: all .3s;
+      transition: all 0.3s;
 
-      &:hover{
+      &:hover {
         color: var(--cl-h);
         text-decoration-color: transparent;
       }
     }
   }
 
-  &__terms{
+  &__terms {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @include for-mobile{
+    @include for-mobile {
       grid-gap: 16px;
     }
 
-    @include mobile{
+    @include mobile {
       grid-gap: 28px;
     }
 
-
-    p{
+    p {
       font-size: 12px;
       text-align: center;
       color: var(--cl-l);
     }
   }
 
-  &__links{
+  &__links {
     display: flex;
     align-items: center;
     justify-content: center;
     grid-gap: 16px;
   }
 
-  &__inputs{
+  &__inputs {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap:clamp(6px, .7801vw, 11px);
+    grid-gap: clamp(6px, 0.7801vw, 11px);
     max-width: 337px;
     position: relative;
 
-    .main-form__input{
+    .main-form__input {
       border-radius: 6px;
       height: 50px;
       font-weight: 600;
       font-size: 18px;
       text-align: center;
-
     }
 
-    & + .main-form__bottom{
+    .main-form__error {
+      text-align: center;
+    }
+
+    & + .main-form__bottom {
       max-width: 337px;
     }
   }
 
-  &__error{
+  &__info{
+    display: flex;
+    align-items: center;
+    grid-gap: 9px;
+    padding: clamp(12px, 1.1111vw, 16px) clamp(12px, 1.1111vw, 16px) 16px 12px;
+    box-shadow: 0 5px 16px 0 rgba(1, 0, 73, 0.08);
+    background: var(--bg-a);
+    border-radius: 8px;
+
+    @media (min-width: (1350px)) {
+      transform: translate(100%, -28%);
+      width: clamp(250px, 22.625vw, 369px);
+    }
+
+    @media (max-width: (1350px)) {
+      @include for-laptop{
+        width: 250px;
+        transform: translate(100%, -15%);
+      }
+    }
+
+    @include for-laptop{
+      position: absolute;
+      right: -16px;
+      bottom: 0;
+      z-index: 5;
+    }
+
+    @include laptop{
+      margin-top: 6px;
+    }
+
+    svg,img{
+      flex-shrink: 0;
+      display: flex;
+      width: 20px;
+      aspect-ratio: 1;
+    }
+
+    p{
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 110%;
+      letter-spacing: -0.01em;
+      color: var(--cl-e);
+    }
+  }
+
+  &__error {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 12px;
     line-height: 110%;
     letter-spacing: -0.01em;
-    text-align: center;
     color: var(--cl-k);
     grid-column: 1/-1;
-    margin-top: calc(clamp(8px, .9929vw, 14px) - clamp(6px, 0.7801vw, 11px));
+    margin-top: calc(clamp(8px, 0.9929vw, 14px) - clamp(6px, 0.7801vw, 11px));
     display: none;
   }
 
@@ -164,7 +214,7 @@
     font-size: 16px;
     line-height: 120%;
     letter-spacing: -0.01em;
-    color:  var(--cl-f);
+    color: var(--cl-f);
 
     &::placeholder {
       font-family: var(--font-family);
@@ -179,7 +229,7 @@
     }
   }
 
-  input[type='password']{
+  input[type="password"] {
     letter-spacing: 3px;
     font-family: var(--font-family);
     font-weight: 300;
@@ -197,45 +247,43 @@
       font-size: 20px;
       letter-spacing: 0.11em;
     }
-    
+
     &:not(:placeholder-shown) {
       padding-top: 4px;
     }
-   
   }
 
-  &.invalid{
-    .main-form__error{
+  &.invalid {
+    .main-form__error {
       display: block;
     }
 
-    .main-form__input{
+    .main-form__input {
       border-color: var(--br-d);
     }
   }
- 
-  &.mode{
-    @include for-mobile{
+
+  &.mode {
+    @include for-mobile {
       grid-template-columns: repeat(2, 1fr);
     }
-  
-    .main-form{
-      &__bottom{
-        @include for-mobile{
+
+    .main-form {
+      &__bottom {
+        @include for-mobile {
           grid-column: 1/-1;
         }
       }
     }
   }
 
-  .iti{
+  .iti {
     grid-column: 1/-1;
     align-items: center;
     display: flex;
     grid-gap: 8px;
-   
 
-    &__arrow{
+    &__arrow {
       position: absolute;
       left: clamp(84px, 7.0922vw, 100px);
       top: 50%;
@@ -247,24 +295,25 @@
       background-position: center;
       width: 20px;
       height: 20px;
-      transition: all .3s;
+      transition: all 0.3s;
 
-      &--up{
+      &--up {
         transform: translate(0, -50%) scaleY(-1);
       }
     }
 
-    &.just-validate-error-field{
-      .iti__flag-container, input[type="tel"]{
+    &.just-validate-error-field {
+      .iti__flag-container,
+      input[type="tel"] {
         border-color: red;
       }
     }
 
-    &__flag{
+    &__flag {
       border-radius: 2px;
     }
 
-    &__flag-container{
+    &__flag-container {
       position: static;
       width: clamp(116px, 9.3617vw, 132px);
       border-radius: 6px;
@@ -274,22 +323,22 @@
       flex-shrink: 0;
     }
 
-    &__dropdown-content{
+    &__dropdown-content {
       margin-top: 8px;
       min-width: 200px;
       max-width: 230px;
       z-index: 10;
     }
 
-    &__selected-flag{
-      transition: all .3s;
+    &__selected-flag {
+      transition: all 0.3s;
       background-color: transparent !important;
       border: none !important;
       position: static;
       padding: 0;
     }
 
-    [code]{
+    [code] {
       font-family: var(--font-family);
       font-weight: 400;
       font-size: 16px;
@@ -307,97 +356,94 @@
       border-radius: 10px;
       padding: 4px 16px;
     }
-
-   
   }
 
-  &__pretitle{
+  &__pretitle {
     font-family: var(--font-family);
     font-weight: 600;
     font-size: clamp(14px, 1.1111vw, 16px);
     line-height: 137%;
     color: var(--cl-j);
 
-    @include mobile{
+    @include mobile {
       line-height: 120%;
     }
   }
 
-  &__value{
-      font-family: var(--font-family);
-      font-weight: 600;
-      font-size: clamp(16px, 1.3889vw, 20px);
-      letter-spacing: -0.01em;
-      text-align: right;
-      color: var(--cl-n);
+  &__value {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: clamp(16px, 1.3889vw, 20px);
+    letter-spacing: -0.01em;
+    text-align: right;
+    color: var(--cl-n);
 
-      b{
-        color: var(--cl-d);
-      }
+    b {
+      color: var(--cl-d);
+    }
 
-      @include for-mobile{
-        line-height: 110%;
-      }
+    @include for-mobile {
+      line-height: 110%;
+    }
 
-      @include mobile{
-        line-height: 137%;
-      }
+    @include mobile {
+      line-height: 137%;
+    }
   }
-    
-  &__inner{
+
+  &__inner {
     display: grid;
     width: 100%;
 
-    @include for-laptop{
+    @include for-laptop {
       grid-gap: 32px 16px;
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include laptop{
+    @include laptop {
       grid-template-columns: 100%;
       grid-gap: 16px;
     }
 
-    .main-form__total{
+    .main-form__total {
       grid-column: 1/-1;
 
-      @include laptop{
+      @include laptop {
         margin-bottom: 16px;
       }
     }
 
-    .main-btn{
+    .main-btn {
       padding: 10px 10px;
 
-      @include for-laptop{
+      @include for-laptop {
         min-width: 231px;
       }
 
-      
-      @include laptop{
+      @include laptop {
         width: 100%;
       }
     }
 
-    .blue-btn{
+    .blue-btn {
       padding: 10px 10px;
 
-      @include for-laptop{
+      @include for-laptop {
         min-width: 231px;
         justify-self: end;
       }
 
-      @include laptop{
+      @include laptop {
         width: 100%;
       }
     }
   }
 
-  &__wrapp{
+  &__wrapp {
     display: flex;
     grid-gap: 4px;
 
-    .main-form__text{
+    .main-form__text {
       font-family: var(--font-family);
       font-weight: 400;
       font-size: 12px;
@@ -405,34 +451,34 @@
       letter-spacing: -0.01em;
       color: var(--cl-l);
 
-      b{
+      b {
         font-weight: 500;
         line-height: 110%;
-        color:  var(--cl-m);
+        color: var(--cl-m);
       }
     }
 
-    @include for-laptop{
+    @include for-laptop {
       align-items: center;
       justify-content: space-between;
     }
 
-    @include laptop{
+    @include laptop {
       flex-direction: column;
     }
   }
 
-  &__total{
+  &__total {
     border-radius: 6px;
     padding: 16px clamp(20px, 1.6667vw, 24px);
-    background:  var(--bg-d);
+    background: var(--bg-d);
     display: flex;
     align-items: center;
     justify-content: space-between;
     grid-gap: 10px;
   }
 
-  &__title{
+  &__title {
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 14px;
@@ -440,13 +486,13 @@
     color: var(--cl-m);
   }
 
-  &__field{
+  &__field {
     display: flex;
     flex-direction: column;
     grid-gap: 6px;
     position: relative;
- 
-    .main-form__icon{
+
+    .main-form__icon {
       position: absolute;
       z-index: 2;
       top: 50%;
@@ -456,32 +502,33 @@
       height: 24px;
       display: flex;
 
-      svg,img{
+      svg,
+      img {
         width: 100%;
         height: 100%;
       }
     }
   }
 
-  &__row{
+  &__row {
     display: grid;
     width: 100%;
     grid-gap: 12px;
 
-    @include for-laptop{
-      .main-form__title{
+    @include for-laptop {
+      .main-form__title {
         grid-column: 1/-1;
       }
 
       grid-template-columns: 206px 1fr;
     }
 
-    @include laptop{
+    @include laptop {
       grid-template-columns: 100%;
     }
   }
 
-  &__image{
+  &__image {
     width: clamp(52px, 4.2361vw, 61px);
     height: clamp(52px, 4.2361vw, 61px);
     display: flex;
@@ -490,20 +537,21 @@
     border-radius: 100%;
     background: var(--bg-d);
 
-    svg,img{
+    svg,
+    img {
       width: clamp(22px, 1.875vw, 27px);
       height: clamp(18px, 1.4583vw, 21px);
     }
   }
 
-  &__swap{
+  &__swap {
     width: 100%;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: clamp(12px, 1.1111vw, 16px);
     align-items: center;
 
-    &-box{
+    &-box {
       display: flex;
       padding: 12px clamp(16px, 1.3889vw, 20px);
       border-radius: 6px;
@@ -511,84 +559,85 @@
       grid-gap: 12px 4px;
       flex-wrap: wrap;
 
-      @include for-mobile{
+      @include for-mobile {
         align-items: center;
         justify-content: space-between;
       }
 
-      @include mobile{
+      @include mobile {
         flex-direction: column;
       }
     }
 
-    &-inner{
+    &-inner {
       display: inline-flex;
-      grid-gap: 4px clamp(4px, .5556vw, 8px);
+      grid-gap: 4px clamp(4px, 0.5556vw, 8px);
       flex-wrap: wrap;
 
-      @include mobile{
+      @include mobile {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
       }
     }
 
-    .main-form__text{
-      font-size: clamp(12px, .9722vw, 14px);
+    .main-form__text {
+      font-size: clamp(12px, 0.9722vw, 14px);
     }
 
-    .main-form__value{
-      font-size: clamp(12px, .9722vw, 14px);
+    .main-form__value {
+      font-size: clamp(12px, 0.9722vw, 14px);
       line-height: 130%;
     }
   }
 }
 
-.funds-form{
+.funds-form {
   grid-gap: 20px;
-  .main-form{
-
-    &__label{
+  .main-form {
+    &__label {
       grid-template-columns: 100%;
     }
 
-    &__total{
-      @include small-tablet{
+    &__total {
+      @include small-tablet {
         margin-top: 8px;
       }
     }
-    
-    &__input{
+
+    &__input {
       font-weight: 400;
       line-height: 126%;
       padding: 4px 36px 4px 16px;
     }
   }
 
-  .select{
+  .select {
     width: 100%;
     padding: 9px 12px 9px 16px;
 
-    &__current:not(.select__current-icon){
+    &__current:not(.select__current-icon) {
       font-weight: 400;
       font-size: 16px;
       line-height: 126%;
       color: var(--cl-m);
 
-      svg, img{
+      svg,
+      img {
         height: 24px;
         width: 24px;
       }
     }
 
-    &__option{
+    &__option {
       font-weight: 400;
       font-size: 16px;
       line-height: 126%;
       color: var(--cl-m);
       padding: 0 16px;
 
-      svg, img{
+      svg,
+      img {
         height: 24px;
         width: 24px;
       }
@@ -596,64 +645,67 @@
   }
 }
 
-.swap-form{
+.swap-form {
   grid-gap: 25px;
-  padding: clamp(24px, 1.9444vw, 28px) clamp(20px, 2.222vw, 32px) clamp(28px, 2.2222vw, 32px);
+  padding: clamp(24px, 1.9444vw, 28px) clamp(20px, 2.222vw, 32px)
+    clamp(28px, 2.2222vw, 32px);
   border: 1px solid var(--br-c);
   border-radius: 12px;
 
-  .main-form{
-    &__label{
+  .main-form {
+    &__label {
       grid-template-columns: 100%;
     }
 
-    &__inner{
+    &__inner {
       margin-top: 7px;
 
-      .main-btn{
-        @include for-laptop{
+      .main-btn {
+        @include for-laptop {
           min-width: clamp(190px, 16.0417vw, 231px);
         }
       }
-  
-      .blue-btn{
-        @include for-laptop{
+
+      .blue-btn {
+        @include for-laptop {
           min-width: clamp(190px, 16.0417vw, 231px);
         }
       }
     }
-    
-    &__input{
+
+    &__input {
       font-weight: 400;
       line-height: 126%;
       padding: 4px 36px 4px 16px;
     }
   }
 
-  .select{
+  .select {
     width: 100%;
     padding: 9px 12px 9px 16px;
 
-    &__current:not(.select__current-icon){
+    &__current:not(.select__current-icon) {
       font-weight: 400;
       font-size: 16px;
       line-height: 126%;
       color: var(--cl-m);
 
-      svg, img{
+      svg,
+      img {
         height: 24px;
         width: 24px;
       }
     }
 
-    &__option{
+    &__option {
       font-weight: 400;
       font-size: 16px;
       line-height: 126%;
       color: var(--cl-m);
       padding: 0 16px;
 
-      svg, img{
+      svg,
+      img {
         height: 24px;
         width: 24px;
       }
@@ -661,105 +713,108 @@
   }
 }
 
-.balance-form{
+.balance-form {
   grid-gap: 20px;
-  padding: clamp(24px, 1.9444vw, 28px) clamp(20px, 2.222vw, 32px) clamp(28px, 2.2222vw, 32px);
+  padding: clamp(24px, 1.9444vw, 28px) clamp(20px, 2.222vw, 32px)
+    clamp(28px, 2.2222vw, 32px);
   border: 1px solid var(--br-c);
   border-radius: 12px;
 
-  @include for-small-tablet{
+  @include for-small-tablet {
     max-width: 560px;
   }
 
-  @include small-tablet{
+  @include small-tablet {
     width: 100%;
   }
 
-  .main-form{
-    &__label{
+  .main-form {
+    &__label {
       grid-template-columns: 100%;
       grid-gap: 6px;
     }
 
-    &__wrapp{
-        @include for-small-tablet{
-          justify-content: flex-end;
+    &__wrapp {
+      @include for-small-tablet {
+        justify-content: flex-end;
 
-          .main-form__text{
-            text-align: right;
+        .main-form__text {
+          text-align: right;
         }
       }
     }
 
-    &__input{
+    &__input {
       font-weight: 400;
       line-height: 126%;
       padding: 4px 36px 4px 16px;
 
-      &--mode{
+      &--mode {
         padding-right: 0;
       }
     }
 
-    &__inner{
+    &__inner {
       margin-top: 12px;
 
-      .main-btn{
-        @include for-laptop{
+      .main-btn {
+        @include for-laptop {
           min-width: clamp(190px, 16.0417vw, 231px);
         }
       }
-  
-      .blue-btn{
-        @include for-laptop{
+
+      .blue-btn {
+        @include for-laptop {
           min-width: clamp(190px, 16.0417vw, 231px);
         }
       }
     }
-    
-    &__pretitle{
+
+    &__pretitle {
       font-weight: 500;
       font-size: 14px;
       line-height: 120%;
 
-      &--mob{
-        @include for-mobile{
+      &--mob {
+        @include for-mobile {
           display: none;
         }
       }
 
-      &:not(.main-form__pretitle--mob){
-        @include mobile{
+      &:not(.main-form__pretitle--mob) {
+        @include mobile {
           display: none;
         }
       }
     }
   }
 
-  .select{
+  .select {
     width: 100%;
     padding: 9px 12px 9px 16px;
 
-    &__current:not(.select__current-icon){
+    &__current:not(.select__current-icon) {
       font-weight: 400;
       font-size: 16px;
       line-height: 126%;
       color: var(--cl-m);
 
-      svg, img{
+      svg,
+      img {
         height: 24px;
         width: 24px;
       }
     }
 
-    &__option{
+    &__option {
       font-weight: 400;
       font-size: 16px;
       line-height: 126%;
       color: var(--cl-m);
       padding: 0 16px;
 
-      svg, img{
+      svg,
+      img {
         height: 24px;
         width: 24px;
       }
@@ -767,47 +822,47 @@
   }
 }
 
-.contact-form{
+.contact-form {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px clamp(20px, 2.2222vw, 32px);
 
-  @include laptop{
+  @include laptop {
     grid-template-columns: 100%;
   }
 
-  .main-form{
-    &__label{
+  .main-form {
+    &__label {
       grid-gap: 6px;
 
-      .select{
+      .select {
         grid-column: 1/-1;
       }
-    
-    @include laptop{
-      &:nth-of-type(1){
-        order: -3;
-      }
 
-      &:nth-of-type(3){
-        order: -2;
-      }
+      @include laptop {
+        &:nth-of-type(1) {
+          order: -3;
+        }
 
-      &:nth-of-type(5){
-        order: -1;
+        &:nth-of-type(3) {
+          order: -2;
+        }
+
+        &:nth-of-type(5) {
+          order: -1;
+        }
       }
-    }
     }
   }
 
-  .blue-btn{
+  .blue-btn {
     margin-top: 12px;
 
-    @include for-laptop{
+    @include for-laptop {
       padding: 11px 20px;
       justify-self: start;
     }
 
-    @include small-tablet{
+    @include small-tablet {
       width: 100%;
     }
   }
@@ -817,26 +872,26 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px clamp(20px, 2.2222vw, 32px);
 
-  @include laptop{
+  @include laptop {
     grid-template-columns: 100%;
   }
 
-  .main-form{
-    &__label{
+  .main-form {
+    &__label {
       grid-gap: 6px;
     }
 
-    &__input{
+    &__input {
       font-weight: 400;
       line-height: 126%;
-      color:  var(--cl-j);
-      
-      &::placeholder{
+      color: var(--cl-j);
+
+      &::placeholder {
         color: var(--cl-t);
       }
     }
 
-    &__btn{
+    &__btn {
       color: var(--cl-d);
       display: flex;
       align-items: center;
@@ -845,23 +900,24 @@
       height: 30px;
       border-radius: 3px;
       background: var(--bg-g);
-      transition: all .3s;
+      transition: all 0.3s;
       position: absolute;
       bottom: 7px;
       right: 6px;
 
-      svg,img{
+      svg,
+      img {
         width: 17px;
         height: 17px;
       }
 
-      &:hover{
+      &:hover {
         background: var(--bg-c);
         color: var(--cl-a);
       }
     }
 
-    &__btns{
+    &__btns {
       grid-column: 1/-1;
       border: 1px solid var(--br-c);
       border-radius: 10px;
@@ -870,20 +926,310 @@
       height: 44px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: clamp(4px, .4861vw, 7px);
+      grid-gap: clamp(4px, 0.4861vw, 7px);
     }
   }
 
-  .blue-btn{
+  .blue-btn {
     margin-top: 12px;
 
-    @include for-laptop{
+    @include for-laptop {
       padding: 11px 20px;
       justify-self: start;
     }
 
-    @include small-tablet{
+    @include small-tablet {
       width: 100%;
+    }
+  }
+}
+
+.support-form {
+  padding: clamp(16px, 1.7021vw, 24px);
+  background: var(--bg-a);
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+
+  .main-form {
+    &__inputs {
+      grid-template-columns: repeat(6, 44px);
+      grid-gap: clamp(9px, 1.0417vw, 15px);
+      max-width: 100%;
+
+      @include for-desktop {
+        justify-content: center;
+      }
+
+      @include desktop {
+        justify-content: space-between;
+      }
+
+      .main-form__input {
+        padding: 4px 8px;
+        border-color: var(--br-h);
+        color: var(--cl-s);
+
+        &.active {
+          color: var(--cl-f);
+        }
+      }
+    }
+
+    &__eye {
+      border-radius: 6px;
+      height: 50px;
+      font-weight: 600;
+      font-size: 18px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 44px;
+      padding: 4px 8px;
+      border: solid 1px var(--br-h);
+      transition: all 0.3s;
+      font-family: var(--font-family);
+      line-height: 120%;
+      letter-spacing: -0.01em;
+      color: var(--cl-f);
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s;
+
+      &::before {
+        background-image: url(../img/sprite/eye-closed.svg);
+        inset: 1px;
+        position: absolute;
+        background-color: var(--bg-a);
+        background-position: center;
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        border-radius: inherit;
+        content: "";
+        z-index: 3;
+        transition: all 0.3s;
+        opacity: 1;
+        transition: none;
+        visibility: visible;
+      }
+
+      svg,
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &.active {
+        &::before {
+          pointer-events: none;
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      &:hover {
+        border-color: var(--br-b);
+      }
+    }
+
+    &__title {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 120%;
+      letter-spacing: -0.01em;
+      color: var(--cl-d);
+      display: inline-flex;
+      align-items: center;
+      grid-gap: 6px;
+    }
+
+    &__bottom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8px;
+      max-width: 100%;
+
+      @include for-mobile {
+        padding-top: 3px;
+      }
+
+      @include mobile {
+        padding: 0;
+        margin-top: -4px;
+      }
+
+      .blue-btn,
+      .main-btn {
+        width: 100%;
+        grid-gap: 8px;
+        padding: 10px;
+      }
+    }
+
+    &__info {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      position: relative;
+      top: -1px;
+
+      svg,
+      img {
+        transition: all 0.3s;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        svg,
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.safety-form {
+  border-radius: 8px;
+  border: solid 1px var(--br-j);
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: (1361px)) {
+    padding: clamp(24px, 2.2222vw, 32px) clamp(21px, 2.1528vw, 31px) 75px;
+  }
+
+  @media (max-width: (1361px)) {
+    @include for-laptop {
+      height: 100%;
+      padding: clamp(24px, 2.2222vw, 32px) clamp(16px, 1.3889vw, 20px) 75px;
+    }
+  }
+
+  @include laptop {
+    padding: clamp(24px, 2.2222vw, 32px) clamp(21px, 2.1528vw, 31px);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    border-radius: inherit;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+    background-image: var(--qr-bg);
+  }
+
+  .main-form {
+    &__inputs {
+      grid-gap: 6px;
+
+      @include for-mobile {
+        margin-top: calc(clamp(30px, 3.75vw, 54px) - 16px);
+      }
+
+      @include mobile {
+        margin-top: 14px;
+      }
+    }
+
+    &__input {
+      background: var(--bg-a);
+      padding: 4px 5px;
+
+      @include mobile {
+        height: 36px;
+        min-height: 36px;
+        font-size: 16px;
+      }
+    }
+
+    &__bottom {
+      padding: 0;
+    }
+
+    &__title {
+      color: var(--cl-d);
+
+      @include for-mobile {
+        font-size: clamp(14px, 1.1111vw, 16px);
+        line-height: 137%;
+        text-align: center;
+      }
+
+      @include mobile {
+        line-height: 120%;
+        text-align: center;
+      }
+    }
+  }
+  .blue-btn {
+    width: 100%;
+    font-size: 14px;
+    line-height: 120%;
+
+    @include mobile {
+      height: 30px;
+      padding: 8px 20px;
+      font-size: 12px;
+      letter-spacing: -0.01em;
+    }
+  }
+}
+
+.change-form {
+  .main-form {
+    &__inner {
+      align-items: end;
+      grid-gap: 20px;
+      width: 100%;
+
+      .blue-btn {
+        @include for-laptop {
+          min-width: 240px;
+        }
+
+        @include laptop {
+          @include for-small-tablet {
+            min-width: initial;
+          }
+        }
+
+        @include small-tablet{
+          width: 100%;
+        }
+      }
+
+      @include for-laptop {
+        grid-template-columns: 1fr auto;
+      }
+
+      @include laptop {
+        @include for-small-tablet {
+          grid-template-columns: minmax(250px, 1fr) minmax(
+              clamp(150px, 16.6667vw, 240px),
+              auto
+            );
+        }
+      }
+
+      @include small-tablet{
+        grid-template-columns: 100%;
+      }
+    }
+  }
+
+  &.invalid {
+    .main-form__inner {
+      align-items: center;
     }
   }
 }

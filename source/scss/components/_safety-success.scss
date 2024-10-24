@@ -1,0 +1,51 @@
+.safety-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: clamp(24px, 2.2222vw, 32px);
+  height: 100%;
+  border: 1px solid var(--br-c);
+  border-radius: 12px;
+    padding: 16px 32px;
+
+  &__icon {
+    display: flex;
+    width: clamp(100px, 10.5556vw, 152px);
+    height: clamp(100px, 10.5556vw, 152px);
+    margin-bottom: calc(clamp(32px, 2.5vw, 36px) - clamp(24px, 2.2222vw, 32px));
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-size: clamp(20px, 1.6667vw, 24px);
+    text-align: center;
+    color: var(--cl-d);
+    max-width: clamp(400px, 31.25vw, 450px);
+
+    @include for-mobile {
+      line-height: 105%;
+      font-weight: 500;
+    }
+
+    @include mobile {
+      font-weight: 600;
+      line-height: 110%;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  .blue-btn{
+    padding: 10px clamp(10px, 2.7778vw, 40px);
+
+    @include mobile{
+        width: 100%;
+    }
+  }
+}

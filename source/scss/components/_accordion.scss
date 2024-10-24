@@ -1,0 +1,125 @@
+.accordion{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+
+    &__item{
+        background: var(--gr-h);
+        border-radius: 12px;
+        padding: clamp(16px, 1.3889vw, 20px) clamp(16px, 2.2222vw, 32px) clamp(16px, 1.6667vw, 24px);
+        display: flex;
+        flex-direction: column;
+
+        @include gradient-border(var(--gr-j), 1px);
+    }
+
+    &__box{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 16px;
+    }
+
+    &__btn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        grid-gap: 20px;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(14px, 1.1111vw, 16px);
+        color: var(--cl-m);
+        justify-content: space-between;
+        transition: all .3s;
+
+        @include for-mobile{
+            line-height: 137%;
+        }
+
+        @include mobile{
+            line-height: 120%;
+        }
+
+        svg,img{
+            width: 24px;
+            height: 24px;
+            transition: all .3s;
+            rotate: 90deg;
+        }
+
+        &:hover{
+            color: var(--cl-h);
+        }
+
+
+        &.active{
+
+            svg,img{
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 12px;
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        font-size: 12px;
+        color: var(--cl-f);
+
+        @include small-tablet{
+            padding-bottom: 4px;
+        }
+    }
+
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 120%;
+        color: var(--cl-j);
+        text-align: right;
+        letter-spacing: -0.01em;
+
+        @include small-tablet{
+            padding-bottom: 4px;
+        }
+    }
+
+    &__row{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        grid-gap: 6px;
+        flex-wrap: wrap;
+
+        p{
+            grid-column: 1/-1;
+            width: 100%;
+            font-family: var(--font-family);
+            font-size: 12px;
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            color: var(--cl-l);
+
+            &:not(:first-of-type){
+                @include for-mobile{
+                    margin-top: -2px;
+                }
+            }
+        }
+
+
+        @include mobile{
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+    } 
+}

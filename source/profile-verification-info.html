@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  <main>
+    <div class="container container--dash">
+      <div class="dashboard">
+        @include('partials/header.html')
+
+        <aside class="aside">
+          <div class="aside__top">
+            <a href="index.html" class="logo">
+              <svg width='125' height='40'>
+                <use href='img/sprite/sprite.svg#logo2'></use>
+              </svg>
+            </a>
+
+            <div class="dashboard-info">
+              <div class="dashboard-info__top">
+                <span class="dashboard-info__title">Ваш баланс</span>
+                <span class="dashboard-info__date">13 Января, 2024</span>
+              </div>
+              <div class="dashboard-info__box">
+                <span class="dashboard-info__value">$ <b>4,389.80</b></span>
+                <span class="dashboard-info__precent">
+                  <svg width='16' height='16'>
+                    <use href='img/sprite/sprite.svg#top'></use>
+                  </svg>
+                  7%
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="aside__mobile">
+            <div class="aside__mobile-top">
+              <button class="info-btn">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#notification'></use>
+                </svg>
+              </button>
+              <span class="aside__mobile-user">Анастасия</span>
+
+              <button class="burger">
+                <span class="burger__line"></span>
+              </button>
+            </div>
+
+            <div class="aside__mobile-box">
+              <form class="search-form">
+                <label for="search">
+                  <input type="text" name="search" id="search" placeholder="Поиск">
+                </label>
+                <button type="submit">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#search'></use>
+                  </svg>
+                </button>
+              </form>
+
+              <ul class="aside-nav">
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button active">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside1'></use>
+                      </svg>
+                    </span>
+                    Дашборд
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside2'></use>
+                      </svg>
+                    </span>
+                    Продукты
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside3'></use>
+                      </svg>
+                    </span>
+                    Финансы
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside4'></use>
+                      </svg>
+                    </span>
+                    Партнеры
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside5'></use>
+                      </svg>
+                    </span>
+                    История операций
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside6'></use>
+                      </svg>
+                    </span>
+                    Настройки
+                  </a>
+                </li>
+              </ul>
+
+              <a href="#" class="exit-btn">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#exit'></use>
+                </svg>
+                Выход
+              </a>
+            </div>
+
+            <div class="aside__mobile-bottom">
+              <div class="lang-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="lang_1" name="lang_1" value="1">
+                  <span class="select__current" data-id="1">
+                    <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                    Русский
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+                    <li class="select__option" data-id="1" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                      English
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                      Українська
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <p>Copyright © 2024 Plexico. All Rights Reserved.</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="dashboard__content">
+          <section class="settings-section">
+            <div class="settings-section__box">
+              <h1 class="title">Настройки профиля</h1>
+
+              <div class="settings mode">
+                <div class="settings__content">
+                  <button class="settings__close">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow'></use>
+                    </svg>
+                    Верификация
+                  </button>
+                  <div class="settings__inner">
+                    <div class="verification">
+                      <div class="verification__wrapp">
+                        <div class="verification__inner">
+                          <a href="profile-verification-info.html" class="verification__link">
+                            <svg width="16" height="16">
+                              <use href="img/sprite/sprite.svg#arrow2"></use>
+                            </svg>
+                            Верификация
+                          </a>
+
+                          <div class="verification__level verification__level--mode">
+                            <span class="verification__title">Базовый уровень</span>
+                            <span class="verification__label orange">Не верифицирован</span>
+                          </div>
+
+                          <ul class='accordion' data-default="1" data-single='true' data-breakpoint='576'
+                            data-accordion-init>
+                            <li class='accordion__item'>
+                              <button class='accordion__btn' data-id='1'>Лимиты верификации 1 LVL
+                                <svg width='24' height='24'>
+                                  <use href='img/sprite/sprite.svg#arrow2'></use>
+                                </svg>
+                              </button>
+                              <div class='accordion__content' data-content='1'>
+                                <div class="accordion__box">
+                                  <ul class="accordion__list">
+                                    <li class="accordion__row">
+                                      <span class="accordion__text">Сумма инвестиции (по всем продуктам):</span>
+                                      <span class="accordion__value"> до $250,000</span>
+                                    </li>
+                                    <li class="accordion__row">
+                                      <span class="accordion__text">Вывод:</span>
+                                      <span class="accordion__value">до $250,000 в месяц</span>
+                                      <p>-Вывод не доступен без активации кабинета</p>
+                                      <p>-Активация кабинета = $100 открытый мин продукт</p>
+                                    </li>
+                                    <li class="accordion__row">
+                                      <span class="accordion__text">Уровни партнерской программы:</span>
+                                      <span class="accordion__value">До 10-го уровня</span>
+                                    </li>
+                                    <li class="accordion__row">
+                                      <span class="accordion__text">Внутренние переводы:</span>
+                                      <span class="accordion__value">Доступно</span>
+                                    </li>
+                                    <li class="accordion__row">
+                                      <span class="accordion__text">Обмен валют:</span>
+                                      <span class="accordion__value">Доступно</span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <form class="verify-form main-form">
+                            <div class="main-form__inner">
+                              <span class="pretitle pretitle--mode">Персональная информация</span>
+
+                              <label for="name" class="main-form__label">
+                                <span class="main-form__name">Имя</span>
+                                <input type="text" name="name" id="name" class="main-form__input" value="Aнастасия">
+                              </label>
+
+                              <label for="date" class="main-form__label">
+                                <span class="main-form__name">Дата рождения</span>
+                                <input type="text" name="date" id="date" class="main-form__input" value="05.06.1997">
+                                <button class="main-form__btn">
+                                  <svg width='17' height='17'>
+                                    <use href='img/sprite/sprite.svg#calendar-month'></use>
+                                  </svg>
+                                </button>
+                              </label>
+
+                              <label for="subname" class="main-form__label">
+                                <span class="main-form__name">Фамилия</span>
+                                <input type="text" name="subname" id="subname" class="main-form__input"
+                                  value="Звонкович">
+                              </label>
+
+                              <div class="main-form__label">
+                                <span class="main-form__name">Гражданство</span>
+                                <div class="contact-select select" data-select>
+                                  <div class="select__header">
+                                    <input type="hidden" class="select__input input-select" id="country_1"
+                                      name="country_1" value="1">
+                                    <span class="select__current" data-id="1">
+                                      Выберите гражданство
+                                    </span>
+                                    <svg class="select__current-icon" width='5' height='7'>
+                                      <use href='img/sprite/sprite.svg#Union'></use>
+                                    </svg>
+                                  </div>
+                                  <div class="select__body">
+                                    <ul class="select__list">
+                                      <li class="select__option" data-id="1" data-type="option">
+                                        Выберите гражданство
+                                      </li>
+                                      <li class="select__option" data-id="2" data-type="option">
+                                        English
+                                      </li>
+                                      <li class="select__option" data-id="3" data-type="option">
+                                        Ukraine
+                                      </li>
+                                      <li class="select__option" data-id="3" data-type="option">
+                                        Russia
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="main-form__inner">
+                              <span class="pretitle pretitle--mode">Место жительства</span>
+
+                              <div class="main-form__label">
+                                <span class="main-form__name">Страна проживания (Резидент)</span>
+                                <div class="select" data-select>
+                                  <div class="select__header">
+                                    <input type="hidden" class="select__input input-select" id="country_1"
+                                      name="country_1" value="1">
+                                    <span class="select__current" data-id="1">
+                                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                                      Беларусь
+                                    </span>
+                                    <svg class="select__current-icon" width='5' height='7'>
+                                      <use href='img/sprite/sprite.svg#Union'></use>
+                                    </svg>
+                                  </div>
+                                  <div class="select__body">
+                                    <ul class="select__list">
+                                      <li class="select__option" data-id="1" data-type="option">
+                                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                                        Беларусь
+                                      </li>
+                                      <li class="select__option" data-id="2" data-type="option">
+                                        <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                                        English
+                                      </li>
+                                      <li class="select__option" data-id="3" data-type="option">
+                                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                                        Українська
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <label for="city_2" class="main-form__label">
+                                <span class="main-form__name">Город (Населенный пункт)</span>
+                                <input type="text" name="city_2" id="city_2" class="main-form__input"
+                                  placeholder="Введите область/регион">
+                              </label>
+
+                              <label for="region" class="main-form__label">
+                                <span class="main-form__name">Область/регион</span>
+                                <input type="text" name="region" id="region" class="main-form__input"
+                                  placeholder="Введите область/регион">
+                              </label>
+
+                              <label for="index" class="main-form__label">
+                                <span class="main-form__name">Почтовый индекс</span>
+                                <input type="number" name="index" id="index" class="main-form__input"
+                                  placeholder="_ _ _ _ _ _">
+                              </label>
+
+                              <label for="adress_2" class="main-form__label">
+                                <span class="main-form__name">Адрес</span>
+                                <input type="text" name="adress_2" id="adress_2" class="main-form__input"
+                                  placeholder="Введите адрес">
+                              </label>
+                            </div>
+
+                            <label class="custom-checkbox">
+                              <input type="checkbox" class="custom-checkbox__field">
+                              <span class="custom-checkbox__content">Место жительства отличается от фактического места
+                                пребывания</span>
+                            </label>
+
+                            <div class="main-form__wrapp">
+                              <span class="pretitle pretitle--mode">Место жительства</span>
+
+                              <div class="main-form__label">
+                                <span class="main-form__name">Страна проживания (Резидент)</span>
+                                <div class="select" data-select>
+                                  <div class="select__header">
+                                    <input type="hidden" class="select__input input-select" id="country_1"
+                                      name="country_1" value="1">
+                                    <span class="select__current" data-id="1">
+                                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                                      Беларусь
+                                    </span>
+                                    <svg class="select__current-icon" width='5' height='7'>
+                                      <use href='img/sprite/sprite.svg#Union'></use>
+                                    </svg>
+                                  </div>
+                                  <div class="select__body">
+                                    <ul class="select__list">
+                                      <li class="select__option" data-id="1" data-type="option">
+                                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                                        Беларусь
+                                      </li>
+                                      <li class="select__option" data-id="2" data-type="option">
+                                        <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                                        English
+                                      </li>
+                                      <li class="select__option" data-id="3" data-type="option">
+                                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                                        Українська
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <label for="city_2" class="main-form__label">
+                                <span class="main-form__name">Город (Населенный пункт)</span>
+                                <input type="text" name="city_2" id="city_2" class="main-form__input"
+                                  placeholder="Введите область/регион">
+                              </label>
+
+                              <label for="region" class="main-form__label">
+                                <span class="main-form__name">Область/регион</span>
+                                <input type="text" name="region" id="region" class="main-form__input"
+                                  placeholder="Введите область/регион">
+                              </label>
+
+                              <label for="index" class="main-form__label">
+                                <span class="main-form__name">Почтовый индекс</span>
+                                <input type="number" name="index" id="index" class="main-form__input"
+                                  placeholder="_ _ _ _ _ _">
+                              </label>
+
+                              <label for="adress_2" class="main-form__label">
+                                <span class="main-form__name">Адрес</span>
+                                <input type="text" name="adress_2" id="adress_2" class="main-form__input"
+                                  placeholder="Введите адрес">
+                              </label>
+                            </div>
+
+                            <div class="main-form__inner">
+                              <span class="pretitle pretitle--mode">Документ удостоверяющий личность</span>
+
+                              <div class="main-form__content">
+                                <span class="main-form__subtitle">Тип документа</span>
+                                <div class="main-form__btns">
+                                  <label class="checkbox-toogle">
+                                    <input name="doc" checked type="radio" class="checkbox-toogle__field">
+                                    <span class="checkbox-toogle__content">Паспорт</span>
+                                  </label>
+  
+                                  <label class="checkbox-toogle">
+                                    <input name="doc" type="radio" class="checkbox-toogle__field">
+                                    <span class="checkbox-toogle__content">ID, Вид на жительство</span>
+                                  </label>
+  
+                                  <label class="checkbox-toogle">
+                                    <input name="doc" type="radio" class="checkbox-toogle__field">
+                                    <span class="checkbox-toogle__content">Водительское удостоверение</span>
+                                  </label>
+                                </div>
+                              </div>
+                           
+                              <div class="main-form__content">
+                                <span class="main-form__subtitle">Файл (фотография) выбранного документа</span>
+
+                                <div class="download">
+
+                                  <div class="download__box">
+                                    <span class="download__icon">
+                                      <svg width='53' height='53'>
+                                        <use href='img/sprite/sprite.svg#download'></use>
+                                      </svg>
+                                    </span>
+                                    <div class="download__info">
+                                      <span class="download__text">Перетащите файл сюда, чтобы прикрепить или</span>
+                                      <button class="main-link">
+                                        Загрузите
+                                        <svg width='16' height='16'>
+                                          <use href='img/sprite/sprite.svg#'></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="main-form__content">
+                                <span class="main-form__subtitle">Фотография с выбранным  документом</span>
+
+                                <div class="download">
+
+                                  <div class="download__box">
+                                    <span class="download__icon">
+                                      <svg width='53' height='53'>
+                                        <use href='img/sprite/sprite.svg#download'></use>
+                                      </svg>
+                                    </span>
+                                    <div class="download__info">
+                                      <span class="download__text">Перетащите файл сюда, чтобы прикрепить или</span>
+                                      <button class="main-link">
+                                        Загрузите
+                                        <svg width='16' height='16'>
+                                          <use href='img/sprite/sprite.svg#'></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+
+                            <button class="blue-btn">Отправить на проверку</button>
+                          </form>
+                        </div>
+
+
+                        <aside class="verification__aside">
+                          <a href="profile-verification-info.html" class="verification__link">
+                            <svg width="16" height="16">
+                              <use href="img/sprite/sprite.svg#arrow2"></use>
+                            </svg>
+                            Верификация
+                          </a>
+                          <div class="verification__aside-box">
+
+                            <div class="verification__info">
+                              <p>Помощь в прохождении верификации</p>
+                              <svg width='26' height='26'>
+                                <use href='img/sprite/sprite.svg#help'></use>
+                              </svg>
+                            </div>
+                            <div class="verification__aside-wrapp">
+                              <span class="verification__subtitle">
+                                <span class="verification__subtitle-icon">
+                                  <svg width='20' height='20'>
+                                    <use href='img/sprite/sprite.svg#help2'></use>
+                                  </svg>
+                                </span>
+
+                                Обязательные требования к документам
+                              </span>
+                              <ul>
+                                <li>
+                                  <p>все документы должны быть сфотографированы только с оригиналов;</p>
+                                </li>
+                                <li>
+                                  <p>на момент отправки срок действия удостоверяющего личность документа должен быть не
+                                    менее 6 месяцев;</p>
+                                </li>
+                                <li>
+                                  <p>изображения должны быть в формате .jpeg, .png или .pdf размером до 50 Мб;</p>
+                                </li>
+                                <li>
+                                  <p>все данные на изображении должны быть четко различимы;</p>
+                                </li>
+                                <li>
+                                  <p>не допускается обрезание краёв документа, все четыре угла документа должны быть
+                                    видны;</p>
+                                </li>
+                                <li>
+                                  <p>изображение не должно содержать посторонних предметов, объектов или надписей,
+                                    которых нет на оригинале документа (например, скрепок, карандашей, пальцев и т.д.).
+                                  </p>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="verification__aside-wrapp">
+                              <span class="verification__subtitle">
+                                <span class="verification__subtitle-icon">
+                                  <svg width='20' height='20'>
+                                    <use href='img/sprite/sprite.svg#help2'></use>
+                                  </svg>
+                                </span>
+                                Для верификации личности вам необходимо загрузить изображение – фото/селфи с паспортом
+                                (пример на рис.).
+                              </span>
+
+                              <div class="verification__aside-image">
+                                <img width='235' height='218' src='img/index/example.png' alt='image'>
+                              </div>
+                            </div>
+
+                            <div class="verification__aside-wrapp">
+                              <span class="verification__subtitle">
+                                <span class="verification__subtitle-icon">
+                                  <svg width='20' height='20'>
+                                    <use href='img/sprite/sprite.svg#help2'></use>
+                                  </svg>
+                                </span>
+                                Требования к фото/селфи:
+                              </span>
+                              <ul>
+                                <li>
+                                  <p>необходимо держать документ с разворотом заднего форзаца у лица;</p>
+                                </li>
+                                <li>
+                                  <p>необходимо держать белый лист бумаги формата не менее А5, на котором от руки
+                                    написано слово Plexico и текущая дата;</p>
+                                </li>
+                                <li>
+                                  <p>фото должно быть хорошего качества, не размыто;</p>
+                                </li>
+                                <li>
+                                  <p>символы на документе должны быть четко различимы;</p>
+                                </li>
+                                <li>
+                                  <p>глаза на фото должны быть открыты, взгляд направлен в объектив камеры;</p>
+                                </li>
+                                <li>
+                                  <p>не допускаются срезание объективом части головы (прически), гримасы, посторонние
+                                    предметы в руке (кроме документа), задний план должен быть нейтральным;</p>
+                                </li>
+                                <li>
+                                  <p>на фото недопустимо отсутствие одежды.</p>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <button class="verification__close blue-btn">Закрыть</button>
+                          </div>
+                        </aside>
+
+                      </div>
+
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

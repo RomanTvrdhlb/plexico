@@ -13,6 +13,8 @@
 @import "../components/main-components/copy-form.scss";
 @import "../components/main-components/level-bar.scss";
 @import "../components/main-components/photo-form.scss";
+@import "../components/main-components/main-product.scss";
+@import "../components/main-components/safety.scss";
 
 
 // ----------------- BLOCK COMPONENTS -----------------
@@ -38,6 +40,11 @@
 @import "../components/verification.scss";
 @import "../components/personal.scss";
 @import "../components/personal-info.scss";
+@import "../components/referral-list.scss";
+@import "../components/safety-nav.scss";
+@import "../components/safety-success.scss";
+@import "../components/accordion.scss";
+
 
 
 // ----------------- CARD COMPONENTS -----------------
@@ -48,6 +55,7 @@
 @import "../components/cards/wallet-card.scss";
 @import "../components/cards/operation-card.scss";
 @import "../components/cards/verification-card.scss";
+@import "../components/cards/product-card.scss";
 
 
 

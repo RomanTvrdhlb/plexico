@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+    <main>
+      <div class="container container--dash">
+        <div class="dashboard">
+          @include('partials/header.html')
+   
+          <aside class="aside">
+            <div class="aside__top">
+              <a href="index.html" class="logo">
+                <svg width='125' height='40'>
+                  <use href='img/sprite/sprite.svg#logo2'></use>
+                </svg>
+              </a>
+
+              <div class="dashboard-info">
+                <div class="dashboard-info__top">
+                  <span class="dashboard-info__title">Ваш баланс</span>
+                  <span class="dashboard-info__date">13 Января, 2024</span>
+                </div>
+                <div class="dashboard-info__box">
+                  <span class="dashboard-info__value">$ <b>4,389.80</b></span>
+                  <span class="dashboard-info__precent">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#top'></use>
+                    </svg>
+                    7%
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="aside__mobile">
+              <div class="aside__mobile-top">
+                <button class="info-btn">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#notification'></use>
+                  </svg>
+                </button>
+                <span class="aside__mobile-user">Анастасия</span>
+            
+                <button class="burger">
+                  <span class="burger__line"></span>
+                </button>
+              </div>
+            
+              <div class="aside__mobile-box">
+                  <form class="search-form"> 
+                      <label for="search"> 
+                        <input type="text" name="search" id="search" placeholder="Поиск">
+                      </label> 
+                      <button type="submit"> 
+                       <svg width='24' height='24'>
+                         <use href='img/sprite/sprite.svg#search'></use>
+                       </svg>
+                      </button> 
+                  </form>
+            
+                  <ul class="aside-nav">
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button active">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside1'></use>
+                          </svg>
+                        </span>
+                        Дашборд
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside2'></use>
+                          </svg>
+                        </span>
+                        Продукты
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside3'></use>
+                          </svg>
+                        </span>
+                        Финансы
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside4'></use>
+                          </svg>
+                        </span>
+                        Партнеры
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside5'></use>
+                          </svg>
+                        </span>
+                        История операций
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="#" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside6'></use>
+                          </svg>
+                        </span>
+                        Настройки
+                      </a>
+                    </li>
+                  </ul>
+            
+                  <a href="#" class="exit-btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#exit'></use>
+                    </svg>
+                    Выход
+                  </a>
+              </div>
+            
+              <div class="aside__mobile-bottom">
+                <div class="lang-select select" data-select>
+                  <div class="select__header">
+                    <input type="hidden" class="select__input input-select" id="lang_1" name="lang_1" value="1">
+                    <span class="select__current" data-id="1">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </span>
+                    <svg class="select__current-icon" width='5' height='7'>
+                      <use href='img/sprite/sprite.svg#Union'></use>
+                    </svg>
+                  </div>
+                  <div class="select__body">
+                    <ul class="select__list">
+                      <li class="select__option" data-id="1" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                        Русский
+                      </li>
+                      <li class="select__option" data-id="2" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                        English
+                      </li>
+                      <li class="select__option" data-id="3" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                        Українська
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            
+                <p>Copyright © 2024 Plexico. All Rights Reserved.</p>
+              </div>
+            </div>
+          </aside>
+  
+          <div class="dashboard__content">
+            <section class="settings-section">
+              <div class="settings-section__box">
+                <h1 class="title">Настройки профиля</h1>
+
+                <div class="settings">
+                  <div class="settings__aside">
+                    <span class="settings__subtitle">MЕНЮ</span>
+                    <ul class="settings-nav">
+                      <li class="settings-nav__item">
+                      <a href="settings.html" class="settings-nav__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#Personal'></use>
+                          </svg>
+                          Личные данные
+                      </a>
+                      </li>
+                      <li class="settings-nav__item">
+                        <a href="settings-lang.html" class="settings-nav__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#Contact'></use>
+                          </svg>
+                          Контактные данные
+                        </a>
+                      </li>
+                      <li class="settings-nav__item">
+                        <a href="settings-bot.html" class="settings-nav__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#Verification'></use>
+                          </svg>
+                          Верификация
+                        </a>
+                      </li>
+                      <li class="settings-nav__item">
+                        <a href="settings-bot.html" class="settings-nav__btn active">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#Safety'></use>
+                          </svg>
+                          Безопасность
+                        </a>
+                      </li>
+                      <li class="settings-nav__item">
+                        <a href="settings-bot.html" class="settings-nav__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#MyWallet'></use>
+                          </svg>
+                          Mои реквизиты
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="settings__content">
+                    <button class="settings__close">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#arrow'></use>
+                      </svg>
+                      Безопасность
+                    </button>
+                    <div class="settings__inner">
+                      <div class="safety">
+                        <div class="safety__top">
+                          <a href="profile-safety.html" class="safety__link">
+                            <svg width="16" height="16">
+                              <use href="img/sprite/sprite.svg#arrow2"></use>
+                            </svg>
+                            Безопасность
+                          </a>
+    
+                          <span class="pretitle">Смена пароля</span>
+
+                          <div class="safety__info">
+                            <span class="safety__info-icon">
+                              <svg width='32' height='32'>
+                                <use href='img/sprite/sprite.svg#lock'></use>
+                              </svg>
+                            </span>
+                            
+                            <p>Для повышения безопасности вашей учетной записи регулярно меняйте пароль. Новый пароль должен быть надежным и уникальным.</p>
+                          </div>
+                        </div>
+                        
+                        <form class="main-form">
+                          <label for="safety_pass" class="main-form__label">
+                            <span class="main-form__name">Текущий пароль</span>
+                            <input type="text" name="safety_pass" id="safety_pass" class="main-form__input" placeholder="Введите текущий пароль">
+                          </label>
+
+                          <label for="safety_pass_new" class="main-form__label">
+                            <span class="main-form__name">Новый пароль</span>
+                            <input type="number" name="safety_pass_new" id="safety_pass_new" class="main-form__input" placeholder="Введите новый пароль">
+                          </label>
+
+                          <label for="safety_pass_new_2" class="main-form__label">
+                            <span class="main-form__name">Подтверждения нового пароля</span>
+                            <input type="text" name="safety_pass_new_2" id="safety_pass_new_2" class="main-form__input" placeholder="Подтвердите новый пароль">
+                          </label>
+
+                          <button class="blue-btn">Cохранить изменения</button>
+                        </form>
+                      </div>
+                     
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </section>
+  
+         
+          </div>
+        </div>
+      </div>
+    </main>
+
+  @include('partials/modals.html')
+  
+  <script src="js/main.js"></script>
+</body>
+
+
+</html>

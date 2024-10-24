@@ -9,12 +9,10 @@ bar &&
      
         steps.forEach((step, index) => {
           if (steps[steps.length - 1].classList.contains("active")) {
-            // Add 'active' class to all steps
             steps.forEach((el) => {
               el.classList.add("hide");
             });
           } else {
-            // Remove 'active' class from all steps
             steps.forEach((el) => {
               el.classList.remove("hide");
             });

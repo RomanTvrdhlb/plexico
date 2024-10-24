@@ -162,5 +162,10 @@
         &:hover{
             color: var(--cl-m);
         }
+
+        &.active{
+            opacity: 0;
+            visibility: hidden;
+        }
     }   
 }

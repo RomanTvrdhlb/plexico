@@ -3,6 +3,10 @@
         display: none;
     }
 
+    @include mobile{
+        overflow: auto;
+    }
+
     display: flex;
     align-items: center;
     grid-gap: 10px;

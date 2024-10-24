@@ -1,0 +1,115 @@
+.main-product{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px;
+
+    @include for-small-tablet{
+        margin-top: 20px;
+    }
+
+    @include small-tablet{
+        margin-top: 24px;
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-d);
+    }
+
+    &__list{
+       
+        grid-gap: 12px clamp(13px, .9722vw, 14px);
+
+        @include for-small-tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include small-tablet{
+            @include for-mobile{
+            grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+            }
+        }
+
+        @include for-mobile{
+            display: grid;
+        }
+
+        @include mobile{
+           display: flex;
+           flex-direction: column;
+        }
+
+        &--mode{
+            grid-gap: 20px clamp(20px, 2.7778vw, 40px);
+            background: var(--bg-d);
+            padding: 16px clamp(16px, 1.6667vw, 24px);
+            position: relative;
+            z-index: 1;
+
+            @include small-tablet{
+                grid-template-columns: 100%;
+                grid-gap: 0;
+            }
+
+            &::before{
+                position: absolute;
+                height: 1px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: var(--br-g);
+                right: 24px;
+                left: 24px;
+                pointer-events: none;
+
+                @include for-small-tablet{
+                    content: '';
+                }
+            }
+
+            .main-product{
+                &__item{
+                    position: relative;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+
+                    &:nth-child(even){
+                        &::before{
+                            @include for-small-tablet{
+                                z-index: -1;
+                                position: absolute;
+                                width: 1px;
+                                top: 7px;
+                                bottom: 7px;
+                                background: var(--br-g);
+                                left: calc((clamp(20px, 2.7778vw, 40px) / 2) * -1);
+                                transform: translateX(-50%);
+                                pointer-events: none;
+                                content: '';
+                            }
+                        }
+                    }
+
+                    @include small-tablet{
+                        &:not(:last-of-type){
+                            &::before{
+                                z-index: -1;
+                                position: absolute;
+                                height: 1px;
+                                bottom: 0;
+                                background: var(--br-g);
+                                left: 0;
+                                width: 100%;
+                                pointer-events: none;
+                                content: '';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

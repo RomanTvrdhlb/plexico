@@ -1,10 +1,16 @@
 .referral-analysis{
-    padding: clamp(16px, 1.7021vw, 24px);
-    background: var(--bg-a);
     display: flex;
     flex-direction: column;
     grid-gap: 20px;
     width: 100%;
+
+    &__box{
+        padding: clamp(16px, 1.7021vw, 24px);
+        background: var(--bg-a);
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+    }
 
     &__top{
         display: flex;
