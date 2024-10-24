@@ -1,0 +1,68 @@
+.download{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-gap: clamp(12px, 1.1806vw, 17px);
+        height: fit-content;
+        background: var(--bg-d);
+        border-radius: 16px;
+        border: 1px dashed var(--br-k);
+        padding: clamp(24px, 2.2222vw, 32px);
+
+        @include for-mobile{
+            min-height: 156px;
+        }
+
+        @include mobile{
+            min-height: 166px;
+            border-color: var(--br-b);
+        }
+    }
+
+    &__icon{
+        display: flex;
+        width: clamp(41px, 3.6806vw, 53px);
+        aspect-ratio: 1;
+
+        svg,img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(12px, .9722vw, 14px);
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: var(--cl-l);
+
+        @include mobile{
+            max-width: 90%;
+        }
+    }
+
+    &__info{
+        display: inline-flex;
+        align-items: center;
+        grid-gap: 10px 14px;
+
+        @include tablet{
+            @include for-small-tablet{
+                flex-direction: column;
+            }
+        }
+
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+}

@@ -26,4 +26,13 @@
         grid-gap: clamp(20px, 1.7021vw, 24px);
         position: relative;
     }
+
+    &--info{
+
+        .title{
+            @include mobile{
+                display: none;
+            }
+        }
+    }
 }

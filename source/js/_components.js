@@ -12,3 +12,5 @@ import './components/chart.js';
 import './components/checkbox.js';
 import './components/simplebar.js';
 import './components/global.js';
+import './components/fundsMenu.js';
+import './components/2faMenu.js';

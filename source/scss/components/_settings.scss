@@ -15,11 +15,6 @@
         z-index: 2;
     }
 
-    &.mode{
-        grid-template-columns: 100%;
-        padding: clamp(24px, 2.2222vw, 32px) clamp(16px, 3.0556vw, 44px) clamp(28px, 2.2222vw, 32px);
-    }
-
     &__aside{
         display: flex;
         flex-direction: column;
@@ -142,6 +137,14 @@
 
         &.active{
             transform: none;
+        }
+    }
+
+    &.mode{
+        grid-template-columns: 100%;
+       
+        @include for-mobile{
+            padding: clamp(24px, 2.2222vw, 32px) clamp(16px, 3.0556vw, 44px) clamp(28px, 2.2222vw, 32px);
         }
     }
 }

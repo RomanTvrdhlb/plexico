@@ -1233,3 +1233,149 @@
     }
   }
 }
+
+.verify-form{
+
+  .pretitle{
+    grid-column: 1/-1;
+    margin-bottom: 4px;
+
+    @include mobile{
+      text-align: center;
+    }
+  }
+
+  .select{
+    grid-column: 1/-1;
+    width: 100%;
+  }
+
+  .custom-checkbox{
+    grid-column: 1/-1;
+
+    &__content{
+      color: var(--cl-m);
+    }
+  }
+
+  .blue-btn{
+    margin-top: 8px;
+    
+    @include for-tablet{
+      min-width: 302px;
+    }
+  }
+
+  grid-gap: 28px;
+
+  .main-form{
+
+    &__subtitle{
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      color: var(--cl-j);
+    }
+
+    &__btns{
+      display: flex;
+      flex-direction: column;
+      grid-gap: 16px;
+    }
+
+    &__content{
+      display: flex;
+      flex-direction: column;
+      grid-gap: 12px;
+      grid-column: 1/-1;
+    }
+
+    &__inner{
+      grid-gap: 20px clamp(16px, 2.2222vw, 32px);
+
+      padding-bottom: 32px;
+      
+      border-bottom: 1px solid var(--br-c);
+
+      @media (max-width: (1350px)) {
+        @include for-laptop{
+          grid-template-columns: 100%;
+        }
+      }
+
+      @include laptop{
+        @include for-tablet{
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      &--mode{
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+
+    &__wrapp{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px clamp(16px, 2.2222vw, 32px);
+      width: 100%;
+      grid-column: 1/-1;
+
+      padding: clamp(20px, 1.6667vw, 24px) clamp(20px, 1.9444vw, 28px) clamp(24px, 1.9444vw, 28px);
+      border: 1px solid var(--br-c);
+      border-radius: 12px;
+
+      @media (max-width: (1350px)) {
+        @include for-laptop{
+          grid-template-columns: 100%;
+        }
+      }
+
+      @include tablet{
+        grid-template-columns: 100%;
+      }
+
+      .pretitle{
+        @include mobile{
+          text-align: start;
+        }
+      }
+    }
+
+    &__label{
+      grid-gap: 6px;
+
+      &--mode{
+        grid-column: 1/-1;
+      }
+    }
+    
+    &__btn {
+      color: var(--cl-d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 3px;
+      background: var(--bg-g);
+      transition: all 0.3s;
+      position: absolute;
+      bottom: 7px;
+      right: 6px;
+
+      svg,
+      img {
+        width: 17px;
+        height: 17px;
+      }
+
+      &:hover {
+        background: var(--bg-c);
+        color: var(--cl-a);
+      }
+    }
+  }
+}
