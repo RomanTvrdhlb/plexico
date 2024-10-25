@@ -1,5 +1,5 @@
 <div class="overlay fixed-block" data-overlay>
-  <div class="modal" data-popup="send">
+  <div class="modal mode" data-popup="send">
     <a href="#" class="modal__logo">
       <svg width='151' height='48'>
         <use href='img/sprite/sprite.svg#logo'></use>
@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <div class="modal success" data-popup="success">
+  <div class="modal success mode" data-popup="success">
     <a href="#" class="modal__logo">
       <svg width='151' height='48'>
         <use href='img/sprite/sprite.svg#logo'></use>
@@ -58,5 +58,659 @@
     </div>
   </div>
 
+  <div class="modal settings-modal" data-popup="mail">
+    <div class="modal__box">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
 
+      <div class="modal__top">
+        <div class="modal__icon">
+          <svg width='132' height='132'>
+            <use href='img/sprite/sprite.svg#mail-open'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title">Подтвердить почту</span>
+        <p>Введите 6-ти значный код отправленный на Email</p>
+      </div>
+
+      <form class="main-form">
+        <div class="main-form__inputs">
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <span class="main-form__error">Неверный код подтвержения</span>
+        </div>
+        
+        <div class="main-form__bottom">
+          <button class="main-btn">Отменить</button>
+          <button class="blue-btn">Подтвердить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal settings-modal invalid" data-popup="mail-error">
+    <div class="modal__box">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon">
+          <svg width='132' height='132'>
+            <use href='img/sprite/sprite.svg#mail-open'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title">Подтвердить почту</span>
+        <p>Введите 6-ти значный код отправленный на Email</p>
+      </div>
+
+      <form class="main-form invalid">
+        <div class="main-form__inputs">
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <span class="main-form__error">Неверный код подтвержения</span>
+        </div>
+        
+        <div class="main-form__bottom">
+          <button class="main-btn">Отменить</button>
+          <button class="blue-btn">Подтвердить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal settings-modal" data-popup="mail-new">
+    <div class="modal__box">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon">
+          <svg width='132' height='132'>
+            <use href='img/sprite/sprite.svg#mail-open'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title">Подтвердить новую почту</span>
+        <p>Введите 6-ти значный код отправленный на Email для подтверждения новой почты</p>
+      </div>
+
+      <form class="main-form">
+        <div class="main-form__inputs">
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <span class="main-form__error">Неверный код подтвержения</span>
+        </div>
+        
+        <div class="main-form__bottom">
+          <button class="main-btn">Отменить</button>
+          <button class="blue-btn" data-btn-inner="mail-success">Подтвердить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal settings-modal invalid" data-popup="mail-new-error">
+    <div class="modal__box">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon">
+          <svg width='132' height='132'>
+            <use href='img/sprite/sprite.svg#mail-open'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title">Подтвердить новую почту</span>
+        <p>Введите 6-ти значный код отправленный на Email для подтверждения новой почты</p>
+      </div>
+
+      <form class="main-form  invalid">
+        <div class="main-form__inputs">
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <span class="main-form__error">Неверный код подтвержения</span>
+        </div>
+        
+        <div class="main-form__bottom">
+          <button class="main-btn">Отменить</button>
+          <button class="blue-btn">Подтвердить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal settings-success" data-popup="mail-success">
+    <div class="modal__box">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon">
+          <svg width='132' height='132'>
+            <use href='img/sprite/sprite.svg#check2'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title">Email успешно изменен!</span>
+      </div>
+
+      <button class="blue-btn close">Закрыть</button>
+    </div>
+  </div>
+
+  <div class="modal code settings-modal" data-popup="code">
+    <div class="modal__box">
+      <div class="modal__top">
+        <span class="modal__title">2FA код</span>
+    
+        <button class="modal__close close">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+      </div>
+
+      <p>Код для подключение 2FA</p>
+
+      <form class="connect-card connect-card--mode">
+        <label for="code_modal" class="connect-card__label">
+          <input class="connect-card__input" type="text" name="code_modal" id="code_modal" value="128b3a45m4Ai34Ds12ga5Fsj" readonly>
+        </label>
+        
+        <button class="blue-btn">
+          Копировать
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#copy'></use>
+          </svg>
+        </button>
+
+        <button class="main-btn close">Закрыть</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal settings-modal" data-popup="2fa-off">
+    <div class="modal__box">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon modal__icon--mode">
+          <svg width='38' height='38'>
+            <use href='img/sprite/sprite.svg#key'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title modal__title--mode">Отключить двухфакторную аутентификацию (2FA)</span>
+        <p>Введите 6-ти значный код из приложения Google Authenticator</p>
+      </div>
+
+      <form class="main-form">
+        <div class="main-form__inputs">
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <input class="main-form__input" type="text" maxlength="1" />
+          <span class="main-form__error">Неверный код подтвержения</span>
+        </div>
+        
+        <div class="main-form__bottom">
+          <button class="main-btn">Отменить</button>
+          <button class="blue-btn" data-btn-inner="2fa-success">Подтвердить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal modal-safety settings-success" data-popup="2fa-success">
+    <div class="modal__box">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon">
+          <svg width='132' height='132'>
+            <use href='img/sprite/sprite.svg#check2'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title">Двухфакторную аутентификацию (2FA) успешно отключена</span>
+      </div>
+
+      <button class="blue-btn close">Закрыть</button>
+    </div>
+  </div>
+
+  <div class="modal modal-profile" data-popup="swap">
+    <div class="modal__box">
+      <a href="finances.html" class="modal__link">
+        <svg width='16' height='16'>
+          <use href='img/sprite/sprite.svg#arrow2'></use>
+        </svg>
+        Финансы
+      </a>
+      <div class="modal__inner">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon">
+          <svg width='92' height='92'>
+            <use href='img/sprite/sprite.svg#check2'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title">Успешный обмен!</span>
+        <p>Обмен средств был успешно выполнен!</p>
+      </div>
+
+      <div class="modal__wrapp">
+        <ul class="modal__list" data-title="Детали обмена:">
+          <li class="modal__item">
+            <span class="modal__text">Валюта продажи:</span>
+            <span class="modal__value">BTC</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Сумма продажи:</span>
+            <span class="modal__value">0,001</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Валюта покупки:</span>
+            <span class="modal__value">USDT</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Сумма покупки:</span>
+            <span class="modal__value">20,5782</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Курс обмена:</span>
+            <span class="modal__value">56.694,49</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Комиссия:</span>
+            <span class="modal__value">0,0056</span>
+          </li>
+        </ul>
+       
+        <p>Спасибо, что пользуетесь нашей платформой!</p>
+      </div>
+
+      <button class="blue-btn close">Закрыть</button>
+    </div>
+    </div>
+  </div>
+
+  <div class="modal modal-profile" data-popup="funds">
+    <div class="modal__box">
+      <a href="finances.html" class="modal__link">
+        <svg width='16' height='16'>
+          <use href='img/sprite/sprite.svg#arrow2'></use>
+        </svg>
+        Финансы
+      </a>
+      <div class="modal__inner">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon">
+          <svg width='92' height='92'>
+            <use href='img/sprite/sprite.svg#check2'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title">Успешный перевод!</span>
+        <p>Ваш перевод средств был успешно выполнен!</p>
+      </div>
+
+      <div class="modal__wrapp">
+        <ul class="modal__list" data-title="Детали перевода:">
+          <li class="modal__item">
+            <span class="modal__text">Валюта:</span>
+            <span class="modal__value">USDT</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Комиссия:</span>
+            <span class="modal__value">0,00001</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Сумма к получению:</span>
+            <span class="modal__value">0,0001</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Получатель:</span>
+            <span class="modal__value">petrovd@mail.com</span>
+          </li>
+          
+        </ul>
+       
+        <p>Спасибо, что пользуетесь нашей платформой!</p>
+      </div>
+
+      <button class="blue-btn close">Закрыть</button>
+    </div>
+    </div>
+  </div>
+
+  <div class="modal modal-profile" data-popup="withdraw">
+    <div class="modal__box">
+      <a href="finances.html" class="modal__link">
+        <svg width='16' height='16'>
+          <use href='img/sprite/sprite.svg#arrow2'></use>
+        </svg>
+        Финансы
+      </a>
+      <div class="modal__inner">
+      <button class="modal__close close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon">
+          <svg width='92' height='92'>
+            <use href='img/sprite/sprite.svg#check2'></use>
+          </svg>
+        </div>
+
+        <span class="modal__title">Транзакция  успешно создана</span>
+        <p>Средства будут зачислены в течение 30 минут. Статус перевода доступен в истории выводов в разделе финансы</p>
+      </div>
+
+      <div class="modal__wrapp">
+        <ul class="modal__list" data-title="Детали перевода:">
+          <li class="modal__item">
+            <span class="modal__text">Валюта:</span>
+            <span class="modal__value">USDT</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Сеть:</span>
+            <span class="modal__value">ERC-20</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Комиссия:</span>
+            <span class="modal__value">0,00001</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Сумма к получению:</span>
+            <span class="modal__value">0,01356</span>
+          </li>
+          <li class="modal__item">
+            <span class="modal__text">Адрес кошелька:</span>
+            <span class="modal__value">p0fjs9mpds3kdjs03k29n5n2dlk003k9fd</span>
+          </li>
+          
+        </ul>
+       
+        <p>Спасибо, что пользуетесь нашей платформой!</p>
+      </div>
+
+      <button class="blue-btn close">Закрыть</button>
+    </div>
+    </div>
+  </div>
+
+  <div class="modal withdraw modal-profile" data-popup="withdrawal">
+    <div class="modal__box">
+      <a href="finances.html" class="modal__link">
+        <svg width='16' height='16'>
+          <use href='img/sprite/sprite.svg#arrow2'></use>
+        </svg>
+        Финансы
+      </a>
+      <div class="modal__inner">
+
+      <div class="modal__top">
+        <span class="modal__title">Вывести ETH </span>
+        <span class="modal__balance">Текущий баланс: <b>0.1532539906 ETH</b></span>
+       
+        <button class="modal__close close">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal__label">
+        <span class="modal__label-icon">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#warn'></use>
+          </svg>
+        </span>
+        <p>Важно, чтобы монета и реквизиты, куда поступят средства, были в одной криптовалюте. </p>
+      </div>
+
+     
+        <form class="balance-form main-form">
+          <label for="valute_5" class="main-form__label">
+            <span class="main-form__title">Адрес вывода</span>
+            <div class="withdraw-select select" data-select>
+              <div class="select__header">
+                <input type="hidden" class="select__input input-select" id="valute_5" name="valute_5"
+                  value="3">
+                <span class="select__current" data-id="3">
+                  <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                  ETH/ERC-20/Crypto 1
+                </span>
+                <svg class="select__current-icon" width='5' height='7'>
+                  <use href='img/sprite/sprite.svg#Union'></use>
+                </svg>
+              </div>
+              <div class="select__body">
+                <ul class="select__list">
+           
+                  <li class="select__option" data-id="1" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
+                    USDT/TRC-20/Crypto 2
+                  </li>
+                  <li class="select__option" data-id="2" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
+                    BTC/BTC/Crypto 3
+                  </li>
+                  <li class="select__option" data-id="3" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                    ETH/ERC-20/Crypto 1
+                  </li>
+                  <li class="select__option" data-id="4" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/USDC.svg" alt="image">
+                    USDC/BEP-20/Crypto 4
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </label>
+
+          <label for="sum_5" class="main-form__label">
+            <span class="main-form__title">Сумма к выводу</span>
+            <div class="main-form__field">
+              <input type="number" name="sum_5" id="sum_5" class="main-form__input" placeholder="0.01">
+              <span class="main-form__icon">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#ETH4'></use>
+                </svg>
+              </span>
+            </div>
+            <span class="main-form__error">Введенная сумма меньше минимальной: Мин: 0.01 ETH , Макс: 150 ETH</span>
+            <div class="main-form__wrapp">
+              <span class="main-form__text">Комиссия на вывод: <b> 0.001 ETH</b></span>
+              <span class="main-form__text">Мин: <b>0.00001 BTC</b> , Макс: <b>150 BTC</b></span>
+            </div>
+          </label>
+
+          <div class="main-form__wrapp">
+            <div class="main-form__balance">
+              <span class="main-form__subtitle">К списанию</span>
+              <span class="main-form__value">0.00 <b>ETH</b></span>
+            </div>
+            <p>Средства будут зачислены в течение 30 минут после подтверждения транзакции в блокчейне</p>
+          </div>
+
+          <div class="main-form__inner">
+            <button class="main-btn">Отменить</button>
+            <button class="blue-btn" data-btn-inner="withdraw">Вывести ETH</button>
+          </div>
+        </form>
+     
+
+    </div>
+    </div>
+  </div>
+
+  <div class="modal withdraw modal-profile" data-popup="withdrawal-error">
+    <div class="modal__box">
+      <a href="finances.html" class="modal__link">
+        <svg width='16' height='16'>
+          <use href='img/sprite/sprite.svg#arrow2'></use>
+        </svg>
+        Финансы
+      </a>
+      <div class="modal__inner">
+
+      <div class="modal__top">
+        <span class="modal__title">Вывести ETH </span>
+        <span class="modal__balance">Текущий баланс: <b>0.1532539906 ETH</b></span>
+       
+        <button class="modal__close close">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal__label">
+        <span class="modal__label-icon">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#warn'></use>
+          </svg>
+        </span>
+        <p>Важно, чтобы монета и реквизиты, куда поступят средства, были в одной криптовалюте. </p>
+      </div>
+
+     
+        <form class="balance-form main-form invalid">
+          <label for="valute_5" class="main-form__label">
+            <span class="main-form__title">Адрес вывода</span>
+            <div class="withdraw-select select" data-select>
+              <div class="select__header">
+                <input type="hidden" class="select__input input-select" id="valute_5" name="valute_5"
+                  value="3">
+                <span class="select__current" data-id="3">
+                  <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                  ETH/ERC-20/Crypto 1
+                </span>
+                <svg class="select__current-icon" width='5' height='7'>
+                  <use href='img/sprite/sprite.svg#Union'></use>
+                </svg>
+              </div>
+              <div class="select__body">
+                <ul class="select__list">
+           
+                  <li class="select__option" data-id="1" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
+                    USDT/TRC-20/Crypto 2
+                  </li>
+                  <li class="select__option" data-id="2" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
+                    BTC/BTC/Crypto 3
+                  </li>
+                  <li class="select__option" data-id="3" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                    ETH/ERC-20/Crypto 1
+                  </li>
+                  <li class="select__option" data-id="4" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/USDC.svg" alt="image">
+                    USDC/BEP-20/Crypto 4
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </label>
+
+          <label for="sum_5" class="main-form__label">
+            <span class="main-form__title">Сумма к выводу</span>
+            <div class="main-form__field">
+              <input type="number" name="sum_5" id="sum_5" class="main-form__input" placeholder="0.01">
+              <span class="main-form__icon">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#ETH4'></use>
+                </svg>
+              </span>
+            </div>
+            <span class="main-form__error">Введенная сумма меньше минимальной: Мин: 0.01 ETH , Макс: 150 ETH</span>
+            <div class="main-form__wrapp">
+              <span class="main-form__text">Комиссия на вывод: <b> 0.001 ETH</b></span>
+              <span class="main-form__text">Мин: <b>0.00001 BTC</b> , Макс: <b>150 BTC</b></span>
+            </div>
+          </label>
+
+          <div class="main-form__wrapp">
+            <div class="main-form__balance">
+              <span class="main-form__subtitle">К списанию</span>
+              <span class="main-form__value">0.00 <b>ETH</b></span>
+            </div>
+            <p>Средства будут зачислены в течение 30 минут после подтверждения транзакции в блокчейне</p>
+          </div>
+
+          <div class="main-form__inner">
+            <button class="main-btn">Отменить</button>
+            <button class="blue-btn" data-btn-inner="withdraw">Вывести ETH</button>
+          </div>
+        </form>
+     
+
+    </div>
+    </div>
+  </div>
 </div>
+
+
+

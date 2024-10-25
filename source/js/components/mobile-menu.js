@@ -44,16 +44,18 @@ const mobileMenuHandler = function (overlay, mobileMenu, burger) {
 
 export const hideMenuHandler = function (overlay, mobileMenu, burger) {
     enableScroll()
-    removeCustomClass(mobileMenu, activeClass);
-    removeClassInArray(burger, activeClass);
+    mobileMenu ? removeCustomClass(mobileMenu, activeClass) : '';
+    burger ? removeClassInArray(burger, activeClass) : '';
     removeCustomClass(overlay, activeClassMode);
 
-    if (mobileMenu.classList.contains(activeClass)) {
-        disableScroll();
-        addCustomClass(header, 'open-menu')
-    } else {
-        enableScroll();
-        removeCustomClass(header, 'open-menu')
+    if(mobileMenu){
+        if (mobileMenu.classList.contains(activeClass)) {
+            disableScroll();
+            addCustomClass(header, 'open-menu')
+        } else {
+            enableScroll();
+            removeCustomClass(header, 'open-menu')
+        }
     }
 }
 

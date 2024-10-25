@@ -54,6 +54,8 @@ if (select.length) {
       items.forEach(function (item) {item.style.display = "flex"});
       item.classList.contains('choice-lang') ? currentItem.style.display = "flex" : currentItem.style.display = "none";
       item.classList.contains('choice-lang') ? addCustomClass(currentItem, 'active') : '';
+      item.classList.contains('withdraw-select') ? currentItem.style.display = "flex" : currentItem.style.display = "none";
+      item.classList.contains('withdraw-select') ? addCustomClass(currentItem, 'active') : '';
 
       if (isSelectOpen) {
         closeSelect(selectBody, item);

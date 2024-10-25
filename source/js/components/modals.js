@@ -13,6 +13,7 @@ class ModalManager {
     this.mobileMenu = document.querySelector('.mobile');
     this.burger = document.querySelectorAll('.burger');
     this.innerButton = null;
+    this.innerClose = null;
     this.timeIn = fadeInTimeout;
     this.timeOut = fadeOutTimeout;
     this.bindEvents();
@@ -53,15 +54,21 @@ class ModalManager {
     removeClassInArray(this.modals, this.activeClass);
     addCustomClass(this.overlay, this.activeClass);
     this.activeMode && addCustomClass(this.overlay, this.activeMode);
+
+    modal.classList.contains('mode')
+    ? addCustomClass(this.overlay, this.activeMode)
+    : removeCustomClass(this.overlay, this.activeMode);
+
     addCustomClass(modal, this.activeClass);
     fadeIn(modal, this.timeIn, 'flex');
     disableScroll();
 
     this.innerButton = modal.querySelector('.close');
+    this.innerClose = modal.querySelector('.blue-btn.close');
   }
 
   overlayClickHandler(e) {
-    if (e.target === this.overlay || e.target === this.innerButton) {
+    if (e.target === this.overlay || e.target === this.innerButton || e.target === this.innerClose) {
       this.closeModal();
     }
   }
@@ -81,6 +88,7 @@ class ModalManager {
     addCustomClass(currentModal, this.activeClass);
     disableScroll();
     this.innerButton = currentModal.querySelector('.close');
+    this.innerClose = currentModal.querySelector('.blue-btn.close');
   }
 
   findAttribute(element, attributeName) {
