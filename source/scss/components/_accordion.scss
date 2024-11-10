@@ -108,6 +108,7 @@
             line-height: 130%;
             letter-spacing: -0.01em;
             color: var(--cl-l);
+            padding-left: clamp(5px, .5556vw, 8px);
 
             &:not(:first-of-type){
                 @include for-mobile{

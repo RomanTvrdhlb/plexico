@@ -5,7 +5,7 @@
 <body>
 
   <main>
-    <section class="auth-section">
+    <section class="auth-section auth-section--registration">
       <div class="container">
         <div class="auth-section__box">
           <div class="auth-section__inner">
@@ -22,7 +22,7 @@
             </div>
           </div>
 
-          <div class="auth-section__content">
+          <div class="auth-section__content safety">
 
             <div class="auth-section__top">
               <a href="#" class="auth-section__logo">
@@ -45,14 +45,24 @@
               <p>Придумайте надежный пароль. Пароль должен содержать не менее 8 символов </p>
             </div>
 
-            <form class="main-form">
+            <form class="main-form pass-form">
               <label for="pass_1" class="main-form__label">
                 <span class="main-form__name">Пароль</span>
-                <input type="password" name="pass_1" id="pass_1" class="main-form__input" placeholder="********">
+                <input type="text" name="pass_1" id="pass_1" class="main-form__input" value="admin1234">
+                <button class="main-form__eye">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#eye'></use>
+                  </svg>
+                </button>
               </label>
               <label for="pass_2" class="main-form__label">
                 <span class="main-form__name">Подтвердите пароль</span>
-                <input type="password" name="pass_2" id="pass_2" class="main-form__input" placeholder="********">
+                <input type="text" name="pass_2" id="pass_2" class="main-form__input" value="admin1234">
+                <button class="main-form__eye">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#eye'></use>
+                  </svg>
+                </button>
               </label>
 
               <div class="main-form__bottom">
@@ -68,6 +78,8 @@
                 </div>
               </div>
             </form>
+
+           
           </div>
         </div>
       </div>

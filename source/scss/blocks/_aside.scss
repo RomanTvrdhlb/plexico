@@ -126,6 +126,14 @@
                 color: var(--cl-l);
                 text-align: center;
             }
+
+            .aside-select{
+                @include  for-tablet{
+                    display: none;
+                }
+
+                max-width: 166px;
+            }
         }
 
         &-box{
@@ -136,6 +144,12 @@
             flex-direction: column;
             grid-gap: 15px;
             height: 100%;
+
+            .aside-select{
+                @include tablet{
+                    display: none;
+                }
+            }
         }
 
         .exit-btn{
@@ -147,6 +161,8 @@
                 display: none;
             }
         }
+
+       
 
         .burger {
             justify-self: end;

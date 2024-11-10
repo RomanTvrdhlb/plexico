@@ -35,10 +35,11 @@
 
             <div class="aside__mobile">
               <div class="aside__mobile-top">
-                <button class="info-btn">
+                <button class="info-btn" data-open>
                   <svg width='20' height='20'>
                     <use href='img/sprite/sprite.svg#notification'></use>
                   </svg>
+                  <span class="info-btn__count">200</span>
                 </button>
                 <span class="aside__mobile-user">Анастасия</span>
             
@@ -61,7 +62,7 @@
             
                   <ul class="aside-nav">
                     <li class="aside-nav__item">
-                      <a href="#" class="aside-nav__button active">
+                      <a href="index.html" class="aside-nav__button active">
                         <span class="aside-nav__icon">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#aside1'></use>
@@ -81,7 +82,7 @@
                       </a>
                     </li>
                     <li class="aside-nav__item">
-                      <a href="#" class="aside-nav__button">
+                      <a href="finances.html" class="aside-nav__button">
                         <span class="aside-nav__icon">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#aside3'></use>
@@ -101,7 +102,7 @@
                       </a>
                     </li>
                     <li class="aside-nav__item">
-                      <a href="#" class="aside-nav__button">
+                      <a href="history.html" class="aside-nav__button">
                         <span class="aside-nav__icon">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#aside5'></use>
@@ -111,7 +112,17 @@
                       </a>
                     </li>
                     <li class="aside-nav__item">
-                      <a href="#" class="aside-nav__button">
+                      <a href="history.html" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside7'></use>
+                          </svg>
+                        </span>
+                        Профиль
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="settings.html" class="aside-nav__button">
                         <span class="aside-nav__icon">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#aside6'></use>
@@ -121,6 +132,51 @@
                       </a>
                     </li>
                   </ul>
+
+                  <div class="aside-select withdraw-select select" data-select>
+                    <div class="select__header">
+                      <input type="hidden" class="select__input input-select" id="lang_5" name="lang_5" value="3">
+                      <span class="select__current" data-id="3">
+                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                        Русский
+                      </span>
+                      <svg class="select__current-icon" width='5' height='7'>
+                        <use href='img/sprite/sprite.svg#Union'></use>
+                      </svg>
+                    </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__option" data-id="1" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                          Украинский
+                        </li>
+                        <li class="select__option" data-id="2" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                          Английский
+                        </li>
+                        <li class="select__option" data-id="3" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                          Русский
+                        </li>
+                        <li class="select__option" data-id="4" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                          Белорусский
+                        </li>
+                        <li class="select__option" data-id="5" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                          Английский2
+                        </li>
+                        <li class="select__option" data-id="6" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                          Русский2
+                        </li>
+                        <li class="select__option" data-id="7" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                          Белорусский2
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
             
                   <a href="#" class="exit-btn">
                     <svg width='20' height='20'>
@@ -131,10 +187,10 @@
               </div>
             
               <div class="aside__mobile-bottom">
-                <div class="lang-select select" data-select>
+                <div class="aside-select withdraw-select select" data-select>
                   <div class="select__header">
-                    <input type="hidden" class="select__input input-select" id="lang_1" name="lang_1" value="1">
-                    <span class="select__current" data-id="1">
+                    <input type="hidden" class="select__input input-select" id="lang_5" name="lang_5" value="3">
+                    <span class="select__current" data-id="3">
                       <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
                       Русский
                     </span>
@@ -145,16 +201,20 @@
                   <div class="select__body">
                     <ul class="select__list">
                       <li class="select__option" data-id="1" data-type="option">
-                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
-                        Русский
+                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                        Украинский
                       </li>
                       <li class="select__option" data-id="2" data-type="option">
                         <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
-                        English
+                        Английский
                       </li>
                       <li class="select__option" data-id="3" data-type="option">
-                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
-                        Українська
+                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                        Русский
+                      </li>
+                      <li class="select__option" data-id="4" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                        Белорусский
                       </li>
                     </ul>
                   </div>
@@ -164,6 +224,235 @@
               </div>
             </div>
           </aside>
+
+          <div class="notification">
+            <div class="notification__box">
+              <div class="notification__top">
+                <div class="notification__info">
+                  <span class="notification__title">Уведомления</span>
+                  <span class="notification__count">200</span>
+                </div>
+              <button class="notification__close">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+              </button>
+              <button class="main-btn">
+                Очистить
+                <svg width='16' height='16'>
+                  <use href='img/sprite/sprite.svg#trash2'></use>
+                </svg>
+              </button>
+              </div>
+        
+              <ul class="notification__list">
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon">
+                      <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon black">
+                      <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon">
+                      <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon">
+                      <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon black">
+                      <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon">
+                      <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon">
+                      <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon black">
+                      <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon">
+                      <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon">
+                      <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon black">
+                      <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+                <li class="notification-coment">
+                  <div class="notification-coment__box">
+                    <span class="notification-coment__icon">
+                      <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                    </span>
+                    <div class="notification-coment__top">
+                      <span class="notification-coment__title">Заголовок уведомления</span>
+                      <span class="notification-coment__date">12:01</span>
+                      <button class="notification-coment__remove">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Небольшое описание уведомление в две строки</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
   
           <div class="dashboard__content">
             <section class="top-section">
@@ -337,6 +626,43 @@
                             </ul>
                           </div>
                         </div>
+
+                        <form class="support-form main-form">
+                          <span class="main-form__title">
+                            Support PIN
+                            <button class="main-form__title-info">
+                              <svg width='16' height='16'>
+                                <use href='img/sprite/sprite.svg#info'></use>
+                              </svg>
+                            </button>
+                          </span>
+                          <div class="main-form__inputs">
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <button class="main-form__eye">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#eye'></use>
+                              </svg>
+                              
+                            </button>
+                          </div>
+                          
+                          <div class="main-form__bottom">
+                            <button class="blue-btn" data-copy>Подтвердить
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#copy'></use>
+                              </svg>
+                            </button> 
+                            <button class="main-btn" data-refresh>Обновить
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#reload'></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </form>
                       </li>
                       <li class="dashboard__tabs-item" data-tab-content="2">
                         <div class="profit-analysis">
@@ -385,8 +711,14 @@
 
                             <ul class="profit-analysis__content">
                               <li class="profit-analysis__content-item active" data-inner-content="1">
-                                <canvas class="profit-chart" width="100%" data-profit="1"></canvas>
-
+                                <div class="profit-analysis__chart">
+                                  <canvas class="profit-chart" width="100%" data-profit="1"></canvas>
+                                  <div class="profit-analysis__chart-info">
+                                    <span class="profit-analysis__chart-text">Продукт №1</span>
+                                    <span class="profit-analysis__chart-text">Продукт №2</span>
+                                  </div>
+                                </div>
+                              
                                 <div class="main-product">
                                   <span class="main-product__title">Мои продукты</span>
       
@@ -470,7 +802,13 @@
                                 </div>
                               </li>
                               <li class="profit-analysis__content-item" data-inner-content="2">
-                                <canvas class="profit-chart" width="100%" data-profit="2"></canvas>
+                                <div class="profit-analysis__chart">
+                                  <canvas class="profit-chart" width="100%" data-profit="2"></canvas>
+                                  <div class="profit-analysis__chart-info">
+                                    <span class="profit-analysis__chart-text">Продукт №1</span>
+                                    <span class="profit-analysis__chart-text">Продукт №2</span>
+                                  </div>
+                                </div>
                                 <div class="main-product">
                                   <span class="main-product__title">Партнерская статистика</span>
       
@@ -499,9 +837,10 @@
                                               <img width='20' height='20' src='img/sprite/bag-money.svg' alt='image'>
                                             </span>
                                             <span class="product-card__subtitle">Cумма рефepальных начислений
-                                              <svg width='10' height='10'>
-                                                <use href='img/sprite/sprite.svg#info-box.svg'></use>
+                                              <svg width='12' height='12'>
+                                                <use href='img/sprite/sprite.svg#info-box'></use>
                                               </svg>
+                                              <span class="product-card__subtitle-info">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
                                             </span>
                                             <span class="product-card__value">7458.00 <b>$</b></span>
                                       </div>
@@ -523,6 +862,43 @@
 
                          
                         </div>
+
+                        <form class="support-form main-form">
+                          <span class="main-form__title">
+                            Support PIN
+                            <button class="main-form__title-info">
+                              <svg width='16' height='16'>
+                                <use href='img/sprite/sprite.svg#info'></use>
+                              </svg>
+                            </button>
+                          </span>
+                          <div class="main-form__inputs">
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <input class="main-form__input" type="text" maxlength="1"/>
+                            <button class="main-form__eye">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#eye'></use>
+                              </svg>
+                              
+                            </button>
+                          </div>
+                          
+                          <div class="main-form__bottom">
+                            <button class="blue-btn" data-copy>Подтвердить
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#copy'></use>
+                              </svg>
+                            </button> 
+                            <button class="main-btn" data-refresh>Обновить
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#reload'></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </form>
                       </li>
                       <li class="dashboard__tabs-item" data-tab-content="3">
                         <div class="referral-analysis">
@@ -619,7 +995,7 @@
                           <form class="support-form main-form">
                             <span class="main-form__title">
                               Support PIN
-                              <button class="main-form__info">
+                              <button class="main-form__title-info">
                                 <svg width='16' height='16'>
                                   <use href='img/sprite/sprite.svg#info'></use>
                                 </svg>
@@ -666,23 +1042,7 @@
         </div>
       </div>
     </main>
-
-    <!-- <div class="info-label">
-      <span class="info-label__icon">
-        <svg width='34' height='34'>
-          <use href='img/sprite/sprite.svg#check3'></use>
-        </svg>
-      </span>
-      <div class="info-label__box">
-        <span class="info-label__title">2FA аунтефикация успешно пройдена</span>
-      </div>
-      <button class="info-label__close">
-        <svg width='20' height='20'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </button>
-    </div> -->
-
+  
   @include('partials/modals.html')
   <script defer src="js/main.js"></script>
 </body>

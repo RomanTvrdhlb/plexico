@@ -1,0 +1,74 @@
+<header class="header fixed-block sticky">
+  <div class="container container--mode">
+    <div class="header__box">
+      <a href="/" aria-label="logo" class="logo">
+        <img width="100" height="34" src="./img/sprite/logo2.svg" alt="image">
+      </a>
+
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="settings.html">Настройки</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span>Уведомления</span>
+        </li>
+      </ul>
+ 
+      <div class="header__inner">
+        <button class="info-btn">
+          <svg width='20' height='20'>
+            <use href='img/sprite/sprite.svg#search'></use>
+          </svg>
+        </button>
+        <button class="info-btn" data-open>
+          <svg width='20' height='20'>
+            <use href='img/sprite/sprite.svg#notification'></use>
+          </svg>
+        </button>
+
+        <div class="user-select select" data-select>
+          <div class="select__header">
+            <input type="hidden" class="select__input input-select" id="user_1" name="user_1" value="1">
+            <span class="select__current" data-id="1">
+              <img width="32" height="32" src="./img/index/ava.png" alt="image">
+              Анастасия
+            </span>
+            <svg class="select__current-icon" width='5' height='7'>
+              <use href='img/sprite/sprite.svg#Union'></use>
+            </svg>
+          </div>
+          <div class="select__body">
+            <ul class="select__list">
+              <li class="select__option" data-id="1" data-type="option">
+                <img width="32" height="32" src="./img/index/ava.png" alt="image">
+                Анастасия
+              </li>
+              <li class="select__option" data-id="2" data-type="option">
+                <a href="#">
+                  <img width="20" height="20" src="./img/sprite/logout.svg" alt="image">
+                  Выход
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__wrapp">
+        <button class="blue-btn">Депозит</button>
+        <a href="#" class="header__link">
+          <svg width='17' height='17'>
+            <use href='img/sprite/sprite.svg#user'></use>
+          </svg>
+        </a>
+        <button class="burger">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+ 
+</header>
+
+
+

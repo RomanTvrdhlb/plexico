@@ -10,6 +10,7 @@ class ModalManager {
     this.modals = document.querySelectorAll('[data-popup]');
     this.activeClass = 'active';
     this.activeMode = activeMode;
+    this.activeClassMode = 'profile';
     this.mobileMenu = document.querySelector('.mobile');
     this.burger = document.querySelectorAll('.burger');
     this.innerButton = null;
@@ -32,6 +33,7 @@ class ModalManager {
 
   closeModal() {
     this.activeMode && removeCustomClass(this.overlay, this.activeMode);
+    this.activeClassMode && removeCustomClass(this.overlay, this.activeClassMode);
     removeCustomClass(this.overlay, this.activeClass);
     removeClassInArray(this.modals, this.activeClass);
     this.modals.forEach(modal => fadeOut(modal, this.timeOut));
@@ -54,10 +56,16 @@ class ModalManager {
     removeClassInArray(this.modals, this.activeClass);
     addCustomClass(this.overlay, this.activeClass);
     this.activeMode && addCustomClass(this.overlay, this.activeMode);
+    this.activeClassMode && addCustomClass(this.overlay, this.activeClassMode);
 
     modal.classList.contains('mode')
     ? addCustomClass(this.overlay, this.activeMode)
     : removeCustomClass(this.overlay, this.activeMode);
+
+    modal.classList.contains('modal-profile')
+    ? addCustomClass(this.overlay, this.activeClassMode)
+    : removeCustomClass(this.overlay, this.activeClassMode);
+    
 
     addCustomClass(modal, this.activeClass);
     fadeIn(modal, this.timeIn, 'flex');
@@ -107,6 +115,6 @@ export default ModalManager;
 
 document.addEventListener("DOMContentLoaded", () => {
   const modalManager = new ModalManager({
-      activeMode: 'mode'
+      activeMode: 'mode',
   });
 });

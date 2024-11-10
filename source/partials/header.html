@@ -5,7 +5,8 @@
         <img width="100" height="34" src="./img/sprite/logo2.svg" alt="image">
       </a>
 
-      <div class="main-partners">
+      <form class="main-partners" data-partners>
+        <input class="main-partners__input" type="text" name="code_10" id="code_10" value="0fjs9mpds3kdjs03k292dlk003k9fd" readonly>
         <div class="main-partners__inner">
           <span class="main-partners__title">Партнеров:</span>
           <span class="main-partners__value">
@@ -15,8 +16,8 @@
             10
           </span>
         </div>
-        <button class="blue-btn">Копировать реферальную ссылку</button>
-      </div>
+        <button class="blue-btn"  data-copy-btn>Копировать реферальную ссылку</button>
+      </form>
 
       <div class='info-slider'>
         <div class="info-slider__top">
@@ -136,13 +137,13 @@
             <use href='img/sprite/sprite.svg#search'></use>
           </svg>
         </button>
-        <button class="info-btn">
+        <button class="info-btn" data-open>
           <svg width='20' height='20'>
             <use href='img/sprite/sprite.svg#notification'></use>
           </svg>
         </button>
 
-        <div class="select" data-select>
+        <div class="user-select select" data-select>
           <div class="select__header">
             <input type="hidden" class="select__input input-select" id="user_1" name="user_1" value="1">
             <span class="select__current" data-id="1">
@@ -160,20 +161,10 @@
                 Анастасия
               </li>
               <li class="select__option" data-id="2" data-type="option">
-                <img width="32" height="32" src="./img/index/ava.png" alt="image">
-                Андрей
-              </li>
-              <li class="select__option" data-id="3" data-type="option">
-                <img width="32" height="32" src="./img/index/ava.png" alt="image">
-                Виталий
-              </li>
-              <li class="select__option" data-id="4" data-type="option">
-                <img width="32" height="32" src="./img/index/ava.png" alt="image">
-                Роман
-              </li>
-              <li class="select__option" data-id="5" data-type="option">
-                <img width="32" height="32" src="./img/index/ava.png" alt="image">
-                Ирина
+                <a href="#">
+                  <img width="20" height="20" src="./img/sprite/logout.svg" alt="image">
+                  Выход
+                </a>
               </li>
             </ul>
           </div>
@@ -193,6 +184,8 @@
       </div>
     </div>
   </div>
+
+
  
 </header>
 

@@ -54,5 +54,13 @@
       }
     }
   }
+
+  &.profile{
+      @include mobile{
+        background: rgba(0, 0, 0, 0);
+        height: calc(100% - var(--header-height));
+        min-height: calc(100dvh - var(--header-height));
+      }
+  }
 }
 

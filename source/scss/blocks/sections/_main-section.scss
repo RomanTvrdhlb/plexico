@@ -32,6 +32,10 @@
             @media (min-width: (1415px)) {
                 grid-column: 9/17;
             }
+
+            &__btn{
+                display: flex;
+            }
         }
 
         .profit-analysis{

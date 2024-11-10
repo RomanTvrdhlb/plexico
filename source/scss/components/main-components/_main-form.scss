@@ -21,6 +21,50 @@
         grid-column: 1/-1;
       }
     }
+
+    &.invalid {
+      .main-form__error {
+        display: block;
+      }
+
+      .main-form__input {
+        border-color: var(--br-d);
+      }
+    }
+
+    .info-label {
+      position: absolute;
+      right: -1px;
+      bottom: 4px;
+      transform: translateX(100%);
+      width: Min(28.9583vw, 417px);
+
+      @media (max-width: (1700px)) {
+        @media (min-width: (1540px)) {
+          width: 390px;
+        }
+      }
+
+      @include laptop {
+        @include for-tablet {
+          right: initial;
+          left: 0;
+          width: 100%;
+          bottom: -4px;
+          transform: translate(0, 100%);
+        }
+      }
+
+      @include small-tablet {
+        right: initial;
+        left: initial;
+        width: 100%;
+        bottom: initial;
+        transform: none;
+        position: relative;
+        grid-column: 1/-1;
+      }
+    }
   }
 
   &__name {
@@ -139,7 +183,7 @@
     }
   }
 
-  &__info{
+  &__info {
     display: flex;
     align-items: center;
     grid-gap: 9px;
@@ -154,37 +198,105 @@
     }
 
     @media (max-width: (1350px)) {
-      @include for-laptop{
+      @include for-laptop {
         width: 250px;
         transform: translate(100%, -15%);
       }
     }
 
-    @include for-laptop{
+    @include for-laptop {
       position: absolute;
       right: -16px;
       bottom: 0;
       z-index: 5;
     }
 
-    @include laptop{
+    @include laptop {
       margin-top: 6px;
     }
 
-    svg,img{
+    svg,
+    img {
       flex-shrink: 0;
       display: flex;
       width: 20px;
       aspect-ratio: 1;
     }
 
-    p{
+    p {
       font-family: var(--font-family);
       font-weight: 400;
       font-size: 10px;
       line-height: 110%;
       letter-spacing: -0.01em;
       color: var(--cl-e);
+    }
+
+    ul:not([class]) {
+      display: flex;
+      flex-direction: column;
+      counter-reset: li;
+      grid-gap: 0;
+      margin-left: 8px;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 8px;
+        counter-increment: li;
+        position: relative;
+        z-index: 1;
+        padding-left: 10px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 5.5px;
+          left: 0;
+          display: block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: var(--cl-e);
+          z-index: 1;
+        }
+      }
+    }
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      flex-shrink: 0;
+      svg,
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--mode {
+      align-items: flex-start;
+
+      @media (min-width: (1350px)) {
+        width: clamp(250px, 22.625vw, 352px);
+        transform: translate(100%, 0%);
+      }
+
+      @media (max-width: (1350px)) {
+        @include for-laptop {
+          width: 250px;
+          transform: translate(100%, 0%);
+        }
+      }
+
+      @include for-laptop {
+        position: absolute;
+        right: -16px;
+        bottom: initial;
+        top: 20px;
+        z-index: 5;
+      }
     }
   }
 
@@ -236,7 +348,6 @@
     font-size: 20px;
     line-height: 10px;
     letter-spacing: 0.11em;
-    padding-top: 13px;
     height: 44px;
     transition: none;
 
@@ -285,7 +396,7 @@
 
     &__arrow {
       position: absolute;
-      left: clamp(84px, 7.0922vw, 100px);
+      left: calc(clamp(84px, 7.0922vw, 100px) - 10px);
       top: 50%;
       transform: translate(0%, -50%);
       margin: 0;
@@ -295,6 +406,7 @@
       background-position: center;
       width: 20px;
       height: 20px;
+      z-index: 12;
       transition: all 0.3s;
 
       &--up {
@@ -324,18 +436,43 @@
     }
 
     &__dropdown-content {
-      margin-top: 8px;
-      min-width: 200px;
-      max-width: 230px;
+      margin-top: 0;
+      min-width: clamp(116px, 9.3617vw, 132px);
+      max-width: clamp(116px, 9.3617vw, 132px);
       z-index: 10;
+      left: 0;
+      margin-left: initial;
+      border-radius: 0 0 6px 6px;
+      border: none;
+      
+      // overflow: hidden;
+      top: 100%;
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: calc(100% + 45px);
+        border-radius: inherit;
+        background: var(--bg-a);
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 0 5px 16px 0 rgba(1, 0, 73, 0.08);
+        // opacity: 0;
+        pointer-events: none;
+      }
     }
 
     &__selected-flag {
       transition: all 0.3s;
       background-color: transparent !important;
       border: none !important;
-      position: static;
+      position: relative;
       padding: 0;
+      z-index: 12;
+      display: flex;
     }
 
     [code] {
@@ -349,12 +486,78 @@
       transform: translateY(-50%);
       position: absolute;
       pointer-events: none;
+      z-index: 10;
     }
 
     input[type="tel"] {
       order: 3;
       border-radius: 10px;
       padding: 4px 16px;
+    }
+
+
+
+    &__country-list {
+      padding-top: 6px;
+      .iti__country-name {
+        display: none;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.12);
+        border-radius: 0 0 6px 0;
+      }
+
+      .iti__country.iti__standard{
+        padding: 10px 12px 10px 13px;
+
+        .iti__flag-box{
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &__dial-code {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 126%;
+      color: var(--cl-e);
+    }
+
+    &__country {
+      &.iti__highlight {
+        background-color: var(--bg-e);
+
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 16px;
+          width: 6px;
+          height: 6px;
+          background: var(--bg-c);
+          display: block;
+          z-index: 1;
+          content: "";
+        }
+
+        .iti__dial-code {
+          color: var(--cl-h);
+        }
+      }
     }
   }
 
@@ -380,6 +583,10 @@
 
     b {
       color: var(--cl-d);
+    }
+
+    i {
+      font-style: normal;
     }
 
     @include for-mobile {
@@ -484,6 +691,27 @@
     font-size: 14px;
     line-height: 120%;
     color: var(--cl-m);
+
+    &-info {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: -1px;
+
+      svg,
+      img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s;
+      }
+
+      &:hover {
+        svg,
+        img {
+          transform: scale(1.15);
+        }
+      }
+    }
   }
 
   &__field {
@@ -962,7 +1190,13 @@
       }
 
       @include desktop {
-        justify-content: space-between;
+        @media (min-width: 1415px) {
+          justify-content: space-between;
+        }
+      }
+
+      @media (max-width: 1415px) {
+        justify-content: center;
       }
 
       .main-form__input {
@@ -1203,7 +1437,7 @@
           }
         }
 
-        @include small-tablet{
+        @include small-tablet {
           width: 100%;
         }
       }
@@ -1221,7 +1455,7 @@
         }
       }
 
-      @include small-tablet{
+      @include small-tablet {
         grid-template-columns: 100%;
       }
     }
@@ -1234,43 +1468,41 @@
   }
 }
 
-.verify-form{
-
-  .pretitle{
+.verify-form {
+  .pretitle {
     grid-column: 1/-1;
     margin-bottom: 4px;
 
-    @include mobile{
+    @include mobile {
       text-align: center;
     }
   }
 
-  .select{
+  .select {
     grid-column: 1/-1;
     width: 100%;
   }
 
-  .custom-checkbox{
+  .custom-checkbox {
     grid-column: 1/-1;
 
-    &__content{
+    &__content {
       color: var(--cl-m);
     }
   }
 
-  .blue-btn{
+  .blue-btn {
     margin-top: 8px;
-    
-    @include for-tablet{
+
+    @include for-tablet {
       min-width: 302px;
     }
   }
 
   grid-gap: 28px;
 
-  .main-form{
-
-    &__subtitle{
+  .main-form {
+    &__subtitle {
       font-family: var(--font-family);
       font-weight: 600;
       font-size: 14px;
@@ -1278,80 +1510,82 @@
       color: var(--cl-j);
     }
 
-    &__btns{
+    &__btns {
       display: flex;
       flex-direction: column;
       grid-gap: 16px;
     }
 
-    &__content{
+    &__content {
       display: flex;
       flex-direction: column;
       grid-gap: 12px;
       grid-column: 1/-1;
     }
 
-    &__inner{
+    &__inner {
       grid-gap: 20px clamp(16px, 2.2222vw, 32px);
 
-      padding-bottom: 32px;
-      
-      border-bottom: 1px solid var(--br-c);
-
       @media (max-width: (1350px)) {
-        @include for-laptop{
+        @include for-laptop {
           grid-template-columns: 100%;
         }
       }
 
-      @include laptop{
-        @include for-tablet{
+      @include laptop {
+        @include for-tablet {
           grid-template-columns: repeat(2, 1fr);
         }
       }
 
-      &--mode{
+      @include for-mobile {
+        padding-bottom: 32px;
+        border-bottom: 1px solid var(--br-c);
+      }
+
+      &--mode {
         border: none;
         padding-bottom: 0;
       }
     }
 
-    &__wrapp{
+    &__wrapp {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 20px clamp(16px, 2.2222vw, 32px);
       width: 100%;
       grid-column: 1/-1;
 
-      padding: clamp(20px, 1.6667vw, 24px) clamp(20px, 1.9444vw, 28px) clamp(24px, 1.9444vw, 28px);
+      padding: clamp(20px, 1.6667vw, 24px) clamp(20px, 1.9444vw, 28px)
+        clamp(24px, 1.9444vw, 28px);
       border: 1px solid var(--br-c);
       border-radius: 12px;
 
       @media (max-width: (1350px)) {
-        @include for-laptop{
+        @include for-laptop {
           grid-template-columns: 100%;
         }
       }
 
-      @include tablet{
+      @include tablet {
         grid-template-columns: 100%;
       }
 
-      .pretitle{
-        @include mobile{
+      .pretitle {
+        @include mobile {
           text-align: start;
         }
       }
     }
 
-    &__label{
+    &__label {
       grid-gap: 6px;
 
-      &--mode{
+      &--mode {
         grid-column: 1/-1;
       }
     }
-    
+
     &__btn {
       color: var(--cl-d);
       display: flex;

@@ -429,4 +429,47 @@ select:-webkit-autofill:focus {
   }
 }
 
+.map{
+  padding: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  grid-gap: 20px;
 
+  li{
+    display: flex;
+    flex-direction: column;
+    ul{
+      display: flex;
+      flex-direction: column;
+      grid-gap: 10px;
+      margin-left: 20px;
+
+      span{
+        font-size: 28px;
+      }
+
+      a{
+        font-size: 24px;
+      }
+      
+    }
+  }
+
+  span{
+    margin-bottom: 14px;
+    font-size: 36px;
+    color: black;
+  }
+
+  a{
+    font-size: 36px;
+    color: blue;
+    transition: all .3s;
+
+    &:hover{
+      color: blueviolet;
+    }
+  }
+}

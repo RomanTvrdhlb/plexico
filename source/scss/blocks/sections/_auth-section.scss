@@ -15,7 +15,7 @@
         display: grid;
 
         @include for-tablet{
-            grid-template-columns: 1fr .845fr;
+            grid-template-columns: 1fr .95fr;
         }
 
         @include tablet{
@@ -32,14 +32,29 @@
         z-index: 1;
         grid-gap: clamp(24px, 2.8369vw, 40px);
 
+       
+       
+
         @include for-tablet{
             padding: 0 var(--container-offset);
+            margin-top: 60px;
+            align-self: flex-start;
+        }
+
+        @include tablet{
+            @include for-mobile{
+                align-self: center;
+                margin-top: calc(var(--auth-top-height) * -1);
+            }
         }
 
         @include for-mobile{
             height: fit-content;
-            align-self: center;
-            margin-top: calc(var(--auth-top-height) * -1);
+        }
+
+        @media (max-height: (700px)) and (min-width: (1024px)) {
+            margin-top: 60px;
+            align-self: flex-start;
         }
 
         @include tablet{
@@ -49,6 +64,11 @@
         @include mobile{
             justify-content: start;
             padding-top: 32px;
+        }
+
+        @media (min-width: (1500px)) {
+            align-self: center;
+            margin-top: calc(var(--auth-top-height) * -1) !important;
         }
 
         .main-form{
@@ -153,7 +173,7 @@
     &__text{
         display: flex;
         flex-direction: column;
-        grid-gap: 4px;
+        grid-gap: clamp(4px, .6944vw, 10px);
         align-items: center;
 
         p{
@@ -195,4 +215,82 @@
         text-align: center;
     }
 
+    &--mail{
+
+        .auth-section{
+            &__content{
+        
+                @include for-tablet{
+                    margin-top: 123px;
+                }
+            }
+
+            &__text{
+                @include for-tablet{
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .main-form{
+            @include for-tablet{
+                margin-top: -3px;  
+            } 
+        }
+    }
+    
+    &--fa{
+
+        .auth-section{
+            &__content{
+        
+                @include for-tablet{
+                    margin-top: 123px;
+                }
+            }
+
+            &__text{
+                @include for-tablet{
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .main-form{
+            @include for-tablet{
+             margin-top: -3px;  
+            } 
+        }
+    }
+
+    &--registration{
+
+        .auth-section{
+            &__box{
+                @include for-tablet{
+                    grid-template-columns: 1fr .865fr;
+                }
+            }
+        }
+
+        .main-form{
+            max-width: 404px;
+
+            @include for-tablet{
+                grid-gap: 16px clamp(12px, 1.1348vw, 16px);
+            }
+
+            &__bottom{
+                @include for-tablet{
+                    grid-gap: calc(clamp(24px, 2.2695vw, 32px) + 4px);
+                }
+            }
+
+            &__terms{
+                @include for-tablet{
+                    margin-top: -6px;
+                }
+            }
+        }
+    }
 }

@@ -95,6 +95,10 @@
         line-height: 110%;
     }
 
+    @include for-tablet{
+      min-width: 148px;
+    }
+
     &-bar {
       height: 4px;
       background-color: var(--bg-g);
@@ -115,6 +119,7 @@
       width: 25%;
       height: 100%;
       background-color: var(--bg-c);
+      transition: all .4s;
     }
   }
 }

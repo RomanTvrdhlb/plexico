@@ -5,9 +5,19 @@
     padding: 6px 7px 6px clamp(6px, .9929vw, 14px);
     border: 0.50px solid var(--br-g);
     border-radius: 8px;
-  
+    position: relative;
     height: fit-content;
     width: fit-content;
+
+    input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 0;
+    }
 
     .blue-btn{
         padding: 4px clamp(8px, 1.1348vw, 16px);
@@ -17,7 +27,12 @@
         font-size: 12px;
         line-height: 120%;
         letter-spacing: -0.01em;
+        
+        @include for-tablet{
+            min-width: clamp(219px, 16.159vw, 228px);
+        }
     }
+
 
     &__title{
         font-family: var(--font-family);

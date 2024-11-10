@@ -4,6 +4,10 @@
     grid-gap: 20px;
     width: 100%;
 
+    @include tablet{
+        max-width: calc(100vw - var(--container-offset) * 2);
+    }
+
     &__box{
         padding: clamp(16px, 1.7021vw, 24px);
         background: var(--bg-a);

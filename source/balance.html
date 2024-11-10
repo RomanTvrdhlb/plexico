@@ -6,7 +6,7 @@
   <main>
     <div class="container container--dash">
       <div class="dashboard">
-        @include('partials/header.html')
+        @include('partials/header-finances.html')
 
         <aside class="aside">
           <div class="aside__top">
@@ -35,7 +35,7 @@
 
           <div class="aside__mobile">
             <div class="aside__mobile-top">
-              <button class="info-btn">
+              <button class="info-btn" data-open>
                 <svg width='20' height='20'>
                   <use href='img/sprite/sprite.svg#notification'></use>
                 </svg>
@@ -61,7 +61,7 @@
 
               <ul class="aside-nav">
                 <li class="aside-nav__item">
-                  <a href="index.html" class="aside-nav__button">
+                  <a href="index.html" class="aside-nav__button active">
                     <span class="aside-nav__icon">
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#aside1'></use>
@@ -101,7 +101,7 @@
                   </a>
                 </li>
                 <li class="aside-nav__item">
-                  <a href="history.html" class="aside-nav__button active">
+                  <a href="history.html" class="aside-nav__button">
                     <span class="aside-nav__icon">
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#aside5'></use>
@@ -165,6 +165,235 @@
           </div>
         </aside>
 
+        <div class="notification">
+          <div class="notification__box">
+            <div class="notification__top">
+              <div class="notification__info">
+                <span class="notification__title">Уведомления</span>
+                <span class="notification__count">200</span>
+              </div>
+            <button class="notification__close">
+              <svg width='20' height='20'>
+                <use href='img/sprite/sprite.svg#close'></use>
+              </svg>
+            </button>
+            <button class="main-btn">
+              Очистить
+              <svg width='16' height='16'>
+                <use href='img/sprite/sprite.svg#trash2'></use>
+              </svg>
+            </button>
+            </div>
+      
+            <ul class="notification__list">
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div class="dashboard__content">
           <section class="finance-section finance-section--balance">
             <div class="finance-section__box">
@@ -205,13 +434,12 @@
                       <p>Введите суммы вывода и выберите сеть криптовалюты.</p>
                     </div>
 
-                    <form class="balance-form main-form">
+                    <form class="balance-form main-form" data-select-parrent>
                       <label for="valute_1" class="main-form__label">
                         <span class="main-form__title">Сеть для пополнения криптовалюты</span>
                         <div class="select" data-select>
                           <div class="select__header">
-                            <input type="hidden" class="select__input input-select" id="valute_1" name="valute_1"
-                              value="1">
+                            <input type="hidden" class="select__input input-select" id="valute_11" name="valute_11" value="1">
                             <span class="select__current" data-id="1">
                               <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
                               Bitcoin (BTC)
@@ -230,9 +458,13 @@
                                 <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
                                 Ethereum (ETH)
                               </li>
-                              <li class="select__option" data-id="2" data-type="option">
+                              <li class="select__option" data-id="3" data-type="option">
                                 <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
                                 USDT (USDT)
+                              </li>
+                              <li class="select__option" data-id="4" data-type="option">
+                                <img width="24" height="24" src="./img/sprite/USDC2.svg" alt="image">
+                                USDC (USDC)
                               </li>
                             </ul>
                           </div>
@@ -244,9 +476,7 @@
                         <div class="main-form__field">
                           <input type="number" name="sum_1" id="sum_1" class="main-form__input" placeholder="0.0001">
                           <span class="main-form__icon">
-                            <svg width='24' height='24'>
-                              <use href='img/sprite/sprite.svg#BTC4'></use>
-                            </svg>
+                            <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
                           </span>
                         </div>
                         <div class="main-form__wrapp">
@@ -281,3 +511,7 @@
 
 
 </html>
+
+
+
+

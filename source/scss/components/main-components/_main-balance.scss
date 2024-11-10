@@ -232,6 +232,20 @@
 
         @include mobile{
             order: 3;
+
+            .main-balance__value.mode{
+                color: var(--cl-k);
+            }
+
+            .main-balance__percent{
+                background-color: var(--bg-q);
+
+                svg{
+                    transform: scaleY(-1);
+                }
+            }
         }
+
+
     }
 }

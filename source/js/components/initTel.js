@@ -21,18 +21,17 @@ export const initTelInput = (code, form) => {
 
       let itemText = item.parentNode.querySelector(".iti__a11y-text");
       let hiddenInput = item.parentNode.querySelector('input[name="phone"]');
-      let codeText = item.parentNode.querySelector("#code");
-
+      let codeText; 
+      const selectedFlag = item.parentNode.querySelector(".iti__selected-flag");
+     
       function validateIti(item) {
         if (iti.isValidNumberPrecise()) {
           removeCustomClass(item, "just-validate-error-field");
           removeCustomClass(item.parentNode, "just-validate-error-field");
           form.querySelector('.blue-btn').style.pointerEvents = 'initial';
-         
         } else {
           addCustomClass(item.parentNode, "just-validate-error-field");
           form.querySelector('.blue-btn').style.pointerEvents = 'none';
-        
         }
       }
 
@@ -44,7 +43,7 @@ export const initTelInput = (code, form) => {
       }
 
       function createText() {
-        codeText = document.createElement("span");
+        codeText = document.createElement("span"); 
         codeText.setAttribute("code", "");
         item.insertAdjacentElement("afterend", codeText);
       }
@@ -54,7 +53,9 @@ export const initTelInput = (code, form) => {
 
         if (!hiddenInput) {
           createInput();
-          createText();
+        }
+        if (!codeText) {
+          createText(); 
         }
         hiddenInput.value = itemText.innerText.replace(/[^0-9\+]/g, "") + iti.telInput.value;
         codeText.innerText = itemText.innerText.replace(/[^0-9\+]/g, "");
@@ -79,14 +80,21 @@ export const initTelInput = (code, form) => {
         validateIti(item);
       });
 
+      replaceInputValue(item);
+
+      const observer = new MutationObserver(() => {
+        const isOpen = selectedFlag.getAttribute("aria-expanded") === "true";
+        selectedFlag.style.opacity = isOpen ? "0.5" : "1";
+        codeText && (codeText.style.opacity = isOpen ? "0.5" : "1");
+      });
+      
+      observer.observe(selectedFlag, { attributes: true, attributeFilter: ["aria-expanded"] });
     });
   }
 };
 
-
 const forms = document.querySelectorAll('.main-form');
 
 forms && forms.forEach(function(form){
-  console.log(form);
   initTelInput('RU', form);
-})
+});

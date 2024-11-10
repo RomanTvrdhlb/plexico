@@ -253,6 +253,66 @@
   .main-form{
     grid-gap: 20px;
 
+    &__eye {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      width: 20px;
+      transition: all 0.3s;
+      color: var(--cl-f);
+      position: absolute;
+      top: 32px;
+      right: 16px;
+      z-index: 1;
+      transition: all 0.3s;
+      opacity: 0;
+      visibility: hidden;
+
+      &::before {
+        background-image: url(../img/sprite/eye-closed.svg);
+        inset: 1px;
+        position: absolute;
+        background-color: var(--bg-a);
+        background-position: center;
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        border-radius: inherit;
+        content: "";
+        z-index: 3;
+        transition: all 0.3s;
+        opacity: 0;
+        visibility: hidden;
+        transition: none;
+      
+      }
+
+      svg,
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &.active {
+        &::before {
+          pointer-events: none;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        svg,img{
+         opacity: 0;
+         visibility: hidden;
+        }
+      }
+
+      &.show{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
     @include for-small-tablet{
         max-width: 353px;
 
@@ -265,6 +325,14 @@
         .blue-btn{
             width: 100%;
         }
+    }
+
+    &.pass-form{
+      .main-form__input{
+        padding-right: 38px;
+        letter-spacing: normal;
+        font-family:   var(--font-family);
+      }
     }
   }
 

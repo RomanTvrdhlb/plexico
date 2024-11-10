@@ -35,7 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
       watchOverflow: true,
       observer: true,
       observeParents: true,
-
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      
       pagination: {
         el: pagination,
         clickable: true,

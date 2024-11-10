@@ -35,7 +35,7 @@
 
             <div class="aside__mobile">
               <div class="aside__mobile-top">
-                <button class="info-btn">
+                <button class="info-btn" data-open>
                   <svg width='20' height='20'>
                     <use href='img/sprite/sprite.svg#notification'></use>
                   </svg>
@@ -61,7 +61,7 @@
             
                   <ul class="aside-nav">
                     <li class="aside-nav__item">
-                      <a href="#" class="aside-nav__button">
+                      <a href="index.html" class="aside-nav__button">
                         <span class="aside-nav__icon">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#aside1'></use>
@@ -81,7 +81,7 @@
                       </a>
                     </li>
                     <li class="aside-nav__item">
-                      <a href="#" class="aside-nav__button active">
+                      <a href="finances.html" class="aside-nav__button active">
                         <span class="aside-nav__icon">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#aside3'></use>
@@ -101,7 +101,7 @@
                       </a>
                     </li>
                     <li class="aside-nav__item">
-                      <a href="#" class="aside-nav__button">
+                      <a href="history.html" class="aside-nav__button">
                         <span class="aside-nav__icon">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#aside5'></use>
@@ -111,7 +111,17 @@
                       </a>
                     </li>
                     <li class="aside-nav__item">
-                      <a href="#" class="aside-nav__button">
+                      <a href="history.html" class="aside-nav__button">
+                        <span class="aside-nav__icon">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#aside7'></use>
+                          </svg>
+                        </span>
+                        Профиль
+                      </a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a href="settings.html" class="aside-nav__button">
                         <span class="aside-nav__icon">
                           <svg width='20' height='20'>
                             <use href='img/sprite/sprite.svg#aside6'></use>
@@ -121,6 +131,51 @@
                       </a>
                     </li>
                   </ul>
+
+                  <div class="aside-select withdraw-select select" data-select>
+                    <div class="select__header">
+                      <input type="hidden" class="select__input input-select" id="lang_5" name="lang_5" value="3">
+                      <span class="select__current" data-id="3">
+                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                        Русский
+                      </span>
+                      <svg class="select__current-icon" width='5' height='7'>
+                        <use href='img/sprite/sprite.svg#Union'></use>
+                      </svg>
+                    </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__option" data-id="1" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                          Украинский
+                        </li>
+                        <li class="select__option" data-id="2" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                          Английский
+                        </li>
+                        <li class="select__option" data-id="3" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                          Русский
+                        </li>
+                        <li class="select__option" data-id="4" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                          Белорусский
+                        </li>
+                        <li class="select__option" data-id="5" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                          Английский2
+                        </li>
+                        <li class="select__option" data-id="6" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                          Русский2
+                        </li>
+                        <li class="select__option" data-id="7" data-type="option">
+                          <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                          Белорусский2
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
             
                   <a href="#" class="exit-btn">
                     <svg width='20' height='20'>
@@ -131,10 +186,10 @@
               </div>
             
               <div class="aside__mobile-bottom">
-                <div class="lang-select select" data-select>
+                <div class="aside-select withdraw-select select" data-select>
                   <div class="select__header">
-                    <input type="hidden" class="select__input input-select" id="lang_1" name="lang_1" value="1">
-                    <span class="select__current" data-id="1">
+                    <input type="hidden" class="select__input input-select" id="lang_5" name="lang_5" value="3">
+                    <span class="select__current" data-id="3">
                       <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
                       Русский
                     </span>
@@ -145,16 +200,20 @@
                   <div class="select__body">
                     <ul class="select__list">
                       <li class="select__option" data-id="1" data-type="option">
-                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
-                        Русский
+                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                        Украинский
                       </li>
                       <li class="select__option" data-id="2" data-type="option">
                         <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
-                        English
+                        Английский
                       </li>
                       <li class="select__option" data-id="3" data-type="option">
-                        <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
-                        Українська
+                        <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                        Русский
+                      </li>
+                      <li class="select__option" data-id="4" data-type="option">
+                        <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                        Белорусский
                       </li>
                     </ul>
                   </div>
@@ -164,6 +223,30 @@
               </div>
             </div>
           </aside>
+
+          <div class="notification">
+            <div class="notification__content">
+              <div class="notification__top">
+                <div class="notification__info">
+                  <span class="notification__title">Уведомления</span>
+                </div>
+                <button class="notification__close">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                  </svg>
+                </button>
+              </div>
+        
+              <div class="notification__wrapp">
+                <span class="notification__image">
+                  <img width='132' height='132' src='img/index/notification.png' alt='image'>
+                </span>
+        
+                <span class="notification__title">У Вас нет уведомлений</span>
+                <p>В данной области будут отображаться уведосления о вашей активности</p>
+              </div>
+            </div>
+          </div>
   
           <div class="dashboard__content">
             <section class="finance-section">
@@ -192,13 +275,13 @@
                           0.0000432
                         </span>
                         <div class="finance-card__btns">
-                          <button class="transparent-btn" data-btn-modal="withdrawal">
+                          <a href="balance.html" class="transparent-btn">
                             Пополнить
                             <svg width='16' height='16'>
                               <use href='img/sprite/sprite.svg#arrow-up'></use>
                             </svg>
-                          </button>
-                          <button class="transparent-btn" data-btn-modal="withdrawal-error">
+                          </a>
+                          <button class="transparent-btn" data-btn-modal="withdrawal">
                             Вывести
                             <svg width='16' height='16'>
                               <use href='img/sprite/sprite.svg#arrow-down'></use>
@@ -233,13 +316,13 @@
                                 0.0000432
                               </span>
                               <div class="finance-card__btns">
-                                <button class="transparent-btn">
+                                <a href="balance.html" class="transparent-btn">
                                   Пополнить
-                                  <svg width='16' height='16'>
-                                    <use href='img/sprite/sprite.svg#arrow-up'></use>
+                                  <svg width="16" height="16">
+                                    <use href="img/sprite/sprite.svg#arrow-up"></use>
                                   </svg>
-                                </button>
-                                <button class="transparent-btn">
+                                </a>
+                                <button class="transparent-btn" data-btn-modal="withdrawal-error">
                                   Вывести
                                   <svg width='16' height='16'>
                                     <use href='img/sprite/sprite.svg#arrow-down'></use>
@@ -247,7 +330,7 @@
                                 </button>
                               </div>
                             </div>
-
+                          
                             <div class="history">
                               <div class="history__top">
                                 <div class="history__wrapp">
@@ -547,13 +630,13 @@
                         </span>
 
                         <div class="finance-card__btns">
-                          <button class="transparent-btn">
+                          <a href="balance.html" class="transparent-btn">
                             Пополнить
                             <svg width='16' height='16'>
                               <use href='img/sprite/sprite.svg#arrow-up'></use>
                             </svg>
-                          </button>
-                          <button class="transparent-btn">
+                          </a>
+                          <button class="transparent-btn" data-btn-modal="withdrawal-error">
                             Вывести
                             <svg width='16' height='16'>
                               <use href='img/sprite/sprite.svg#arrow-down'></use>
@@ -589,13 +672,13 @@
                                 0.0000432
                               </span>
                               <div class="finance-card__btns">
-                                <button class="transparent-btn">
-                                  Пополнить
-                                  <svg width='16' height='16'>
-                                    <use href='img/sprite/sprite.svg#arrow-up'></use>
-                                  </svg>
-                                </button>
-                                <button class="transparent-btn">
+                                <a href="balance.html" class="transparent-btn">
+                            Пополнить
+                            <svg width="16" height="16">
+                              <use href="img/sprite/sprite.svg#arrow-up"></use>
+                            </svg>
+                          </a>
+                                <button class="transparent-btn" data-btn-modal="withdrawal-error">
                                   Вывести
                                   <svg width='16' height='16'>
                                     <use href='img/sprite/sprite.svg#arrow-down'></use>
@@ -904,13 +987,13 @@
                         </span>
 
                         <div class="finance-card__btns">
-                          <button class="transparent-btn">
+                          <a href="balance.html" class="transparent-btn">
                             Пополнить
                             <svg width='16' height='16'>
                               <use href='img/sprite/sprite.svg#arrow-up'></use>
                             </svg>
-                          </button>
-                          <button class="transparent-btn">
+                          </a>
+                          <button class="transparent-btn" data-btn-modal="withdrawal-error">
                             Вывести
                             <svg width='16' height='16'>
                               <use href='img/sprite/sprite.svg#arrow-down'></use>
@@ -946,13 +1029,13 @@
                                 200.432
                               </span>
                               <div class="finance-card__btns">
-                                <button class="transparent-btn">
-                                  Пополнить
-                                  <svg width='16' height='16'>
-                                    <use href='img/sprite/sprite.svg#arrow-up'></use>
-                                  </svg>
-                                </button>
-                                <button class="transparent-btn">
+                                <a href="balance.html" class="transparent-btn">
+                            Пополнить
+                            <svg width="16" height="16">
+                              <use href="img/sprite/sprite.svg#arrow-up"></use>
+                            </svg>
+                          </a>
+                                <button class="transparent-btn" data-btn-modal="withdrawal-error">
                                   Вывести
                                   <svg width='16' height='16'>
                                     <use href='img/sprite/sprite.svg#arrow-down'></use>
@@ -1261,13 +1344,13 @@
                         </span>
 
                         <div class="finance-card__btns">
-                          <button class="transparent-btn">
+                          <a href="balance.html" class="transparent-btn">
                             Пополнить
                             <svg width='16' height='16'>
                               <use href='img/sprite/sprite.svg#arrow-up'></use>
                             </svg>
-                          </button>
-                          <button class="transparent-btn">
+                          </a>
+                          <button class="transparent-btn" data-btn-modal="withdrawal-error">
                             Вывести
                             <svg width='16' height='16'>
                               <use href='img/sprite/sprite.svg#arrow-down'></use>
@@ -1303,13 +1386,13 @@
                                 237.32
                               </span>
                               <div class="finance-card__btns">
-                                <button class="transparent-btn">
-                                  Пополнить
-                                  <svg width='16' height='16'>
-                                    <use href='img/sprite/sprite.svg#arrow-up'></use>
-                                  </svg>
-                                </button>
-                                <button class="transparent-btn">
+                                <a href="balance.html" class="transparent-btn">
+                            Пополнить
+                            <svg width="16" height="16">
+                              <use href="img/sprite/sprite.svg#arrow-up"></use>
+                            </svg>
+                          </a>
+                                <button class="transparent-btn" data-btn-modal="withdrawal-error">
                                   Вывести
                                   <svg width='16' height='16'>
                                     <use href='img/sprite/sprite.svg#arrow-down'></use>

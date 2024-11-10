@@ -89,4 +89,11 @@
         grid-gap: 8px;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    & + .support-form{
+        margin-top: 28px;
+        @include for-mobile{
+            display: none;
+        }
+    }
 }

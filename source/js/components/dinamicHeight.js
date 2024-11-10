@@ -29,6 +29,7 @@ const settingsElement = document.querySelector('.settings');
 const historyElement = document.querySelector('.finance-section--history .history');
 const fundsElement = document.querySelector('.finance-section--funds .funds');
 const balanceElement = document.querySelector('.finance-section--balance .balance');
+const fundsAsideElement = document.querySelector('.funds .funds__aside');
 
 function updateSettingsDistance(el, name) {
     if (el) {
@@ -50,6 +51,10 @@ if (historyElement) {
 if (fundsElement) {
     updateSettingsDistance(fundsElement, 'history');
     window.addEventListener('resize', () => updateSettingsDistance(fundsElement, 'history'));
+}
+
+if (fundsAsideElement) {
+    elementHeight(fundsAsideElement, 'aside-height');
 }
 
 if (balanceElement) {

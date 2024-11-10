@@ -6,7 +6,7 @@
 
 
   <main>
-    <section class="auth-section">
+    <section class="auth-section auth-section--mail">
       <div class="container">
         <div class="auth-section__box">
           <div class="auth-section__inner">
@@ -61,16 +61,18 @@
     </section>
   </main>
 
-  <div class="error-label">
-    <span class="error-label__icon">
+  <div class="info-label" style="border-color: var(--br-d);">
+    <span class="info-label__icon">
       <svg width='34' height='34'>
         <use href='img/sprite/sprite.svg#error'></use>
       </svg>
     </span>
 
-    <span class="error-label__title">Ошибка</span>
-    <p>Неверный код подтверждения. Проверьте правильность введенных данных.</p>
-    <button class="error-label__close">
+    <div class="info-label__box">
+      <span class="info-label__title">Ошибка</span>
+      <p>Неверный код подтверждения. Проверьте правильность введенных данных.</p>
+    </div>
+    <button class="info-label__close">
       <svg width='20' height='20'>
         <use href='img/sprite/sprite.svg#close'></use>
       </svg>

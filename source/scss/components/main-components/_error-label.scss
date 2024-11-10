@@ -1,6 +1,6 @@
 .info-label{
     position: fixed;
-    z-index: 10;
+    z-index: 17;
     box-shadow: 0 5px 16px 0 rgba(1, 0, 73, 0.08);
     background: var(--bg-a);
     border: 1px solid transparent;
@@ -19,8 +19,11 @@
     }
 
     @include mobile{
-        right: 36px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 100%;
         bottom: 32px;
+        max-width: 303px;
     }
 
     &__box{

@@ -353,7 +353,7 @@
         <ul class="modal__list" data-title="Детали обмена:">
           <li class="modal__item">
             <span class="modal__text">Валюта продажи:</span>
-            <span class="modal__value">BTC</span>
+            <span class="modal__value" data-sell>BTC</span>
           </li>
           <li class="modal__item">
             <span class="modal__text">Сумма продажи:</span>
@@ -361,7 +361,7 @@
           </li>
           <li class="modal__item">
             <span class="modal__text">Валюта покупки:</span>
-            <span class="modal__value">USDT</span>
+            <span class="modal__value" data-buy>USDT</span>
           </li>
           <li class="modal__item">
             <span class="modal__text">Сумма покупки:</span>
@@ -415,7 +415,7 @@
         <ul class="modal__list" data-title="Детали перевода:">
           <li class="modal__item">
             <span class="modal__text">Валюта:</span>
-            <span class="modal__value">USDT</span>
+            <span class="modal__value" data-valute>USDT</span>
           </li>
           <li class="modal__item">
             <span class="modal__text">Комиссия:</span>
@@ -530,14 +530,14 @@
       </div>
 
      
-        <form class="balance-form main-form">
+        <form class="balance-form main-form" data-select-parrent>
           <label for="valute_5" class="main-form__label">
             <span class="main-form__title">Адрес вывода</span>
             <div class="withdraw-select select" data-select>
               <div class="select__header">
                 <input type="hidden" class="select__input input-select" id="valute_5" name="valute_5"
-                  value="3">
-                <span class="select__current" data-id="3">
+                  value="2">
+                <span class="select__current" data-id="2">
                   <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
                   ETH/ERC-20/Crypto 1
                 </span>
@@ -547,18 +547,17 @@
               </div>
               <div class="select__body">
                 <ul class="select__list">
-           
                   <li class="select__option" data-id="1" data-type="option">
-                    <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
-                    USDT/TRC-20/Crypto 2
-                  </li>
-                  <li class="select__option" data-id="2" data-type="option">
                     <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
                     BTC/BTC/Crypto 3
                   </li>
-                  <li class="select__option" data-id="3" data-type="option">
+                  <li class="select__option" data-id="2" data-type="option">
                     <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
                     ETH/ERC-20/Crypto 1
+                  </li>
+                  <li class="select__option" data-id="3" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
+                    USDT/TRC-20/Crypto 2
                   </li>
                   <li class="select__option" data-id="4" data-type="option">
                     <img width="24" height="24" src="./img/sprite/USDC.svg" alt="image">
@@ -569,14 +568,12 @@
             </div>
           </label>
 
-          <label for="sum_5" class="main-form__label">
+          <label for="sum_10" class="main-form__label">
             <span class="main-form__title">Сумма к выводу</span>
             <div class="main-form__field">
-              <input type="number" name="sum_5" id="sum_5" class="main-form__input" placeholder="0.01">
+              <input type="number" name="sum_10" id="sum_10" class="main-form__input" placeholder="0.01">
               <span class="main-form__icon">
-                <svg width='24' height='24'>
-                  <use href='img/sprite/sprite.svg#ETH4'></use>
-                </svg>
+                <img width="24" height="24" src="./img/sprite/ETH4.svg" alt="image">
               </span>
             </div>
             <span class="main-form__error">Введенная сумма меньше минимальной: Мин: 0.01 ETH , Макс: 150 ETH</span>
@@ -595,7 +592,7 @@
           </div>
 
           <div class="main-form__inner">
-            <button class="main-btn">Отменить</button>
+            <button class="main-btn  close">Отменить</button>
             <button class="blue-btn" data-btn-inner="withdraw">Вывести ETH</button>
           </div>
         </form>
@@ -636,14 +633,14 @@
       </div>
 
      
-        <form class="balance-form main-form invalid">
-          <label for="valute_5" class="main-form__label">
+        <form class="balance-form main-form invalid" data-select-parrent>
+          <label for="valute_7" class="main-form__label">
             <span class="main-form__title">Адрес вывода</span>
             <div class="withdraw-select select" data-select>
               <div class="select__header">
-                <input type="hidden" class="select__input input-select" id="valute_5" name="valute_5"
-                  value="3">
-                <span class="select__current" data-id="3">
+                <input type="hidden" class="select__input input-select" id="valute_7" name="valute_7"
+                  value="2">
+                <span class="select__current" data-id="2">
                   <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
                   ETH/ERC-20/Crypto 1
                 </span>
@@ -653,18 +650,17 @@
               </div>
               <div class="select__body">
                 <ul class="select__list">
-           
                   <li class="select__option" data-id="1" data-type="option">
-                    <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
-                    USDT/TRC-20/Crypto 2
-                  </li>
-                  <li class="select__option" data-id="2" data-type="option">
                     <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
                     BTC/BTC/Crypto 3
                   </li>
-                  <li class="select__option" data-id="3" data-type="option">
+                  <li class="select__option" data-id="2" data-type="option">
                     <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
                     ETH/ERC-20/Crypto 1
+                  </li>
+                  <li class="select__option" data-id="3" data-type="option">
+                    <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
+                    USDT/TRC-20/Crypto 2
                   </li>
                   <li class="select__option" data-id="4" data-type="option">
                     <img width="24" height="24" src="./img/sprite/USDC.svg" alt="image">
@@ -680,9 +676,7 @@
             <div class="main-form__field">
               <input type="number" name="sum_5" id="sum_5" class="main-form__input" placeholder="0.01">
               <span class="main-form__icon">
-                <svg width='24' height='24'>
-                  <use href='img/sprite/sprite.svg#ETH4'></use>
-                </svg>
+                <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
               </span>
             </div>
             <span class="main-form__error">Введенная сумма меньше минимальной: Мин: 0.01 ETH , Макс: 150 ETH</span>
@@ -701,13 +695,276 @@
           </div>
 
           <div class="main-form__inner">
-            <button class="main-btn">Отменить</button>
+            <button class="main-btn  close">Отменить</button>
             <button class="blue-btn" data-btn-inner="withdraw">Вывести ETH</button>
           </div>
         </form>
      
 
     </div>
+    </div>
+  </div>
+
+  <div class="modal wallet modal-profile" data-popup="wallet">
+    <div class="modal__box">
+      <a href="profile-details.html" class="modal__link">
+        <svg width='16' height='16'>
+          <use href='img/sprite/sprite.svg#arrow2'></use>
+        </svg>
+        Мои реквизиты
+      </a>
+      <div class="modal__inner">
+
+      <div class="modal__top">
+        <span class="modal__title">Добавить реквизиты</span>
+
+        <button class="modal__close close">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal__label mode">
+        <span class="modal__label-icon">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#money'></use>
+          </svg>
+        </span>
+        <p>Чтобы добавить реквизиты заполните поля ниже</p>
+      </div>
+
+     
+        <form class="balance-form main-form">
+          <div class="main-form__box">
+            <label for="props" class="main-form__label">
+              <span class="main-form__title">Название реквизитов</span>
+              <input type="text" name="props" id="props" class="main-form__input" value="Crypto 1">
+            </label>
+
+            <label for="valute_6" class="main-form__label">
+              <span class="main-form__title">Валюта кошелька</span>
+              <div class="withdraw-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="valute_6" name="valute_6"
+                    value="3">
+                  <span class="select__current" data-id="2">
+                    <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                    Bitcoin (BTC)
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+            
+                    <li class="select__option" data-id="1" data-type="option">
+                      <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
+                      Tether (USDT)
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
+                      Bitcoin (BTC)
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                      Ethereum (ETH)
+                    </li>
+                    <li class="select__option" data-id="4" data-type="option">
+                      <img width="24" height="24" src="./img/sprite/USDC.svg" alt="image">
+                      USD Coin (USDC)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </label>
+
+            <label for="network" class="main-form__label">
+              <span class="main-form__title">Cеть</span>
+              <div class="contact-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="network" name="network"
+                    value="3">
+                  <span class="select__current" data-id="1">
+                    Выберите сеть
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+            
+                    <li class="select__option" data-id="1" data-type="option">
+                      Выберите сеть
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      TRC-20
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      ETH-20
+                    </li>
+                    <li class="select__option" data-id="4" data-type="option">
+                      USDC-20
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </label>
+
+            <label for="wallet" class="main-form__label">
+              <span class="main-form__title">Адрес кошелька</span>
+              <input type="text" name="wallet" id="wallet" class="main-form__input" placeholder="Введите адрес кошелька">
+            </label>
+          </div>
+
+          <div class="main-form__inner">
+            <button class="main-btn">Отменить</button>
+            <button class="blue-btn">Добавить реквизиты</button>
+          </div>
+        </form>
+     
+
+    </div>
+    </div>
+  </div>
+
+  <div class="modal wallet modal-profile" data-popup="edit">
+    <div class="modal__box">
+      <a href="profile-details.html" class="modal__link">
+        <svg width='16' height='16'>
+          <use href='img/sprite/sprite.svg#arrow2'></use>
+        </svg>
+        Мои реквизиты
+      </a>
+      <div class="modal__inner">
+
+      <div class="modal__top">
+        <span class="modal__title">Pедактировать реквизиты</span>
+
+        <button class="modal__close close">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+      </div>
+     
+        <form class="balance-form main-form">
+          <div class="main-form__box">
+            <label for="props_2" class="main-form__label">
+              <span class="main-form__title">Название реквизитов</span>
+              <input type="text" name="props_2" id="props_2" class="main-form__input" value="Crypto 1">
+            </label>
+
+            <label for="valute_10" class="main-form__label">
+              <span class="main-form__title">Валюта кошелька</span>
+              <div class="withdraw-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="valute_10" name="valute_10"
+                    value="3">
+                  <span class="select__current" data-id="2">
+                    <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                    Bitcoin (BTC)
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+            
+                    <li class="select__option" data-id="1" data-type="option">
+                      <img width="24" height="24" src="./img/sprite/USDT2.svg" alt="image">
+                      Tether (USDT)
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      <img width="24" height="24" src="./img/sprite/BTC3.svg" alt="image">
+                      Bitcoin (BTC)
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      <img width="24" height="24" src="./img/sprite/ETH2.svg" alt="image">
+                      Ethereum (ETH)
+                    </li>
+                    <li class="select__option" data-id="4" data-type="option">
+                      <img width="24" height="24" src="./img/sprite/USDC.svg" alt="image">
+                      USD Coin (USDC)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </label>
+
+            <label for="network_2" class="main-form__label">
+              <span class="main-form__title">Cеть</span>
+              <div class="contact-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="network_2" name="network_2"
+                    value="3">
+                  <span class="select__current" data-id="1">
+                    Выберите сеть
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+            
+                    <li class="select__option" data-id="1" data-type="option">
+                      Выберите сеть
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      TRC-20
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      ETH-20
+                    </li>
+                    <li class="select__option" data-id="4" data-type="option">
+                      USDC-20
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </label>
+
+            <label for="wallet_2" class="main-form__label">
+              <span class="main-form__title">Адрес кошелька</span>
+              <input type="text" name="wallet_2" id="wallet_2" class="main-form__input" value="0fjs9mpds3kdjs03k29n5n2dlk003k9fd">
+            </label>
+
+            <button class="grey-btn">
+              Удалить кошелек
+              <svg width='16' height='16'>
+                <use href='img/sprite/sprite.svg#trash'></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="main-form__inner">
+            <button class="main-btn">Отменить</button>
+            <button class="blue-btn">Сохранить изменения</button>
+          </div>
+        </form>
+     
+
+    </div>
+    </div>
+
+    <div class="info-label">
+      <span class="info-label__icon">
+        <svg width='34' height='34'>
+          <use href='img/sprite/sprite.svg#check3'></use>
+        </svg>
+      </span>
+      <div class="info-label__box">
+        <span class="info-label__title">Реквизиты успешно добавлены</span>
+      </div>
+      <button class="info-label__close">
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
     </div>
   </div>
 </div>
