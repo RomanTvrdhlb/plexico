@@ -5,38 +5,38 @@
   flex-direction: column;
   border: 1px solid var(--br-c);
   position: relative;
-    z-index: 1;
+  z-index: 1;
 
-    @include tablet{
-      max-width: calc(
-        100vw - (var(--container-offset) * 2) - (clamp(24px, 2.2222vw, 32px) * 2)
-      );
-    }
+  @include tablet {
+    max-width: calc(
+      100vw - (var(--container-offset) * 2) - (clamp(24px, 2.2222vw, 32px) * 2)
+    );
+  }
 
-    @media (max-width: (655px)) {
-      margin-bottom: 16px;
-    }
+  @media (max-width: (655px)) {
+    margin-bottom: 16px;
+  }
 
-  &::after{
+  &::after {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    content: '';
+    content: "";
     width: 100%;
     background: var(--bg-d);
     border-radius: 12px 12px 0 0;
     pointer-events: none;
 
-    @include for-small-tablet{
+    @include for-small-tablet {
       height: 38px;
     }
 
-    @include small-tablet{
+    @include small-tablet {
       height: 36px;
     }
   }
-  
+
   &::before {
     position: absolute;
     background-image: var(--scroll);
@@ -108,10 +108,9 @@
 
     @include small-tablet {
       padding: 0 20px;
-      grid-template-columns: minmax(120px, 1fr) minmax(60px, .8fr) minmax(
-          80px,
-          1fr
-        ) minmax(85px, 1fr) minmax(131px, 1fr);
+      grid-template-columns:
+        minmax(120px, 1fr) minmax(60px, 0.8fr) minmax(80px, 1fr)
+        minmax(85px, 1fr) minmax(131px, 1fr);
       min-width: clamp(579px, 100vw, 600px);
     }
 
@@ -134,13 +133,13 @@
     letter-spacing: -0.01em;
     color: var(--cl-n);
 
-    @include for-laptop{
+    @include for-laptop {
       font-size: 14px;
     }
 
-    @include laptop{
-      @include for-small-tablet{
-        font-size: clamp(12px, .9722vw, 14px);
+    @include laptop {
+      @include for-small-tablet {
+        font-size: clamp(12px, 0.9722vw, 14px);
       }
     }
 
@@ -197,49 +196,50 @@
     font-size: 12px;
   }
 
-  &__link{
+  &__link {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
     letter-spacing: -0.01em;
     color: var(--cl-h);
-    transition: all .3s;
+    transition: all 0.3s;
     display: inline-flex;
     align-items: center;
     grid-gap: 1px;
 
-    b{
+    b {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
       max-width: 100%;
     }
 
-    svg,img{
+    svg,
+    img {
       width: 16px;
       height: 16px;
-      transition: all .3s;
+      transition: all 0.3s;
       flex-shrink: 0;
     }
 
-    &:hover{
-      color: var(--cl-f);;
+    &:hover {
+      color: var(--cl-f);
     }
   }
 
-  &__inner{
+  &__inner {
     display: flex;
     flex-direction: column;
     grid-gap: 6px;
     padding: 11px 0;
 
-    .history-list__status{
+    .history-list__status {
       width: 100%;
     }
   }
 
-  &__info{
+  &__info {
     position: absolute;
     top: 0;
     right: -10px;
@@ -257,7 +257,7 @@
     padding: clamp(8px, 1.1111vw, 16px) clamp(10px, 1.3889vw, 20px);
     width: 279px;
     height: fit-content;
-    transition: all .3s;
+    transition: all 0.3s;
     visibility: hidden;
     opacity: 0;
   }
@@ -283,19 +283,21 @@
     justify-content: center;
     grid-gap: 6px;
 
-    svg,img{
+    svg,
+    img {
       width: 16px;
       height: 16px;
       margin: 4px 0;
     }
 
-    &.mode{
+    &.mode {
       background: var(--bg-c);
       cursor: pointer;
 
-      svg,img{
-        &:hover{
-          & ~ .history-list__info{
+      svg,
+      img {
+        &:hover {
+          & ~ .history-list__info {
             opacity: 1;
             visibility: visible;
           }
@@ -325,10 +327,33 @@
     }
   }
 
-  &__currency{
+  &__currency {
     display: flex;
     flex-direction: column;
     grid-gap: 2px;
+  }
+
+  &__btn {
+    border: 1px solid var(--br-c);
+    border-radius: 6px;
+    padding: 8px 0px;
+    width: 100%;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    color: var(--cl-j);
+    transition: all 0.3s;
+
+    &:hover {
+      background: var(--bg-c);
+      color: var(--cl-a);
+    }
   }
 
   .simplebar-track {
@@ -339,7 +364,7 @@
     background: var(--bg-f);
 
     @media (min-width: (655px)) {
-     display: none;
+      display: none;
     }
   }
 
@@ -347,49 +372,55 @@
     background: var(--cl-h);
   }
 
-  .simplebar-vertical{
+  .simplebar-vertical {
     display: none;
   }
 
-
-  &--swap{
-
-    @include small-tablet{
+  &--swap {
+    @include small-tablet {
       .simplebar-track {
-        display: flex ;
+        display: flex;
       }
 
       margin-bottom: 16px;
 
-      &::before{
+      &::before {
         content: "";
       }
     }
 
-    .history-list{
- 
+    .history-list {
       &__row {
         @include for-laptop {
-          grid-template-columns: minmax(120px, 1fr) repeat(3, 1fr) minmax(130px, 1fr) minmax(77px, .5fr);
+          grid-template-columns: minmax(120px, 1fr) repeat(3, 1fr) minmax(
+              130px,
+              1fr
+            ) minmax(77px, 0.5fr);
         }
-    
+
         @include laptop {
           @include for-small-tablet {
             grid-gap: 5px;
-            grid-template-columns: 110px minmax(80px, 1fr) minmax(100px, 1fr) 1fr minmax(130px, 1fr) minmax(77px, .5fr);
+            grid-template-columns: 110px minmax(80px, 1fr) minmax(100px, 1fr) 1fr minmax(
+                130px,
+                1fr
+              ) minmax(77px, 0.5fr);
           }
         }
-    
+
         @include for-small-tablet {
           padding: 0 clamp(10px, 1.3889vw, 20px);
         }
-    
+
         @include small-tablet {
           padding: 0 20px;
-          grid-template-columns: minmax(120px, .85fr) repeat(3, minmax(100px, .8fr))  minmax(110px, 1fr)  minmax(66px, .5fr);
+          grid-template-columns: minmax(120px, 0.85fr) repeat(
+              3,
+              minmax(100px, 0.8fr)
+            ) minmax(110px, 1fr) minmax(66px, 0.5fr);
           min-width: clamp(726px, 124.5vw, 747px);
         }
-    
+
         .history-list {
           &__name:last-child {
             text-align: center;
@@ -399,24 +430,21 @@
     }
   }
 
-  &--transfer{
-    
-    @include small-tablet{
+  &--transfer {
+    @include small-tablet {
       .simplebar-track {
-        display: flex ;
+        display: flex;
       }
 
       margin-bottom: 16px;
 
-      &::before{
+      &::before {
         content: "";
       }
     }
 
-    .history-list{
- 
+    .history-list {
       &__row {
-
         @media (min-width: (1350px)) {
           grid-gap: clamp(12px, 2.5694vw, 37px);
         }
@@ -427,35 +455,44 @@
           }
         }
         @include for-laptop {
-          grid-template-columns: minmax(120px, .5fr) minmax(120px, .5fr) 50px repeat(3, 1fr) minmax(85px, 1fr) minmax(77px, .5fr);
+          grid-template-columns: minmax(120px, 0.5fr) minmax(120px, 0.5fr) 50px repeat(
+              3,
+              1fr
+            ) minmax(85px, 1fr) minmax(77px, 0.5fr);
         }
-    
+
         @include laptop {
-          @include for-tablet{
+          @include for-tablet {
             grid-gap: 5px;
           }
 
           @include for-small-tablet {
-            grid-template-columns: minmax(80px, .5fr) minmax(110px, .5fr) 50px repeat(3, 1fr) minmax(75px, 1fr) minmax(77px, .5fr);
+            grid-template-columns: minmax(80px, 0.5fr) minmax(110px, 0.5fr) 50px repeat(
+                3,
+                1fr
+              ) minmax(75px, 1fr) minmax(77px, 0.5fr);
           }
         }
 
-        @include tablet{
-          @include for-small-tablet{
+        @include tablet {
+          @include for-small-tablet {
             grid-gap: clamp(5px, 1.465vw, 15px);
           }
         }
-    
+
         @include for-small-tablet {
           padding: 0 clamp(10px, 1.3889vw, 20px);
         }
-    
+
         @include small-tablet {
           padding: 0 20px;
-          grid-template-columns: minmax(120px, .5fr) minmax(120px, .5fr) minmax(60px, .5fr) repeat(4, minmax(80px, .6fr))  minmax(66px, .5fr);
+          grid-template-columns: minmax(120px, 0.5fr) minmax(120px, 0.5fr) minmax(
+              60px,
+              0.5fr
+            ) repeat(4, minmax(80px, 0.6fr)) minmax(66px, 0.5fr);
           min-width: 850px;
         }
-    
+
         .history-list {
           &__name:last-child {
             text-align: center;
@@ -465,24 +502,22 @@
     }
   }
 
-  &--withdrawals{
-    
-    @include small-tablet{
+  &--withdrawals {
+    @include small-tablet {
       .simplebar-track {
-        display: flex ;
+        display: flex;
       }
 
       margin-bottom: 16px;
 
-      &::before{
+      &::before {
         content: "";
       }
     }
 
-    .history-list{
- 
+    .history-list {
       &__row {
-        &:not(.history-list__row--head){
+        &:not(.history-list__row--head) {
           min-height: clamp(58px, 4.1667vw, 60px);
         }
 
@@ -496,96 +531,191 @@
           }
         }
         @include for-laptop {
-          grid-template-columns: minmax(120px, .5fr) 50px minmax(50px, 1fr) repeat(2, minmax(60px, 1fr)) minmax(85px, 1fr) minmax(clamp(120px, 9.167vw, 132px), .5fr) minmax(174px, .5fr);
+          grid-template-columns: minmax(120px, 0.5fr) 50px minmax(50px, 1fr) repeat(
+              2,
+              minmax(60px, 1fr)
+            ) minmax(85px, 1fr) minmax(clamp(120px, 9.167vw, 132px), 0.5fr) minmax(
+              174px,
+              0.5fr
+            );
         }
-    
+
         @include laptop {
-          @include for-tablet{
+          @include for-tablet {
             grid-gap: 5px;
           }
 
-          @include for-small-tablet{
-            grid-template-columns: minmax(110px, .5fr) 45px minmax(50px, .8fr) minmax(60px, 1fr) minmax(65px, 1fr) minmax(75px, 1fr) minmax(174px, .5fr);
+          @include for-small-tablet {
+            grid-template-columns: minmax(110px, 0.5fr) 45px minmax(50px, 0.8fr) minmax(
+                60px,
+                1fr
+              ) minmax(65px, 1fr) minmax(75px, 1fr) minmax(174px, 0.5fr);
 
-            .history-list__name:nth-child(7), .history-list__value:nth-child(7){
+            .history-list__name:nth-child(7),
+            .history-list__value:nth-child(7) {
               display: none;
             }
-  
-            .history-list__link{
+
+            .history-list__link {
               display: none;
             }
           }
         }
 
-        @include tablet{
-          @include for-small-tablet{
-           grid-gap: clamp(5px, 1.465vw, 15px);
+        @include tablet {
+          @include for-small-tablet {
+            grid-gap: clamp(5px, 1.465vw, 15px);
           }
         }
-    
+
         @include for-small-tablet {
           padding: 0 clamp(10px, 1.3889vw, 20px);
         }
-    
+
         @include small-tablet {
           padding: 0 20px;
-          grid-template-columns: minmax(120px, .5fr) minmax(60px, .4fr) repeat(4, minmax(80px, .6fr)) minmax(112px, .5fr)  minmax(152px, .5fr);
+          grid-template-columns: minmax(120px, 0.5fr) minmax(60px, 0.4fr) repeat(
+              4,
+              minmax(80px, 0.6fr)
+            ) minmax(112px, 0.5fr) minmax(152px, 0.5fr);
           min-width: 1000px;
         }
 
-        @include mobile{
-          grid-template-columns: 120px minmax(60px, .1fr) repeat(4, minmax(80px, .2fr)) 112px  152px;
+        @include mobile {
+          grid-template-columns: 120px minmax(60px, 0.1fr) repeat(
+              4,
+              minmax(80px, 0.2fr)
+            ) 112px 152px;
           min-width: 890px;
         }
       }
     }
   }
 
-  &--career{
-    
-    @include small-tablet{
+  &--career {
+    @include small-tablet {
       .simplebar-track {
-        display: flex ;
+        display: flex;
       }
 
       margin-bottom: 16px;
 
-      &::before{
+      &::before {
         content: "";
       }
     }
 
-    .history-list{
- 
+    .history-list {
       &__row {
         @include for-laptop {
-          grid-template-columns: 1fr minmax(120px, 1fr) repeat(3, 1fr) minmax(77px, .5fr);
+          grid-template-columns: 1fr minmax(120px, 1fr) repeat(3, 1fr) minmax(
+              77px,
+              0.5fr
+            );
         }
-    
+
         @include laptop {
           @include for-small-tablet {
             grid-gap: 5px;
-            grid-template-columns: 1fr minmax(120px, 1fr) minmax(100px, 1fr) 1fr 1fr minmax(77px, .5fr);
+            grid-template-columns: 1fr minmax(120px, 1fr) minmax(100px, 1fr) 1fr 1fr minmax(
+                77px,
+                0.5fr
+              );
           }
         }
-    
+
         @include for-small-tablet {
           padding: 0 clamp(10px, 1.3889vw, 20px);
         }
-    
+
         @include small-tablet {
           padding: 0 20px;
-          grid-template-columns: minmax(120px, .85fr) minmax(100px, .7fr) minmax(60px, .4fr) repeat(2, minmax(100px, .7fr)) minmax(66px, .5fr);
+          grid-template-columns: minmax(120px, 0.85fr) minmax(100px, 0.7fr) minmax(
+              60px,
+              0.4fr
+            ) repeat(2, minmax(100px, 0.7fr)) minmax(66px, 0.5fr);
           min-width: 700px;
         }
 
-        @include mobile{
+        @include mobile {
           min-width: clamp(646px, 133.2vw, 666px);
         }
-    
+
         .history-list {
           &__name:last-child {
             text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  &--product {
+    @include for-tablet {
+      max-width: calc(
+        100vw -
+          (var(--container-offset) - calc(290px + clamp(16px, 2.1277vw, 30px)))
+      );
+    }
+
+    @media (max-width: (1380px)) {
+      .simplebar-track {
+        display: flex;
+      }
+
+      margin-bottom: 16px;
+
+      &::before {
+        content: "";
+      }
+    }
+
+    
+  @include tablet {
+    max-width: calc(
+      100vw - (var(--container-offset) * 2) - (30px * 2)
+    );
+  }
+
+  @include small-tablet{
+    max-width: calc(
+      100vw - (var(--container-offset) * 2) - (20px * 2)
+    );
+  }
+
+    .history-list {
+
+      &__name{
+        @include small-tablet{
+          font-size: 14px;
+        }
+      }
+
+      &__value{
+        @include small-tablet{
+          font-size: 14px;
+        }
+      }
+      &__row {
+        grid-gap: 10px;
+        min-height: 51px;
+        grid-template-columns: 75px minmax(clamp(130px, 10.6383vw, 150px), 1fr) minmax(
+            clamp(60px, 5.3191vw, 75px),
+            0.5fr
+          ) repeat(2, 0.9fr) minmax(clamp(130px, 11.0638vw, 156px), 1.1fr) minmax(
+            clamp(90px, 7.0922vw, 100px),
+            0.5fr
+          ) clamp(95px, 7.0922vw, 100px);
+        padding: 0 20px;
+
+        @media (max-width: (1380px)) {
+          min-width: 1030px;
+        }
+
+        .history-list {
+          &__name:last-child {
+            grid-column: 7/9;
+            text-align: start;
           }
         }
       }

@@ -1,0 +1,117 @@
+.profit-card{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: fit-content;
+    padding: 16px;
+    border-radius: 8px;
+    background: #f6f7f9;
+
+    @include mobile{
+        width: 100%;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 9px;
+        padding-top: 12px;
+        border-top: solid 1px var(--br-c);
+    }
+   
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 105%;
+        letter-spacing: -0.02em;
+        color:  var(--cl-d);
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 126%;
+        color: var(--cl-g);
+        opacity: 0.9;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+
+        .profit-card{
+
+            &__text{
+                font-size: 12px;
+                line-height: 130%;
+                letter-spacing: -0.01em;
+                color: var(--cl-e);
+                opacity: 0.8;
+            }
+
+            &__value{
+                font-size: 12px;
+                line-height: 130%;
+                letter-spacing: -0.01em;
+            }
+        }
+    }
+
+    &__title{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        color: var(--cl-e);
+        border: 0.50px solid transparent;
+        border-radius: 133px;
+        background: transparent;
+        white-space: nowrap;
+        transition: all .3s;
+        align-self: flex-end;
+        margin-bottom: 9px;
+    
+        &::before{
+          content: '';
+          width: 12px;
+          height: 12px;
+          display: flex;
+          border-radius: 50%;
+          pointer-events: none;
+          background: var(--cl-g);
+        }
+    
+        &.blue{
+          &::before{
+            background: linear-gradient(166deg, #5164d8 0%, #0824b6 100%);
+          }
+        }
+    
+        &.green{
+          &::before{
+            background: linear-gradient(170deg, #57d3bf 0%, #0fa7ba 100%);
+          }
+        }
+    
+        &.violet{
+          &::before{
+            background: linear-gradient(167deg, #914fea 0%, #3b2ec6 100%);
+          }
+        }
+    
+        &.orange{
+          &::before{
+            background: linear-gradient(169deg, #f0ad78 0%, #dd8464 100%);
+          }
+        }
+    }
+}

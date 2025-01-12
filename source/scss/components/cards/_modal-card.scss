@@ -1,0 +1,59 @@
+.modal-card{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 2.1277vw, 30px);
+    padding: clamp(15px, 1.4184vw, 20px);
+    border-radius: 8px;
+    width: 100%;
+    background: var(--bg-d);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &.mode{
+        &::before{
+            position: absolute;
+            content: '';
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='130' fill='none'%3E%3Cg filter='url(%23a)' opacity='.3'%3E%3Ccircle cx='286' cy='-57' r='119' fill='url(%23b)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='b' x1='286.449' x2='470.993' y1='-238.745' y2='58.691' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%235164D8'/%3E%3Cstop offset='1' stop-color='%230824B6'/%3E%3C/linearGradient%3E%3Cfilter id='a' width='644.838' height='644.838' x='-36.419' y='-379.419' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_3266_143853' stdDeviation='101.709'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top left;
+            pointer-events: none;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        color: var(--cl-e);
+    }
+
+    &__box{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(18px, 1.7021vw, 24px);
+        line-height: 105%;
+        letter-spacing: -0.02em;
+        color: var(--cl-d);
+    }
+
+    &__icon{
+        display: flex;
+        width: clamp(40px, 3.1206vw, 44px);
+        height: clamp(40px, 3.1206vw, 44px);
+    }
+}

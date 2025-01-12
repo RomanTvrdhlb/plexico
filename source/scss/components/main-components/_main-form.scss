@@ -818,6 +818,30 @@
       line-height: 130%;
     }
   }
+
+  &--pass{
+    grid-gap: 20px;
+
+    .main-form{
+
+      &__input{
+        text-align: center;
+
+        &::placeholder{
+          text-align: center;
+        }
+      }
+
+      &__label{
+        grid-gap: 6px;
+      }
+      
+      &__title{
+        text-align: center;
+        grid-column: 1/-1;
+      }
+    }
+  }
 }
 
 .funds-form {

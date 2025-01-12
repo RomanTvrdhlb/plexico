@@ -1,0 +1,291 @@
+.profit-section {
+  @include for-small-tablet {
+    margin-bottom: 30px;
+  }
+
+  @include tablet{
+      max-width: calc(100vw - (var(--container-offset) * 2) );
+    }
+
+  @include small-tablet {
+    margin-bottom: 41px;
+  }
+
+  position: relative;
+  z-index: 1;
+
+  &__chart{
+    overflow-x: auto;
+
+    @media (max-width: (1480px)) {
+      padding-bottom: 28px;
+    }
+
+    @include small-tablet{
+      width: calc(100% + 40px);
+      margin: 0 -20px;
+      padding: 0 20px 28px 20px;
+    }
+
+    &-box{
+      min-width: 1000px !important;
+      height: 200px !important;
+    }
+
+    .simplebar-track.simplebar-horizontal{
+      cursor: pointer;
+      z-index: 10;
+      bottom: 0;
+      height: 5px;
+      left: 25px;
+      transform: translateY(-50%);
+      width: calc(100% - 25px);
+      background: #E6EAF0;
+      border-radius: 133px;
+
+      .simplebar-scrollbar{
+          border-radius: 133px;
+          background: #B3C0D2;
+       
+          &::before{
+              opacity: 0 !important;
+          }
+      }
+
+      @include small-tablet{
+        left: 40px;
+        width: calc(100% - 60px);
+      }
+  }
+  }
+
+  &__wrapp{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid var(--br-c);
+    border-radius: 12px;
+    padding: 30px;
+
+    @include small-tablet{
+      padding: 20px;
+    }
+
+    .product-chart{
+      width: 100% !important;
+      height: 100% !important;
+      // height: 350px !important;
+    }
+
+    .profit-nav{
+      align-self: flex-end;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background: var(--bg-a);
+   
+    @include small-tablet{
+        padding: 20px;
+    }
+
+  }
+
+  &__labels{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-self: center;
+    background: var(--bg-g);
+    border-radius: 133px;
+    padding: 3px;
+
+    @media (max-width: (1380px)) {
+     grid-column: 1/-1; 
+     width: 100%;
+     justify-content: center;
+
+     @include for-small-tablet{
+      grid-row: 2;
+      gap: 20px;
+     }
+    }
+   
+    @include mobile{
+      border-radius: 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__btn{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: var(--cl-e);
+    padding: 8px clamp(8px, 1.563vw, 12px);
+    border: 0.50px solid transparent;
+    border-radius: 133px;
+    background: transparent;
+    white-space: nowrap;
+    transition: all .3s;
+
+    &::before{
+      content: '';
+      width: clamp(10px, 1.563vw, 12px);
+      height: clamp(10px, 1.563vw, 12px);
+      display: flex;
+      border-radius: 50%;
+      pointer-events: none;
+      background: var(--cl-g);
+    }
+    
+    &:hover{
+      color: var(--cl-d);
+    }
+
+    &.active{
+      background: var(--bg-a);
+      border-color: var(--br-g);
+
+      &:hover{
+        color: var(--cl-e);
+      }
+    }
+
+    &.blue{
+      &::before{
+        background: linear-gradient(166deg, #5164d8 0%, #0824b6 100%);
+      }
+    }
+
+    &.green{
+      &::before{
+        background: linear-gradient(170deg, #57d3bf 0%, #0fa7ba 100%);
+      }
+    }
+
+    &.violet{
+      &::before{
+        background: linear-gradient(167deg, #914fea 0%, #3b2ec6 100%);
+      }
+    }
+
+    &.orange{
+      &::before{
+        background: linear-gradient(169deg, #f0ad78 0%, #dd8464 100%);
+      }
+    }
+
+    @include small-tablet{
+      width: 100%;
+      justify-content: center;
+    }
+
+    @include mobile{
+      width: fit-content;
+    }
+  }
+
+  &__top{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+
+    @media (max-width: (1380px)) {
+      grid-template-columns: 1fr auto;
+     }
+
+     @include small-tablet{
+      grid-template-columns: 100%;
+
+      .subtitle{
+        margin-bottom: 15px;
+    }
+     }
+
+  }
+
+  &__calendar{
+      max-width: 125px;
+
+      @include small-tablet{
+          max-width: 100%;
+          width: 100%;
+      }
+
+      .main-form__btn{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 12px;
+      }
+
+      input{
+          border-radius: 6px;
+          min-height: 36px;
+          padding-right: 35px;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 126%;
+      }
+
+      &[data-calendar] .air-datepicker{ 
+          top: 40px !important;
+          right: 0;
+          left: initial;
+
+          .air-datepicker-cell{
+              &.-year-{
+                  &.-focus-{
+                      background: transparent !important;
+                      color: var(--cl-h);
+                  }
+              }
+              &.-month-{
+                  background: transparent !important;
+                  
+                  &.-focus-{
+                      background: transparent;
+                      color: var(--cl-h);
+                  }
+
+                  &.-current-{
+                      color: var(--cl-h);
+                  }
+              }
+
+          }
+
+      }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    grid-gap: 8px 10px;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__text{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--cl-q);
+  }
+}

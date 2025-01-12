@@ -5,6 +5,8 @@ import { addCustomClass, removeCustomClass, removeClassInArray, fadeIn, fadeOut 
 class ModalManager {
   constructor({activeMode = '', fadeInTimeout, fadeOutTimeout }) {
     this.overlay = document.querySelector('[data-overlay]');
+    if (!this.overlay) return;
+    
     this.modalsButton = document.querySelectorAll("[data-btn-modal]");
     this.innerButtonModal = document.querySelectorAll("[data-btn-inner]");
     this.modals = document.querySelectorAll('[data-popup]');

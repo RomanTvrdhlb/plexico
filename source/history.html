@@ -463,30 +463,23 @@
                   <div class="history__top history__top--mode">
                     <div class="history__wrapp">
                       <span class="history__text">Период</span>
-                      <div class="period-select select" data-select>
-                        <div class="select__header">
-                          <input type="hidden" class="select__input input-select" id="year_1" name="year_1" value="1">
-                          <span class="select__current" data-id="1">
-                            Последний год
-                          </span>
-                          <svg class="select__current-icon" width='5' height='7'>
-                            <use href='img/sprite/sprite.svg#Union'></use>
+
+                      <label for="date" class="history__calendar main-form__label" data-calendar>
+                        <input type="text" name="date" id="date" class="main-form__input" value="05.06.1997">
+                        <button class="main-form__btn">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#calendar-month'></use>
                           </svg>
-                        </div>
-                        <div class="select__body">
-                          <ul class="select__list">
-                            <li class="select__option" data-id="1" data-type="option">
-                              Последний год
-                            </li>
-                            <li class="select__option" data-id="2" data-type="option">
-                              Текущий год
-                            </li>
-                            <li class="select__option" data-id="3" data-type="option">
-                              Все года
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                        </button>
+                      </label>
+                      <label for="date_2" class="history__calendar main-form__label" data-calendar>
+                        <input type="text" name="date_2" id="date_2" class="main-form__input" value="05.06.2024">
+                        <button class="main-form__btn">
+                          <svg width='17' height='17'>
+                            <use href='img/sprite/sprite.svg#calendar-month'></use>
+                          </svg>
+                        </button>
+                      </label>
                     </div>
 
                     <div class="period-select select" data-select>

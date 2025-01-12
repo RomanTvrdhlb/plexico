@@ -6,19 +6,18 @@ bar &&
     const progressText = progressBar.querySelector(".progress-bar__text");
 
     if (progressBar.classList.contains("progress-bar--balance")) {
-     
-        steps.forEach((step, index) => {
-          if (steps[steps.length - 1].classList.contains("active")) {
-            steps.forEach((el) => {
-              el.classList.add("hide");
-            });
-          } else {
-            steps.forEach((el) => {
-              el.classList.remove("hide");
-            });
-          }
-        });
-      }
+      steps.forEach((step, index) => {
+        if (steps[steps.length - 1].classList.contains("active")) {
+          steps.forEach((el) => {
+            el.classList.add("hide");
+          });
+        } else {
+          steps.forEach((el) => {
+            el.classList.remove("hide");
+          });
+        }
+      });
+    }
 
     if (!progressText) return;
 
@@ -34,3 +33,4 @@ bar &&
       }
     });
   });
+  

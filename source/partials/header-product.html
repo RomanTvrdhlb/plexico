@@ -1,0 +1,188 @@
+<header class="header fixed-block sticky">
+  <div class="container container--mode">
+    <div class="header__box product">
+      <a href="/" aria-label="logo" class="logo">
+        <img width="100" height="34" src="./img/sprite/logo2.svg" alt="image">
+      </a>
+
+      <div class='info-slider'>
+        <div class="info-slider__top">
+          <button class="info-slider__close">
+            <svg width='16' height='16'>
+              <use href='img/sprite/sprite.svg#arrow'></use>
+            </svg>
+            <svg width='20' height='20'>
+              <use href='img/sprite/sprite.svg#valute'></use>
+            </svg>
+          </button>
+          <span class="info-slider__title">Курсы валют</span>
+        </div>
+        <div class='swiper-container'>
+          <ul class='swiper-wrapper'>
+            <li class='swiper-slide'>
+              <div class="info-card">
+                <div class="info-card__box">
+                  <span class="info-card__icon">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#BTC'></use>
+                    </svg>
+                  </span>
+                  <span class="info-card__name"><i>BTC</i>/USD</span>
+                </div>
+                <div class="info-card__inner">
+                  <span class="info-card__value">58,984.15</span>
+                  <span class="info-card__percent">
+                    <svg width='14' height='14'>
+                      <use href='img/sprite/sprite.svg#top'></use>
+                    </svg>
+                    7.34%
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li class='swiper-slide'>
+              <div class="info-card down">
+                <div class="info-card__box">
+                  <span class="info-card__icon">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#USDT'></use>
+                    </svg>
+                  </span>
+                  <span class="info-card__name"><i>USDT</i>/USD</span>
+                </div>
+                <div class="info-card__inner">
+                  <span class="info-card__value">1.015</span>
+                  <span class="info-card__percent">
+                    <svg width='14' height='14'>
+                      <use href='img/sprite/sprite.svg#down'></use>
+                    </svg>
+                    2.12%
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li class='swiper-slide'>
+              <div class="info-card">
+                <div class="info-card__box">
+                  <span class="info-card__icon">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#ETH'></use>
+                    </svg>
+                  </span>
+                  <span class="info-card__name"><i>ETH</i>/USD</span>
+                </div>
+                <div class="info-card__inner">
+                  <span class="info-card__value">25,053.15</span>
+                  <span class="info-card__percent">
+                    <svg width='14' height='14'>
+                      <use href='img/sprite/sprite.svg#top'></use>
+                    </svg>
+                    12.95%
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li class='swiper-slide'>
+              <div class="info-card down">
+                <div class="info-card__box">
+                  <span class="info-card__icon">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#USDC'></use>
+                    </svg>
+                  </span>
+                  <span class="info-card__name"><i>USDC</i>/USD</span>
+                </div>
+                <div class="info-card__inner">
+                  <span class="info-card__value">13.015</span>
+                  <span class="info-card__percent">
+                    <svg width='14' height='14'>
+                      <use href='img/sprite/sprite.svg#down'></use>
+                    </svg>
+                    4.75%
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <span class='swiper-pagination'></span>
+      </div>
+
+      <div class="header-date">
+        <span class="header-date__icon">
+          <svg width='10' height='10'>
+            <use href='img/sprite/sprite.svg#clock2'></use>
+          </svg>
+        </span>
+        <span class="header-date__value">12:34<b>UTC</b></span>
+      </div>
+
+      <button class="valute-btn">
+        <svg width='16' height='16'>
+          <use href='img/sprite/sprite.svg#arrow'></use>
+        </svg>
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#valute'></use>
+        </svg>
+      </button>
+
+      <div class="header__inner">
+        <button class="info-btn">
+          <svg width='20' height='20'>
+            <use href='img/sprite/sprite.svg#search'></use>
+          </svg>
+        </button>
+        <button class="info-btn" data-open>
+          <svg width='20' height='20'>
+            <use href='img/sprite/sprite.svg#notification'></use>
+          </svg>
+        </button>
+
+        <div class="user-select select" data-select>
+          <div class="select__header">
+            <input type="hidden" class="select__input input-select" id="user_1" name="user_1" value="1">
+            <span class="select__current" data-id="1">
+              <img width="32" height="32" src="./img/index/ava.png" alt="image">
+              Анастасия
+            </span>
+            <svg class="select__current-icon" width='5' height='7'>
+              <use href='img/sprite/sprite.svg#Union'></use>
+            </svg>
+          </div>
+          <div class="select__body">
+            <ul class="select__list">
+              <li class="select__option" data-id="1" data-type="option">
+                <img width="32" height="32" src="./img/index/ava.png" alt="image">
+                Анастасия
+              </li>
+              <li class="select__option" data-id="2" data-type="option">
+                <a href="#">
+                  <img width="20" height="20" src="./img/sprite/logout.svg" alt="image">
+                  Выход
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__wrapp">
+        <button class="blue-btn">Депозит</button>
+        <a href="#" class="header__link">
+          <svg width='17' height='17'>
+            <use href='img/sprite/sprite.svg#user'></use>
+          </svg>
+        </a>
+        <button class="burger">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+ 
+</header>
+
+
+

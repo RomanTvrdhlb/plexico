@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  <main>
+    <div class="container container--dash">
+      <div class="dashboard">
+        @include('partials/header-product.html')
+
+        <aside class="aside">
+          <div class="aside__top">
+            <a href="index.html" class="logo">
+              <svg width='125' height='40'>
+                <use href='img/sprite/sprite.svg#logo2'></use>
+              </svg>
+            </a>
+
+            <div class="dashboard-info">
+              <div class="dashboard-info__top">
+                <span class="dashboard-info__title">Ваш баланс</span>
+                <span class="dashboard-info__date">13 Января, 2024</span>
+              </div>
+              <div class="dashboard-info__box">
+                <span class="dashboard-info__value">$ <b>4,389.80</b></span>
+                <span class="dashboard-info__precent">
+                  <svg width='16' height='16'>
+                    <use href='img/sprite/sprite.svg#top'></use>
+                  </svg>
+                  7%
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="aside__mobile">
+            <div class="aside__mobile-top">
+              <button class="info-btn" data-open>
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#notification'></use>
+                </svg>
+                <span class="info-btn__count">200</span>
+              </button>
+              <span class="aside__mobile-user">Анастасия</span>
+
+              <button class="burger">
+                <span class="burger__line"></span>
+              </button>
+            </div>
+
+            <div class="aside__mobile-box">
+              <form class="search-form">
+                <label for="search">
+                  <input type="text" name="search" id="search" placeholder="Поиск">
+                </label>
+                <button type="submit">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#search'></use>
+                  </svg>
+                </button>
+              </form>
+
+              <ul class="aside-nav">
+                <li class="aside-nav__item">
+                  <a href="index.html" class="aside-nav__button active">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside1'></use>
+                      </svg>
+                    </span>
+                    Дашборд
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside2'></use>
+                      </svg>
+                    </span>
+                    Продукты
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="finances.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside3'></use>
+                      </svg>
+                    </span>
+                    Финансы
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside4'></use>
+                      </svg>
+                    </span>
+                    Партнеры
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="history.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside5'></use>
+                      </svg>
+                    </span>
+                    История операций
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="history.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside7'></use>
+                      </svg>
+                    </span>
+                    Профиль
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="settings.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside6'></use>
+                      </svg>
+                    </span>
+                    Настройки
+                  </a>
+                </li>
+              </ul>
+
+              <div class="aside-select withdraw-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="lang_5" name="lang_5" value="3">
+                  <span class="select__current" data-id="3">
+                    <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                    Русский
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+                    <li class="select__option" data-id="1" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                      Украинский
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                      Английский
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </li>
+                    <li class="select__option" data-id="4" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                      Белорусский
+                    </li>
+                    <li class="select__option" data-id="5" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                      Английский2
+                    </li>
+                    <li class="select__option" data-id="6" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский2
+                    </li>
+                    <li class="select__option" data-id="7" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                      Белорусский2
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" class="exit-btn">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#exit'></use>
+                </svg>
+                Выход
+              </a>
+            </div>
+
+            <div class="aside__mobile-bottom">
+              <div class="aside-select withdraw-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="lang_5" name="lang_5" value="3">
+                  <span class="select__current" data-id="3">
+                    <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                    Русский
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+                    <li class="select__option" data-id="1" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                      Украинский
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                      Английский
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </li>
+                    <li class="select__option" data-id="4" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                      Белорусский
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <p>Copyright © 2024 Plexico. All Rights Reserved.</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="notification">
+          <div class="notification__box">
+            <div class="notification__top">
+              <div class="notification__info">
+                <span class="notification__title">Уведомления</span>
+                <span class="notification__count">200</span>
+              </div>
+              <button class="notification__close">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+              </button>
+              <button class="main-btn">
+                Очистить
+                <svg width='16' height='16'>
+                  <use href='img/sprite/sprite.svg#trash2'></use>
+                </svg>
+              </button>
+            </div>
+
+            <ul class="notification__list">
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dashboard__content">
+          <section class="partner-section">
+            <div class="partner-section__box">
+              <h1 class="title">Партнерская программа</h1>
+
+              <div class="partner-section__tabs" data-tabs-parrent>
+                <ul class="partner-section__nav">
+                  <li class="partner-section__nav-item">
+                    <button class="partner-section__nav-btn active" type="button" data-tab="1">Персональный
+                      маркетинг</button>
+                  </li>
+                  <li class="partner-section__nav-item">
+                    <button class="partner-section__nav-btn" type="button" data-tab="2">To be accounced</button>
+                  </li>
+                </ul>
+                <ul class="partner-section__content">
+                  <li class="partner-section__item active" data-tab-content="1">
+                    <div class="partner-info">
+                      <div class="partner-info__bg">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/bg.webp'>
+                          <img width='1090' height='65' src='img/index/bg.png' alt='image'>
+                        </picture>
+                      </div>
+
+                      <span class="partner-info__value">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#users2'></use>
+                        </svg>
+                        Количество переходов:
+                        <b>133</b>
+                      </span>
+
+                      <div class="partner-info__box" data-copy-parent>
+                        <span class="partner-info__icon">
+                          <svg width='18' height='18'>
+                            <use href='img/sprite/sprite.svg#link'></use>
+                          </svg>
+                        </span>
+                        <p>Ваша реферальная ссылка:</p>
+
+                        <button class="partner-info__copy"
+                          data-copy="https://plexico.io/ref/alexxey123">https://plexico.io/ref/alexxey123</button>
+
+                        <button class="edit-btn edit-btn--mode">
+                          Копировать ссылку
+                          <svg width='16' height='16'>
+                            <use href='img/sprite/sprite.svg#copy2'></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="partner-section__inner">
+                      <div class="partner-bonus">
+                        <h2 class="subtitle">Командные бонусы
+                          <button class="info-btn">
+                            <svg width='18' height='18'>
+                              <use href='img/sprite/sprite.svg#info'></use>
+                            </svg>
+                          </button>
+                        </h2>
+
+                        <ul class="partner-bonus__list">
+                          <li class="partner-bonus__item">
+                            <div class="partner-bonus__percent active">
+                              <b>9</b>%
+                            </div>
+                            <div class="partner-card active">
+                              <span class="partner-card__label">
+                                <svg width='12' height='12'>
+                                  <use href='img/sprite/sprite.svg#gift'></use>
+                                </svg>
+                                $<b>750</b>
+                              </span>
+
+                              <div class="partner-card__top">
+                                <span class="partner-card__lvl">Уровень <b>4</b></span>
+                                <span class="partner-card__title">Текущий процент</span>
+                                <span class="partner-card__percent"><b>9</b>%</span>
+                              </div>
+
+                              <div class="partner-card__inner">
+                                <div class="partner-card__wrapp">
+                                  <span class="partner-card__subtitle">Личный оборот</span>
+                                  <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+
+                                  <div class="partner-card__line">
+                                    <span style="width: 100%;"></span>
+                                  </div>
+                                </div>
+                                <div class="partner-card__wrapp">
+                                  <span class="partner-card__subtitle">Структурный оборот</span>
+                                  <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+
+                                  <div class="partner-card__line">
+                                    <span style="width: 100%;"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="partner-bonus__item">
+                            <div class="partner-bonus__percent">
+                              <b>10</b>%
+                            </div>
+                            <div class="partner-card">
+                              <span class="partner-card__label">
+                                <svg width='12' height='12'>
+                                  <use href='img/sprite/sprite.svg#gift'></use>
+                                </svg>
+                                $<b>2000</b>
+                              </span>
+
+                              <div class="partner-card__top">
+                                <span class="partner-card__lvl">Уровень <b>5</b></span>
+                                <span class="partner-card__title">Следующий процент</span>
+                                <span class="partner-card__percent"><b>10</b>%</span>
+                              </div>
+
+                              <div class="partner-card__inner">
+                                <div class="partner-card__wrapp">
+                                  <span class="partner-card__subtitle">Личный оборот</span>
+                                  <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+
+                                  <div class="partner-card__line">
+                                    <span style="width: 30%;"></span>
+                                  </div>
+                                </div>
+                                <div class="partner-card__wrapp">
+                                  <span class="partner-card__subtitle">Структурный оборот</span>
+                                  <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+
+                                  <div class="partner-card__line">
+                                    <span style="width: 70%;"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <button class="partner-btn" data-bonus-btn>
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#bonus'></use>
+                          </svg>
+                          Посмотреть таблицу бонусов
+                        </button>
+                      </div>
+
+                      <div class="partner-comand">
+                        <h2 class="subtitle">Моя команда
+                          <button class="info-btn">
+                            <svg width='18' height='18'>
+                              <use href='img/sprite/sprite.svg#info'></use>
+                            </svg>
+                          </button>
+                        </h2>
+
+                        <div class="partner-comand__info">
+                          <span class="partner-comand__title">Личный оборот</span>
+                          <span class="partner-comand__value">$<b>300,50</b></span>
+                        </div>
+                        <div class="partner-comand__info">
+                          <span class="partner-comand__title">Структурный оборот</span>
+                          <span class="partner-comand__value">$<b>20.290</b></span>
+                        </div>
+                        <div class="partner-comand__info">
+                          <span class="partner-comand__title">Партнерский доход</span>
+                          <span class="partner-comand__value">$<b>1.350</b></span>
+                        </div>
+
+                        <div class="partner-comand__wrapp">
+                          <span class="partner-comand__subtitle">Кол-во партнеров</span>
+                          <span class="partner-comand__value">
+                            <img width='45' height='18' src='img/sprite/users3.svg' alt='image'>
+
+                            <b>133</b>
+                          </span>
+                        </div>
+
+                        <div class="partner-comand__wrapp">
+                          <span class="partner-comand__subtitle">Активных партнеров</span>
+                          <span class="partner-comand__value">
+                            <img width='45' height='18' src='img/sprite/users4.svg' alt='image'>
+                            <b>40</b>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="partner-referral">
+                        <h2 class="subtitle">Реферальные бонусы
+                          <button class="info-btn">
+                            <svg width='18' height='18'>
+                              <use href='img/sprite/sprite.svg#info'></use>
+                            </svg>
+                          </button>
+                        </h2>
+
+                        <div class="partner-referral__box">
+                          <div class="partner-referral__wrapp">
+                            <span class="partner-referral__text">Начислено всего</span>
+                            <span class="partner-referral__value">$<b>99.550</b></span>
+                          </div>
+
+
+
+                          <div class="partner-referral__info">
+                            <span class="partner-referral__icon">
+                              <svg width='38' height='38'>
+                                <use href='img/sprite/sprite.svg#BTC'></use>
+                              </svg>
+                            </span>
+                            <span class="partner-referral__name">BTC</span>
+                            <span class="partner-referral__value">1.009302</span>
+                          </div>
+
+                          <div class="partner-referral__info">
+                            <span class="partner-referral__icon">
+                              <svg width='38' height='38'>
+                                <use href='img/sprite/sprite.svg#ETH'></use>
+                              </svg>
+                            </span>
+                            <span class="partner-referral__name">ETH</span>
+                            <span class="partner-referral__value">0.000500</span>
+                          </div>
+
+                          <div class="partner-referral__info">
+                            <span class="partner-referral__icon">
+                              <svg width='38' height='38'>
+                                <use href='img/sprite/sprite.svg#USDT'></use>
+                              </svg>
+                            </span>
+                            <span class="partner-referral__name">USDT</span>
+                            <span class="partner-referral__value">750.33</span>
+                          </div>
+
+                          <div class="partner-referral__info">
+                            <span class="partner-referral__icon">
+                              <svg width='38' height='38'>
+                                <use href='img/sprite/sprite.svg#USDC'></use>
+                              </svg>
+                            </span>
+                            <span class="partner-referral__name">USDC</span>
+                            <span class="partner-referral__value">0.000</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="partner-section__wrapp">
+                      <span class="partner-section__pretitle">
+                        <svg width='18' height='18'>
+                          <use href='img/sprite/sprite.svg#union6'></use>
+                        </svg>
+                        Как работает партнерская программа?</span>
+
+                      <button class="download-btn">Скачать PDF
+                        <svg width='24' height='24'>
+                          <use href='img/sprite/sprite.svg#folder'></use>
+                        </svg>
+                      </button>
+                      <button class="download-btn black">YouTube презентация
+                        <svg width='24' height='24'>
+                          <use href='img/sprite/sprite.svg#Union2'></use>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="partners-info">
+                      <div class="partners-info__top">
+                        <h2 class="subtitle">Партнеры</h2>
+
+                        <button class="grey-btn grey-btn--mode">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#search'></use>
+                          </svg>
+                        </button>
+
+                        <div class="partners-select select" data-select>
+                          <div class="select__header">
+                            <input type="hidden" class="select__input input-select" id="partners_1" name="partners_1"
+                              value="1">
+                            <span class="select__header-icon">
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#filter'></use>
+                              </svg>
+                            </span>
+                            <span class="select__current" data-id="1">
+                              По регистрации
+                            </span>
+                            <svg class="select__current-icon" width='5' height='7'>
+                              <use href='img/sprite/sprite.svg#Union'></use>
+                            </svg>
+                          </div>
+                          <div class="select__body">
+                            <ul class="select__list">
+                              <li class="select__option" data-id="1" data-type="option">
+                                По регистрации
+                              </li>
+                              <li class="select__option" data-id="2" data-type="option">
+                                По инвестициям
+                              </li>
+                              <li class="select__option" data-id="3" data-type="option">
+                                По уровню
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="partners-info__inner">
+                        <ul class="partners-list" data-simplebar>
+                          <li class="partners-list__item">
+                            <div class="partners-list__row">
+                              <button class="partners-list__open active">
+                                <svg width='7' height='7'>
+                                  <use href='img/sprite/sprite.svg#plus'></use>
+                                </svg>
+
+                                <svg width='7' height='2' class="partners-list__open-icon">
+                                  <use href='img/sprite/sprite.svg#minus'></use>
+                                </svg>
+                              </button>
+                              <div class="partners-list__box">
+                                <span class="partners-list__ava">
+                                  <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                </span>
+                                <div class="partners-list__top">
+                                  <span class="partners-list__title">Мария Лескова</span>
+                                  <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                </div>
+                                <div class="partners-list__info">
+                                  <span class="partners-list__line">Линия: <b>1</b></span>
+                                  <span class="partners-list__lvl">Партнерский уровень: <span
+                                      class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                  <span class="partners-list__currency">Личные инвестиции: <span
+                                      class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                  <span class="partners-list__percent">Ваши Реф: <span
+                                      class="partners-list__percent-value"><b>4</b>%</span></span>
+                                </div>
+
+                                <div class="partners-list__wrapp">
+                                  <span class="partners-list__text">Оборот</span>
+                                  <span class="partners-list__turnover">$<b>10.500</b></span>
+                                  <button class="partners-list__more">
+                                    <svg width='12' height='3'>
+                                      <use href='img/sprite/sprite.svg#more'></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <ul class="partners-list__sublist">
+                              <li class="partners-list__sublist-item">
+                                <div class="partners-list__row">
+                                  <button class="partners-list__open">
+                                    <svg width='7' height='7'>
+                                      <use href='img/sprite/sprite.svg#plus'></use>
+                                    </svg>
+
+                                    <svg width='7' height='2' class="partners-list__open-icon">
+                                      <use href='img/sprite/sprite.svg#minus'></use>
+                                    </svg>
+                                  </button>
+                                  <div class="partners-list__box">
+                                    <span class="partners-list__ava">
+                                      <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                    </span>
+                                    <div class="partners-list__top">
+                                      <span class="partners-list__title">Мария Лескова</span>
+                                      <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                    </div>
+                                    <div class="partners-list__info">
+                                      <span class="partners-list__line mode">Линия: <b>2</b></span>
+                                      <span class="partners-list__lvl">Партнерский уровень: <span
+                                          class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                      <span class="partners-list__currency">Личные инвестиции: <span
+                                          class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                      <span class="partners-list__percent">Ваши Реф: <span
+                                          class="partners-list__percent-value"><b>4</b>%</span></span>
+                                    </div>
+
+                                    <div class="partners-list__wrapp">
+                                      <span class="partners-list__text">Оборот</span>
+                                      <span class="partners-list__turnover">$<b>10.500</b></span>
+                                      <button class="partners-list__more">
+                                        <svg width='12' height='3'>
+                                          <use href='img/sprite/sprite.svg#more'></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="partners-list__sublist-item active">
+                                <div class="partners-list__row">
+                                  <button class="partners-list__open active">
+                                    <svg width='7' height='7'>
+                                      <use href='img/sprite/sprite.svg#plus'></use>
+                                    </svg>
+
+                                    <svg width='7' height='2' class="partners-list__open-icon">
+                                      <use href='img/sprite/sprite.svg#minus'></use>
+                                    </svg>
+                                  </button>
+                                  <div class="partners-list__box">
+                                    <span class="partners-list__ava">
+                                      <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                    </span>
+                                    <div class="partners-list__top">
+                                      <span class="partners-list__title">Мария Лескова</span>
+                                      <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                    </div>
+                                    <div class="partners-list__info">
+                                      <span class="partners-list__line mode">Линия: <b>2</b></span>
+                                      <span class="partners-list__lvl">Партнерский уровень: <span
+                                          class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                      <span class="partners-list__currency">Личные инвестиции: <span
+                                          class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                      <span class="partners-list__percent">Ваши Реф: <span
+                                          class="partners-list__percent-value"><b>4</b>%</span></span>
+                                    </div>
+
+                                    <div class="partners-list__wrapp">
+                                      <span class="partners-list__text">Оборот</span>
+                                      <span class="partners-list__turnover">$<b>10.500</b></span>
+                                      <button class="partners-list__more">
+                                        <svg width='12' height='3'>
+                                          <use href='img/sprite/sprite.svg#more'></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <ul class="partners-list__sublist">
+                                  <li class="partners-list__sublist-item">
+                                    <div class="partners-list__row">
+                                      <button class="partners-list__open">
+                                        <svg width='7' height='7'>
+                                          <use href='img/sprite/sprite.svg#plus'></use>
+                                        </svg>
+
+                                        <svg width='7' height='2' class="partners-list__open-icon">
+                                          <use href='img/sprite/sprite.svg#minus'></use>
+                                        </svg>
+                                      </button>
+                                      <div class="partners-list__box">
+                                        <span class="partners-list__ava">
+                                          <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                        </span>
+                                        <div class="partners-list__top">
+                                          <span class="partners-list__title">Мария Лескова</span>
+                                          <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                        </div>
+                                        <div class="partners-list__info">
+                                          <span class="partners-list__line">Линия: <b>3</b></span>
+                                          <span class="partners-list__lvl">Партнерский уровень: <span
+                                              class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                          <span class="partners-list__currency">Личные инвестиции: <span
+                                              class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                          <span class="partners-list__percent">Ваши Реф: <span
+                                              class="partners-list__percent-value"><b>4</b>%</span></span>
+                                        </div>
+
+                                        <div class="partners-list__wrapp">
+                                          <span class="partners-list__text">Оборот</span>
+                                          <span class="partners-list__turnover">$<b>10.500</b></span>
+                                          <button class="partners-list__more">
+                                            <svg width='12' height='3'>
+                                              <use href='img/sprite/sprite.svg#more'></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="partners-list__sublist-item">
+                                    <div class="partners-list__row">
+                                      <button class="partners-list__open">
+                                        <svg width='7' height='7'>
+                                          <use href='img/sprite/sprite.svg#plus'></use>
+                                        </svg>
+
+                                        <svg width='7' height='2' class="partners-list__open-icon">
+                                          <use href='img/sprite/sprite.svg#minus'></use>
+                                        </svg>
+                                      </button>
+                                      <div class="partners-list__box">
+                                        <span class="partners-list__ava">
+                                          <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                        </span>
+                                        <div class="partners-list__top">
+                                          <span class="partners-list__title">Мария Лескова</span>
+                                          <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                        </div>
+                                        <div class="partners-list__info">
+                                          <span class="partners-list__line">Линия: <b>3</b></span>
+                                          <span class="partners-list__lvl">Партнерский уровень: <span
+                                              class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                          <span class="partners-list__currency">Личные инвестиции: <span
+                                              class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                          <span class="partners-list__percent">Ваши Реф: <span
+                                              class="partners-list__percent-value"><b>4</b>%</span></span>
+                                        </div>
+
+                                        <div class="partners-list__wrapp">
+                                          <span class="partners-list__text">Оборот</span>
+                                          <span class="partners-list__turnover">$<b>10.500</b></span>
+                                          <button class="partners-list__more">
+                                            <svg width='12' height='3'>
+                                              <use href='img/sprite/sprite.svg#more'></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="partners-list__sublist-item">
+                                    <div class="partners-list__row">
+                                      <button class="partners-list__open">
+                                        <svg width='7' height='7'>
+                                          <use href='img/sprite/sprite.svg#plus'></use>
+                                        </svg>
+
+                                        <svg width='7' height='2' class="partners-list__open-icon">
+                                          <use href='img/sprite/sprite.svg#minus'></use>
+                                        </svg>
+                                      </button>
+                                      <div class="partners-list__box">
+                                        <span class="partners-list__ava">
+                                          <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                        </span>
+                                        <div class="partners-list__top">
+                                          <span class="partners-list__title">Мария Лескова</span>
+                                          <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                        </div>
+                                        <div class="partners-list__info">
+                                          <span class="partners-list__line">Линия: <b>3</b></span>
+                                          <span class="partners-list__lvl">Партнерский уровень: <span
+                                              class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                          <span class="partners-list__currency">Личные инвестиции: <span
+                                              class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                          <span class="partners-list__percent">Ваши Реф: <span
+                                              class="partners-list__percent-value"><b>4</b>%</span></span>
+                                        </div>
+
+                                        <div class="partners-list__wrapp">
+                                          <span class="partners-list__text">Оборот</span>
+                                          <span class="partners-list__turnover">$<b>10.500</b></span>
+                                          <button class="partners-list__more">
+                                            <svg width='12' height='3'>
+                                              <use href='img/sprite/sprite.svg#more'></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="partners-list__sublist-item">
+                                    <div class="partners-list__row">
+                                      <button class="partners-list__open">
+                                        <svg width='7' height='7'>
+                                          <use href='img/sprite/sprite.svg#plus'></use>
+                                        </svg>
+
+                                        <svg width='7' height='2' class="partners-list__open-icon">
+                                          <use href='img/sprite/sprite.svg#minus'></use>
+                                        </svg>
+                                      </button>
+                                      <div class="partners-list__box">
+                                        <span class="partners-list__ava">
+                                          <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                        </span>
+                                        <div class="partners-list__top">
+                                          <span class="partners-list__title">Мария Лескова</span>
+                                          <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                        </div>
+                                        <div class="partners-list__info">
+                                          <span class="partners-list__line">Линия: <b>3</b></span>
+                                          <span class="partners-list__lvl">Партнерский уровень: <span
+                                              class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                          <span class="partners-list__currency">Личные инвестиции: <span
+                                              class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                          <span class="partners-list__percent">Ваши Реф: <span
+                                              class="partners-list__percent-value"><b>4</b>%</span></span>
+                                        </div>
+
+                                        <div class="partners-list__wrapp">
+                                          <span class="partners-list__text">Оборот</span>
+                                          <span class="partners-list__turnover">$<b>10.500</b></span>
+                                          <button class="partners-list__more">
+                                            <svg width='12' height='3'>
+                                              <use href='img/sprite/sprite.svg#more'></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li class="partners-list__sublist-item mode">
+                                    <button class="partner-btn">Загрузить еще (+<b>10</b>)</button>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+
+                          </li>
+
+                          <li class="partners-list__item">
+                            <div class="partners-list__row">
+                              <button class="partners-list__open">
+                                <svg width='7' height='7'>
+                                  <use href='img/sprite/sprite.svg#plus'></use>
+                                </svg>
+
+                                <svg width='7' height='2' class="partners-list__open-icon">
+                                  <use href='img/sprite/sprite.svg#minus'></use>
+                                </svg>
+                              </button>
+                              <div class="partners-list__box">
+                                <span class="partners-list__ava">
+                                  <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                </span>
+                                <div class="partners-list__top">
+                                  <span class="partners-list__title">Мария Лескова</span>
+                                  <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                </div>
+                                <div class="partners-list__info">
+                                  <span class="partners-list__line">Линия: <b>1</b></span>
+                                  <span class="partners-list__lvl">Партнерский уровень: <span
+                                      class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                  <span class="partners-list__currency">Личные инвестиции: <span
+                                      class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                  <span class="partners-list__percent">Ваши Реф: <span
+                                      class="partners-list__percent-value"><b>4</b>%</span></span>
+                                </div>
+
+                                <div class="partners-list__wrapp">
+                                  <span class="partners-list__text">Оборот</span>
+                                  <span class="partners-list__turnover">$<b>10.500</b></span>
+                                  <button class="partners-list__more">
+                                    <svg width='12' height='3'>
+                                      <use href='img/sprite/sprite.svg#more'></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="partners-list__item">
+                            <div class="partners-list__row">
+                              <button class="partners-list__open">
+                                <svg width='7' height='7'>
+                                  <use href='img/sprite/sprite.svg#plus'></use>
+                                </svg>
+
+                                <svg width='7' height='2' class="partners-list__open-icon">
+                                  <use href='img/sprite/sprite.svg#minus'></use>
+                                </svg>
+                              </button>
+                              <div class="partners-list__box">
+                                <span class="partners-list__ava">
+                                  <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                </span>
+                                <div class="partners-list__top">
+                                  <span class="partners-list__title">Мария Лескова</span>
+                                  <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                </div>
+                                <div class="partners-list__info">
+                                  <span class="partners-list__line">Линия: <b>1</b></span>
+                                  <span class="partners-list__lvl">Партнерский уровень: <span
+                                      class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                  <span class="partners-list__currency">Личные инвестиции: <span
+                                      class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                  <span class="partners-list__percent">Ваши Реф: <span
+                                      class="partners-list__percent-value"><b>4</b>%</span></span>
+                                </div>
+
+                                <div class="partners-list__wrapp">
+                                  <span class="partners-list__text">Оборот</span>
+                                  <span class="partners-list__turnover">$<b>10.500</b></span>
+                                  <button class="partners-list__more">
+                                    <svg width='12' height='3'>
+                                      <use href='img/sprite/sprite.svg#more'></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="partners-list__item">
+                            <button class="partner-btn">Загрузить еще (+<b>10</b>)</button>
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+
+                  </li>
+
+                  <li class="partner-section__item" data-tab-content="2">
+                    <div class="partner-warn">
+                      <p class="partner-warn__info">
+                        <svg width='39' height='39'>
+                          <use href='img/sprite/sprite.svg#alert-caution'></use>
+                        </svg>
+                        Вы не можете получать реферальные начисления и бонусы
+                      </p>
+
+                      <div class="partner-warn__box">
+                        <p>Для этого активируйте кабинет, пополнив баланс и <b>оформив продукт на сумму от $100</b></p>
+
+                        <button class="transparent-btn">
+                          Внести депозит
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#arrow-right-box'></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="partner-info">
+                      <div class="partner-info__bg">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/bg.webp'>
+                          <img width='1090' height='65' src='img/index/bg.png' alt='image'>
+                        </picture>
+                      </div>
+
+                      <span class="partner-info__value">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#users2'></use>
+                        </svg>
+                        Количество переходов:
+                        <b>133</b>
+                      </span>
+
+                      <div class="partner-info__box" data-copy-parent>
+                        <span class="partner-info__icon">
+                          <svg width='18' height='18'>
+                            <use href='img/sprite/sprite.svg#link'></use>
+                          </svg>
+                        </span>
+                        <p>Ваша реферальная ссылка:</p>
+
+                        <button class="partner-info__copy"
+                          data-copy="https://plexico.io/ref/alexxey123">https://plexico.io/ref/alexxey123</button>
+
+                        <button class="edit-btn edit-btn--mode">
+                          Копировать ссылку
+                          <svg width='16' height='16'>
+                            <use href='img/sprite/sprite.svg#copy2'></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="partner-section__inner">
+                      <div class="partner-bonus">
+                        <h2 class="subtitle">Командные бонусы
+                          <button class="info-btn">
+                            <svg width='18' height='18'>
+                              <use href='img/sprite/sprite.svg#info'></use>
+                            </svg>
+                          </button>
+                        </h2>
+
+                        <ul class="partner-bonus__list">
+                          <li class="partner-bonus__item">
+                            <div class="partner-bonus__percent active">
+                              <b>9</b>%
+                            </div>
+                            <div class="partner-card active">
+                              <span class="partner-card__label">
+                                <svg width='12' height='12'>
+                                  <use href='img/sprite/sprite.svg#gift'></use>
+                                </svg>
+                                $<b>750</b>
+                              </span>
+
+                              <div class="partner-card__top">
+                                <span class="partner-card__lvl">Уровень <b>4</b></span>
+                                <span class="partner-card__title">Текущий процент</span>
+                                <span class="partner-card__percent"><b>9</b>%</span>
+                              </div>
+
+                              <div class="partner-card__inner">
+                                <div class="partner-card__wrapp">
+                                  <span class="partner-card__subtitle">Личный оборот</span>
+                                  <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+
+                                  <div class="partner-card__line">
+                                    <span style="width: 100%;"></span>
+                                  </div>
+                                </div>
+                                <div class="partner-card__wrapp">
+                                  <span class="partner-card__subtitle">Структурный оборот</span>
+                                  <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+
+                                  <div class="partner-card__line">
+                                    <span style="width: 100%;"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="partner-bonus__item">
+                            <div class="partner-bonus__percent">
+                              <b>10</b>%
+                            </div>
+                            <div class="partner-card">
+                              <span class="partner-card__label">
+                                <svg width='12' height='12'>
+                                  <use href='img/sprite/sprite.svg#gift'></use>
+                                </svg>
+                                $<b>2000</b>
+                              </span>
+
+                              <div class="partner-card__top">
+                                <span class="partner-card__lvl">Уровень <b>5</b></span>
+                                <span class="partner-card__title">Следующий процент</span>
+                                <span class="partner-card__percent"><b>10</b>%</span>
+                              </div>
+
+                              <div class="partner-card__inner">
+                                <div class="partner-card__wrapp">
+                                  <span class="partner-card__subtitle">Личный оборот</span>
+                                  <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+
+                                  <div class="partner-card__line">
+                                    <span style="width: 30%;"></span>
+                                  </div>
+                                </div>
+                                <div class="partner-card__wrapp">
+                                  <span class="partner-card__subtitle">Структурный оборот</span>
+                                  <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+
+                                  <div class="partner-card__line">
+                                    <span style="width: 70%;"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <button class="partner-btn" data-bonus-btn>
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#bonus'></use>
+                          </svg>
+                          Посмотреть таблицу бонусов
+                        </button>
+                      </div>
+
+                      <div class="partner-comand">
+                        <h2 class="subtitle">Моя команда
+                          <button class="info-btn">
+                            <svg width='18' height='18'>
+                              <use href='img/sprite/sprite.svg#info'></use>
+                            </svg>
+                          </button>
+                        </h2>
+
+                        <div class="partner-comand__info">
+                          <span class="partner-comand__title">Личный оборот</span>
+                          <span class="partner-comand__value">$<b>300,50</b></span>
+                        </div>
+                        <div class="partner-comand__info">
+                          <span class="partner-comand__title">Структурный оборот</span>
+                          <span class="partner-comand__value">$<b>20.290</b></span>
+                        </div>
+                        <div class="partner-comand__info">
+                          <span class="partner-comand__title">Партнерский доход</span>
+                          <span class="partner-comand__value">$<b>1.350</b></span>
+                        </div>
+
+                        <div class="partner-comand__wrapp">
+                          <span class="partner-comand__subtitle">Кол-во партнеров</span>
+                          <span class="partner-comand__value">
+                            <img width='45' height='18' src='img/sprite/users3.svg' alt='image'>
+
+                            <b>133</b>
+                          </span>
+                        </div>
+
+                        <div class="partner-comand__wrapp">
+                          <span class="partner-comand__subtitle">Активных партнеров</span>
+                          <span class="partner-comand__value">
+                            <img width='45' height='18' src='img/sprite/users4.svg' alt='image'>
+                            <b>40</b>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="partner-referral">
+                        <h2 class="subtitle">Реферальные бонусы
+                          <button class="info-btn">
+                            <svg width='18' height='18'>
+                              <use href='img/sprite/sprite.svg#info'></use>
+                            </svg>
+                          </button>
+                        </h2>
+
+                        <div class="partner-referral__box">
+                          <div class="partner-referral__wrapp">
+                            <span class="partner-referral__text">Начислено всего</span>
+                            <span class="partner-referral__value">$<b>99.550</b></span>
+                          </div>
+
+
+
+                          <div class="partner-referral__info">
+                            <span class="partner-referral__icon">
+                              <svg width='38' height='38'>
+                                <use href='img/sprite/sprite.svg#BTC'></use>
+                              </svg>
+                            </span>
+                            <span class="partner-referral__name">BTC</span>
+                            <span class="partner-referral__value">1.009302</span>
+                          </div>
+
+                          <div class="partner-referral__info">
+                            <span class="partner-referral__icon">
+                              <svg width='38' height='38'>
+                                <use href='img/sprite/sprite.svg#ETH'></use>
+                              </svg>
+                            </span>
+                            <span class="partner-referral__name">ETH</span>
+                            <span class="partner-referral__value">0.000500</span>
+                          </div>
+
+                          <div class="partner-referral__info">
+                            <span class="partner-referral__icon">
+                              <svg width='38' height='38'>
+                                <use href='img/sprite/sprite.svg#USDT'></use>
+                              </svg>
+                            </span>
+                            <span class="partner-referral__name">USDT</span>
+                            <span class="partner-referral__value">750.33</span>
+                          </div>
+
+                          <div class="partner-referral__info">
+                            <span class="partner-referral__icon">
+                              <svg width='38' height='38'>
+                                <use href='img/sprite/sprite.svg#USDC'></use>
+                              </svg>
+                            </span>
+                            <span class="partner-referral__name">USDC</span>
+                            <span class="partner-referral__value">0.000</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="partner-section__wrapp">
+                      <span class="partner-section__pretitle">
+                        <svg width='18' height='18'>
+                          <use href='img/sprite/sprite.svg#union6'></use>
+                        </svg>
+                        Как работает партнерская программа?</span>
+
+                      <button class="download-btn">Скачать PDF
+                        <svg width='24' height='24'>
+                          <use href='img/sprite/sprite.svg#folder'></use>
+                        </svg>
+                      </button>
+                      <button class="download-btn black">YouTube презентация
+                        <svg width='24' height='24'>
+                          <use href='img/sprite/sprite.svg#Union2'></use>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="partners-info">
+                      <div class="partners-info__top">
+                        <h2 class="subtitle">Партнеры</h2>
+
+                        <button class="grey-btn grey-btn--mode">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#search'></use>
+                          </svg>
+                        </button>
+
+                        <div class="partners-select select" data-select>
+                          <div class="select__header">
+                            <input type="hidden" class="select__input input-select" id="partners_1" name="partners_1"
+                              value="1">
+                            <span class="select__header-icon">
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#filter'></use>
+                              </svg>
+                            </span>
+                            <span class="select__current" data-id="1">
+                              По регистрации
+                            </span>
+                            <svg class="select__current-icon" width='5' height='7'>
+                              <use href='img/sprite/sprite.svg#Union'></use>
+                            </svg>
+                          </div>
+                          <div class="select__body">
+                            <ul class="select__list">
+                              <li class="select__option" data-id="1" data-type="option">
+                                По регистрации
+                              </li>
+                              <li class="select__option" data-id="2" data-type="option">
+                                По инвестициям
+                              </li>
+                              <li class="select__option" data-id="3" data-type="option">
+                                По уровню
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="partners-info__inner">
+                        <ul class="partners-list" data-simplebar>
+                          <li class="partners-list__item">
+                            <div class="partners-list__row">
+                              <button class="partners-list__open active">
+                                <svg width='7' height='7'>
+                                  <use href='img/sprite/sprite.svg#plus'></use>
+                                </svg>
+
+                                <svg width='7' height='2' class="partners-list__open-icon">
+                                  <use href='img/sprite/sprite.svg#minus'></use>
+                                </svg>
+                              </button>
+                              <div class="partners-list__box">
+                                <span class="partners-list__ava">
+                                  <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                </span>
+                                <div class="partners-list__top">
+                                  <span class="partners-list__title">Мария Лескова</span>
+                                  <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                </div>
+                                <div class="partners-list__info">
+                                  <span class="partners-list__line">Линия: <b>1</b></span>
+                                  <span class="partners-list__lvl">Партнерский уровень: <span
+                                      class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                  <span class="partners-list__currency">Личные инвестиции: <span
+                                      class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                  <span class="partners-list__percent">Ваши Реф: <span
+                                      class="partners-list__percent-value"><b>4</b>%</span></span>
+                                </div>
+
+                                <div class="partners-list__wrapp">
+                                  <span class="partners-list__text">Оборот</span>
+                                  <span class="partners-list__turnover">$<b>10.500</b></span>
+                                  <button class="partners-list__more">
+                                    <svg width='12' height='3'>
+                                      <use href='img/sprite/sprite.svg#more'></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <ul class="partners-list__sublist">
+                              <li class="partners-list__sublist-item">
+                                <div class="partners-list__row">
+                                  <button class="partners-list__open">
+                                    <svg width='7' height='7'>
+                                      <use href='img/sprite/sprite.svg#plus'></use>
+                                    </svg>
+
+                                    <svg width='7' height='2' class="partners-list__open-icon">
+                                      <use href='img/sprite/sprite.svg#minus'></use>
+                                    </svg>
+                                  </button>
+                                  <div class="partners-list__box">
+                                    <span class="partners-list__ava">
+                                      <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                    </span>
+                                    <div class="partners-list__top">
+                                      <span class="partners-list__title">Мария Лескова</span>
+                                      <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                    </div>
+                                    <div class="partners-list__info">
+                                      <span class="partners-list__line mode">Линия: <b>2</b></span>
+                                      <span class="partners-list__lvl">Партнерский уровень: <span
+                                          class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                      <span class="partners-list__currency">Личные инвестиции: <span
+                                          class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                      <span class="partners-list__percent">Ваши Реф: <span
+                                          class="partners-list__percent-value"><b>4</b>%</span></span>
+                                    </div>
+
+                                    <div class="partners-list__wrapp">
+                                      <span class="partners-list__text">Оборот</span>
+                                      <span class="partners-list__turnover">$<b>10.500</b></span>
+                                      <button class="partners-list__more">
+                                        <svg width='12' height='3'>
+                                          <use href='img/sprite/sprite.svg#more'></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="partners-list__sublist-item active">
+                                <div class="partners-list__row">
+                                  <button class="partners-list__open active">
+                                    <svg width='7' height='7'>
+                                      <use href='img/sprite/sprite.svg#plus'></use>
+                                    </svg>
+
+                                    <svg width='7' height='2' class="partners-list__open-icon">
+                                      <use href='img/sprite/sprite.svg#minus'></use>
+                                    </svg>
+                                  </button>
+                                  <div class="partners-list__box">
+                                    <span class="partners-list__ava">
+                                      <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                    </span>
+                                    <div class="partners-list__top">
+                                      <span class="partners-list__title">Мария Лескова</span>
+                                      <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                    </div>
+                                    <div class="partners-list__info">
+                                      <span class="partners-list__line mode">Линия: <b>2</b></span>
+                                      <span class="partners-list__lvl">Партнерский уровень: <span
+                                          class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                      <span class="partners-list__currency">Личные инвестиции: <span
+                                          class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                      <span class="partners-list__percent">Ваши Реф: <span
+                                          class="partners-list__percent-value"><b>4</b>%</span></span>
+                                    </div>
+
+                                    <div class="partners-list__wrapp">
+                                      <span class="partners-list__text">Оборот</span>
+                                      <span class="partners-list__turnover">$<b>10.500</b></span>
+                                      <button class="partners-list__more">
+                                        <svg width='12' height='3'>
+                                          <use href='img/sprite/sprite.svg#more'></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <ul class="partners-list__sublist">
+                                  <li class="partners-list__sublist-item">
+                                    <div class="partners-list__row">
+                                      <button class="partners-list__open">
+                                        <svg width='7' height='7'>
+                                          <use href='img/sprite/sprite.svg#plus'></use>
+                                        </svg>
+
+                                        <svg width='7' height='2' class="partners-list__open-icon">
+                                          <use href='img/sprite/sprite.svg#minus'></use>
+                                        </svg>
+                                      </button>
+                                      <div class="partners-list__box">
+                                        <span class="partners-list__ava">
+                                          <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                        </span>
+                                        <div class="partners-list__top">
+                                          <span class="partners-list__title">Мария Лескова</span>
+                                          <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                        </div>
+                                        <div class="partners-list__info">
+                                          <span class="partners-list__line">Линия: <b>3</b></span>
+                                          <span class="partners-list__lvl">Партнерский уровень: <span
+                                              class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                          <span class="partners-list__currency">Личные инвестиции: <span
+                                              class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                          <span class="partners-list__percent">Ваши Реф: <span
+                                              class="partners-list__percent-value"><b>4</b>%</span></span>
+                                        </div>
+
+                                        <div class="partners-list__wrapp">
+                                          <span class="partners-list__text">Оборот</span>
+                                          <span class="partners-list__turnover">$<b>10.500</b></span>
+                                          <button class="partners-list__more">
+                                            <svg width='12' height='3'>
+                                              <use href='img/sprite/sprite.svg#more'></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="partners-list__sublist-item">
+                                    <div class="partners-list__row">
+                                      <button class="partners-list__open">
+                                        <svg width='7' height='7'>
+                                          <use href='img/sprite/sprite.svg#plus'></use>
+                                        </svg>
+
+                                        <svg width='7' height='2' class="partners-list__open-icon">
+                                          <use href='img/sprite/sprite.svg#minus'></use>
+                                        </svg>
+                                      </button>
+                                      <div class="partners-list__box">
+                                        <span class="partners-list__ava">
+                                          <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                        </span>
+                                        <div class="partners-list__top">
+                                          <span class="partners-list__title">Мария Лескова</span>
+                                          <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                        </div>
+                                        <div class="partners-list__info">
+                                          <span class="partners-list__line">Линия: <b>3</b></span>
+                                          <span class="partners-list__lvl">Партнерский уровень: <span
+                                              class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                          <span class="partners-list__currency">Личные инвестиции: <span
+                                              class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                          <span class="partners-list__percent">Ваши Реф: <span
+                                              class="partners-list__percent-value"><b>4</b>%</span></span>
+                                        </div>
+
+                                        <div class="partners-list__wrapp">
+                                          <span class="partners-list__text">Оборот</span>
+                                          <span class="partners-list__turnover">$<b>10.500</b></span>
+                                          <button class="partners-list__more">
+                                            <svg width='12' height='3'>
+                                              <use href='img/sprite/sprite.svg#more'></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li class="partners-list__sublist-item mode">
+                                    <button class="partner-btn">Загрузить еще (+<b>10</b>)</button>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+
+                          </li>
+
+                          <li class="partners-list__item">
+                            <div class="partners-list__row">
+                              <button class="partners-list__open">
+                                <svg width='7' height='7'>
+                                  <use href='img/sprite/sprite.svg#plus'></use>
+                                </svg>
+
+                                <svg width='7' height='2' class="partners-list__open-icon">
+                                  <use href='img/sprite/sprite.svg#minus'></use>
+                                </svg>
+                              </button>
+                              <div class="partners-list__box">
+                                <span class="partners-list__ava">
+                                  <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                </span>
+                                <div class="partners-list__top">
+                                  <span class="partners-list__title">Мария Лескова</span>
+                                  <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                </div>
+                                <div class="partners-list__info">
+                                  <span class="partners-list__line">Линия: <b>1</b></span>
+                                  <span class="partners-list__lvl">Партнерский уровень: <span
+                                      class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                  <span class="partners-list__currency">Личные инвестиции: <span
+                                      class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                  <span class="partners-list__percent">Ваши Реф: <span
+                                      class="partners-list__percent-value"><b>4</b>%</span></span>
+                                </div>
+
+                                <div class="partners-list__wrapp">
+                                  <span class="partners-list__text">Оборот</span>
+                                  <span class="partners-list__turnover">$<b>10.500</b></span>
+                                  <button class="partners-list__more">
+                                    <svg width='12' height='3'>
+                                      <use href='img/sprite/sprite.svg#more'></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="partners-list__item">
+                            <div class="partners-list__row">
+                              <button class="partners-list__open">
+                                <svg width='7' height='7'>
+                                  <use href='img/sprite/sprite.svg#plus'></use>
+                                </svg>
+
+                                <svg width='7' height='2' class="partners-list__open-icon">
+                                  <use href='img/sprite/sprite.svg#minus'></use>
+                                </svg>
+                              </button>
+                              <div class="partners-list__box">
+                                <span class="partners-list__ava">
+                                  <img width='34' height='34' src='img/index/ava.png' alt='image'>
+                                </span>
+                                <div class="partners-list__top">
+                                  <span class="partners-list__title">Мария Лескова</span>
+                                  <span class="partners-list__subtitle"><b>·</b> leskovamaria</span>
+                                </div>
+                                <div class="partners-list__info">
+                                  <span class="partners-list__line">Линия: <b>1</b></span>
+                                  <span class="partners-list__lvl">Партнерский уровень: <span
+                                      class="partners-list__lvl-value"><b>3</b> (<b>7.5</b>%)</span></span>
+                                  <span class="partners-list__currency">Личные инвестиции: <span
+                                      class="partners-list__currency-value">$<b>4.000</b></span></span>
+                                  <span class="partners-list__percent">Ваши Реф: <span
+                                      class="partners-list__percent-value"><b>4</b>%</span></span>
+                                </div>
+
+                                <div class="partners-list__wrapp">
+                                  <span class="partners-list__text">Оборот</span>
+                                  <span class="partners-list__turnover">$<b>10.500</b></span>
+                                  <button class="partners-list__more">
+                                    <svg width='12' height='3'>
+                                      <use href='img/sprite/sprite.svg#more'></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="partners-list__item">
+                            <button class="partner-btn">Загрузить еще (+<b>10</b>)</button>
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="copy-label">
+    <div class="copy-label__top">
+      <span class="copy-label__title">
+        <svg width='19' height='19'>
+          <use href='img/sprite/sprite.svg#link2'></use>
+        </svg>
+        Ссылка скопирована!
+      </span>
+
+      <p>Используйте ее для приглашения
+        своих друзей в партнеры</p>
+
+      <button class="copy-label__close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+    </div>
+
+    <span class="copy-label__link" data-copy-link>https://plexico/regisyerpartnerCode=j49jcvsl291</span>
+  </div>
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

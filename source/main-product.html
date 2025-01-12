@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  <main>
+    <div class="container container--dash">
+      <div class="dashboard">
+        @include('partials/header-product.html')
+
+        <aside class="aside">
+          <div class="aside__top">
+            <a href="index.html" class="logo">
+              <svg width='125' height='40'>
+                <use href='img/sprite/sprite.svg#logo2'></use>
+              </svg>
+            </a>
+
+            <div class="dashboard-info">
+              <div class="dashboard-info__top">
+                <span class="dashboard-info__title">Ваш баланс</span>
+                <span class="dashboard-info__date">13 Января, 2024</span>
+              </div>
+              <div class="dashboard-info__box">
+                <span class="dashboard-info__value">$ <b>4,389.80</b></span>
+                <span class="dashboard-info__precent">
+                  <svg width='16' height='16'>
+                    <use href='img/sprite/sprite.svg#top'></use>
+                  </svg>
+                  7%
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="aside__mobile">
+            <div class="aside__mobile-top">
+              <button class="info-btn" data-open>
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#notification'></use>
+                </svg>
+                <span class="info-btn__count">200</span>
+              </button>
+              <span class="aside__mobile-user">Анастасия</span>
+
+              <button class="burger">
+                <span class="burger__line"></span>
+              </button>
+            </div>
+
+            <div class="aside__mobile-box">
+              <form class="search-form">
+                <label for="search">
+                  <input type="text" name="search" id="search" placeholder="Поиск">
+                </label>
+                <button type="submit">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#search'></use>
+                  </svg>
+                </button>
+              </form>
+
+              <ul class="aside-nav">
+                <li class="aside-nav__item">
+                  <a href="index.html" class="aside-nav__button active">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside1'></use>
+                      </svg>
+                    </span>
+                    Дашборд
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside2'></use>
+                      </svg>
+                    </span>
+                    Продукты
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="finances.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside3'></use>
+                      </svg>
+                    </span>
+                    Финансы
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="#" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside4'></use>
+                      </svg>
+                    </span>
+                    Партнеры
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="history.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside5'></use>
+                      </svg>
+                    </span>
+                    История операций
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="history.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside7'></use>
+                      </svg>
+                    </span>
+                    Профиль
+                  </a>
+                </li>
+                <li class="aside-nav__item">
+                  <a href="settings.html" class="aside-nav__button">
+                    <span class="aside-nav__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#aside6'></use>
+                      </svg>
+                    </span>
+                    Настройки
+                  </a>
+                </li>
+              </ul>
+
+              <div class="aside-select withdraw-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="lang_5" name="lang_5" value="3">
+                  <span class="select__current" data-id="3">
+                    <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                    Русский
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+                    <li class="select__option" data-id="1" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                      Украинский
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                      Английский
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </li>
+                    <li class="select__option" data-id="4" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                      Белорусский
+                    </li>
+                    <li class="select__option" data-id="5" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                      Английский2
+                    </li>
+                    <li class="select__option" data-id="6" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский2
+                    </li>
+                    <li class="select__option" data-id="7" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                      Белорусский2
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" class="exit-btn">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#exit'></use>
+                </svg>
+                Выход
+              </a>
+            </div>
+
+            <div class="aside__mobile-bottom">
+              <div class="aside-select withdraw-select select" data-select>
+                <div class="select__header">
+                  <input type="hidden" class="select__input input-select" id="lang_5" name="lang_5" value="3">
+                  <span class="select__current" data-id="3">
+                    <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                    Русский
+                  </span>
+                  <svg class="select__current-icon" width='5' height='7'>
+                    <use href='img/sprite/sprite.svg#Union'></use>
+                  </svg>
+                </div>
+                <div class="select__body">
+                  <ul class="select__list">
+                    <li class="select__option" data-id="1" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ua.svg" alt="image">
+                      Украинский
+                    </li>
+                    <li class="select__option" data-id="2" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/eng.svg" alt="image">
+                      Английский
+                    </li>
+                    <li class="select__option" data-id="3" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/ru.svg" alt="image">
+                      Русский
+                    </li>
+                    <li class="select__option" data-id="4" data-type="option">
+                      <img width="22" height="16" src="./img/sprite/belarus.svg" alt="image">
+                      Белорусский
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <p>Copyright © 2024 Plexico. All Rights Reserved.</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="notification">
+          <div class="notification__box">
+            <div class="notification__top">
+              <div class="notification__info">
+                <span class="notification__title">Уведомления</span>
+                <span class="notification__count">200</span>
+              </div>
+              <button class="notification__close">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+              </button>
+              <button class="main-btn">
+                Очистить
+                <svg width='16' height='16'>
+                  <use href='img/sprite/sprite.svg#trash2'></use>
+                </svg>
+              </button>
+            </div>
+
+            <ul class="notification__list">
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon black">
+                    <img width='16' height='16' src='img/index/Subtract.png' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+              <li class="notification-coment">
+                <div class="notification-coment__box">
+                  <span class="notification-coment__icon">
+                    <img width='16' height='16' src='img/sprite/mess2.svg' alt='image'>
+                  </span>
+                  <div class="notification-coment__top">
+                    <span class="notification-coment__title">Заголовок уведомления</span>
+                    <span class="notification-coment__date">12:01</span>
+                    <button class="notification-coment__remove">
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Небольшое описание уведомление в две строки</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dashboard__content">
+          <section class="product-section mode">
+            <div class="product-section__bg">
+              <picture>
+                <source type='image/webp' srcset='img/product/bg2.webp'>
+                <img width='1150' height='546' src='img/product/bg2.png' alt='image'>
+              </picture>
+            </div>
+
+            <div class="product-section__box">
+              <h1>DailyFlow —<br>
+                инновационный инвестиционный продукт от Plexico</h1>
+              <p>Откройте для себя уникальные возможности ежедневного пассивного дохода с DailyFlow — продуктом,
+                созданным на базе Prexico DeFi. Интеллектуальные инструменты и гибкие настройки помогают вам максимально
+                увеличить доходность ваших инвестиций. Присоединяйтесь к тысячам довольных клиентов и начните
+                зарабатывать уже сегодня с Plexico!</p>
+
+              <div class="product-section__inner">
+                <div class="product-section__info">
+                  <p>Средняя ежемесячная доходность</p>
+                  <span class="product-section__info-text">в месяц</span>
+                  <span class="product-section__info-value">13-16%</span>
+                </div>
+
+                <div class="product-accruals" data-speed="7">
+                  <span class="product-accruals__text">Реинвестирование</span>
+                  <span class="product-accruals__text">Автореинвестирование</span>
+                  <div class="progress-ring">
+                    <svg class="progress-ring__icon" viewBox="0 0 150 150">
+                      <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%"
+                          gradientTransform="rotate(34)">
+                          <stop offset="0%" style="stop-color:#5496fe;stop-opacity:1" />
+                          <stop offset="47.25%" style="stop-color:#565cff;stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:#5496fe;stop-opacity:1" />
+                        </linearGradient>
+                      </defs>
+                      <circle class="progress-ring__circle" stroke="url(#gradient)" stroke-width="20"
+                        fill="transparent" r="60" cx="75" cy="75" />
+                    </svg>
+                  
+                    <div class="progress-ring__text">Начисления</div>
+                    <div class="progress-ring__info"><b>7</b>/7</div>
+                  </div>
+                </div>
+
+                <a href="#" class="product-link" data-btn-modal="agree-closing">
+                  <svg width='26' height='26'>
+                    <use href='img/sprite/sprite.svg#trending-up'></use>
+                  </svg>
+                  <span>Возможности
+                    Updgrade</span>
+                </a>
+                <div class="product-link mode">
+                  <svg width='26' height='26'>
+                    <use href='img/sprite/sprite.svg#clock'></use>
+                  </svg>
+                  <span>Досрочное закрытие
+                    после 180 дней</span>
+                </div>
+              </div>
+
+              <div class="product-section__wrapp">
+                <span class="product-section__pretitle">Презентация DailyFlow</span>
+
+                <button class="download-btn" data-btn-modal="early-closing">Скачать PDF
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#folder'></use>
+                  </svg>
+                </button>
+                <button class="download-btn black" data-btn-modal="early-closing-actual">YouTube презентация
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#Union2'></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="plan-section">
+            <div class="plan-section__box">
+              <h2 class="subtitle">Тарифный план</h2>
+
+              <ul class="main-plan" data-simplebar>
+                <li class="main-plan__item">
+                  <div class="plan-card">
+                    <div class="plan-card__top">
+                      <span class="plan-card__title">DF 1</span>
+
+                      <div class="plan-card__info">
+                        <span class="plan-card__text">Комиссия</span>
+                        <span class="plan-card__text gray">Заработок</span>
+
+                        <div class="plan-card__line">
+                          <span class="plan-card__percent blue">65%</span>
+                          <span class="plan-card__percent" style="width: 35%;">35%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="plan-card__box">
+                      <ul>
+                        <li>
+                          <span class="plan-card__name">Мин. сумма депозита:</span>
+                          <span class="plan-card__value">$ 100</span>
+                        </li>
+                        <li>
+                          <span class="plan-card__name">Макс. сумма депозита:</span>
+                          <span class="plan-card__value">$ 500</span>
+                        </li>
+                      </ul>
+
+                      <button class="black-btn" data-btn-modal="closing-success">Выбрать план</button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="main-plan__item">
+                  <div class="plan-card">
+                    <div class="plan-card__top">
+                      <span class="plan-card__title">DF 2</span>
+
+                      <div class="plan-card__info">
+                        <span class="plan-card__text">Комиссия</span>
+                        <span class="plan-card__text gray">Заработок</span>
+
+                        <div class="plan-card__line">
+                          <span class="plan-card__percent blue">70%</span>
+                          <span class="plan-card__percent" style="width: 30%;">30%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="plan-card__box">
+                      <ul>
+                        <li>
+                          <span class="plan-card__name">Мин. сумма депозита:</span>
+                          <span class="plan-card__value">$ 500</span>
+                        </li>
+                        <li>
+                          <span class="plan-card__name">Макс. сумма депозита:</span>
+                          <span class="plan-card__value">$ 2500</span>
+                        </li>
+                      </ul>
+
+                      <button class="black-btn mode" data-btn-modal="closing-mail">Выбрать план</button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="main-plan__item">
+                  <div class="plan-card">
+                    <div class="plan-card__top">
+                      <span class="plan-card__title">DF 2</span>
+
+                      <div class="plan-card__info">
+                        <span class="plan-card__text">Комиссия</span>
+                        <span class="plan-card__text gray">Заработок</span>
+
+                        <div class="plan-card__line">
+                          <span class="plan-card__percent blue">75%</span>
+                          <span class="plan-card__percent" style="width: 25%;">25%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="plan-card__box">
+                      <ul>
+                        <li>
+                          <span class="plan-card__name">Мин. сумма депозита:</span>
+                          <span class="plan-card__value">$ 2500</span>
+                        </li>
+                        <li>
+                          <span class="plan-card__name">Макс. сумма депозита:</span>
+                          <span class="plan-card__value">$ 5000</span>
+                        </li>
+                      </ul>
+
+                      <button class="black-btn mode" data-btn-modal="closing-mail-code">Выбрать план</button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="main-plan__item">
+                  <div class="plan-card">
+                    <div class="plan-card__top">
+                      <span class="plan-card__title">DF 2</span>
+
+                      <div class="plan-card__info">
+                        <span class="plan-card__text">Комиссия</span>
+                        <span class="plan-card__text gray">Заработок</span>
+
+                        <div class="plan-card__line">
+                          <span class="plan-card__percent blue">80%</span>
+                          <span class="plan-card__percent" style="width: 20%;">20%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="plan-card__box">
+                      <ul>
+                        <li>
+                          <span class="plan-card__name">Мин. сумма депозита:</span>
+                          <span class="plan-card__value">$ 5000</span>
+                        </li>
+                        <li>
+                          <span class="plan-card__name">Макс. сумма депозита:</span>
+                          <span class="plan-card__value">$ 7500</span>
+                        </li>
+                      </ul>
+
+                      <button class="black-btn mode" data-btn-modal="closing-mail-2fa">Выбрать план</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="deposit-section">
+            <div class="deposit-section__box">
+              <div class="deposit-card">
+                <h2 class="subtitle">Создать новый депозит</h2>
+                <div class="deposit-card__top">
+                  <div class="deposit-card__wrapp">
+                  <span class="deposit-card__text">План DailyFlow:</span>
+                  <span class="deposit-card__title">DF1</span>
+                  </div>
+                  <div class="deposit-card__wrapp mode">
+                    <span class="deposit-card__text">Период</span>
+                    <span class="deposit-card__status">Бессрочный</span>
+                  </div>
+
+                 
+                </div>
+
+                <form class="deposit-form">
+                  <div class="deposit-form__field">
+                    <span class="deposit-form__text">Валюта</span>
+                    <div class="withdraw-select select" data-select>
+                      <div class="select__header">
+                        <input type="hidden" class="select__input input-select" id="deposit_5" name="deposit_5" value="1">
+                        <span class="select__current" data-id="1">
+                          USDT
+                        </span>
+                        <svg class="select__current-icon" width='5' height='7'>
+                          <use href='img/sprite/sprite.svg#Union'></use>
+                        </svg>
+                      </div>
+                      <div class="select__body">
+                        <ul class="select__list">
+                          <li class="select__option" data-id="1" data-type="option">
+                            USDT
+                          </li>
+                          <li class="select__option" data-id="2" data-type="option">
+                           BTC
+                          </li>
+                          <li class="select__option" data-id="3" data-type="option">
+                            ETH
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="deposit-form__field">
+                    <span class="deposit-form__text">Сумма инвестиции</span>
+                    <label for="deposit_sum" class="deposit-form__label">
+                      <input class="deposit-form__input" type="text" name="deposit_sum" id="deposit_sum" value="300">
+                      <span class="deposit-form__currency">USDT</span>
+                    </label>
+                    <span class="deposit-form__info">Мин: <b>100 USDT</b> , Макс: <b>500 USDT</b></span>
+                  </div>
+
+                  <div class="deposit-form__bottom">
+                    <div class="deposit-form__inner">
+                      <span class="deposit-form__text">Комиссия:</span>
+                      <span class="deposit-form__value">1.5% (300 USDT)</span>
+                    </div>
+                    <div class="deposit-form__inner">
+                      <span class="deposit-form__text blue">Итоговая сумма:</span>
+                      <span class="deposit-form__value blue">304.5 USDT</span>
+                    </div>
+
+                    <button class="black-btn" data-btn-modal="reinvest-auto">Создать депозит
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#add-box'></use>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="deposit-section__inner">
+                <div class="deposit-section__wrapp">
+                  <div class="deposit-section__balance">
+                    <span class="deposit-section__text">Доступный баланс</span>
+                    <div class="deposit-section__currency">
+                      <span class="deposit-section__icon">
+                        <svg width='44' height='44'>
+                          <use href='img/sprite/sprite.svg#Tether'></use>
+                        </svg>
+                      </span>
+
+                      <span class="deposit-section__value">633 <b>USDT</b></span>
+                    </div>
+                  </div>
+
+                  <div class="exchange-card">
+                    <span class="exchange-card__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#reload'></use>
+                      </svg>
+                    </span>
+                    <span class="exchange-card__title">USDT = USD</span>
+                    <p>Курс обмена</p>
+                  </div>
+
+                  <div class="exchange-card">
+                    <span class="exchange-card__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#reload'></use>
+                      </svg>
+                    </span>
+                    <span class="exchange-card__title">BTC = <b>95,500.32</b> USD</span>
+                    <p>Курс обмена</p>
+                  </div>
+                </div>
+
+
+                <span class="deposit-section__title subtitle">Депозитный график</span>
+
+                <div class="deposit-info">
+                  <span class="deposit-info__label">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#alert2'></use>
+                    </svg>
+                    Создайте первый депозит, чтобы отслеживать график
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section class="deposit-section">
+            <div class="deposit-section__box">
+              <div class="deposit-card">
+                <h2 class="subtitle">Создать новый депозит</h2>
+                <div class="deposit-card__top">
+                  <div class="deposit-card__wrapp">
+                  <span class="deposit-card__text">План DailyFlow:</span>
+                  <span class="deposit-card__title">DF1</span>
+                  </div>
+                  <div class="deposit-card__wrapp mode">
+                    <span class="deposit-card__text">Период</span>
+                    <span class="deposit-card__status">Бессрочный</span>
+                  </div>
+                </div>
+
+                <form class="deposit-form">
+                  <div class="deposit-form__field">
+                    <span class="deposit-form__text">Валюта</span>
+                    <div class="withdraw-select select" data-select>
+                      <div class="select__header">
+                        <input type="hidden" class="select__input input-select" id="valute_5" name="valute_5" value="2">
+                        <span class="select__current" data-id="1">
+                          BTC
+                        </span>
+                        <svg class="select__current-icon" width='5' height='7'>
+                          <use href='img/sprite/sprite.svg#Union'></use>
+                        </svg>
+                      </div>
+                      <div class="select__body">
+                        <ul class="select__list">
+                          <li class="select__option" data-id="1" data-type="option">
+                            USDT
+                          </li>
+                          <li class="select__option" data-id="2" data-type="option">
+                           BTC
+                          </li>
+                          <li class="select__option" data-id="3" data-type="option">
+                            ETH
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="deposit-form__field">
+                    <span class="deposit-form__text">Сумма инвестиции</span>
+                    <label for="deposit_sum_2" class="deposit-form__label">
+                      <input class="deposit-form__input" type="text" name="deposit_sum_2" id="deposit_sum_2" value="0">
+                      <span class="deposit-form__currency">USDT</span>
+                    </label>
+                    <span class="deposit-form__info">Мин: <b>0,005 BTC</b> , Макс: <b>5.000 BTC</b></span>
+                  </div>
+                  
+                  <div class="deposit-form__bottom">
+                    <div class="deposit-form__inner">
+                      <span class="deposit-form__text">Equivalent <i>(00:33)</i></span>
+                      <span class="deposit-form__value">0.0011 BTC = $104,54</span>
+                    </div>
+                    <div class="deposit-form__inner">
+                      <span class="deposit-form__text">Fee:</span>
+                      <span class="deposit-form__value">10% (0,00011)</span>
+                    </div>
+                    <div class="deposit-form__inner">
+                      <span class="deposit-form__text blue">Total payable:</span>
+                      <span class="deposit-form__value blue">0.00121 BTC</span>
+                    </div>
+
+                    <button class="black-btn">Создать депозит
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#add-box'></use>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="deposit-section__inner">
+                <div class="deposit-section__wrapp">
+                  <div class="deposit-section__balance blue">
+                    <span class="deposit-section__text">Доступный баланс</span>
+                    <div class="deposit-section__currency">
+                      <span class="deposit-section__icon">
+                        <svg width='44' height='44'>
+                          <use href='img/sprite/sprite.svg#BTC5'></use>
+                        </svg>
+                      </span>
+
+                      <span class="deposit-section__value">1.90324 <b>BTC</b></span>
+                    </div>
+                  </div>
+
+                  <div class="exchange-card">
+                    <span class="exchange-card__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#reload'></use>
+                      </svg>
+                    </span>
+                    <span class="exchange-card__title">USDT = USD</span>
+                    <p>Курс обмена</p>
+                  </div>
+
+                  <div class="exchange-card">
+                    <span class="exchange-card__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#reload'></use>
+                      </svg>
+                    </span>
+                    <span class="exchange-card__title">BTC = <b>95,500.32</b> USD</span>
+                    <p>Курс обмена</p>
+                  </div>
+                </div>
+
+
+                <span class="deposit-section__title subtitle">Депозитный график</span>
+
+                <div class="deposit-info">
+                    <ul class="deposit-info__list">
+                      <li class="deposit-info__item">
+                          <span class="deposit-info__text">Начало открытия вклада</span>
+                          <span class="deposit-info__value">17.01.2025/ 12:59</span>
+                      </li>
+                      <li class="deposit-info__item active">
+                          <span class="deposit-info__text">Начисление прибыли</span>
+                          <span class="deposit-info__value">19.01.2025/ 12:00</span>
+                      </li>
+                    </ul>
+
+                    <div class="deposit-info__bottom">
+                      <div class="deposit-info__about">
+                        <span class="deposit-info__icon">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#info2'></use>
+                          </svg>
+                        </span>
+                        <p>При открытии депозита до 14:00 (МСК)- первые начисления прибыли произойдут через 1 раб.день, после 14:00 (МСК) - через 2 раб.дня</p>
+                      </div>
+                      <div class="deposit-info__about">
+                        <span class="deposit-info__icon">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#info2'></use>
+                          </svg>
+                        </span>
+                        <p>При открытии депозита до 14:00 (МСК)- первые начисления прибыли произойдут через 1 раб.день, после 14:00 (МСК) - через 2 раб.дня</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section class="profit-section">
+            <div class="profit-section__box" data-tabs-parrent>
+                <div class="profit-section__top">
+                  <h2 class="subtitle">Динамика прибыли</h2>
+
+                  <div class="profit-section__labels">
+                    <button class="profit-section__btn" type="button" data-tab="1">Все продукты</button>
+                    <button class="profit-section__btn green" type="button" data-tab="2">DF 1</button>
+                    <button class="profit-section__btn blue active" type="button" data-tab="3">DF 2</button>
+                    <button class="profit-section__btn orange" type="button" data-tab="4">DF 3</button>
+                    <button class="profit-section__btn violet" type="button" data-tab="5">DF 4</button>
+                  </div> 
+
+                  <form class="profit-section__form">
+                    <span class="profit-section__text">Период</span>
+                    <label for="date_3" class="profit-section__calendar main-form__label" data-calendar>
+                      <input type="text" name="date_3" id="date_3" class="main-form__input" value="01.02.2024">
+                      <button class="main-form__btn">
+                        <svg width='17' height='17'>
+                          <use href='img/sprite/sprite.svg#calendar-month'></use>
+                        </svg>
+                      </button>
+                    </label>
+                    <label for="date_4" class="profit-section__calendar main-form__label" data-calendar>
+                      <input type="text" name="date_4" id="date_4" class="main-form__input" value="05.08.2024">
+                      <button class="main-form__btn">
+                        <svg width='17' height='17'>
+                          <use href='img/sprite/sprite.svg#calendar-month'></use>
+                        </svg>
+                      </button>
+                    </label>
+                  </form>
+                </div>
+
+                <ul class="profit-section__content">
+                  <li class="profit-section__item" data-tab-content="1">
+                    <div class="profit-card">
+                      <span class="profit-card__title">Все продукты</span>
+    
+                      <span class="profit-card__text">Общий депозит</span>
+                      <span class="profit-card__value">633 <b>USDT</b></span>
+    
+                      <ul class="profit-card__list">
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Ежедневный доход</span>
+                          <span class="profit-card__value">50.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Еженедельный доход</span>
+                          <span class="profit-card__value">350.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Общий доход</span>
+                          <span class="profit-card__value">1000.00 <b>USDT</b></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="profit-section__item" data-tab-content="2">
+                    <div class="profit-card">
+                      <span class="profit-card__title green">DF 1</span>
+    
+                      <span class="profit-card__text">Общий депозит</span>
+                      <span class="profit-card__value">633 <b>USDT</b></span>
+    
+                      <ul class="profit-card__list">
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Ежедневный доход</span>
+                          <span class="profit-card__value">50.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Еженедельный доход</span>
+                          <span class="profit-card__value">350.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Общий доход</span>
+                          <span class="profit-card__value">1000.00 <b>USDT</b></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="profit-section__item active" data-tab-content="3">
+                    <div class="profit-card">
+                      <span class="profit-card__title blue">DF 2</span>
+    
+                      <span class="profit-card__text">Общий депозит</span>
+                      <span class="profit-card__value">633 <b>USDT</b></span>
+    
+                      <ul class="profit-card__list">
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Ежедневный доход</span>
+                          <span class="profit-card__value">50.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Еженедельный доход</span>
+                          <span class="profit-card__value">350.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Общий доход</span>
+                          <span class="profit-card__value">1000.00 <b>USDT</b></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="profit-section__item" data-tab-content="4">
+                    <div class="profit-card">
+                      <span class="profit-card__title orange">DF 3</span>
+    
+                      <span class="profit-card__text">Общий депозит</span>
+                      <span class="profit-card__value">633 <b>USDT</b></span>
+    
+                      <ul class="profit-card__list">
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Ежедневный доход</span>
+                          <span class="profit-card__value">50.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Еженедельный доход</span>
+                          <span class="profit-card__value">350.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Общий доход</span>
+                          <span class="profit-card__value">1000.00 <b>USDT</b></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="profit-section__item" data-tab-content="5">
+                    <div class="profit-card">
+                      <span class="profit-card__title violet">DF 4</span>
+    
+                      <span class="profit-card__text">Общий депозит</span>
+                      <span class="profit-card__value">633 <b>USDT</b></span>
+    
+                      <ul class="profit-card__list">
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Ежедневный доход</span>
+                          <span class="profit-card__value">50.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Еженедельный доход</span>
+                          <span class="profit-card__value">350.00 <b>USDT</b></span>
+                        </li>
+                        <li class="profit-card__item">
+                          <span class="profit-card__text">Общий доход</span>
+                          <span class="profit-card__value">1000.00 <b>USDT</b></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="profit-section__wrapp">
+                  <ul class="profit-nav">
+                    <li class="provit-nav__item">
+                      <button class="profit-nav__btn active" data-chart="1">День</button>
+                    </li>
+                    <li class="provit-nav__item">
+                      <button class="profit-nav__btn" data-chart="2">Неделя</button>
+                    </li>
+                    <li class="provit-nav__item">
+                      <button class="profit-nav__btn" data-chart="3">Месяц</button>
+                    </li>
+                    <li class="provit-nav__item">
+                      <button class="profit-nav__btn" data-chart="4">Год</button>
+                    </li>
+                  </ul>
+
+                  <div class="profit-section__chart" data-simplebar>
+                    <div class="profit-section__chart-box">
+                      <canvas class="product-chart"></canvas>
+                    </div>
+                 
+                  </div>
+                 
+                </div>
+            </div>
+          </section>
+
+          <section class="info-section">
+            <div class="info-section__box">
+                <div class="info-section__top mode">
+                  <span class="subtitle">Открытые продукты</span>
+
+                  <span class="info-section__text">Период</span>
+                  <div class="period-select select" data-select>
+                    <div class="select__header">
+                      <input type="hidden" class="select__input input-select" id="score_1" name="score_1" value="1">
+                      <span class="select__current" data-id="1">
+                        Все счета
+                      </span>
+                      <svg class="select__current-icon" width='5' height='7'>
+                        <use href='img/sprite/sprite.svg#Union'></use>
+                      </svg>
+                    </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__option" data-id="1" data-type="option">
+                          Все счета
+                        </li>
+                        <li class="select__option" data-id="2" data-type="option">
+                          Текущие счета
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="history-list history-list--product">
+                  <ul class="history-list__box" data-simplebar>
+                    <li class="history-list__row history-list__row--head">
+                      <span class="history-list__name">Дата</span>
+                      <span class="history-list__name">Название</span>
+                      <span class="history-list__name">Валюта</span>
+                      <span class="history-list__name">Сумма</span>
+                      <span class="history-list__name">Прибыль</span>
+                      <span class="history-list__name">Автореинвестирование</span>
+                      <span class="history-list__name">Срок работы</span>
+                    </li>
+                    <li class="history-list__row">
+                      <span class="history-list__value">15.03.24</span>
+                      <span class="history-list__value">Тарифный план DF 1</span>
+                      <span class="history-list__value">BTC</span>
+                      <span class="history-list__value">0.20010 BTC</span>
+                      <span class="history-list__value">0.00101 BTC</span>
+                      <span class="history-list__value underline">25%</span>
+                      <span class="history-list__value">190 дней</span>
+                      <button class="history-list__btn">Управление</button>
+                    </li>
+                    <li class="history-list__row">
+                      <span class="history-list__value">15.03.24</span>
+                      <span class="history-list__value">Тарифный план DF 1</span>
+                      <span class="history-list__value">BTC</span>
+                      <span class="history-list__value">0.20010 BTC</span>
+                      <span class="history-list__value">0.00101 BTC</span>
+                      <span class="history-list__value underline">15%</span>
+                      <span class="history-list__value">190 дней</span>
+                      <button class="history-list__btn">Управление</button>
+                    </li>
+                    <li class="history-list__row">
+                      <span class="history-list__value">15.03.24</span>
+                      <span class="history-list__value">Тарифный план DF 1</span>
+                      <span class="history-list__value">BTC</span>
+                      <span class="history-list__value">0.20010 BTC</span>
+                      <span class="history-list__value">0.00101 BTC</span>
+                      <span class="history-list__value underline">50%</span>
+                      <span class="history-list__value">190 дней</span>
+                      <button class="history-list__btn">Управление</button>
+                    </li>
+                   
+                  </ul>
+                </div>
+            </div>
+          </section>
+
+          <section class="info-section">
+            <div class="info-section__box">
+                <div class="info-section__top">
+                  <span class="subtitle">Открытые продукты</span>
+
+                  <form class="info-section__form">
+                    <span class="info-section__text">Период</span>
+                    <label for="date" class="info-section__calendar main-form__label" data-calendar>
+                      <input type="text" name="date" id="date" class="main-form__input" value="05.06.1997">
+                      <button class="main-form__btn">
+                        <svg width='17' height='17'>
+                          <use href='img/sprite/sprite.svg#calendar-month'></use>
+                        </svg>
+                      </button>
+                    </label>
+                    <label for="date_2" class="info-section__calendar main-form__label" data-calendar>
+                      <input type="text" name="date_2" id="date_2" class="main-form__input" value="05.06.2024">
+                      <button class="main-form__btn">
+                        <svg width='17' height='17'>
+                          <use href='img/sprite/sprite.svg#calendar-month'></use>
+                        </svg>
+                      </button>
+                    </label>
+                  </form>
+
+                  <div class="period-select select" data-select>
+                    <div class="select__header">
+                      <input type="hidden" class="select__input input-select" id="score_1" name="score_1" value="1">
+                      <span class="select__current" data-id="1">
+                        Все счета
+                      </span>
+                      <svg class="select__current-icon" width='5' height='7'>
+                        <use href='img/sprite/sprite.svg#Union'></use>
+                      </svg>
+                    </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__option" data-id="1" data-type="option">
+                          Все счета
+                        </li>
+                        <li class="select__option" data-id="2" data-type="option">
+                          Текущие счета
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="history-list history-list--product">
+                  <ul class="history-list__box" data-simplebar>
+                    <li class="history-list__row history-list__row--head">
+                      <span class="history-list__name">Дата</span>
+                      <span class="history-list__name">Название</span>
+                      <span class="history-list__name">Валюта</span>
+                      <span class="history-list__name">Сумма</span>
+                      <span class="history-list__name">Прибыль</span>
+                      <span class="history-list__name">Автореинвестирование</span>
+                      <span class="history-list__name">Срок работы</span>
+                    </li>
+                    <li class="history-list__row">
+                      <span class="history-list__value">15.03.24</span>
+                      <span class="history-list__value">Тарифный план DF 1</span>
+                      <span class="history-list__value">BTC</span>
+                      <span class="history-list__value">0.20010 BTC</span>
+                      <span class="history-list__value">0.00101 BTC</span>
+                      <span class="history-list__value underline">25%</span>
+                      <span class="history-list__value">190 дней</span>
+                      <button class="history-list__btn">Управление</button>
+                    </li>
+                    <li class="history-list__row">
+                      <span class="history-list__value">15.03.24</span>
+                      <span class="history-list__value">Тарифный план DF 1</span>
+                      <span class="history-list__value">BTC</span>
+                      <span class="history-list__value">0.20010 BTC</span>
+                      <span class="history-list__value">0.00101 BTC</span>
+                      <span class="history-list__value underline">15%</span>
+                      <span class="history-list__value">190 дней</span>
+                      <button class="history-list__btn">Управление</button>
+                    </li>
+                    <li class="history-list__row">
+                      <span class="history-list__value">15.03.24</span>
+                      <span class="history-list__value">Тарифный план DF 1</span>
+                      <span class="history-list__value">BTC</span>
+                      <span class="history-list__value">0.20010 BTC</span>
+                      <span class="history-list__value">0.00101 BTC</span>
+                      <span class="history-list__value underline">50%</span>
+                      <span class="history-list__value">190 дней</span>
+                      <button class="history-list__btn">Управление</button>
+                    </li>
+                   
+                  </ul>
+                </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

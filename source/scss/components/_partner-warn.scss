@@ -1,0 +1,122 @@
+.partner-warn {
+  border: 1px solid var(--br-m);
+  display: grid;
+  gap: 20px 15px;
+  grid-template-columns: 0.81fr 1fr;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+
+  @include laptop{
+        grid-template-columns: 100%;
+    }
+
+    @include mobile{
+        padding-bottom: 15px;
+    }
+
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 15px;
+    background: var(--bg-a);
+    border-radius: 12px;
+    padding: clamp(20px, 1.875vw, 27px) clamp(20px, 2.0833vw, 30px);
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 110%;
+      letter-spacing: -0.02em;
+      color: var(--cl-m);
+
+      b {
+        font-weight: 600;
+        color: var(--cl-d);
+      }
+
+      @include for-laptop{
+        max-width: 255px;
+      }
+
+      
+
+    }
+
+    .transparent-btn {
+      height: 48px;
+      padding: 14px 16px;
+      color: var(--cl-m);
+      border-color: var(--br-k);
+      width: fit-content;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 137%;
+      white-space: nowrap;
+
+      svg,
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        color: var(--cl-a);
+      }
+
+      @include mobile{
+        width: 100%;
+      }
+    }
+
+    @include mobile{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 50%;
+    background: var(--gr-k);
+    z-index: -1;
+    pointer-events: none;
+
+    @include laptop{
+        width: 100%;
+        height: 50%;
+    }
+  }
+
+  &__info {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: clamp(16px, 1.25vw, 18px);
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: var(--cl-a);
+
+    svg,
+    img {
+      width: clamp(30px, 2.7083vw, 39px);
+      height: clamp(30px, 2.7083vw, 39px);
+      flex-shrink: 0;
+      display: flex;
+    }
+
+    @include for-laptop{
+        padding-left: clamp(5px, 1.7361vw, 25px);
+    }
+  }
+}

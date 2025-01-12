@@ -304,3 +304,120 @@ window.addEventListener('resize', updateCharts);
     }
   });
   
+
+
+  // product-chart
+  document.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.querySelector('.product-chart');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+
+    const gradientLine = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientLine.addColorStop(0, '#5164d8');
+    gradientLine.addColorStop(1, '#0824b6');
+
+    const gradientPoint = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientPoint.addColorStop(0, '#5164d8');
+    gradientPoint.addColorStop(1, '#0824b6');
+
+    const datasets = {
+      1: {
+          labels: [
+              "01.02.24", "07.02.24", "14.02.24", "21.02.24", "28.02.24",
+              "05.03.24", "12.03.24", "19.03.24", "26.03.24", "03.04.24",
+              "10.04.24", "17.04.24", "24.04.24", "01.05.24", "08.05.24"
+          ],
+          data: [0.25, 0.50, 1.00, 1.25, 1.50, 0.60, 1.10, 0.80, 1.20, 1.00, 1.40, 1.10, 0.90, 1.30, 1.50],
+      },
+      2: {
+          labels: [
+              "01.03.24", "08.03.24", "15.03.24", "22.03.24", "29.03.24",
+              "05.04.24", "12.04.24", "19.04.24", "26.04.24", "03.05.24",
+              "10.05.24", "17.05.24", "24.05.24", "31.05.24", "07.06.24"
+          ],
+          data: [0.50, 1.20, 1.30, 0.50, 1.00, 1.10, 0.90, 1.40, 1.00, 1.20, 1.30, 1.10, 0.80, 1.50, 1.60],
+      },
+      3: {
+          labels: [
+              "01.04.24", "08.04.24", "15.04.24", "22.04.24", "29.04.24",
+              "06.05.24", "13.05.24", "20.05.24", "27.05.24", "03.06.24",
+              "10.06.24", "17.06.24", "24.06.24", "01.07.24", "08.07.24"
+          ],
+          data: [1.40, 1.00, 0.70, 0.90, 1.50, 0.80, 1.10, 1.30, 0.50, 1.40, 1.60, 1.20, 0.90, 1.10, 1.50],
+      },
+      4: {
+          labels: [
+              "01.01.24", "08.01.24", "15.01.24", "22.01.24", "29.01.24",
+              "05.02.24", "12.02.24", "19.02.24", "26.02.24", "04.03.24",
+              "11.03.24", "18.03.24", "25.03.24", "01.04.24", "08.04.24"
+          ],
+          data: [0.30, 0.60, 1.10, 1.40, 1.60, 0.80, 1.00, 1.30, 0.90, 1.20, 1.50, 1.10, 0.70, 1.40, 1.60],
+      },
+  };
+  
+
+    const data = {
+        labels: datasets[1].labels,
+        datasets: [{
+            label: 'Dataset',
+            data: datasets[1].data,
+            borderColor: gradientLine,
+            borderWidth: 3,
+            pointBackgroundColor: gradientPoint,
+            pointBorderColor: '#fff',
+            pointBorderWidth: 6,
+            pointRadius: 7,
+            fill: false,
+        }],
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: {
+                        font: { size: 14 },
+                        padding: 5,
+                    },
+                    grid: { display: false },
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        font: { size: 14 },
+                        padding: 5,
+                        callback: (value) => `${value}%`,
+                    },
+                    grid: { drawBorder: false },
+                },
+            },
+            plugins: {
+                legend: { display: false },
+            },
+        },
+    };
+
+    const chart = new Chart(ctx, config);
+
+    document.querySelectorAll('[data-chart]').forEach(button => {
+      button.addEventListener('click', () => {
+          document.querySelectorAll('[data-chart]').forEach(btn => btn.classList.remove('active'));
+
+          button.classList.add('active');
+
+          const chartId = button.getAttribute('data-chart');
+          if (datasets[chartId]) {
+              chart.data.labels = datasets[chartId].labels;
+              chart.data.datasets[0].data = datasets[chartId].data;
+              chart.update();
+          }
+      });
+  });
+});
+
+

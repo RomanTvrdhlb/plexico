@@ -1,0 +1,30 @@
+.plan-section{
+    @include for-small-tablet{
+        margin-bottom: 32px;
+    }
+
+    @include tablet{
+        max-width: calc(100vw - (var(--container-offset) * 2) );
+      }
+
+    @include small-tablet{
+        margin-bottom: 41px;
+        padding: 20px;
+    }
+   
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    background: var(--bg-a);
+   
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 23px;
+
+
+
+    }
+
+
+}

@@ -1,0 +1,129 @@
+.partner-info {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @include laptop{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  @include small-tablet{
+    padding: 14px 16px;
+  }
+
+  &__bg {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    img,picture{
+        width: 100%;
+        height: 100%;
+
+        @include small-tablet{
+            object-position: 30% 50%;
+        }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    margin-right: 3px;
+    width: 18px;
+    height: 18px;
+    color: var(--cl-a);
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__copy{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--cl-a);
+    opacity: 0.5;
+    transition: all .3s;
+
+    &:hover{
+        text-decoration-color: transparent;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    p{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        color: var(--cl-a);
+    }
+
+    .edit-btn {
+      margin-left: clamp(15px, 1.7361vw, 25px);
+
+      @include laptop{
+        margin-left: auto;
+      }
+
+      @include small-tablet{
+        width: 100%;
+        margin-top: 5px;
+        justify-content: center;
+      }
+    }
+
+    @include laptop{
+        width: 100%;
+    }
+
+    @include small-tablet{
+        flex-wrap: wrap;
+    }
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: var(--cl-a);
+
+    svg,
+    img {
+      margin-right: 3px;
+      width: 16px;
+      height: 16px;
+    }
+
+    b {
+      font-weight: 500;
+      opacity: 0.4;
+    }
+  }
+}

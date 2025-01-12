@@ -45,15 +45,15 @@
                 </label>
                 <label for="pass" class="main-form__label">
                   <span class="main-form__name">Пароль</span>
-                  <a href="#" class="main-form__link">Забыли пароль?</a>
+                  <a href="#" class="main-form__link" data-btn-modal="change-invalid">Забыли пароль?</a>
                   <input type="password" name="pass" id="pass" class="main-form__input" value="********">
                 </label>
               <div class="main-form__bottom">
-                <button class="blue-btn">Войти</button> 
+                <button class="blue-btn" data-btn-modal="pass">Войти</button> 
 
                 <div class="main-form__links">
                   <span class="main-form__text">Еще нет аккаунта?</span>
-                  <a href="registration.html" class="main-form__link blue">Зарегистрироваться</a>
+                  <a href="#" class="main-form__link blue" data-btn-modal="pass-success">Зарегистрироваться</a>
                 </div>
               </div>
             </form>
@@ -64,7 +64,7 @@
 
   </main>
 
-  @include('partials/modals.html')
+  <!-- @include('partials/modals.html') -->
   <script defer src="js/main.js"></script>
 </body>
 

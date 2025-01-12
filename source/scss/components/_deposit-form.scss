@@ -1,0 +1,156 @@
+.deposit-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+
+    &__field{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-j);
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: var(--cl-j);
+
+        i{
+            font-style: normal;
+            font-family: var(--font-family);
+            line-height: 140%;
+            color: #aeb0b9;
+            margin-left: 2px;
+        }
+    }
+
+    &__bottom{
+        flex-direction: column;
+        display: flex;
+        gap: 5px;
+        height: 100%;
+
+        button{
+            margin-top: 25px;
+        }
+
+        .deposit-form__value{
+            color: var(--cl-e);
+        }
+
+        .deposit-form__text{
+            color: var(--cl-e);
+        }
+    }
+
+    &__label{
+        position: relative;
+        z-index: 1;
+    }
+
+    &__currency{
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 126%;
+        text-align: center;
+        color: var(--cl-e);
+    }
+
+    &__input {
+        display: flex;
+        width: 100%;
+        min-height: 44px;
+        height: fit-content;
+        border-radius: 6px;
+        padding: 4px 85px 4px 16px;
+        border: solid 1px var(--br-c);
+        transition: all 0.3s;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 126%;
+        color: var(--cl-j);
+    
+        &::placeholder {
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 126%;
+          color:  var(--cl-j);
+        }
+    
+        &:focus {
+          border-color: var(--br-b);
+        }
+      }
+
+    &__info{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        color: var(--cl-l);
+
+        b,i{
+            font-weight: 500;
+            line-height: 110%;
+            color: var(--cl-m);
+        }
+
+        border-bottom: 1px solid var(--br-c);
+        padding-bottom: 17px;
+    }
+
+    &__text{
+        &.blue{
+            color:  var(--cl-h);
+        }
+    }
+
+    &__value{
+        &.blue{
+            color:  var(--cl-h);
+        }
+    }
+
+    &__inner{
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        gap: 5px;
+
+        &:last-of-type{
+            align-items: flex-start;
+            flex-grow: 1;
+        }
+    }
+
+    .select{
+        width: 100%;
+        padding: 11px 16px;
+    
+        &__current{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 126%;
+            color: var(--cl-e);
+        }
+    }
+}

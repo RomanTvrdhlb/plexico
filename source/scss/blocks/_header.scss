@@ -125,6 +125,19 @@
     @include tablet{
       grid-template-columns: auto 1fr;
     }
+
+    &.product{
+      
+      @include for-full-hd{
+        grid-template-columns: repeat(2, auto) 1fr;
+      }
+
+      @include tablet{
+        .header-date{
+          display: none;
+        }
+      }
+    }
   }
 
   &__wrapp{

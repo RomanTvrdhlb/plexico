@@ -1,0 +1,55 @@
+.main-plan{
+    display: flex;
+    gap: clamp(20px, 1.6312vw, 23px);
+    overflow-x: auto;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    padding: 0 30px;
+
+    @include small-tablet{
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        padding: 0 20px;
+    }
+
+
+    .simplebar-content{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        gap: clamp(20px, 1.6312vw, 23px);
+        justify-content: flex-start;
+        padding: 0 0 28px 5px !important;
+    }
+
+    &__item{
+        &:last-of-type{
+            padding-right: 30px;
+
+            @include small-tablet{
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .simplebar-track.simplebar-horizontal{
+        cursor: pointer;
+        z-index: 10;
+        bottom: 0;
+        height: 5px;
+        left: 30px;
+        transform: translateY(-50%);
+        width: calc(100% - 60px);
+        background: #E6EAF0;
+        border-radius: 133px;
+
+        .simplebar-scrollbar{
+            border-radius: 133px;
+            background: #B3C0D2;
+         
+            &::before{
+                opacity: 0 !important;
+            }
+        }
+    }
+}

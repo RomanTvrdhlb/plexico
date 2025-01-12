@@ -15,3 +15,8 @@ import './components/acc.js';
 import './components/download.js';
 import './components/fundsForm.js';
 import './components/sliders.js';
+import './components/pieChart.js';
+
+import './components/range.js';
+import './components/ring.js';
+import './components/copyLabel.js';
