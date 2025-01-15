@@ -18,13 +18,17 @@ const {
     activeClass,
     activeClassMode,
     navBtns,
-    navContent
+    navContent,
+    bonusMenu,
+    bonusMenuBtn,
+    partnerMenu,
+    partnerMenuBtn
 } = vars;
 
 const notification = document.querySelector('.notification');
 const notificationBtns = document.querySelectorAll('[data-open]');
 
-const mobileMenuHandler = function (overlay, mobileMenu, burger) {
+const mobileMenuHandler = function (overlay, mobileMenu, burger, bonusMenu, partnerMenu) {
     burger.forEach((btn) => {
         btn.addEventListener('click', function (e) {
             e.preventDefault();
@@ -32,6 +36,9 @@ const mobileMenuHandler = function (overlay, mobileMenu, burger) {
             toggleCustomClass(mobileMenu, activeClass);
             toggleClassInArray(burger, activeClass);
             toggleCustomClass(overlay, activeClass);
+           
+            bonusMenu ? removeCustomClass(bonusMenu, activeClass) : '';
+            partnerMenu ? removeCustomClass(partnerMenu, activeClass) : '';
 
             if (mobileMenu.classList.contains(activeClass)) {
                 disableScroll();
@@ -42,13 +49,14 @@ const mobileMenuHandler = function (overlay, mobileMenu, burger) {
             }
         })
     });
-
 }
 
-export const hideMenuHandler = function (overlay, mobileMenu, burger) {
+export const hideMenuHandler = function (overlay, mobileMenu, burger, bonusMenu, partnerMenu) {
     enableScroll()
     mobileMenu ? removeCustomClass(mobileMenu, activeClass) : '';
     burger ? removeClassInArray(burger, activeClass) : '';
+    bonusMenu ? removeCustomClass(bonusMenu, activeClass) : '';
+    partnerMenu ? removeCustomClass(partnerMenu, activeClass) : '';
     removeCustomClass(overlay, activeClassMode);
 
     if(mobileMenu){
@@ -62,14 +70,73 @@ export const hideMenuHandler = function (overlay, mobileMenu, burger) {
     }
 }
 
-if (overlay) {
-    mobileMenuHandler(overlay, mobileMenu, burger);
-    overlay.addEventListener('click', function (e) {
-        if (e.target.classList.contains('overlay')) {
-            hideMenuHandler(overlay, mobileMenu, burger);
-        }
+const bonusMenuHandler = function (overlay, bonusMenuBtn, bonusMenu) {
+    if(!bonusMenu){
+        return
+    }
+
+    const close = bonusMenu.querySelector('.bonus-menu__close');
+
+    bonusMenuBtn.forEach((btn) => { 
+        btn && btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleCustomClass(bonusMenu, activeClass);
+            toggleCustomClass(overlay, activeClass);
+    
+            if (bonusMenu.classList.contains(activeClass)) {
+                disableScroll();
+              
+            } else {
+                enableScroll();
+            }
+        })
     });
 
+    close && close.addEventListener('click', function(e){
+        e.preventDefault();
+        hideMenuHandler(overlay, mobileMenu, burger, bonusMenu);
+        removeCustomClass(overlay, activeClass);
+    })
+}
+
+const partnerMenuHandler = function (overlay, partnerMenuBtn, partnerMenu) {
+    if(!partnerMenu){
+        return
+    }
+
+    const close = partnerMenu.querySelector('.partner-menu__close');
+
+    partnerMenuBtn.forEach((btn) => { 
+        btn && btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleCustomClass(partnerMenu, activeClass);
+            toggleCustomClass(overlay, activeClass);
+    
+            if (partnerMenu.classList.contains(activeClass)) {
+                disableScroll();
+              
+            } else {
+                enableScroll();
+            }
+        })
+    });
+
+    close && close.addEventListener('click', function(e){
+        e.preventDefault();
+        hideMenuHandler(overlay, mobileMenu, burger, bonusMenu, partnerMenu);
+        removeCustomClass(overlay, activeClass);
+    })
+}
+
+if (overlay) {
+    mobileMenuHandler(overlay, mobileMenu, burger, bonusMenu, partnerMenu);
+    bonusMenuHandler(overlay, bonusMenuBtn, bonusMenu);
+    partnerMenuHandler(overlay, partnerMenuBtn, partnerMenu);
+    overlay.addEventListener('click', function (e) {
+        if (e.target.classList.contains('overlay')) {
+            hideMenuHandler(overlay, mobileMenu, burger, bonusMenu, partnerMenu);
+        }
+    });
 }
 
 function initNavBtns() {
@@ -178,7 +245,7 @@ function initNotificationHandlers() {
         notificationBtns.forEach(btn => {
             btn.addEventListener('click', e => {
                 e.preventDefault();
-                hideMenuHandler(overlay, mobileMenu, burger);
+                hideMenuHandler(overlay, mobileMenu, burger, bonusMenu, partnerMenu);
                 removeCustomClass(overlay, 'active');
                 
                 toggleCustomClass(notification, 'active');
@@ -223,9 +290,11 @@ if(notification){
 
 document.querySelectorAll('[data-modal]').forEach(function (item) {
     item.addEventListener('click', function () {
-        hideMenuHandler(overlay, mobileMenu, burger);
+        hideMenuHandler(overlay, mobileMenu, burger, bonusMenu, partnerMenu);
     })
 })
+
+
 
 
 

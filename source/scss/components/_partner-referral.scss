@@ -1,123 +1,148 @@
-.partner-referral{
-    padding: 30px;
-    background: var(--bg-a);
+.partner-referral {
+  padding: 30px;
+  background: var(--bg-a);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @include laptop {
+    padding: 20px;
+  }
+
+  @include tablet {
+    gap: 20px;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px 5px;
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include ios {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__wrapp {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    justify-content: space-between;
+    gap: 10px;
+    padding: clamp(16px, 1.389vw, 20px) clamp(16px, 1.389vw, 20px)
+      clamp(16px, 1.25vw, 18px);
+    border: 1px solid var(--br-c);
+    border-radius: 8px;
 
-    @include laptop{
-        padding: 20px;
+    @include for-mobile {
+      grid-column: 1;
+      grid-row: 1/3;
+      margin-right: 5px;
     }
 
-    @include tablet{
-        gap: 20px;
+    @include mobile {
+      align-items: center;
+      flex-direction: row;
+      grid-column: 1/-1;
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: var(--cl-y);
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: var(--cl-y);
+    align-self: end;
+  }
+
+  &__value {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(20px, 1.736vw, 25px);
+    line-height: 105%;
+    letter-spacing: -0.02em;
+    color: var(--cl-d);
+
+    b {
+      font-weight: inherit;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    grid-column: 1;
+    grid-row: 1/3;
+
+    svg,
+    img {
+      display: flex;
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    padding: 14px 15px;
+    // border: 1px solid var(--br-c);
+    border-radius: 8px;
+
+    .partner-referral__value {
+      font-size: 16px;
     }
 
-    &__box{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px 5px;
+    @include gradient-border(var(--gr-b), 1px);
 
-        @include mobile{
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include ios{
-            grid-template-columns: 100%;
-        }
+    &:before {
+      opacity: 0.2;
     }
 
-    &__wrapp{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 10px;
-        padding: clamp(16px, 1.389vw, 20px) clamp(16px, 1.389vw, 20px) clamp(16px, 1.25vw, 18px);
-        border: 1px solid var(--br-c);
-        border-radius: 8px;
-
-
-        @include for-mobile{
-            grid-column: 1;
-            grid-row: 1/3;
-            margin-right: 5px;
-        }
-
-        @include mobile{
-            align-items: center;
-            flex-direction: row;
-            grid-column: 1/-1;
-        }
+    &.violet {
+      &:before {
+        background: var(--gr-c);
+      }
     }
 
-    &__text{
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 110%;
-        letter-spacing: -0.02em;
-        color: var(--cl-y);
+    &.green {
+      &:before {
+        background: var(--gr-d);
+      }
     }
 
-    &__name{
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 110%;
-        letter-spacing: -0.02em;
-        color: var(--cl-y);
-        align-self: end;
+    &.orange {
+      &:before {
+        background: var(--gr-e);
+      }
     }
+  }
 
-    &__value{
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: clamp(20px, 1.736vw, 25px);
-        line-height: 105%;
-        letter-spacing: -0.02em;
-        color: var(--cl-d);
+  .subtitle {
+    gap: 11px;
 
-        b{
-            font-weight: inherit;
-        }
+    .info-btn {
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      background: 0;
+      border-radius: 0;
+      margin-left: -5px;
     }
-
-    &__icon{
-        display: flex;
-        flex-shrink: 0;
-        grid-column: 1;
-        grid-row: 1/3;
-
-        svg,img{
-            display: flex;
-            width: 38px;
-            height: 38px;
-        }
-    }
-
-    &__info{
-        display: grid;
-        grid-template-columns: auto 1fr;
-        column-gap: 10px;
-        padding: 14px 15px;
-        border: 1px solid var(--br-c);
-        border-radius: 8px;
-
-        .partner-referral__value{
-            font-size: 16px;
-        }
-    }
-
-    .subtitle{
-        gap: 11px;
-
-        .info-btn{
-            width: 20px;
-            height: 20px;
-            padding: 0;
-            background: 0;
-            border-radius: 0;
-            margin-left: -5px;
-        }
-    }
+  }
 }

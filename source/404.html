@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+
+  <main>
+    <section class="error-section error-section--mode">
+      <div class="container">
+        <div class="error-section__box">
+          <div class="error-section__content">
+            <a href="#" class="error-section__logo">
+              <svg width='151' height='48'>
+                <use href='img/sprite/sprite.svg#logo'></use>
+              </svg>
+            </a>
+
+
+            <span class="error-section__pretitle">Ошибка 404</span>
+            <h1 class="error-section__title">Cтраница не найдена</h1>
+            <p>Похоже что такой страницы нет...</p>
+            <a href="#" class="blue-btn">
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#arrow-right'></use>
+              </svg>
+              На главную</a>
+
+          </div>
+
+          <div class="error-section__image">
+            <svg width='827' height='755'>
+              <use href='img/sprite/sprite.svg#404'></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

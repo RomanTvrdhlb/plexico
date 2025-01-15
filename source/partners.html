@@ -8,6 +8,572 @@
       <div class="dashboard">
         @include('partials/header-product.html')
 
+        <div class="bonus-menu">
+          <div class="bonus-menu__top">
+            <h2 class="subtitle">Командные бонусы
+              <button class="info-btn">
+                <svg width='18' height='18'>
+                  <use href='img/sprite/sprite.svg#info'></use>
+                </svg>
+              </button>
+            </h2>
+
+            <button class="bonus-menu__close">
+              <svg width='20' height='20'>
+                <use href='img/sprite/sprite.svg#close'></use>
+              </svg>
+            </button>
+          </div>
+          <div class="partner-bonus">
+            <ul class="partner-bonus__list"  data-simplebar>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>4</b>%
+                </div>
+                <div class="partner-card">
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>1</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>4</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>0</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>0</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>6</b>%
+                </div>
+                <div class="partner-card">
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>2</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>6</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>2.500</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>7,5</b>%
+                </div>
+                <div class="partner-card">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>2000</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>3</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>7,5</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent active">
+                  <b>9</b>%
+                </div>
+                <div class="partner-card active">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>750</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>4</b></span>
+                    <span class="partner-card__title">Текущий процент</span>
+                    <span class="partner-card__percent"><b>9</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>10</b>%
+                </div>
+                <div class="partner-card">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>2000</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>5</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>10</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>11</b>%
+                </div>
+                <div class="partner-card">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>3.500</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>5</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>11</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>12</b>%
+                </div>
+                <div class="partner-card">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>6.000</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>7</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>12</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>13</b>%
+                </div>
+                <div class="partner-card">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>10.000</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>5</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>13</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>14</b>%
+                </div>
+                <div class="partner-card">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>2000</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>9</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>14</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>15</b>%
+                </div>
+                <div class="partner-card">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>100.000</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>10</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>15</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>15,5</b>%
+                </div>
+                <div class="partner-card">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>100.000</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>11</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>15,5</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="partner-bonus__item">
+                <div class="partner-bonus__percent">
+                  <b>16</b>%
+                </div>
+                <div class="partner-card">
+                  <span class="partner-card__label">
+                    <svg width='12' height='12'>
+                      <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                    $<b>2000</b>
+                  </span>
+
+                  <div class="partner-card__top">
+                    <span class="partner-card__lvl">Уровень <b>12</b></span>
+                    <span class="partner-card__title">Реферальный процент</span>
+                    <span class="partner-card__percent"><b>16</b>%</span>
+                  </div>
+
+                  <div class="partner-card__inner">
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Личный оборот</span>
+                      <span class="partner-card__value">$<b>300,50</b> / $<b>100</b></span>
+                    </div>
+                    <div class="partner-card__wrapp">
+                      <span class="partner-card__subtitle">Структурный оборот</span>
+                      <span class="partner-card__value">$<b>20.290</b> / $<b>15.000</b></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="partner-menu">
+          <div class="partner-menu__top">
+            <h2 class="subtitle">Детальная информация о партнере
+            </h2>
+
+            <button class="partner-menu__close">
+              <svg width='20' height='20'>
+                <use href='img/sprite/sprite.svg#close'></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="partner-menu__box" data-simplebar>
+            <div class="partner-user">
+              <div class="partner-user__top">
+                <div class="partner-user__ava">
+                  <img width='45' height='45' src='img/index/ava.png' alt='image'>
+                </div>
+                <span class="partner-user__name">Мария Лескова</span>
+                <span class="partner-user__line">Линия: <b>1</b></span>
+              </div>
+
+              <ul class="partner-user__list">
+                <li class="partner-user__item">
+                  <span class="partner-user__text">Логин:</span>
+                  <span class="partner-user__currency">leskovamaria</span>
+                </li>
+                <li class="partner-user__item">
+                  <span class="partner-user__text">Аплайнер:</span>
+                  <span class="partner-user__currency">rjedkmmal</span>
+                </li>
+
+                <li class="partner-user__item">
+                  <span class="partner-user__text">Верификация:</span>
+                  <span class="partner-user__label">пройдено (lvl <b>1</b>)
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#check3'></use>
+                  </svg>
+                </span>
+                </li>
+
+                <li class="partner-user__item">
+                  <span class="partner-user__text">Email:</span>
+                  <span class="partner-user__copy" data-copy-mail="leskovamaria@gmail.com"><b>leskovamaria@gmail.com</b>
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#copy3'></use>
+                  </svg>
+                  </span>
+                </li>
+                <li class="partner-user__item">
+                  <span class="partner-user__text">Номер телефона:</span>
+                  <span class="partner-user__currency">+1 3890 2890 209</span>
+                </li>
+                <li class="partner-user__item">
+                  <span class="partner-user__text">Дата регистрации:</span>
+                  <span class="partner-user__currency">24.07.2024</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="partner-menu__inner">
+
+              <div class="partner-referral">
+                <span class="subtitle">Реферальных доход от партнера</span>
+
+                <div class="partner-referral__box">
+                  <div class="partner-referral__wrapp">
+                    <span class="partner-referral__text">Начислено всего</span>
+                    <span class="partner-referral__value">$<b>120.21</b></span>
+                  </div>
+
+                  <div class="partner-referral__info">
+                    <span class="partner-referral__icon">
+                      <svg width='38' height='38'>
+                        <use href='img/sprite/sprite.svg#BTC'></use>
+                      </svg>
+                    </span>
+                    <span class="partner-referral__name">BTC</span>
+                    <span class="partner-referral__value">1.009302</span>
+                  </div>
+
+                  <div class="partner-referral__info violet">
+                    <span class="partner-referral__icon">
+                      <svg width='38' height='38'>
+                        <use href='img/sprite/sprite.svg#ETH'></use>
+                      </svg>
+                    </span>
+                    <span class="partner-referral__name">ETH</span>
+                    <span class="partner-referral__value">0.000500</span>
+                  </div>
+
+                  <div class="partner-referral__info green">
+                    <span class="partner-referral__icon">
+                      <svg width='38' height='38'>
+                        <use href='img/sprite/sprite.svg#USDT'></use>
+                      </svg>
+                    </span>
+                    <span class="partner-referral__name">USDT</span>
+                    <span class="partner-referral__value">750.33</span>
+                  </div>
+
+                  <div class="partner-referral__info orange">
+                    <span class="partner-referral__icon">
+                      <svg width='38' height='38'>
+                        <use href='img/sprite/sprite.svg#USDC'></use>
+                      </svg>
+                    </span>
+                    <span class="partner-referral__name">USDC</span>
+                    <span class="partner-referral__value">0.000</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="partner-menu__wrapp">
+                <div class="partner-menu__wrapp-top">
+                  <span class="partner-menu__title">Доля в структурном обороте:</span>
+                  <span class="partner-menu__percent"><b>70</b>%</span>
+                </div>
+                <ul class="partner-menu__list">
+                  <li class="partner-menu__item">
+                    <span class="partner-menu__text">Личная инвестиция</span>
+                    <span class="partner-menu__value">$<b>2.000</b></span>
+                  </li>
+                  <li class="partner-menu__item">
+                    <span class="partner-menu__text">Доля</span>
+                    <span class="partner-menu__value">$<b>1.400</b></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="partner-menu__wrapp">
+                <div class="partner-menu__wrapp-top">
+                  <span class="partner-menu__title">Партнерский уровень:</span>
+                  <span class="partner-menu__percent"><b>3</b> (<b>7.5</b>%)</span>
+                </div>
+                <ul class="partner-menu__list">
+                  <li class="partner-menu__item">
+                    <span class="partner-menu__text">Ваши Реф:</span>
+                    <span class="partner-menu__value"><b>4</b>%</span>
+                  </li>
+                  <li class="partner-menu__item">
+                    <span class="partner-menu__text">Количество партнеров:</span>
+                    <span class="partner-menu__value"><b>17</b>
+                      <img width='45' height='18' src='img/sprite/users3.svg' alt='image'>
+                    </span>
+                  </li>
+                  <li class="partner-menu__item">
+                    <span class="partner-menu__text">Количество партнеров:</span>
+                    <span class="partner-menu__value"><b>8</b>
+                      <img width='45' height='18' src='img/sprite/users4.svg' alt='image'>
+                    </span>
+                  </li>
+                  <li class="partner-menu__item">
+                    <span class="partner-menu__text">Структурный оборот партнера</span>
+                    <span class="partner-menu__value">$<b>7.340</b></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="partner-menu__wrapp">
+                <div class="partner-menu__wrapp-top mode">
+                  <span class="partner-menu__title">DailyFlow:</span>
+                  <span class="partner-menu__percent">$<b>13.500,00</b></span>
+                  <button class="partner-menu__btn">
+                    <svg width='22' height='22'>
+                      <use href='img/sprite/sprite.svg#chevron-down'></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="level-info">
+                  <li class="level-info__item">
+                    <span class="level-info__title">DF 1</span>
+                    <span class="level-info__lvl">1 Уровень</span>
+                    <span class="level-info__value"><b>633</b> USDT</span>
+                  </li>
+                  <li class="level-info__item">
+                    <span class="level-info__title">DF 2</span>
+                    <span class="level-info__lvl">2 Уровень</span>
+                    <span class="level-info__value"><b>1.009302</b> BTC</span>
+                  </li>
+                  <li class="level-info__item">
+                    <span class="level-info__title">DF 3</span>
+                    <span class="level-info__lvl">1 Уровень</span>
+                    <span class="level-info__value"><b>633</b> USDT</span>
+                  </li>
+                  <li class="level-info__item">
+                    <span class="level-info__title">DF 4</span>
+                    <span class="level-info__lvl">2 Уровень</span>
+                    <span class="level-info__value"><b>1.009302</b> BTC</span>
+                  </li>
+                
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
         <aside class="aside">
           <div class="aside__top">
             <a href="index.html" class="logo">
@@ -671,7 +1237,7 @@
                             <span class="partner-referral__value">1.009302</span>
                           </div>
 
-                          <div class="partner-referral__info">
+                          <div class="partner-referral__info violet">
                             <span class="partner-referral__icon">
                               <svg width='38' height='38'>
                                 <use href='img/sprite/sprite.svg#ETH'></use>
@@ -681,7 +1247,7 @@
                             <span class="partner-referral__value">0.000500</span>
                           </div>
 
-                          <div class="partner-referral__info">
+                          <div class="partner-referral__info green">
                             <span class="partner-referral__icon">
                               <svg width='38' height='38'>
                                 <use href='img/sprite/sprite.svg#USDT'></use>
@@ -691,7 +1257,7 @@
                             <span class="partner-referral__value">750.33</span>
                           </div>
 
-                          <div class="partner-referral__info">
+                          <div class="partner-referral__info orange">
                             <span class="partner-referral__icon">
                               <svg width='38' height='38'>
                                 <use href='img/sprite/sprite.svg#USDC'></use>
@@ -1381,7 +1947,7 @@
                             <span class="partner-referral__value">1.009302</span>
                           </div>
 
-                          <div class="partner-referral__info">
+                          <div class="partner-referral__info violet">
                             <span class="partner-referral__icon">
                               <svg width='38' height='38'>
                                 <use href='img/sprite/sprite.svg#ETH'></use>
@@ -1391,7 +1957,7 @@
                             <span class="partner-referral__value">0.000500</span>
                           </div>
 
-                          <div class="partner-referral__info">
+                          <div class="partner-referral__info green">
                             <span class="partner-referral__icon">
                               <svg width='38' height='38'>
                                 <use href='img/sprite/sprite.svg#USDT'></use>
@@ -1401,7 +1967,7 @@
                             <span class="partner-referral__value">750.33</span>
                           </div>
 
-                          <div class="partner-referral__info">
+                          <div class="partner-referral__info orange">
                             <span class="partner-referral__icon">
                               <svg width='38' height='38'>
                                 <use href='img/sprite/sprite.svg#USDC'></use>

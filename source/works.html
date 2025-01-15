@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+
+  <main>
+    <section class="error-section error-section--works">
+      <div class="container">
+        <div class="error-section__box">
+          <div class="error-section__content">
+            <a href="#" class="error-section__logo">
+              <svg width='151' height='48'>
+                <use href='img/sprite/sprite.svg#logo'></use>
+              </svg>
+            </a>
+
+
+            <span class="error-section__pretitle">Мы скоро вернемся</span>
+            <h1 class="error-section__title">Ведутся технические
+              работы</h1>
+            <p>Если у вас есть вопросы, свяжитесь с нами по телефону <a href="tel:+88008050456">8 800 805 04 56</a></p>
+            <p>Или отправьте сообщение на почту<br> <a href="mailto:support@plexico.com">support@plexico.com</a></p>
+         
+            <ul class="socials" data-title="Наши социальные сети">
+              <li class="socials__item">
+                <a class="socials__link" href="#">
+                  <span class="socials__icon">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#Instagram'></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link" href="#">
+                  <span class="socials__icon">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#Linked'></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link" href="#">
+                  <span class="socials__icon">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#Telegram'></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="error-section__image">
+            <svg width='791' height='923'>
+              <use href='img/sprite/sprite.svg#cloud'></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

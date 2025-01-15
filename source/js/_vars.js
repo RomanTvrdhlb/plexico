@@ -20,4 +20,9 @@ export default {
   modals: [...document.querySelectorAll('[data-popup]')],
   modalsMode: [...document.querySelectorAll('[data-mode-modal]')],
   modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
+  
+  bonusMenu: document.querySelector('.bonus-menu'),
+  bonusMenuBtn: document.querySelectorAll('[data-bonus-btn]'),
+  partnerMenuBtn: document.querySelectorAll('.partners-list__more'),
+  partnerMenu: document.querySelector('.partner-menu'),
 }

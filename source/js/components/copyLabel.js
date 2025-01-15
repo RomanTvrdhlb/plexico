@@ -53,3 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', handleGlobalClick);
   });
   
+  document.addEventListener('DOMContentLoaded', () => {
+    const copyElement = document.querySelector('.partner-user__copy');
+    if (copyElement) {
+        copyElement.addEventListener('click', () => {
+            const email = copyElement.getAttribute('data-copy-mail');
+            if (email) {
+                navigator.clipboard.writeText(email).catch(() => {});
+            }
+        });
+    }
+});

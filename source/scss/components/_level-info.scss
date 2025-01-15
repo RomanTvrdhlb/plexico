@@ -1,0 +1,68 @@
+.level-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    @include mobile{
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 20px 5px;
+        border-radius: 8px;
+        padding: 16px;
+        background: #f6f7f9;
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+        color: var(--cl-d);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        &:after{
+            width: 11px;
+            height: 11px;
+            background: var(--gr-b);
+            border-radius: 50%;
+            display: block;
+            content: '';
+            order: -1;
+            margin-top: -2px;
+        }
+    }
+
+    &__lvl{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+        color: var(--cl-y);
+
+        b{
+            font-weight: 400;
+        }
+    }
+
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(20px, 1.5278vw, 22px);
+        line-height: 105%;
+        letter-spacing: -0.02em;
+        color: var(--cl-d);
+        grid-column: 1/-1;
+
+        b{
+            font-weight: 500;
+        }
+    }
+}
